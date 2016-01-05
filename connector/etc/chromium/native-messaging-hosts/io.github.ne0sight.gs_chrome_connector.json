@@ -1,0 +1,9 @@
+{
+  "name": "io.github.ne0sight.gs_chrome_connector",
+  "description": "Native connector for extensions.gnome.org",
+  "path": "/usr/local/bin/gs-chrome-connector",
+  "type": "stdio",
+  "allowed_origins": [
+    "chrome-extension://gphhapmejobijbbhgpjhcjognlahblep/"
+  ]
+}
