@@ -41,13 +41,16 @@ def send_error(message):
 	send_message({'success': False, 'message': message})
 
 def dbus_call_response(method, parameters, resultProperty):
-	result = proxy.call_sync(method,
-		parameters,
-		Gio.DBusCallFlags.NONE,
-		-1,
-		None)
+	try:
+		result = proxy.call_sync(method,
+			parameters,
+			Gio.DBusCallFlags.NONE,
+			-1,
+			None)
 
-	send_message({ 'success': True, resultProperty: result.unpack()[0] })
+		send_message({ 'success': True, resultProperty: result.unpack()[0] })
+	except GLib.GError as e:
+		send_message({ 'success': False, message: e.message })
 
 # Thread that reads messages from the webapp.
 def read_thread_func(proxy, mainLoop):
