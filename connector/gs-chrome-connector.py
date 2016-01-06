@@ -50,7 +50,7 @@ def dbus_call_response(method, parameters, resultProperty):
 
 		send_message({ 'success': True, resultProperty: result.unpack()[0] })
 	except GLib.GError as e:
-		send_message({ 'success': False, message: e.message })
+		send_error(e.message)
 
 # Thread that reads messages from the webapp.
 def read_thread_func(proxy, mainLoop):
