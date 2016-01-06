@@ -94,6 +94,14 @@ def read_thread_func(proxy, mainLoop):
 						None,
 						None,
 						None)
+			elif request['execute'] == 'getExtensionErrors':
+				result = proxy.call_sync("GetExtensionErrors",
+					GLib.Variant.new_tuple(GLib.Variant.new_string(request['uuid'])),
+					Gio.DBusCallFlags.NONE,
+					-1,
+					None)
+
+				send_message({ 'success': True, 'extensionErrors': result.unpack()[0] })
 			elif request['execute'] == 'getExtensionInfo':
 				result = proxy.call_sync("GetExtensionInfo",
 					GLib.Variant.new_tuple(GLib.Variant.new_string(request['uuid'])),
