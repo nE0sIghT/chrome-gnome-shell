@@ -56,7 +56,7 @@ def dbus_call_response(method, parameters, resultProperty):
 def read_thread_func(proxy, mainLoop):
 	settings = Gio.Settings.new(SHELL_SCHEMA)
 
-	while 1:
+	while mainLoop.is_running():
 		# Read the message length (first 4 bytes).
 		text_length_bytes = sys.stdin.read(4)
 
@@ -158,7 +158,10 @@ if __name__ == '__main__':
 	appLoop = threading.Thread(target=read_thread_func, args=(proxy, mainLoop))
 	appLoop.start()
 
-	mainLoop.run()
-	appLoop.join()
+	try:
+		mainLoop.run()
+	except KeyboardInterrupt:
+		mainLoop.quit()
 
+	appLoop.join()
 	sys.exit(0)
