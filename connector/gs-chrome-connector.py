@@ -39,6 +39,15 @@ def send_message(response):
 def send_error(message):
 	send_message({'success': False, 'message': message})
 
+def dbus_call_response(method, parameters, resultProperty):
+	result = proxy.call_sync(method,
+		parameters,
+		Gio.DBusCallFlags.NONE,
+		-1,
+		None)
+
+	send_message({ 'success': True, resultProperty: result.unpack()[0] })
+
 # Thread that reads messages from the webapp.
 def read_thread_func(proxy, mainLoop):
 	settings = Gio.Settings.new(SHELL_SCHEMA)
@@ -61,13 +70,8 @@ def read_thread_func(proxy, mainLoop):
 
 		if 'execute' in request:
 			if request['execute'] == 'listExtensions':
-				result = proxy.call_sync("ListExtensions",
-					None,
-					Gio.DBusCallFlags.NONE,
-					-1,
-					None)
+				dbus_call_response("ListExtensions", None, "extensions")
 
-				send_message({ 'success': True, 'extensions': result.unpack()[0] })
 			elif request['execute'] == 'ShellVersion':
 				result = proxy.get_cached_property("ShellVersion")
 
@@ -95,21 +99,10 @@ def read_thread_func(proxy, mainLoop):
 						None,
 						None)
 			elif request['execute'] == 'getExtensionErrors':
-				result = proxy.call_sync("GetExtensionErrors",
-					GLib.Variant.new_tuple(GLib.Variant.new_string(request['uuid'])),
-					Gio.DBusCallFlags.NONE,
-					-1,
-					None)
+				dbus_call_response("GetExtensionErrors", GLib.Variant.new_tuple(GLib.Variant.new_string(request['uuid'])), "extensionErrors")
 
-				send_message({ 'success': True, 'extensionErrors': result.unpack()[0] })
 			elif request['execute'] == 'getExtensionInfo':
-				result = proxy.call_sync("GetExtensionInfo",
-					GLib.Variant.new_tuple(GLib.Variant.new_string(request['uuid'])),
-					Gio.DBusCallFlags.NONE,
-					-1,
-					None)
-
-				send_message({ 'success': True, 'extensionInfo': result.unpack()[0] })
+				dbus_call_response("GetExtensionInfo", GLib.Variant.new_tuple(GLib.Variant.new_string(request['uuid'])), "extensionInfo")
 
 def on_shell_signal(d_bus_proxy, sender_name, signal_name, parameters):
 	if signal_name == 'ExtensionStatusChanged':
