@@ -29,6 +29,10 @@ define('gs-chrome', ['jquery'], function($) {
 				return extensionId;
 			},
 
+			getExtensionInfo:	function(uuid) {
+				return sendResolveExtensionMessage("getExtensionInfo", "extensionInfo", {uuid: uuid});
+			},
+
 			launchExtensionPrefs:	function(uuid) {
 				sendExtensionMessage("launchExtensionPrefs", null, { uuid: uuid });
 			},

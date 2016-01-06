@@ -94,6 +94,14 @@ def read_thread_func(proxy, mainLoop):
 						None,
 						None,
 						None)
+			elif request['execute'] == 'getExtensionInfo':
+				result = proxy.call_sync("GetExtensionInfo",
+					GLib.Variant.new_tuple(GLib.Variant.new_string(request['uuid'])),
+					Gio.DBusCallFlags.NONE,
+					-1,
+					None)
+
+				send_message({ 'success': True, 'extensionInfo': result.unpack()[0] })
 
 def on_shell_signal(d_bus_proxy, sender_name, signal_name, parameters):
 	if signal_name == 'ExtensionStatusChanged':
