@@ -131,6 +131,12 @@ def on_shell_signal(d_bus_proxy, sender_name, signal_name, parameters):
 	if signal_name == 'ExtensionStatusChanged':
 		send_message({ 'signal': signal_name, 'parameters': parameters.unpack() })
 
+
+def on_shell_appeared(connection, name, name_owner):
+	#send_message({ 'signal': name })
+	print >> sys.stderr, 'on_shell_appeared'
+
+
 if __name__ == '__main__':
 	proxy = Gio.DBusProxy.new_for_bus_sync(Gio.BusType.SESSION,
 						Gio.DBusProxyFlags.NONE,
@@ -141,6 +147,11 @@ if __name__ == '__main__':
 						None)
 
 	proxy.connect('g-signal', on_shell_signal)
+#	Gio.bus_watch_name(Gio.BusType.SESSION,
+#			'org.gnome.Shell',
+#			Gio.BusNameWatcherFlags.NONE,
+#			on_shell_appeared,
+#			None)
 
 	mainLoop = GLib.MainLoop()
 

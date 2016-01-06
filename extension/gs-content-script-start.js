@@ -47,11 +47,11 @@ chrome.runtime.onMessage.addListener(
 	function (request, sender, sendResponse) {
 		if(
 			sender.id && sender.id === GS_CHROME_ID &&
-			request && request.signal && request.signal === 'ExtensionStatusChanged')
+			request && request.signal && ["ExtensionStatusChanged", "org.gnome.Shell"].indexOf(request.signal) !== -1)
 		{
 			window.postMessage(
 				{
-					type: "gs-chrome-onchange",
+					type: "gs-chrome",
 					request: request
 				}, "*"
 			);

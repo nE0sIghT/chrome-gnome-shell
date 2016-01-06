@@ -61,13 +61,20 @@ define('gs-chrome', ['jquery'], function($) {
 
 			if (event.data.type)
 			{
-				if(event.data.type == "gs-chrome-onchange")
+				if(event.data.type == "gs-chrome")
 				{
-					apiObject.onchange(
-						event.data.request.parameters[0],
-						event.data.request.parameters[1],
-						event.data.request.parameters[2]
-					);
+					if(event.data.request.signal == 'ExtensionStatusChanged' && apiObject.onchange)
+					{
+						apiObject.onchange(
+							event.data.request.parameters[0],
+							event.data.request.parameters[1],
+							event.data.request.parameters[2]
+						);
+					}
+					else if(event.data.request.signal == 'org.gnome.Shell' && apiObject.onshellrestart)
+					{
+						apiObject.onshellrestart();
+					}
 				}
 			}
 		}, false);

@@ -13,7 +13,7 @@ var nativeHost = 'io.github.ne0sight.gs_chrome_connector';
 var port = chrome.runtime.connectNative(nativeHost);
 
 port.onMessage.addListener(function(message) {
-	if(message && message.signal && message.signal === 'ExtensionStatusChanged')
+	if(message && message.signal && ["ExtensionStatusChanged", "org.gnome.Shell"].indexOf(message.signal) !== -1)
 	{
 		chrome.tabs.query(
 			{
