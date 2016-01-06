@@ -14,11 +14,13 @@ from gi.repository import GLib, Gio
 import json
 import struct
 import sys
-import threading
+from threading import Thread, Lock
 
 SHELL_SCHEMA		= "org.gnome.shell"
 ENABLED_EXTENSIONS_KEY	= "enabled-extensions"
 EXTENSION_DISABLE_VERSION_CHECK_KEY = "disable-extension-version-validation"
+
+mutex = Lock()
 
 # On Windows, the default I/O mode is O_TEXT. Set this to O_BINARY
 # to avoid unwanted modifications of the input/output streams.
@@ -41,6 +43,7 @@ def send_error(message):
 	send_message({'success': False, 'message': message})
 
 def dbus_call_response(method, parameters, resultProperty):
+	mutex.acquire()
 	try:
 		result = proxy.call_sync(method,
 			parameters,
@@ -52,6 +55,7 @@ def dbus_call_response(method, parameters, resultProperty):
 	except GLib.GError as e:
 		send_error(e.message)
 
+	mutex.release()
 # Thread that reads messages from the webapp.
 def read_thread_func(proxy, mainLoop):
 	settings = Gio.Settings.new(SHELL_SCHEMA)
@@ -129,12 +133,15 @@ def read_thread_func(proxy, mainLoop):
 
 def on_shell_signal(d_bus_proxy, sender_name, signal_name, parameters):
 	if signal_name == 'ExtensionStatusChanged':
+		mutex.acquire()
 		send_message({ 'signal': signal_name, 'parameters': parameters.unpack() })
+		mutex.release()
 
 
-def on_shell_appeared(connection, name, name_owner):
-	#send_message({ 'signal': name })
-	print >> sys.stderr, 'on_shell_appeared'
+#def on_shell_appeared(connection, name, name_owner):
+#	mutex.acquire()
+#	send_message({ 'signal': name })
+#	mutex.release()
 
 
 if __name__ == '__main__':
@@ -155,7 +162,7 @@ if __name__ == '__main__':
 
 	mainLoop = GLib.MainLoop()
 
-	appLoop = threading.Thread(target=read_thread_func, args=(proxy, mainLoop))
+	appLoop = Thread(target=read_thread_func, args=(proxy, mainLoop))
 	appLoop.start()
 
 	try:
