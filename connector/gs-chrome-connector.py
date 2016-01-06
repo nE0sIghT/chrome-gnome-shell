@@ -84,6 +84,9 @@ def read_thread_func(proxy, mainLoop):
 					}
 				)
 
+			elif request['execute'] == 'installExtension':
+				dbus_call_response("InstallRemoteExtension", GLib.Variant.new_tuple(GLib.Variant.new_string(request['uuid'])), "status")
+
 			elif request['execute'] == 'listExtensions':
 				dbus_call_response("ListExtensions", None, "extensions")
 

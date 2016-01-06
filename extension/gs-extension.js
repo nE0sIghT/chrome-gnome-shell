@@ -39,7 +39,7 @@ function sendNativeRequest(request, sendResponse) {
 			nativeHost,
 			request,
 			function (response) {
-				if (response && response.success)
+				if (response)
 				{
 					sendResponse(response);
 				}
@@ -79,7 +79,7 @@ chrome.runtime.onMessageExternal.addListener(
 				{
 					sendNativeRequest({ execute: request.execute, uuid: request.uuid });
 				}
-				else if(["getExtensionErrors", "getExtensionInfo"].indexOf(request.execute) !== -1)
+				else if(["getExtensionErrors", "getExtensionInfo", "installExtension"].indexOf(request.execute) !== -1)
 				{
 					sendNativeRequest({ execute: request.execute, uuid: request.uuid }, sendResponse);
 					return true;
