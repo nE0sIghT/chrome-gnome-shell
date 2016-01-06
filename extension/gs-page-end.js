@@ -113,29 +113,39 @@ define('gs-chrome', ['jquery'], function($) {
 define('versions/common/common', ['jquery', 'dbus!API'], function($, API) {
     "use strict";
 
-    function _makeRawPromise(result) {
-        // Make a new completed promise -- when we move the plugin
-        // over to async, we can remove this.
+     function _makeRawPromise(result) {
+        // Check if result is promise already
+        if(isPromise(result))
+            return result;
+
         return (new $.Deferred()).resolve(result);
     }
 
     function _makePromise(result) {
+        // Check if result is promise already
+        if(isPromise(result))
+            return result;
+
         return _makeRawPromise(JSON.parse(result));
+    }
+
+    function isPromise(value) {
+        return value && value.promise;
     }
 
     return {
         _makePromise: _makePromise,
 
         ListExtensions: function() {
-            return API.listExtensions();
+            return _makePromise(API.listExtensions());
         },
 
         GetExtensionInfo: function(uuid) {
-            return API.getExtensionInfo(uuid);
+            return _makePromise(API.getExtensionInfo(uuid));
         },
 
         GetErrors: function(uuid) {
-            return API.getExtensionErrors(uuid);
+            return _makePromise(API.getExtensionErrors(uuid));
         },
 
         LaunchExtensionPrefs: function(uuid) {
@@ -153,21 +163,35 @@ define('versions/common/common', ['jquery', 'dbus!API'], function($, API) {
         },
 
         InstallExtensionOne: function(uuid) {
-            return API.installExtension(uuid);
+            var result = API.installExtension(uuid);
+
+	    if(isPromise(result))
+		    return result;
+
+            return _makeRawPromise('succeeded');
         },
 
         InstallExtensionTwo: function(uuid) {
-            return API.installExtension(uuid, "");
+            var result = API.installExtension(uuid, "");
+
+	    if(isPromise(result))
+		    return result;
+
+            return _makeRawPromise('succeeded');
         },
 
         InstallExtensionAsync: function(uuid) {
             var d = new $.Deferred();
-            API.installExtension(uuid, d.done.bind(d), d.fail.bind(d));
+            var result = API.installExtension(uuid, d.done.bind(d), d.fail.bind(d));
+
+	    if(isPromise(result))
+		    return result;
+
             return d;
         },
 
         UninstallExtension: function(uuid) {
-            return API.uninstallExtension(uuid);
+            return _makePromise(API.uninstallExtension(uuid));
         },
 
         API_onchange: function(proxy) {
