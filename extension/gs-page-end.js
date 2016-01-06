@@ -13,10 +13,11 @@ define('gs-chrome', ['jquery'], function($) {
 
 	window.SweetTooth = function() {
 		var apiObject			= {
-			ready:			$.Deferred(),
+			ready:				$.Deferred(),
 
-			apiVersion:		5,
-			shellVersion:		'-1',
+			apiVersion:			5,
+			shellVersion:			'-1',
+			versionValidationEnabled:	true,
 
 			getChromeExtensionId:	function() {
 				return GS_CHROME_ID;
@@ -43,7 +44,7 @@ define('gs-chrome', ['jquery'], function($) {
 			}
 		};
 
-		sendResolveExtensionMessage("ShellVersion", "shellVersion", null, apiObject.ready);
+		sendResolveExtensionMessage("initialize", "properties", null, apiObject.ready);
 
 		window.addEventListener("message", function(event) {
 			// We only accept messages from ourselves
@@ -187,8 +188,9 @@ define('versions/common/common', ['jquery', 'dbus!API'], function($, API) {
 
 gs_chrome_initialized = true;
 require(['messages', 'gs-chrome'], function(messages){
-	SweetTooth.ready.done(function(version) {
-		SweetTooth.shellVersion = version;
+	SweetTooth.ready.done(function(response) {
+		SweetTooth.shellVersion			= response.shellVersion;
+		SweetTooth.versionValidationEnabled	= response.versionValidationEnabled;
 	}).fail(function() {
 		messages.addWarning('Although Gnome-shell extension for Chrome is running, we cannot detect a native Gnome-shell integration connector. Please make sure it properly installed.');
 	}).always(function() {

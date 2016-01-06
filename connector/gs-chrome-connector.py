@@ -18,6 +18,7 @@ import threading
 
 SHELL_SCHEMA		= "org.gnome.shell"
 ENABLED_EXTENSIONS_KEY	= "enabled-extensions"
+EXTENSION_DISABLE_VERSION_CHECK_KEY = "disable-extension-version-validation"
 
 # On Windows, the default I/O mode is O_TEXT. Set this to O_BINARY
 # to avoid unwanted modifications of the input/output streams.
@@ -69,13 +70,23 @@ def read_thread_func(proxy, mainLoop):
 		request = json.loads(text)
 
 		if 'execute' in request:
-			if request['execute'] == 'listExtensions':
+			if request['execute'] == 'initialize':
+				shellVersion = proxy.get_cached_property("ShellVersion")
+				disableVersionCheck = settings.get_boolean(EXTENSION_DISABLE_VERSION_CHECK_KEY)
+
+				send_message(
+					{
+						'success': True,
+						'properties': {
+							'shellVersion': shellVersion.unpack(),
+							'versionValidationEnabled': not disableVersionCheck
+						}
+					}
+				)
+
+			elif request['execute'] == 'listExtensions':
 				dbus_call_response("ListExtensions", None, "extensions")
 
-			elif request['execute'] == 'ShellVersion':
-				result = proxy.get_cached_property("ShellVersion")
-
-				send_message({ 'success': True, 'shellVersion': result.unpack() })
 			elif request['execute'] == 'EnableExtension':
 				uuid = request['uuid']
 				enable = request['enable']
@@ -90,6 +101,7 @@ def read_thread_func(proxy, mainLoop):
 				settings.set_strv(ENABLED_EXTENSIONS_KEY, uuids)
 
 				send_message({ 'success': True })
+
 			elif request['execute'] == 'launchExtensionPrefs':
 				proxy.call("LaunchExtensionPrefs",
 						GLib.Variant.new_tuple(GLib.Variant.new_string(request['uuid'])),
@@ -98,6 +110,7 @@ def read_thread_func(proxy, mainLoop):
 						None,
 						None,
 						None)
+
 			elif request['execute'] == 'getExtensionErrors':
 				dbus_call_response("GetExtensionErrors", GLib.Variant.new_tuple(GLib.Variant.new_string(request['uuid'])), "extensionErrors")
 

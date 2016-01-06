@@ -70,7 +70,7 @@ chrome.runtime.onMessageExternal.addListener(
 				request.execute
 			)
 			{
-				if(["listExtensions", "ShellVersion"].indexOf(request.execute) !== -1)
+				if(["listExtensions", "initialize"].indexOf(request.execute) !== -1)
 				{
 					sendNativeRequest({ execute: request.execute }, sendResponse);
 					return true;
