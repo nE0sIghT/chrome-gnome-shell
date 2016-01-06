@@ -33,25 +33,32 @@ port.onMessage.addListener(function(message) {
 });
 
 function sendNativeRequest(request, sendResponse) {
-	chrome.runtime.sendNativeMessage(
-		nativeHost,
-		request,
-		function (response) {
-			if (response && response.success)
-			{
-				sendResponse(response);
+	if(sendResponse)
+	{
+		chrome.runtime.sendNativeMessage(
+			nativeHost,
+			request,
+			function (response) {
+				if (response && response.success)
+				{
+					sendResponse(response);
+				}
+				else
+				{
+					sendResponse(
+						{
+							success: false,
+							message: "No host response"
+						}
+					);
+				}
 			}
-			else
-			{
-				sendResponse(
-					{
-						success: false,
-						message: "No host response"
-					}
-				);
-			}
-		}
-	);
+		);
+	}
+	else
+	{
+		chrome.runtime.sendNativeMessage(nativeHost, request);
+	}
 }
 
 chrome.runtime.onMessageExternal.addListener(
