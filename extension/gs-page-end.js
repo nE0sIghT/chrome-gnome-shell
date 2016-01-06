@@ -32,32 +32,17 @@ define('gs-chrome', ['jquery'], function($) {
 			launchExtensionPrefs:	function(uuid) {
 				sendExtensionMessage("launchExtensionPrefs", null, { uuid: uuid });
 			},
+
 			listExtensions:		function() {
-				var deferred = $.Deferred();
-
-				sendExtensionMessage("listExtensions", function(response) {
-					resolveOnSuccess(response, deferred, response.extensions);
-				});
-
-				return deferred;
+				return sendResolveExtensionMessage("listExtensions", "extensions");
 			},
 
 			setExtensionEnabled:	function(uuid, enable) {
-				var deferred = $.Deferred();
-
-				sendExtensionMessage("EnableExtension", function(response) {
-						resolveOnSuccess(response, deferred, 'success');
-					},
-					{uuid: uuid, enable: enable}
-				);
-
-				return deferred;
+				return sendResolveExtensionMessage("EnableExtension", "success", {uuid: uuid, enable: enable});
 			}
 		};
 
-		sendExtensionMessage("ShellVersion", function(response) {
-			resolveOnSuccess(response, apiObject.ready, response.shellVersion);
-		});
+		sendResolveExtensionMessage("ShellVersion", "shellVersion", null, apiObject.ready);
 
 		window.addEventListener("message", function(event) {
 			// We only accept messages from ourselves
@@ -74,6 +59,35 @@ define('gs-chrome', ['jquery'], function($) {
 			}
 		}, false);
 
+		function sendResolveExtensionMessage(method, resolveProperty, parameters, deferred)
+		{
+			function resolveOnSuccess(response, deferred, value)
+			{
+				if(response && response.success)
+				{
+					deferred.resolve(value);
+				}
+				else
+				{
+					var message = response && response.message ? response.message : "Wrong extension response received";
+					deferred.reject(message);
+				}
+			}
+
+			if(!deferred)
+			{
+				deferred = $.Deferred();
+			}
+
+			sendExtensionMessage(method, function(response) {
+					resolveOnSuccess(response, deferred, response[resolveProperty]);
+				},
+				parameters
+			);
+
+			return deferred;
+		}
+
 		function sendExtensionMessage(method, callback, parameters)
 		{
 			var request = { execute: method };
@@ -85,19 +99,6 @@ define('gs-chrome', ['jquery'], function($) {
 				request,
 				callback
 			);
-		}
-
-		function resolveOnSuccess(response, deferred, value)
-		{
-			if(response && response.success)
-			{
-				deferred.resolve(value);
-			}
-			else
-			{
-				var message = response && response.message ? response.message : "Wrong extension response received";
-				deferred.reject(message);
-			}
 		}
 
 		function _installExtension () {};
