@@ -4,7 +4,7 @@
   "name": "Gnome-shell integration for Chrome",
   "short_name": "GS Chrome",
   "description": "This extension provides integration with gnome-shell and the corresponding extensions repository, codenamed SweetTooth",
-  "version": "1.0.1",
+  "version": "1.1",
   "version_name": "1.0 devel",
 
   "author": "Yuri Konotopov <ykonotopov@gmail.com>",
