@@ -15,19 +15,3 @@ s.onload = function() {
     this.parentNode.removeChild(this);
 };
 (document.head || document.documentElement).appendChild(s);
-
-chrome.runtime.onMessage.addListener(
-	function (request, sender, sendResponse) {
-		if(
-			sender.id && sender.id === 'gphhapmejobijbbhgpjhcjognlahblep' &&
-			request && request.signal && request.signal === 'ExtensionStatusChanged')
-		{
-			window.postMessage(
-				{
-					type: "gs-chrome-event",
-					request: request
-				}, "*"
-			);
-		}
-	}
-);

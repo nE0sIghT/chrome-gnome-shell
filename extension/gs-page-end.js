@@ -12,13 +12,6 @@ define('gs-chrome', ['jquery'], function($) {
     "use strict";
 
 	window.SweetTooth = function() {
-		var extensionId = "gphhapmejobijbbhgpjhcjognlahblep";
-
-		var apiVersion			= 5;
-		var versionValidationEnabled	= null;
-
-		var getExtensionInfo		= null;
-
 		var apiObject			= {
 			ready:			$.Deferred(),
 
@@ -26,7 +19,7 @@ define('gs-chrome', ['jquery'], function($) {
 			shellVersion:		'-1',
 
 			getChromeExtensionId:	function() {
-				return extensionId;
+				return GS_CHROME_ID;
 			},
 
 			getExtensionErrors:	function(uuid) {
@@ -57,13 +50,16 @@ define('gs-chrome', ['jquery'], function($) {
 			if (event.source != window)
 				return;
 
-			if (event.data.type && (event.data.type == "gs-chrome-event"))
+			if (event.data.type)
 			{
-				apiObject.onchange(
-					event.data.request.parameters[0],
-					event.data.request.parameters[1],
-					event.data.request.parameters[2]
-				);
+				if(event.data.type == "gs-chrome-onchange")
+				{
+					apiObject.onchange(
+						event.data.request.parameters[0],
+						event.data.request.parameters[1],
+						event.data.request.parameters[2]
+					);
+				}
 			}
 		}, false);
 
@@ -103,17 +99,11 @@ define('gs-chrome', ['jquery'], function($) {
 				request = $.extend(parameters, request);
 
 			chrome.runtime.sendMessage(
-				extensionId,
+				apiObject.getChromeExtensionId(),
 				request,
 				callback
 			);
 		}
-
-		function _installExtension () {};
-		function _uninstallExtension () {};
-		function _getExtensionErrors () {};
-
-		function _onshellrestart () {};
 
 		return apiObject;
 	} ();
