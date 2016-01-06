@@ -123,6 +123,10 @@ def read_thread_func(proxy, mainLoop):
 			elif request['execute'] == 'getExtensionInfo':
 				dbus_call_response("GetExtensionInfo", GLib.Variant.new_tuple(GLib.Variant.new_string(request['uuid'])), "extensionInfo")
 
+			elif request['execute'] == 'uninstallExtension':
+				dbus_call_response("UninstallExtension", GLib.Variant.new_tuple(GLib.Variant.new_string(request['uuid'])), "status")
+
+
 def on_shell_signal(d_bus_proxy, sender_name, signal_name, parameters):
 	if signal_name == 'ExtensionStatusChanged':
 		send_message({ 'signal': signal_name, 'parameters': parameters.unpack() })
