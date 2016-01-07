@@ -231,7 +231,7 @@ require(['messages', 'gs-chrome'], function(messages){
 		SweetTooth.shellVersion			= response.shellVersion;
 		SweetTooth.versionValidationEnabled	= response.versionValidationEnabled;
 	}).fail(function() {
-		messages.addWarning('Although Gnome-shell extension for Chrome is running, we cannot detect a native Gnome-shell integration connector. Please make sure it properly installed.');
+		messages.addWarning('Although Gnome-shell extension for Chrome is running, we cannot detect a native Gnome-shell integration connector. Please refer <a href="https://github.com/nE0sIghT/chrome-gnome-shell#installation">documentation</a> for instructions about installing native connector.');
 	}).always(function() {
 
 		// Start extensions.gnome.org main script
