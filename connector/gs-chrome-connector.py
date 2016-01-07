@@ -43,7 +43,6 @@ def send_error(message):
 	send_message({'success': False, 'message': message})
 
 def dbus_call_response(method, parameters, resultProperty):
-	mutex.acquire()
 	try:
 		result = proxy.call_sync(method,
 			parameters,
@@ -55,7 +54,6 @@ def dbus_call_response(method, parameters, resultProperty):
 	except GLib.GError as e:
 		send_error(e.message)
 
-	mutex.release()
 # Thread that reads messages from the webapp.
 def read_thread_func(proxy, mainLoop):
 	settings = Gio.Settings.new(SHELL_SCHEMA)
@@ -77,6 +75,7 @@ def read_thread_func(proxy, mainLoop):
 		request = json.loads(text)
 
 		if 'execute' in request:
+			mutex.acquire()
 			if request['execute'] == 'initialize':
 				shellVersion = proxy.get_cached_property("ShellVersion")
 				disableVersionCheck = settings.get_boolean(EXTENSION_DISABLE_VERSION_CHECK_KEY)
@@ -131,6 +130,7 @@ def read_thread_func(proxy, mainLoop):
 				dbus_call_response("UninstallExtension", GLib.Variant.new_tuple(GLib.Variant.new_string(request['uuid'])), "status")
 
 
+			mutex.release()
 def on_shell_signal(d_bus_proxy, sender_name, signal_name, parameters):
 	if signal_name == 'ExtensionStatusChanged':
 		mutex.acquire()
