@@ -1,5 +1,5 @@
 cmake_minimum_required (VERSION 3.2)
-project (GC_Chrome)
+project (GS_Chrome)
 
 # https://cmake.org/pipermail/cmake/2011-January/041666.html
 function(find_python_module module)
@@ -10,9 +10,9 @@ function(find_python_module module)
 		endif()
 		# A module's location is usually a directory, but for binary modules
 		# it's a .so file.
-		execute_process(COMMAND "${PYTHON_EXECUTABLE}" "-c" 
+		execute_process(COMMAND "${PYTHON_EXECUTABLE}" "-c"
 			"import re, ${module}; print re.compile('/__init__.py.*').sub('',${module}.__file__)"
-			RESULT_VARIABLE _${module}_status 
+			RESULT_VARIABLE _${module}_status
 			OUTPUT_VARIABLE _${module}_location
 			ERROR_QUIET OUTPUT_STRIP_TRAILING_WHITESPACE)
 
