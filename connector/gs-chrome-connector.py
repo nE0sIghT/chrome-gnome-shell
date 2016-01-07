@@ -32,12 +32,22 @@ if sys.platform == "win32":
 # Helper function that sends a message to the webapp.
 def send_message(response):
 	message = json.dumps(response)
+	message_length = len(message)
 
-	# Write message size.
-	sys.stdout.write(struct.pack('I', len(message)))
-	# Write the message itself.
-	sys.stdout.write(message)
-	sys.stdout.flush()
+	if message_length > 1024*1024:
+		print >> sys.stderr, 'Too long message (%d): "%s"' % (message_length, message)
+		return
+
+	try:
+		# Write message size.
+		sys.stdout.write(struct.pack('I', message_length))
+		# Write the message itself.
+		sys.stdout.write(message)
+		sys.stdout.flush()
+	except IOError as e:
+		print >> sys.stderr, 'IOError occured: %s' % e.strerror
+		sys.exit(1)
+
 
 def send_error(message):
 	send_message({'success': False, 'message': message})
