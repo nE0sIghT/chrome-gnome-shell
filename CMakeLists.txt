@@ -1,5 +1,15 @@
 cmake_minimum_required (VERSION 3.2)
-project (GS_Chrome)
+project (GS_Chrome NONE)
+
+option(BUILD_EXTENSION	"Build extension zip package"	TRUE)
+option(BUILD_CONNECTOR	"Build native messaging host"	TRUE)
+
+# Suppress warning
+if(NOT DEFINED(CMAKE_SIZEOF_VOID_P))
+	set(CMAKE_SIZEOF_VOID_P 8)
+endif(NOT DEFINED(CMAKE_SIZEOF_VOID_P))
+
+include(GNUInstallDirs)
 
 # https://cmake.org/pipermail/cmake/2011-January/041666.html
 function(find_python_module module)
@@ -26,10 +36,25 @@ function(find_python_module module)
 	find_package_handle_standard_args(PY_${module} DEFAULT_MSG PY_${module_upper})
 endfunction(find_python_module)
 
-find_package(PythonInterp 2.7 REQUIRED)
-find_python_module(gi.repository.GLib REQUIRED)
-find_python_module(gi.repository.Gio REQUIRED)
+if(NOT BUILD_EXTENSION AND NOT BUILD_CONNECTOR)
+	message(FATAL_ERROR "No build options selected")
+endif(NOT BUILD_EXTENSION AND NOT BUILD_CONNECTOR)
 
-add_custom_target(extension
-	COMMAND ${CMAKE_COMMAND} -E tar "cfv" "${CMAKE_BINARY_DIR}/extension.zip" --format=zip "*"
-	WORKING_DIRECTORY "${CMAKE_CURRENT_SOURCE_DIR}/extension/")
+if(BUILD_EXTENSION)
+	add_custom_target(extension ALL
+		COMMAND ${CMAKE_COMMAND} -E tar "cfv" "${CMAKE_BINARY_DIR}/extension.zip" --format=zip "*"
+		WORKING_DIRECTORY "${CMAKE_CURRENT_SOURCE_DIR}/extension/")
+endif(BUILD_EXTENSION)
+
+if(BUILD_CONNECTOR)
+	find_package(PythonInterp 2.7 REQUIRED)
+	find_python_module(gi.repository.GLib REQUIRED)
+	find_python_module(gi.repository.Gio REQUIRED)
+
+	configure_file("${CMAKE_CURRENT_SOURCE_DIR}/connector/io.github.ne0sight.gs_chrome_connector.json"
+			"${CMAKE_BINARY_DIR}/")
+
+	install(PROGRAMS "${CMAKE_CURRENT_SOURCE_DIR}/connector/gs-chrome-connector.py" DESTINATION "${CMAKE_INSTALL_BINDIR}/" RENAME gs-chrome-connector)
+	install(FILES "${CMAKE_CURRENT_SOURCE_DIR}/connector/io.github.ne0sight.gs_chrome_connector.json" DESTINATION "/etc/chromium/native-messaging-hosts/")
+	install(FILES "${CMAKE_CURRENT_SOURCE_DIR}/connector/io.github.ne0sight.gs_chrome_connector.json" DESTINATION "/etc/opt/chrome/native-messaging-hosts/")
+endif(BUILD_CONNECTOR)
