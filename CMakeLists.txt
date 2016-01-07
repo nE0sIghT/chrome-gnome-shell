@@ -55,6 +55,6 @@ if(BUILD_CONNECTOR)
 			"${CMAKE_BINARY_DIR}/")
 
 	install(PROGRAMS "${CMAKE_CURRENT_SOURCE_DIR}/connector/gs-chrome-connector.py" DESTINATION "${CMAKE_INSTALL_BINDIR}/" RENAME gs-chrome-connector)
-	install(FILES "${CMAKE_CURRENT_SOURCE_DIR}/connector/io.github.ne0sight.gs_chrome_connector.json" DESTINATION "/etc/chromium/native-messaging-hosts/")
-	install(FILES "${CMAKE_CURRENT_SOURCE_DIR}/connector/io.github.ne0sight.gs_chrome_connector.json" DESTINATION "/etc/opt/chrome/native-messaging-hosts/")
+	install(FILES "${CMAKE_BINARY_DIR}/io.github.ne0sight.gs_chrome_connector.json" DESTINATION "/etc/chromium/native-messaging-hosts/")
+	install(FILES "${CMAKE_BINARY_DIR}/io.github.ne0sight.gs_chrome_connector.json" DESTINATION "/etc/opt/chrome/native-messaging-hosts/")
 endif(BUILD_CONNECTOR)
