@@ -171,12 +171,12 @@ if __name__ == '__main__':
 						'org.gnome.Shell.Extensions',
 						None)
 
-	proxy.connect('g-signal', on_shell_signal)
-#	Gio.bus_watch_name(Gio.BusType.SESSION,
-#			'org.gnome.Shell',
-#			Gio.BusNameWatcherFlags.NONE,
-#			on_shell_appeared,
-#			None)
+	shellSignalId = proxy.connect('g-signal', on_shell_signal)
+	shellAppearedId = Gio.bus_watch_name(Gio.BusType.SESSION,
+			'org.gnome.Shell',
+			Gio.BusNameWatcherFlags.NONE,
+			on_shell_appeared,
+			None)
 
 	mainLoop = GLib.MainLoop()
 
@@ -187,6 +187,9 @@ if __name__ == '__main__':
 		mainLoop.run()
 	except KeyboardInterrupt:
 		mainLoop.quit()
+
+	proxy.disconnect(shellSignalId)
+	Gio.bus_unwatch_name(shellAppearedId)
 
 	appLoop.join()
 	sys.exit(0)
