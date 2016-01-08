@@ -12,9 +12,12 @@
 
 from gi.repository import GLib, Gio
 import json
+import os
 import struct
 import sys
 from threading import Thread, Lock
+
+debugEnabled = False
 
 SHELL_SCHEMA		= "org.gnome.shell"
 ENABLED_EXTENSIONS_KEY	= "enabled-extensions"
@@ -36,7 +39,7 @@ def send_message(response):
 	message_length = len(message)
 
 	if message_length > 1024*1024:
-		print >> sys.stderr, 'Too long message (%d): "%s"' % (message_length, message)
+		logError('Too long message (%d): "%s"' % (message_length, message))
 		return
 
 	try:
@@ -46,12 +49,23 @@ def send_message(response):
 		sys.stdout.write(message)
 		sys.stdout.flush()
 	except IOError as e:
-		print >> sys.stderr, 'IOError occured: %s' % e.strerror
+		logError('IOError occured: %s' % e.strerror)
 		sys.exit(1)
 
 
 def send_error(message):
 	send_message({'success': False, 'message': message})
+
+def debug(message):
+	global debugEnabled
+
+	if debugEnabled:
+		logError(message)
+
+
+def logError(message):
+	print >> sys.stderr, message
+
 
 def dbus_call_response(method, parameters, resultProperty):
 	try:
@@ -87,6 +101,8 @@ def read_thread_func(proxy, mainLoop):
 
 		if 'execute' in request:
 			mutex.acquire()
+			debug('[%d] Execute: to %s' % (os.getpid(), request['execute']))
+
 			if request['execute'] == 'initialize':
 				shellVersion = proxy.get_cached_property("ShellVersion")
 				disableVersionCheck = settings.get_boolean(EXTENSION_DISABLE_VERSION_CHECK_KEY)
@@ -140,12 +156,16 @@ def read_thread_func(proxy, mainLoop):
 			elif request['execute'] == 'uninstallExtension':
 				dbus_call_response("UninstallExtension", GLib.Variant.new_tuple(GLib.Variant.new_string(request['uuid'])), "status")
 
-
+			debug('[%d] Execute: from %s' % (os.getpid(), request['execute']))
 			mutex.release()
+
+
 def on_shell_signal(d_bus_proxy, sender_name, signal_name, parameters):
 	if signal_name == 'ExtensionStatusChanged':
 		mutex.acquire()
+		debug('[%d] Signal: to %s' % (os.getpid(), signal_name))
 		send_message({ 'signal': signal_name, 'parameters': parameters.unpack() })
+		debug('[%d] Signal: from %s' % (os.getpid(), signal_name))
 		mutex.release()
 
 
@@ -158,7 +178,9 @@ def on_shell_appeared(connection, name, name_owner):
 		return
 
 	mutex.acquire()
+	debug('[%d] Signal: to %s' % (os.getpid(), name))
 	send_message({ 'signal': name })
+	debug('[%d] Signal: from %s' % (os.getpid(), name))
 	mutex.release()
 
 
