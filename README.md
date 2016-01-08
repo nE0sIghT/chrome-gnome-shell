@@ -19,7 +19,7 @@ As for native connector the preferred way is use your distro's favorite package 
 For Gentoo Linux ebuild is available in vortex overlay. If you use Layman just type:
 ```
 layman -a vortex
-emerge -av emerge gnome-extra/gs-chrome-connector
+emerge -av gnome-extra/gs-chrome-connector
 ```
 If there is no native connector package in your distro you can install it using cmake or manually.
 
