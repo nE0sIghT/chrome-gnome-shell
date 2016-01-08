@@ -21,6 +21,7 @@ ENABLED_EXTENSIONS_KEY	= "enabled-extensions"
 EXTENSION_DISABLE_VERSION_CHECK_KEY = "disable-extension-version-validation"
 
 mutex = Lock()
+watcherConnected = False
 
 # On Windows, the default I/O mode is O_TEXT. Set this to O_BINARY
 # to avoid unwanted modifications of the input/output streams.
@@ -148,10 +149,17 @@ def on_shell_signal(d_bus_proxy, sender_name, signal_name, parameters):
 		mutex.release()
 
 
-#def on_shell_appeared(connection, name, name_owner):
-#	mutex.acquire()
-#	send_message({ 'signal': name })
-#	mutex.release()
+def on_shell_appeared(connection, name, name_owner):
+	global mutex, watcherConnected
+
+	# Things get broken if we send 1st signal
+	if not watcherConnected:
+		watcherConnected = True
+		return
+
+	mutex.acquire()
+	send_message({ 'signal': name })
+	mutex.release()
 
 
 if __name__ == '__main__':
