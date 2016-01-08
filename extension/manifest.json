@@ -1,7 +1,7 @@
 {
   "manifest_version": 2,
 
-  "name": "Gnome-shell integration for Chrome",
+  "name": "Gnome-shell integration",
   "short_name": "GS Chrome",
   "description": "This extension provides integration with gnome-shell and the corresponding extensions repository, codenamed SweetTooth",
   "version": "1.1",
