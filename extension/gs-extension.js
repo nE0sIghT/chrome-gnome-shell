@@ -8,6 +8,18 @@
     (at your option) any later version.
  */
 
+chrome.runtime.onInstalled.addListener(function(details) {
+	var version = chrome.runtime.getManifest().version;
+
+	if(details.reason == chrome.runtime.OnInstalledReason.UPDATE && details.previousVersion != version)
+	{
+		chrome.tabs.create({
+			url: 'https://github.com/nE0sIghT/chrome-gnome-shell/releases/tag/v' + version,
+			active: true
+		});
+	}
+});
+
 (function() {
 	var nativeHost = 'io.github.ne0sight.gs_chrome_connector';
 
