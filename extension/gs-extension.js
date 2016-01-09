@@ -191,6 +191,31 @@ chrome.runtime.onInstalled.addListener(function(details) {
 					}
 				});
 			}
+
+			chrome.storage.onChanged.addListener(function(changes, areaName) {
+				if(changes.updateCheck)
+				{
+					if(!changes.updateCheck.newValue)
+					{
+						chrome.alarms.clear(ALARM_UPDATE_CHECK);
+					}
+					else
+					{
+						chrome.storage.sync.get(defaultOptions, function (options) {
+							schedule_update(options.updateCheckPeriod);
+						});
+					}
+				}
+				else if(changes.updateCheckPeriod)
+				{
+					chrome.storage.sync.get(defaultOptions, function (options) {
+						if(options.updateCheck)
+						{
+							schedule_update(options.updateCheckPeriod);
+						}
+					});
+				}
+			});
 		});
 	}
 
