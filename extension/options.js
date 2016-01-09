@@ -8,8 +8,8 @@
     (at your option) any later version.
  */
 
-// Saves options to chrome.storage.sync.
-function save_options() {
+function save_options()
+{
 	var updateCheck = $('#update_check_yes').prop('checked');
 	var updateCheckPeriod = $('#update_check_period').val();
 	updateCheckPeriod = Math.max(3, updateCheckPeriod);
@@ -28,9 +28,8 @@ function save_options() {
 	});
 }
 
-// Restores select box and checkbox state using the preferences
-// stored in chrome.storage.
-function restore_options() {
+function restore_options()
+{
 
 	chrome.storage.sync.get({
 		updateCheck:		true,
@@ -89,5 +88,4 @@ function checkUpdate(result)
 }
 
 document.addEventListener('DOMContentLoaded', restore_options);
-document.getElementById('save').addEventListener('click',
-	save_options);
+document.getElementById('save').addEventListener('click', save_options);
