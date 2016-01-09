@@ -124,7 +124,7 @@ def read_thread_func(proxy, mainLoop):
 			elif request['execute'] == 'listExtensions':
 				dbus_call_response("ListExtensions", None, "extensions")
 
-			elif request['execute'] == 'EnableExtension':
+			elif request['execute'] == 'EnableExtension' or request['execute'] == 'enableExtension':
 				uuid = request['uuid']
 				enable = request['enable']
 

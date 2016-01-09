@@ -44,7 +44,7 @@ define('gs-chrome', ['jquery'], function($) {
 			},
 
 			setExtensionEnabled:	function(uuid, enable) {
-				return sendResolveExtensionMessage("EnableExtension", "success", {uuid: uuid, enable: enable});
+				return sendResolveExtensionMessage("enableExtension", "success", {uuid: uuid, enable: enable});
 			},
 
 			uninstallExtension:	function(uuid) {

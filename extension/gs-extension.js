@@ -57,7 +57,7 @@
 							sendNativeRequest({ execute: request.execute, uuid: request.uuid }, sendResponse);
 							return true;
 
-						case 'EnableExtension':
+						case 'enableExtension':
 							sendNativeRequest(
 								{
 									execute:	request.execute,
