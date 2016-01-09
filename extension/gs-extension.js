@@ -130,68 +130,68 @@ chrome.runtime.onInstalled.addListener(function(details) {
 	var NOTIFICATION_UPDATE_CHECK_FAILED	= 'gs-chrome-update-fail';
 	var ALARM_UPDATE_CHECK			= 'gs-chrome-update-check';
 
+	var defaultOptions			= {
+		updateCheck:		true,
+		updateCheckPeriod:	6
+	};
+
 	function init() {
-		chrome.storage.sync.get({
-				updateCheck:		true,
-				updateCheckPeriod:	6
-			},
-			function (options) {
-				if (options.updateCheck)
-				{
-					chrome.alarms.onAlarm.addListener(function (alarm) {
-						if (alarm.name === ALARM_UPDATE_CHECK)
-						{
-							check_updates();
-						}
-					});
+		chrome.storage.sync.get(defaultOptions, function (options) {
+			if (options.updateCheck)
+			{
+				chrome.alarms.onAlarm.addListener(function (alarm) {
+					if (alarm.name === ALARM_UPDATE_CHECK)
+					{
+						check_updates();
+					}
+				});
 
-					chrome.notifications.onClosed.addListener(function (notificationId, byUser) {
-						if (!byUser)
-						{
-							updateNotification(notificationId);
-						}
-						else
-						{
-							removeNotification(notificationId);
-						}
-					});
-
-					chrome.notifications.onClicked.addListener(function (notificationId) {
-						if(notificationId === NOTIFICATION_UPDATE_AVAILABLE)
-						{
-							chrome.tabs.create({
-								url: 'https://extensions.gnome.org/local/',
-								active: true
-							});
-						}
-
+				chrome.notifications.onClosed.addListener(function (notificationId, byUser) {
+					if (!byUser)
+					{
+						updateNotification(notificationId);
+					}
+					else
+					{
 						removeNotification(notificationId);
-					});
+					}
+				});
 
-					chrome.notifications.onButtonClicked.addListener(function (notificationId, buttonIndex) {
-						removeNotification(notificationId);
-					});
+				chrome.notifications.onClicked.addListener(function (notificationId) {
+					if(notificationId === NOTIFICATION_UPDATE_AVAILABLE)
+					{
+						chrome.tabs.create({
+							url: 'https://extensions.gnome.org/local/',
+							active: true
+						});
+					}
 
-					chrome.alarms.get(ALARM_UPDATE_CHECK, function (alarm) {
-						if (!alarm || !alarm.periodInMinutes || alarm.periodInMinutes !== options.updateCheckPeriod * 60)
-						{
-							schedule_update(options.updateCheckPeriod);
-						}
-					});
+					removeNotification(notificationId);
+				});
 
-					chrome.storage.local.get({
-						notifications: {}
-					}, function (items) {
-						var notifications = items.notifications;
+				chrome.notifications.onButtonClicked.addListener(function (notificationId, buttonIndex) {
+					removeNotification(notificationId);
+				});
 
-						for (notificationId in notifications)
-						{
-							updateNotification(notificationId);
-						}
-					});
-				}
+				chrome.alarms.get(ALARM_UPDATE_CHECK, function (alarm) {
+					if (!alarm || !alarm.periodInMinutes || alarm.periodInMinutes !== options.updateCheckPeriod * 60)
+					{
+						schedule_update(options.updateCheckPeriod);
+					}
+				});
+
+				chrome.storage.local.get({
+					notifications: {}
+				}, function (items) {
+					var notifications = items.notifications;
+
+					for (notificationId in notifications)
+					{
+						updateNotification(notificationId);
+					}
+				});
 			}
-		);
+		});
 	}
 
 	function schedule_update(updateCheckPeriod) {
