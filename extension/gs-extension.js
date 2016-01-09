@@ -20,10 +20,18 @@ chrome.runtime.onInstalled.addListener(function(details) {
 	}
 });
 
-(function() {
-	var nativeHost = 'io.github.ne0sight.gs_chrome_connector';
+// Update check handler
+(function($) {
+	var NOTIFICATION_UPDATE_AVAILABLE	= 'gs-chrome-update';
+	var NOTIFICATION_UPDATE_CHECK_FAILED	= 'gs-chrome-update-fail';
+	var ALARM_UPDATE_CHECK			= 'gs-chrome-update-check';
 
-	function init()
+	var nativeHost = 'io.github.ne0sight.gs_chrome_connector';
+	var defaultOptions			= {
+		updateCheck:		true,
+		updateCheckPeriod:	6
+	};
+	function initExtension()
 	{
 		var port = chrome.runtime.connectNative(nativeHost);
 		port.onMessage.addListener(function(message) {
@@ -88,54 +96,7 @@ chrome.runtime.onInstalled.addListener(function(details) {
 		});
 	}
 
-	// https://wiki.gnome.org/Projects/GnomeShell/Extensions/UUIDGuidelines
-	function isUUID(uuid)
-	{
-		return uuid && uuid.match('^[-a-zA-Z0-9@._]+$');
-	}
-
-	function sendNativeRequest(request, sendResponse) {
-		if(sendResponse)
-		{
-			chrome.runtime.sendNativeMessage(
-				nativeHost,
-				request,
-				function (response) {
-					if (response)
-					{
-						sendResponse(response);
-					}
-					else
-					{
-						sendResponse({
-							success: false,
-							message: "No host response"
-						});
-					}
-				}
-			);
-		}
-		else
-		{
-			chrome.runtime.sendNativeMessage(nativeHost, request);
-		}
-	}	
-
-	init()
-})();
-
-// Update check handler
-(function($) {
-	var NOTIFICATION_UPDATE_AVAILABLE	= 'gs-chrome-update';
-	var NOTIFICATION_UPDATE_CHECK_FAILED	= 'gs-chrome-update-fail';
-	var ALARM_UPDATE_CHECK			= 'gs-chrome-update-check';
-
-	var defaultOptions			= {
-		updateCheck:		true,
-		updateCheckPeriod:	6
-	};
-
-	function init() {
+	function initUpdatesCheck() {
 		chrome.storage.sync.get(defaultOptions, function (options) {
 			if (options.updateCheck)
 			{
@@ -368,5 +329,39 @@ chrome.runtime.onInstalled.addListener(function(details) {
 		});
 	}
 
-	init();
+	// https://wiki.gnome.org/Projects/GnomeShell/Extensions/UUIDGuidelines
+	function isUUID(uuid)
+	{
+		return uuid && uuid.match('^[-a-zA-Z0-9@._]+$');
+	}
+
+	function sendNativeRequest(request, sendResponse) {
+		if(sendResponse)
+		{
+			chrome.runtime.sendNativeMessage(
+				nativeHost,
+				request,
+				function (response) {
+					if (response)
+					{
+						sendResponse(response);
+					}
+					else
+					{
+						sendResponse({
+							success: false,
+							message: "No host response"
+						});
+					}
+				}
+			);
+		}
+		else
+		{
+			chrome.runtime.sendNativeMessage(nativeHost, request);
+		}
+	}
+
+	initExtension();
+	initUpdatesCheck();
 })(jQuery);
