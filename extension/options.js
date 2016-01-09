@@ -34,6 +34,15 @@ function restore_options() {
 
 		$('#update_check_period').val(items.updateCheckPeriod);
 	});
+
+	chrome.storage.local.get({
+		lastUpdateCheck: null
+	}, function (items) {
+		if(items.lastUpdateCheck)
+		{
+			$('#last_update_check').text(items.lastUpdateCheck);
+		}
+	});
 }
 
 function checkUpdate(result)

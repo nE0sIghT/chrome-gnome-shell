@@ -245,6 +245,10 @@ chrome.runtime.onInstalled.addListener(function(details) {
 									items: toUpgrade
 								});
 							}
+
+							chrome.storage.local.set({
+								lastUpdateCheck: new Date().toLocaleString()
+							});
 						}).fail(function (jqXHR, textStatus, errorThrown) {
 							createNotification(NOTIFICATION_UPDATE_CHECK_FAILED, {
 								message: 'Failed to check extensions updates: ' + textStatus
