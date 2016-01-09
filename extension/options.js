@@ -13,12 +13,15 @@ function save_options() {
 			.show()
 			.delay(750)
 			.hide(250);
+
+		retrieveUpdateTimes();
 	});
 }
 
 // Restores select box and checkbox state using the preferences
 // stored in chrome.storage.
 function restore_options() {
+
 	chrome.storage.sync.get({
 		updateCheck:		true,
 		updateCheckPeriod:	6
@@ -33,7 +36,14 @@ function restore_options() {
 		}
 
 		$('#update_check_period').val(items.updateCheckPeriod);
+
+		retrieveUpdateTimes();
 	});
+}
+
+function retrieveUpdateTimes()
+{
+	var ALARM_UPDATE_CHECK			= 'gs-chrome-update-check';
 
 	chrome.storage.local.get({
 		lastUpdateCheck: null
@@ -41,6 +51,21 @@ function restore_options() {
 		if(items.lastUpdateCheck)
 		{
 			$('#last_update_check').text(items.lastUpdateCheck);
+		}
+		else
+		{
+			$('#last_update_check').text('never');
+		}
+	});
+
+	chrome.alarms.get(ALARM_UPDATE_CHECK, function (alarm) {
+		if (alarm)
+		{
+			$('#next_update_check').text(new Date(alarm.scheduledTime).toLocaleString());
+		}
+		else
+		{
+			$('#next_update_check').text('never');
 		}
 	});
 }
