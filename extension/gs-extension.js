@@ -39,6 +39,11 @@
 			{
 				if (request && request.execute)
 				{
+					if(request.uuid && !isUUID(request.uuid))
+					{
+						return;
+					}
+
 					switch(request.execute)
 					{
 						case 'initialize':
@@ -71,6 +76,12 @@
 				}
 			}
 		});
+	}
+
+	// https://wiki.gnome.org/Projects/GnomeShell/Extensions/UUIDGuidelines
+	function isUUID(uuid)
+	{
+		return uuid && uuid.match('^[-a-zA-Z0-9@._]+$');
 	}
 
 	function sendNativeRequest(request, sendResponse) {
