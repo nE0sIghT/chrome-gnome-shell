@@ -8,29 +8,97 @@
     (at your option) any later version.
  */
 
-var nativeHost = 'io.github.ne0sight.gs_chrome_connector';
+(function() {
+	var nativeHost = 'io.github.ne0sight.gs_chrome_connector';
 
-var port = chrome.runtime.connectNative(nativeHost);
-
-port.onMessage.addListener(function(message) {
-	if(message && message.signal && ["ExtensionStatusChanged", "org.gnome.Shell"].indexOf(message.signal) !== -1)
+	function init()
 	{
-		chrome.tabs.query(
+		var port = chrome.runtime.connectNative(nativeHost);
+		port.onMessage.addListener(function(message) {
+			if(message && message.signal && ["ExtensionStatusChanged", "org.gnome.Shell"].indexOf(message.signal) !== -1)
 			{
-				url:	'https://extensions.gnome.org/*'
-			},
-			function(tabs) {
-				for(k in tabs)
+				chrome.tabs.query(
+					{
+						url:	'https://extensions.gnome.org/*'
+					},
+					function(tabs) {
+						for(k in tabs)
+						{
+							chrome.tabs.sendMessage(
+								tabs[k].id,
+								message
+							);
+						}
+					}
+				);
+			}
+		});
+
+		chrome.runtime.onMessageExternal.addListener(function (request, sender, sendResponse) {
+			if (sender.url.startsWith('https://extensions.gnome.org/'))
+			{
+				if (request && request.execute)
 				{
-					chrome.tabs.sendMessage(
-						tabs[k].id,
-						message
-					);
+					if(["listExtensions", "initialize"].indexOf(request.execute) !== -1)
+					{
+						sendNativeRequest({ execute: request.execute }, sendResponse);
+						return true;
+					}
+					else if(["launchExtensionPrefs"].indexOf(request.execute) !== -1)
+					{
+						sendNativeRequest({ execute: request.execute, uuid: request.uuid });
+					}
+					else if(["getExtensionErrors", "getExtensionInfo", "installExtension", "uninstallExtension"].indexOf(request.execute) !== -1)
+					{
+						sendNativeRequest({ execute: request.execute, uuid: request.uuid }, sendResponse);
+						return true;
+					}
+					else if (request.execute === 'EnableExtension')
+					{
+						sendNativeRequest(
+							{
+								execute:	request.execute,
+								uuid:		request.uuid,
+								enable:		request.enable
+							},
+							sendResponse
+						);
+						return true;
+					}
 				}
 			}
-		);
+		});
 	}
-});
+
+	function sendNativeRequest(request, sendResponse) {
+		if(sendResponse)
+		{
+			chrome.runtime.sendNativeMessage(
+				nativeHost,
+				request,
+				function (response) {
+					if (response)
+					{
+						sendResponse(response);
+					}
+					else
+					{
+						sendResponse({
+							success: false,
+							message: "No host response"
+						});
+					}
+				}
+			);
+		}
+		else
+		{
+			chrome.runtime.sendNativeMessage(nativeHost, request);
+		}
+	}	
+
+	init()
+})();
 
 // Update check handler
 (function($) {
@@ -253,71 +321,3 @@ port.onMessage.addListener(function(message) {
 
 	init();
 })(jQuery);
-
-function sendNativeRequest(request, sendResponse) {
-	if(sendResponse)
-	{
-		chrome.runtime.sendNativeMessage(
-			nativeHost,
-			request,
-			function (response) {
-				if (response)
-				{
-					sendResponse(response);
-				}
-				else
-				{
-					sendResponse(
-						{
-							success: false,
-							message: "No host response"
-						}
-					);
-				}
-			}
-		);
-	}
-	else
-	{
-		chrome.runtime.sendNativeMessage(nativeHost, request);
-	}
-}
-
-chrome.runtime.onMessageExternal.addListener(
-	function (request, sender, sendResponse) {
-		if (sender.url.startsWith('https://extensions.gnome.org/'))
-		{
-			if (
-				request &&
-				request.execute
-			)
-			{
-				if(["listExtensions", "initialize"].indexOf(request.execute) !== -1)
-				{
-					sendNativeRequest({ execute: request.execute }, sendResponse);
-					return true;
-				}
-				else if(["launchExtensionPrefs"].indexOf(request.execute) !== -1)
-				{
-					sendNativeRequest({ execute: request.execute, uuid: request.uuid });
-				}
-				else if(["getExtensionErrors", "getExtensionInfo", "installExtension", "uninstallExtension"].indexOf(request.execute) !== -1)
-				{
-					sendNativeRequest({ execute: request.execute, uuid: request.uuid }, sendResponse);
-					return true;
-				}
-				else if (request.execute === 'EnableExtension')
-				{
-					sendNativeRequest(
-						{
-							execute:	request.execute,
-							uuid:		request.uuid,
-							enable:		request.enable
-						},
-						sendResponse
-					);
-					return true;
-				}
-			}
-		}
-	});
