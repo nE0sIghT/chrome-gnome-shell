@@ -16,7 +16,7 @@
   },
 
   "background": {
-    "scripts": ["jquery-2.1.4.min.js", "gs-extension.js"],
+    "scripts": ["jquery-2.1.4.min.js", "constants.js", "gs-extension.js"],
     "persistent": false
   },
 

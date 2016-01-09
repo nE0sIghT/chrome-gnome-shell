@@ -52,8 +52,6 @@ function restore_options()
 
 function retrieveUpdateTimes()
 {
-	var ALARM_UPDATE_CHECK			= 'gs-chrome-update-check';
-
 	chrome.storage.local.get({
 		lastUpdateCheck: null
 	}, function (items) {

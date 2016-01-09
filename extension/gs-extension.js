@@ -22,18 +22,13 @@ chrome.runtime.onInstalled.addListener(function(details) {
 
 // Update check handler
 (function($) {
-	var NOTIFICATION_UPDATE_AVAILABLE	= 'gs-chrome-update';
-	var NOTIFICATION_UPDATE_CHECK_FAILED	= 'gs-chrome-update-fail';
-	var ALARM_UPDATE_CHECK			= 'gs-chrome-update-check';
-
-	var nativeHost = 'io.github.ne0sight.gs_chrome_connector';
 	var defaultOptions			= {
 		updateCheck:		true,
 		updateCheckPeriod:	6
 	};
 	function initExtension()
 	{
-		var port = chrome.runtime.connectNative(nativeHost);
+		var port = chrome.runtime.connectNative(NATIVE_HOST);
 		port.onMessage.addListener(function(message) {
 			if(message && message.signal && ["ExtensionStatusChanged", "org.gnome.Shell"].indexOf(message.signal) !== -1)
 			{
@@ -343,7 +338,7 @@ chrome.runtime.onInstalled.addListener(function(details) {
 		if(sendResponse)
 		{
 			chrome.runtime.sendNativeMessage(
-				nativeHost,
+				NATIVE_HOST,
 				request,
 				function (response) {
 					if (response)
@@ -362,7 +357,7 @@ chrome.runtime.onInstalled.addListener(function(details) {
 		}
 		else
 		{
-			chrome.runtime.sendNativeMessage(nativeHost, request);
+			chrome.runtime.sendNativeMessage(NATIVE_HOST, request);
 		}
 	}
 
