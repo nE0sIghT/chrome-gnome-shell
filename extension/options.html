@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Gnome-shell integration options</title>
+		<style>
+			body { padding: 10px; }
+			.buttons { text-align: center; margin-top: 1em; }
+			#update_check_period { width: 6em; }
+		</style>
+	</head>
+
+	<body>
+		<div>
+			<strong>Check for extensions update</strong>:
+			<label for='update_check_yes'>Yes</label> <input type='radio' id='update_check_yes' name='update_check' />
+			<label for='update_check_no'>No</label> <input type='radio' id='update_check_no' name='update_check' />
+		</div>
+		<div>
+			<label for='update_check_period'><strong>Update check period</strong></label>: <input id='update_check_period' type='number' min="3"  /> hours
+		</div>
+
+		<div id="status"></div>
+		<div class='buttons'>
+			<button id="save">Save</button>
+		</div>
+
+		<script src="options.js"></script>
+	</body>
+</html>

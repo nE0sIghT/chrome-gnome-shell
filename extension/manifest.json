@@ -16,7 +16,7 @@
   },
 
   "background": {
-    "scripts": ["gs-extension.js"],
+    "scripts": ["jquery-2.1.4.min.js", "gs-extension.js"],
     "persistent": false
   },
 
@@ -35,8 +35,15 @@
   "externally_connectable": {
       "matches": ["https://extensions.gnome.org/*"]
   },
+  "options_ui": {
+    "page": "options.html",
+    "chrome_style": true
+  },
   "permissions": [
+    "alarms",
     "nativeMessaging",
+    "notifications",
+    "storage",
     "https://extensions.gnome.org/"
   ],
   "web_accessible_resources": ["gs-page-end.js"]

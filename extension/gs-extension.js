@@ -32,6 +32,228 @@ port.onMessage.addListener(function(message) {
 	}
 });
 
+// Update check handler
+(function($) {
+	var NOTIFICATION_UPDATE_AVAILABLE	= 'gs-chrome-update';
+	var NOTIFICATION_UPDATE_CHECK_FAILED	= 'gs-chrome-update-fail';
+	var ALARM_UPDATE_CHECK			= 'gs-chrome-update-check';
+
+	function init() {
+		chrome.storage.sync.get({
+				updateCheck:		true,
+				updateCheckPeriod:	6
+			},
+			function (options) {
+				if (options.updateCheck)
+				{
+					chrome.alarms.onAlarm.addListener(function (alarm) {
+						if (alarm.name === ALARM_UPDATE_CHECK)
+						{
+							check_updates();
+						}
+					});
+
+					chrome.notifications.onClosed.addListener(function (notificationId, byUser) {
+						if (!byUser)
+						{
+							updateNotification(notificationId);
+						}
+						else
+						{
+							removeNotification(notificationId);
+						}
+					});
+
+					chrome.notifications.onClicked.addListener(function (notificationId) {
+						if(notificationId === NOTIFICATION_UPDATE_AVAILABLE)
+						{
+							chrome.tabs.create({
+								url: 'https://extensions.gnome.org/local/',
+								active: true
+							});
+						}
+
+						removeNotification(notificationId);
+					});
+
+					chrome.notifications.onButtonClicked.addListener(function (notificationId, buttonIndex) {
+						removeNotification(notificationId);
+					});
+
+					chrome.alarms.get(ALARM_UPDATE_CHECK, function (alarm) {
+						if (!alarm || !alarm.periodInMinutes || alarm.periodInMinutes !== options.updateCheckPeriod * 60)
+						{
+							schedule_update(options.updateCheckPeriod);
+						}
+					});
+
+					chrome.storage.local.get({
+						notifications: {}
+					}, function (items) {
+						var notifications = items.notifications;
+
+						for (notificationId in notifications)
+						{
+							updateNotification(notificationId);
+						}
+					});
+				}
+			}
+		);
+	}
+
+	function schedule_update(updateCheckPeriod) {
+		check_updates();
+
+		chrome.alarms.create(
+			ALARM_UPDATE_CHECK,
+			{
+				delayInMinutes: updateCheckPeriod * 60,
+				periodInMinutes: updateCheckPeriod * 60
+			}
+		);
+	}
+
+	function check_updates() {
+		sendNativeRequest({execute: 'initialize'}, function (response) {
+			if (response.success)
+			{
+				var shellVersion = response.properties.shellVersion;
+
+				sendNativeRequest({execute: 'listExtensions'}, function (extensionsResponse) {
+					if (response.success)
+					{
+						var request = {
+							shell_version: shellVersion,
+							installed: {}
+						};
+
+						for (uuid in extensionsResponse.extensions)
+						{
+							request.installed[uuid] = {version: extensionsResponse.extensions[uuid].version};
+						}
+
+						request.installed = JSON.stringify(request.installed);
+
+						$.ajax({
+							url: 'https://extensions.gnome.org/update-info/',
+							data: request,
+							method: 'GET',
+							cache: false
+						}).done(function (data, textStatus, jqXHR) {
+							removeNotification(NOTIFICATION_UPDATE_CHECK_FAILED);
+
+							var toUpgrade = [];
+							for (uuid in data)
+							{
+								if (extensionsResponse.extensions[uuid] && $.inArray(data[uuid], ['upgrade', 'downgrade']) !== -1)
+								{
+									toUpgrade.push({
+										title: extensionsResponse.extensions[uuid].name,
+										message: {
+											upgrade: 'can be upgraded',
+											downgrade: 'must be downgraded'
+										}[data[uuid]]
+									});
+								}
+							}
+
+							if (toUpgrade.length > 0)
+							{
+								createNotification(NOTIFICATION_UPDATE_AVAILABLE, {
+									type: chrome.notifications.TemplateType.LIST,
+									title: 'An update for Gnome-shell extensions available',
+									message: '',
+									items: toUpgrade
+								});
+							}
+						}).fail(function (jqXHR, textStatus, errorThrown) {
+							createNotification(NOTIFICATION_UPDATE_CHECK_FAILED, {
+								message: 'Failed to check extensions updates: ' + textStatus
+							});
+						});
+					}
+				});
+			}
+		});
+	}
+
+	function createNotification(name, options)
+	{
+		chrome.storage.local.get({
+			notifications: {}
+		}, function (items) {
+			var notifications = items.notifications;
+
+			notifications[name] = $.extend({
+				type: chrome.notifications.TemplateType.BASIC,
+				iconUrl: 'icons/GnomeLogo-128.png',
+				title: 'Gnome-shell integration',
+				buttons: [
+					{title: 'Close'}
+				],
+				priority: 2,
+				isClickable: true
+			}, options);
+
+			_createNotification(name, notifications[name], function (notificationId) {
+				chrome.storage.local.set({
+					notifications: notifications
+				});
+
+				updateNotification(notificationId);
+			});
+		});
+	}
+
+	function _createNotification(name, options, callback)
+	{
+		if (callback)
+		{
+			chrome.notifications.create(name, options, callback);
+		}
+		else
+		{
+			chrome.notifications.create(name, options);
+		}
+	}
+
+	function updateNotification(notificationId)
+	{
+		chrome.storage.local.get({
+			notifications: {}
+		}, function (items) {
+			var notifications = items.notifications;
+
+			if (notifications[notificationId])
+			{
+				_createNotification(notificationId, notifications[notificationId]);
+			}
+		});
+	}
+
+	function removeNotification(notificationId)
+	{
+		chrome.storage.local.get({
+			notifications: {}
+		}, function (items) {
+			var notifications = items.notifications;
+
+			if (notifications[notificationId])
+			{
+				delete notifications[notificationId];
+				chrome.storage.local.set({
+					notifications: notifications
+				});
+			}
+
+			chrome.notifications.clear(notificationId);
+		});
+	}
+
+	init();
+})(jQuery);
+
 function sendNativeRequest(request, sendResponse) {
 	if(sendResponse)
 	{
