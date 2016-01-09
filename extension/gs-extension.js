@@ -29,8 +29,7 @@ chrome.runtime.onInstalled.addListener(function(details) {
 		port.onMessage.addListener(function(message) {
 			if(message && message.signal && ["ExtensionStatusChanged", "org.gnome.Shell"].indexOf(message.signal) !== -1)
 			{
-				chrome.tabs.query(
-					{
+				chrome.tabs.query({
 						url:	'https://extensions.gnome.org/*'
 					},
 					function(tabs) {
@@ -75,8 +74,7 @@ chrome.runtime.onInstalled.addListener(function(details) {
 							return true;
 
 						case 'enableExtension':
-							sendNativeRequest(
-								{
+							sendNativeRequest({
 									execute:	request.execute,
 									uuid:		request.uuid,
 									enable:		request.enable
