@@ -8,6 +8,8 @@
     (at your option) any later version.
  */
 
+GS_CHROME_ID				= "gphhapmejobijbbhgpjhcjognlahblep";
+
 NOTIFICATION_UPDATE_AVAILABLE		= 'gs-chrome-update';
 NOTIFICATION_UPDATE_CHECK_FAILED	= 'gs-chrome-update-fail';
 ALARM_UPDATE_CHECK			= 'gs-chrome-update-check';

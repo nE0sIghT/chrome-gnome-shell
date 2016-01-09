@@ -12,10 +12,9 @@
  * Hijack require property to disallow execution of main extensions.gnome.org
  * script until extension initializated.
  */
-var GS_CHROME_ID = "gphhapmejobijbbhgpjhcjognlahblep";
 
 var gs_require_inject = function () {
-	GS_CHROME_ID		= "gphhapmejobijbbhgpjhcjognlahblep";
+	GS_CHROME_ID		= "${GS_CHROME_ID}";
 	gs_chrome_initialized	= false;
 	var functionSet		= false;
 	var originalRequire	= null;
@@ -39,7 +38,7 @@ var gs_require_inject = function () {
 var s = document.createElement('script');
 
 s.type = "text/javascript";
-s.textContent = '(' + gs_require_inject + ')()';
+s.textContent = '(' + gs_require_inject.toString().replace("${GS_CHROME_ID}", GS_CHROME_ID) + ')()';
 (document.head||document.documentElement).appendChild(s);
 s.parentNode.removeChild(s);
 

@@ -24,7 +24,7 @@
     {
       "matches": ["https://extensions.gnome.org/*"],
       "run_at": "document_start",
-      "js": ["gs-content-script-start.js"]
+      "js": ["constants.js", "gs-content-script-start.js"]
     },
     {
       "matches": ["https://extensions.gnome.org/*"],
