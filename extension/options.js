@@ -1,3 +1,13 @@
+/*
+    Gnome-shell integration for Chrome
+    Copyright (C) 2016  Yuri Konotopov <ykonotopov@gmail.com>
+
+    This program is free software: you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+ */
+
 // Saves options to chrome.storage.sync.
 function save_options() {
 	var updateCheck = $('#update_check_yes').prop('checked');
