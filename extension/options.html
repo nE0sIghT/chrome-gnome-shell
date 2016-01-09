@@ -4,28 +4,69 @@
 		<title>Gnome-shell integration options</title>
 		<style>
 			body { padding: 10px; }
-			.buttons { text-align: center; margin-top: 1em; }
+
 			#update_check_period { width: 5em; }
-			#status { display: none; }
+			#status {
+				display: none;
+				color: green;
+				text-align: center;
+			}
+
+			.buttons { text-align: center; margin-top: 1em; }
+			.notice { font-size: 90%; margin-top: 0.5em; }
+
+			fieldset {
+				border: 0;
+				margin: 0;
+				padding: 0;
+				width: 100%;
+			}
+
+			dl {
+				padding: 0.2em 0;
+			}
+
+			dt {
+				display: block;
+				float: left;
+				width: 50%;
+				text-align: left;
+				font-weight: bold;
+			}
+
+			dd {
+				margin-left: 51%;
+				vertical-align: top;
+				margin-bottom: 3px;
+			}
 		</style>
 		<script type="text/javascript" src="jquery-2.1.4.min.js"></script>
 	</head>
-
 	<body>
-		<div>
-			<strong>Check for extensions update</strong>:
-			<label for='update_check_yes'>Yes</label> <input type='radio' id='update_check_yes' name='update_check' />
-			<label for='update_check_no'>No</label> <input type='radio' id='update_check_no' name='update_check' />
-		</div>
-		<div>
-			<label for='update_check_period'><strong>Update check period</strong></label>: <input id='update_check_period' type='number' min="3"  /> hours
-		</div>
-
 		<div id="status">Options saved.</div>
+
+		<fieldset>
+			<dl>
+				<dt>Check for extensions update:</dt>
+				<dd>
+					<label for='update_check_yes'>Yes</label> <input type='radio' id='update_check_yes' name='update_check' />
+					<label for='update_check_no'>No</label> <input type='radio' id='update_check_no' name='update_check' />
+				</dd>
+			</dl>
+			<dl>
+				<dt>
+					<label for='update_check_period'>Update check period</label>:
+				</dt>
+				<dd>
+					<input id='update_check_period' type='number' min="3"  /> hours
+				</dd>
+			</dl>
+		</fieldset>
+
 		<div class='buttons'>
 			<button id="save">Save</button>
 		</div>
 
-		<script src="options.js"></script>
+		<script type="text/javascript" src="options.js"></script>
 	</body>
 </html>
