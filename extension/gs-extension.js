@@ -39,31 +39,34 @@
 			{
 				if (request && request.execute)
 				{
-					if(["listExtensions", "initialize"].indexOf(request.execute) !== -1)
+					switch(request.execute)
 					{
-						sendNativeRequest({ execute: request.execute }, sendResponse);
-						return true;
-					}
-					else if(["launchExtensionPrefs"].indexOf(request.execute) !== -1)
-					{
-						sendNativeRequest({ execute: request.execute, uuid: request.uuid });
-					}
-					else if(["getExtensionErrors", "getExtensionInfo", "installExtension", "uninstallExtension"].indexOf(request.execute) !== -1)
-					{
-						sendNativeRequest({ execute: request.execute, uuid: request.uuid }, sendResponse);
-						return true;
-					}
-					else if (request.execute === 'EnableExtension')
-					{
-						sendNativeRequest(
-							{
-								execute:	request.execute,
-								uuid:		request.uuid,
-								enable:		request.enable
-							},
-							sendResponse
-						);
-						return true;
+						case 'initialize':
+						case 'listExtensions':
+							sendNativeRequest({ execute: request.execute }, sendResponse);
+							return true;
+
+						case 'launchExtensionPrefs':
+							sendNativeRequest({ execute: request.execute, uuid: request.uuid });
+							break;
+
+						case 'getExtensionErrors':
+						case 'getExtensionInfo':
+						case 'installExtension':
+						case 'uninstallExtension':
+							sendNativeRequest({ execute: request.execute, uuid: request.uuid }, sendResponse);
+							return true;
+
+						case 'EnableExtension':
+							sendNativeRequest(
+								{
+									execute:	request.execute,
+									uuid:		request.uuid,
+									enable:		request.enable
+								},
+								sendResponse
+							);
+							return true;
 					}
 				}
 			}
