@@ -5,8 +5,10 @@
 		<style>
 			body { padding: 10px; }
 			.buttons { text-align: center; margin-top: 1em; }
-			#update_check_period { width: 6em; }
+			#update_check_period { width: 5em; }
+			#status { display: none; }
 		</style>
+		<script type="text/javascript" src="jquery-2.1.4.min.js"></script>
 	</head>
 
 	<body>
@@ -19,7 +21,7 @@
 			<label for='update_check_period'><strong>Update check period</strong></label>: <input id='update_check_period' type='number' min="3"  /> hours
 		</div>
 
-		<div id="status"></div>
+		<div id="status">Options saved.</div>
 		<div class='buttons'>
 			<button id="save">Save</button>
 		</div>

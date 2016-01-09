@@ -1,7 +1,7 @@
 // Saves options to chrome.storage.sync.
 function save_options() {
-	var updateCheck = document.querySelector('#update_check_yes').checked;
-	var updateCheckPeriod = document.querySelector('#update_check_period').value;
+	var updateCheck = $('#update_check_yes').prop('checked');
+	var updateCheckPeriod = $('#update_check_period').val();
 	updateCheckPeriod = Math.max(3, updateCheckPeriod);
 
 	chrome.storage.sync.set({
@@ -9,12 +9,10 @@ function save_options() {
 		updateCheckPeriod:	updateCheckPeriod
 	}, function () {
 		// Update status to let user know options were saved.
-		var status = document.getElementById('status');
-
-		status.textContent = 'Options saved.';
-		setTimeout(function () {
-			status.textContent = '';
-		}, 750);
+		$('#status')
+			.show()
+			.delay(750)
+			.hide(250);
 	});
 }
 
@@ -34,16 +32,16 @@ function restore_options() {
 			checkUpdate(false);
 		}
 
-		document.querySelector('#update_check_period').value = items.updateCheckPeriod;
+		$('#update_check_period').val(items.updateCheckPeriod);
 	});
 }
 
 function checkUpdate(result)
 {
 	if(result)
-		document.querySelector('#update_check_yes').checked = true;
+		$('#update_check_yes').prop('checked', true);
 	else
-		document.querySelector('#update_check_no').checked = true;
+		$('#update_check_no').prop('checked', true);
 }
 
 document.addEventListener('DOMContentLoaded', restore_options);
