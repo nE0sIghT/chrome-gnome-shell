@@ -200,6 +200,9 @@ chrome.runtime.onInstalled.addListener(function(details) {
 				sendNativeRequest({execute: 'listExtensions'}, function (extensionsResponse) {
 					if (response.success)
 					{
+						if($.isEmptyObject(extensionsResponse.extensions))
+							return;
+
 						var request = {
 							shell_version: shellVersion,
 							installed: {}
