@@ -18,7 +18,7 @@ import sys
 import re
 from threading import Thread, Lock
 
-debugEnabled = False
+DEBUG_ENABLED		= False
 
 SHELL_SCHEMA		= "org.gnome.shell"
 ENABLED_EXTENSIONS_KEY	= "enabled-extensions"
@@ -63,9 +63,9 @@ def send_error(message):
 	send_message({'success': False, 'message': message})
 
 def debug(message):
-	global debugEnabled
+	global DEBUG_ENABLED
 
-	if debugEnabled:
+	if DEBUG_ENABLED:
 		logError(message)
 
 
