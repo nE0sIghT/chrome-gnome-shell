@@ -249,17 +249,30 @@ chrome.runtime.onInstalled.addListener(function(details) {
 								lastUpdateCheck: new Date().toLocaleString()
 							});
 						}).fail(function (jqXHR, textStatus, errorThrown) {
-							createNotification(NOTIFICATION_UPDATE_CHECK_FAILED, {
-								message: 'Failed to check extensions updates: ' + textStatus,
-								buttons: [
-									{title: 'Retry'},
-									{title: 'Close'}
-								],
-							});
+							createUpdateFailedNotification('Failed to check extensions updates: ' + textStatus);
 						});
+					}
+					else
+					{
+						createUpdateFailedNotification((response.message ? response.message : '"listExtensions" native request failed'));
 					}
 				});
 			}
+			else
+			{
+				createUpdateFailedNotification((response.message ? response.message : '"initialize" native request failed'));
+			}
+		});
+	}
+
+	function createUpdateFailedNotification(cause)
+	{
+		createNotification(NOTIFICATION_UPDATE_CHECK_FAILED, {
+			message: 'Failed to check extensions updates: ' + cause,
+			buttons: [
+				{title: 'Retry'},
+				{title: 'Close'}
+			],
 		});
 	}
 
