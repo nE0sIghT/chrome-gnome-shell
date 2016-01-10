@@ -18,6 +18,7 @@ import sys
 import re
 from threading import Thread, Lock
 
+CONNECTOR_VERSION	= 3
 DEBUG_ENABLED		= False
 
 SHELL_SCHEMA		= "org.gnome.shell"
@@ -121,6 +122,7 @@ def read_thread_func(proxy, mainLoop):
 					{
 						'success': True,
 						'properties': {
+							'connectorVersion': CONNECTOR_VERSION,
 							'shellVersion': shellVersion.unpack(),
 							'versionValidationEnabled': not disableVersionCheck
 						}

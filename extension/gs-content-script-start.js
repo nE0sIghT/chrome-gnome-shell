@@ -15,6 +15,8 @@
 
 var gs_require_inject = function () {
 	GS_CHROME_ID		= "${GS_CHROME_ID}";
+	GS_CHROME_VERSION	= "${GS_CHROME_VERSION}";
+
 	gs_chrome_initialized	= false;
 	var functionSet		= false;
 	var originalRequire	= null;
@@ -38,7 +40,11 @@ var gs_require_inject = function () {
 var s = document.createElement('script');
 
 s.type = "text/javascript";
-s.textContent = '(' + gs_require_inject.toString().replace("${GS_CHROME_ID}", GS_CHROME_ID) + ')()';
+s.textContent = '(' +
+	gs_require_inject.toString()
+		.replace("${GS_CHROME_ID}", GS_CHROME_ID)
+		.replace("${GS_CHROME_VERSION}", chrome.runtime.getManifest().version)
+	+ ')()';
 (document.head||document.documentElement).appendChild(s);
 s.parentNode.removeChild(s);
 
