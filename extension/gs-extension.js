@@ -22,10 +22,6 @@ chrome.runtime.onInstalled.addListener(function(details) {
 
 // Update check handler
 (function($) {
-	var defaultOptions			= {
-		updateCheck:		true,
-		updateCheckPeriod:	6
-	};
 	function initExtension()
 	{
 		var port = chrome.runtime.connectNative(NATIVE_HOST);
@@ -92,7 +88,7 @@ chrome.runtime.onInstalled.addListener(function(details) {
 	}
 
 	function initUpdatesCheck() {
-		chrome.storage.sync.get(defaultOptions, function (options) {
+		chrome.storage.sync.get(DEFAULT_OPTIONS, function (options) {
 			if (options.updateCheck)
 			{
 				chrome.alarms.onAlarm.addListener(function (alarm) {
@@ -157,14 +153,14 @@ chrome.runtime.onInstalled.addListener(function(details) {
 					}
 					else
 					{
-						chrome.storage.sync.get(defaultOptions, function (options) {
+						chrome.storage.sync.get(DEFAULT_OPTIONS, function (options) {
 							schedule_update(options.updateCheckPeriod);
 						});
 					}
 				}
 				else if(changes.updateCheckPeriod)
 				{
-					chrome.storage.sync.get(defaultOptions, function (options) {
+					chrome.storage.sync.get(DEFAULT_OPTIONS, function (options) {
 						if(options.updateCheck)
 						{
 							schedule_update(options.updateCheckPeriod);

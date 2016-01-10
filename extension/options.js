@@ -31,10 +31,7 @@ function save_options()
 function restore_options()
 {
 
-	chrome.storage.sync.get({
-		updateCheck:		true,
-		updateCheckPeriod:	6
-	}, function (items) {
+	chrome.storage.sync.get(DEFAULT_OPTIONS, function (items) {
 		if(items.updateCheck)
 		{
 			checkUpdate(true);

@@ -15,3 +15,8 @@ NOTIFICATION_UPDATE_CHECK_FAILED	= 'gs-chrome-update-fail';
 ALARM_UPDATE_CHECK			= 'gs-chrome-update-check';
 
 NATIVE_HOST				= 'io.github.ne0sight.gs_chrome_connector';
+
+DEFAULT_OPTIONS				= {
+	updateCheck:		true,
+	updateCheckPeriod:	6
+};
