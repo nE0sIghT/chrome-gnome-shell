@@ -122,6 +122,14 @@ chrome.runtime.onInstalled.addListener(function(details) {
 				});
 
 				chrome.notifications.onButtonClicked.addListener(function (notificationId, buttonIndex) {
+					if($.inArray(notificationId, [NOTIFICATION_UPDATE_AVAILABLE, NOTIFICATION_UPDATE_CHECK_FAILED]) === -1)
+						return;
+
+					if(notificationId === NOTIFICATION_UPDATE_CHECK_FAILED && buttonIndex === 0)
+					{
+						check_updates();
+					}
+
 					removeNotification(notificationId);
 				});
 
@@ -242,7 +250,11 @@ chrome.runtime.onInstalled.addListener(function(details) {
 							});
 						}).fail(function (jqXHR, textStatus, errorThrown) {
 							createNotification(NOTIFICATION_UPDATE_CHECK_FAILED, {
-								message: 'Failed to check extensions updates: ' + textStatus
+								message: 'Failed to check extensions updates: ' + textStatus,
+								buttons: [
+									{title: 'Retry'},
+									{title: 'Close'}
+								],
 							});
 						});
 					}
