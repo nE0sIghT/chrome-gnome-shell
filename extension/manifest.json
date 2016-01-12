@@ -16,7 +16,14 @@
   },
 
   "background": {
-    "scripts": ["jquery-2.1.4.min.js", "constants.js", "gs-extension.js"],
+    "scripts": [
+	    "include/jquery-2.1.4.min.js",
+	    "include/constants.js",
+	    "include/gsc.js",
+	    "include/notifications.js",
+	    "include/update.js",
+	    "gs-extension.js"
+    ],
     "persistent": false
   },
 
@@ -24,7 +31,7 @@
     {
       "matches": ["https://extensions.gnome.org/*"],
       "run_at": "document_start",
-      "js": ["constants.js", "gs-content-script-start.js"]
+      "js": ["include/constants.js", "gs-content-script-start.js"]
     },
     {
       "matches": ["https://extensions.gnome.org/*"],
