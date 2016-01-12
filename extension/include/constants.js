@@ -19,6 +19,7 @@ MESSAGE_NEXT_UPDATE_CHANGED		= 'gs-next-update-changed';
 NATIVE_HOST				= 'io.github.ne0sight.gs_chrome_connector';
 
 DEFAULT_OPTIONS				= {
+	showReleaseNotes:	true,
 	updateCheck:		true,
 	updateCheckPeriod:	6
 };

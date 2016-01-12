@@ -10,11 +10,13 @@
 
 function save_options()
 {
+	var showReleaseNotes = $('#show_release_notes_yes').prop('checked');
 	var updateCheck = $('#update_check_yes').prop('checked');
 	var updateCheckPeriod = $('#update_check_period').val();
 	updateCheckPeriod = Math.max(3, updateCheckPeriod);
 
 	chrome.storage.sync.set({
+		showReleaseNotes:	showReleaseNotes,
 		updateCheck:		updateCheck,
 		updateCheckPeriod:	updateCheckPeriod
 	}, function () {
@@ -31,6 +33,7 @@ function restore_options()
 	chrome.storage.sync.get(DEFAULT_OPTIONS, function (items) {
 		setCheckUpdate(items.updateCheck);
 		$('#update_check_period').val(items.updateCheckPeriod);
+		setReleaseNotes(items.showReleaseNotes);
 
 		retrieveUpdateTimes();
 	});
@@ -74,6 +77,14 @@ function setCheckUpdate(result)
 		$('#update_check_yes').prop('checked', true);
 	else
 		$('#update_check_no').prop('checked', true);
+}
+
+function setReleaseNotes(result)
+{
+	if(result)
+		$('#show_release_notes_yes').prop('checked', true);
+	else
+		$('#show_release_notes_no').prop('checked', true);
 }
 
 document.addEventListener('DOMContentLoaded', restore_options);

@@ -13,9 +13,14 @@ chrome.runtime.onInstalled.addListener(function(details) {
 
 	if(details.reason == chrome.runtime.OnInstalledReason.UPDATE && details.previousVersion != version)
 	{
-		chrome.tabs.create({
-			url: 'https://github.com/nE0sIghT/chrome-gnome-shell/releases/tag/v' + version,
-			active: true
+		chrome.storage.sync.get(DEFAULT_OPTIONS, function (options) {
+			if(options.showReleaseNotes)
+			{
+				chrome.tabs.create({
+					url: 'https://github.com/nE0sIghT/chrome-gnome-shell/releases/tag/v' + version,
+					active: true
+				});
+			}
 		});
 	}
 });
