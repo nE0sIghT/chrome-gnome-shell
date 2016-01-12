@@ -23,14 +23,11 @@ function save_options()
 			.show()
 			.delay(750)
 			.hide(250);
-
-		retrieveUpdateTimes();
 	});
 }
 
 function restore_options()
 {
-
 	chrome.storage.sync.get(DEFAULT_OPTIONS, function (items) {
 		if(items.updateCheck)
 		{
@@ -84,3 +81,13 @@ function checkUpdate(result)
 
 document.addEventListener('DOMContentLoaded', restore_options);
 document.getElementById('save').addEventListener('click', save_options);
+
+chrome.storage.onChanged.addListener(function (changes, areaName) {
+	if (areaName === 'local' && changes.lastUpdateCheck)
+	{
+		if (changes.lastUpdateCheck.newValue)
+		{
+			$('#last_update_check').text(changes.lastUpdateCheck.newValue);
+		}
+	}
+});
