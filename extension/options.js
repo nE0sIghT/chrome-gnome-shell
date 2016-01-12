@@ -59,6 +59,11 @@ function retrieveUpdateTimes()
 		}
 	});
 
+	retrieveNextUpdateTime();
+}
+
+function retrieveNextUpdateTime()
+{
 	chrome.alarms.get(ALARM_UPDATE_CHECK, function (alarm) {
 		if (alarm)
 		{
@@ -91,3 +96,15 @@ chrome.storage.onChanged.addListener(function (changes, areaName) {
 		}
 	}
 });
+
+chrome.runtime.onMessage.addListener(
+	function (request, sender, sendResponse) {
+		if(
+			sender.id && sender.id === GS_CHROME_ID &&
+			request && request === MESSAGE_NEXT_UPDATE_CHANGED
+		)
+		{
+			retrieveNextUpdateTime();
+		}
+	}
+);

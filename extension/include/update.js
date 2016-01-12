@@ -19,6 +19,8 @@ GSC.update = (function($) {
 				periodInMinutes: updateCheckPeriod * 60
 			}
 		);
+
+		chrome.runtime.sendMessage(GS_CHROME_ID, MESSAGE_NEXT_UPDATE_CHANGED);
 	}
 
 	function check() {
@@ -113,6 +115,7 @@ GSC.update = (function($) {
 			if (alarm.name === ALARM_UPDATE_CHECK)
 			{
 				check();
+				chrome.runtime.sendMessage(GS_CHROME_ID, MESSAGE_NEXT_UPDATE_CHANGED);
 			}
 		});
 

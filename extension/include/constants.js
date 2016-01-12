@@ -14,6 +14,8 @@ NOTIFICATION_UPDATE_AVAILABLE		= 'gs-chrome-update';
 NOTIFICATION_UPDATE_CHECK_FAILED	= 'gs-chrome-update-fail';
 ALARM_UPDATE_CHECK			= 'gs-chrome-update-check';
 
+MESSAGE_NEXT_UPDATE_CHANGED		= 'gs-next-update-changed';
+
 NATIVE_HOST				= 'io.github.ne0sight.gs_chrome_connector';
 
 DEFAULT_OPTIONS				= {
