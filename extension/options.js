@@ -29,15 +29,7 @@ function save_options()
 function restore_options()
 {
 	chrome.storage.sync.get(DEFAULT_OPTIONS, function (items) {
-		if(items.updateCheck)
-		{
-			checkUpdate(true);
-		}
-		else
-		{
-			checkUpdate(false);
-		}
-
+		setCheckUpdate(items.updateCheck);
 		$('#update_check_period').val(items.updateCheckPeriod);
 
 		retrieveUpdateTimes();
@@ -76,7 +68,7 @@ function retrieveNextUpdateTime()
 	});
 }
 
-function checkUpdate(result)
+function setCheckUpdate(result)
 {
 	if(result)
 		$('#update_check_yes').prop('checked', true);
