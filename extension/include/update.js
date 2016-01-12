@@ -104,7 +104,7 @@ GSC.update = (function($) {
 			buttons: [
 				{title: 'Retry'},
 				{title: 'Close'}
-			],
+			]
 		});
 	}
 

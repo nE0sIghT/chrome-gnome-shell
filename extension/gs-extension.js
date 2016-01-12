@@ -76,13 +76,9 @@ port.onMessage.addListener(function (message) {
 		function (tabs) {
 			for (k in tabs)
 			{
-				chrome.tabs.sendMessage(
-					tabs[k].id,
-					message
-					);
+				chrome.tabs.sendMessage(tabs[k].id, message);
 			}
-		}
-		);
+		});
 	}
 });
 
