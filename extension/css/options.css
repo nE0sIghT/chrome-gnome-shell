@@ -1,0 +1,36 @@
+body { padding: 10px; }
+
+#update_check_period { width: 5em; }
+#status {
+	display: none;
+	color: green;
+	text-align: center;
+}
+
+.buttons { text-align: center; margin-top: 1em; }
+.notice { font-size: 90%; margin-top: 0.5em; white-space: nowrap; }
+
+fieldset {
+	border: 0;
+	margin: 0;
+	padding: 0;
+	width: 100%;
+}
+
+dl {
+	padding: 0.2em 0;
+}
+
+dt {
+	display: block;
+	float: left;
+	width: 50%;
+	text-align: left;
+	font-weight: bold;
+}
+
+dd {
+	margin-left: 51%;
+	vertical-align: top;
+	margin-bottom: 3px;
+}
