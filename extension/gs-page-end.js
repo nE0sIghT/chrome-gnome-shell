@@ -234,9 +234,11 @@ require(['messages', 'gs-chrome'], function(messages){
 		if(!response.connectorVersion || response.connectorVersion != GS_CHROME_VERSION)
 		{
 			if(!response.connectorVersion)
-				response.connectorVersion = "older than 4";
+				response.connectorVersion = "older than v4";
+			else
+				response.connectorVersion = "v" + response.connectorVersion;
 
-			messages.addWarning('You are using different versions of gnome-shell integration extension (v' + GS_CHROME_VERSION + ") and native connector (v" + response.connectorVersion + "). Some features may not work or work wrong.");
+			messages.addWarning('You are using different versions of gnome-shell integration extension (v' + GS_CHROME_VERSION + ") and native connector (" + response.connectorVersion + "). Some features may not work or work wrong.");
 		}
 	}).fail(function() {
 		messages.addWarning('Although Gnome-shell extension for Chrome is running, we cannot detect a native Gnome-shell integration connector. Please refer <a href="https://github.com/nE0sIghT/chrome-gnome-shell#installation">documentation</a> for instructions about installing native connector.');
