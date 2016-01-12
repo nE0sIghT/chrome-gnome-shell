@@ -79,9 +79,23 @@ GSC.notifications = (function($) {
 		});
 	}
 
+	function restore() {
+		chrome.storage.local.get({
+			notifications: {}
+		}, function (items) {
+			var notifications = items.notifications;
+
+			for (notificationId in notifications)
+			{
+				update(notificationId);
+			}
+		});
+	}
+
 	return {
 		create: create,
 		update: update,
-		remove: remove
+		remove: remove,
+		restore: restore
 	};
 })(jQuery);

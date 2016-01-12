@@ -151,17 +151,6 @@ GSC.update = (function($) {
 			GSC.notifications.remove(notificationId);
 		});
 
-		chrome.storage.local.get({
-			notifications: {}
-		}, function (items) {
-			var notifications = items.notifications;
-
-			for (notificationId in notifications)
-			{
-				GSC.notifications.update(notificationId);
-			}
-		});
-
 		chrome.storage.onChanged.addListener(function (changes, areaName) {
 			if (changes.updateCheck)
 			{
