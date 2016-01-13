@@ -50,7 +50,7 @@ function retrieveUpdateTimes()
 		}
 		else
 		{
-			$('#last_update_check').text('never');
+			$('#last_update_check').text(m('never'));
 		}
 	});
 
@@ -66,7 +66,7 @@ function retrieveNextUpdateTime()
 		}
 		else
 		{
-			$('#next_update_check').text('never');
+			$('#next_update_check').text(m('never'));
 		}
 	});
 }
@@ -86,6 +86,8 @@ function setReleaseNotes(result)
 	else
 		$('#show_release_notes_no').prop('checked', true);
 }
+
+i18n();
 
 document.addEventListener('DOMContentLoaded', restore_options);
 document.getElementById('save').addEventListener('click', save_options);

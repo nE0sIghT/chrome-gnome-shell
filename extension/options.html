@@ -1,45 +1,44 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>Gnome-shell integration options</title>
+		<title data-i18n="options_title, __MSG_gs_chrome__"></title>
 		<link href="css/options.css" rel="stylesheet" type="text/css" />
 		<script type="text/javascript" src="include/jquery-2.1.4.min.js"></script>
+		<script type="text/javascript" src="include/i18n.js"></script>
 		<script type="text/javascript" src="include/constants.js"></script>
 	</head>
 	<body>
-		<div id="status">Options saved.</div>
+		<div id="status" data-i18n="options_saved"></div>
 
 		<fieldset>
 			<dl>
-				<dt>Check for extensions update:</dt>
+				<dt><span data-i18n="options_update_check"></span>:</dt>
 				<dd>
-					<label for='update_check_yes'>Yes</label> <input type='radio' id='update_check_yes' name='update_check' />
-					<label for='update_check_no'>No</label> <input type='radio' id='update_check_no' name='update_check' />
+					<label for='update_check_yes' data-i18n="yes"></label> <input type='radio' id='update_check_yes' name='update_check' />
+					<label for='update_check_no' data-i18n="no"></label> <input type='radio' id='update_check_no' name='update_check' />
 
-					<div class='notice'>Last check: <span id="last_update_check">never</span></div>
+					<div class='notice'><span data-i18n="options_last_check"></span>: <span id="last_update_check" data-i18n="never"></span></div>
 				</dd>
 			</dl>
 			<dl>
-				<dt>
-					<label for='update_check_period'>Update check period</label>:
-				</dt>
+				<dt><label for='update_check_period' data-i18n="options_check_period"></label>:</dt>
 				<dd>
-					<input id='update_check_period' type='number' min="3"  /> hours
+					<input id='update_check_period' type='number' min="3"  /> <span data-i18n="hours"></span>
 
-					<div class='notice'>Next check: <span id="next_update_check">never</span></div>
+					<div class='notice'><span data-i18n="options_next_check"></span>: <span id="next_update_check" data-i18n="never"></span></div>
 				</dd>
 			</dl>
 			<dl>
-				<dt>Show release notes when extension updated:</dt>
+				<dt><span data-i18n="options_show_release_notes"></span>:</dt>
 				<dd>
-					<label for='show_release_notes_yes'>Yes</label> <input type='radio' id='show_release_notes_yes' name='show_release_notes' />
-					<label for='show_release_notes_no'>No</label> <input type='radio' id='show_release_notes_no' name='show_release_notes' />
+					<label for='show_release_notes_yes' data-i18n="yes"></label> <input type='radio' id='show_release_notes_yes' name='show_release_notes' />
+					<label for='show_release_notes_no' data-i18n="no"></label> <input type='radio' id='show_release_notes_no' name='show_release_notes' />
 				</dd>
 			</dl>
 		</fieldset>
 
 		<div class='buttons'>
-			<button id="save">Save</button>
+			<button id="save" data-i18n="save"></button>
 		</div>
 
 		<script type="text/javascript" src="options.js"></script>

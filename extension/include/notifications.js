@@ -20,7 +20,7 @@ GSC.notifications = (function($) {
 				iconUrl: 'icons/GnomeLogo-128.png',
 				title: 'Gnome-shell integration',
 				buttons: [
-					{title: 'Close'}
+					{title: m('close')}
 				],
 				priority: 2,
 				isClickable: true

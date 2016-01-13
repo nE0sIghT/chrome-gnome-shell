@@ -30,7 +30,7 @@ GSC = (function() {
 						{
 							sendResponse({
 								success: false,
-								message: "No host response"
+								message: m('no_host_response')
 							});
 						}
 					}

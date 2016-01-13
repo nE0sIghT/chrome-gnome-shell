@@ -1,0 +1,87 @@
+{
+	"gs_chrome": {
+		"message": "GNOME Shell integration"
+	},
+
+	"manifest_description": {
+		"message": "This extension provides integration with gnome-shell and the corresponding extensions repository https://extensions.gnome.org"
+	},
+
+	"extension_status_upgrade" : {
+		"message": "can be upgraded"
+	},
+	"extension_status_downgrade" : {
+		"message": "must be downgraded"
+	},
+	"native_request_failed" : {
+		"message": "«$REQUEST» native request failed",
+		"placeholders": {
+			"request": {
+				"content": "$1"
+			}
+		}
+	},
+	"no_host_response" : {
+		"message": "No host response"
+	},
+	"update_check_failed" : {
+		"message": "Failed to check extensions updates: $CAUSE$",
+		"placeholders": {
+			"cause": {
+				"content": "$1"
+			}
+		}
+	},
+	"update_available" : {
+		"message": "An update for GNOME Shell extensions available"
+	},
+
+	"options_title": {
+		"message": "$GS_CHROME$ options",
+		"placeholders": {
+			"gs_chrome": {
+				"content": "$1"
+			}
+		}
+	},
+	"options_saved": {
+		"message": "Options saved."
+	},
+	"options_update_check": {
+		"message": "Check for extensions update"
+	},
+	"options_check_period": {
+		"message": "Update check period"
+	},
+	"options_show_release_notes": {
+		"message": "Show release notes when extension updated"
+	},
+	"options_last_check": {
+		"message": "Last check"
+	},
+	"options_next_check": {
+		"message": "Next check"
+	},
+
+	"hours": {
+		"message": "hours"
+	},
+	"yes": {
+		"message": "Yes"
+	},
+	"no": {
+		"message": "No"
+	},
+	"never": {
+		"message": "never"
+	},
+	"retry": {
+		"message": "Retry"
+	},
+	"close": {
+		"message": "Close"
+	},
+	"save": {
+		"message": "Save"
+	}
+}

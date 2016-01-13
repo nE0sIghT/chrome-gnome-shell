@@ -8,7 +8,7 @@
     (at your option) any later version.
  */
 
-GS_CHROME_ID				= "gphhapmejobijbbhgpjhcjognlahblep";
+GS_CHROME_ID				= chrome.i18n.getMessage('@@extension_id');
 
 NOTIFICATION_UPDATE_AVAILABLE		= 'gs-chrome-update';
 NOTIFICATION_UPDATE_CHECK_FAILED	= 'gs-chrome-update-fail';

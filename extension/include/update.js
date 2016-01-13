@@ -62,10 +62,7 @@ GSC.update = (function($) {
 								{
 									toUpgrade.push({
 										title: extensionsResponse.extensions[uuid].name,
-										message: {
-											upgrade: 'can be upgraded',
-											downgrade: 'must be downgraded'
-										}[data[uuid]]
+										message: m('extension_status_' + data[uuid])
 									});
 								}
 							}
@@ -74,7 +71,7 @@ GSC.update = (function($) {
 							{
 								GSC.notifications.create(NOTIFICATION_UPDATE_AVAILABLE, {
 									type: chrome.notifications.TemplateType.LIST,
-									title: 'An update for Gnome-shell extensions available',
+									title: m('update_available'),
 									message: '',
 									items: toUpgrade
 								});
@@ -89,23 +86,23 @@ GSC.update = (function($) {
 					}
 					else
 					{
-						createUpdateFailedNotification((response.message ? response.message : '"listExtensions" native request failed'));
+						createUpdateFailedNotification(response.message ? response.message : m('native_request_failed', 'listExtensions'));
 					}
 				});
 			}
 			else
 			{
-				createUpdateFailedNotification((response.message ? response.message : '"initialize" native request failed'));
+				createUpdateFailedNotification(response.message ? response.message : m('native_request_failed', 'initialize'));
 			}
 		});
 	}
 
 	function createUpdateFailedNotification(cause) {
 		GSC.notifications.create(NOTIFICATION_UPDATE_CHECK_FAILED, {
-			message: 'Failed to check extensions updates: ' + cause,
+			message: m('update_check_failed', cause),
 			buttons: [
-				{title: 'Retry'},
-				{title: 'Close'}
+				{title: m('retry')},
+				{title: m('close')}
 			]
 		});
 	}
