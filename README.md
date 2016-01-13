@@ -1,17 +1,17 @@
-Gnome-shell integration for Chrome
+GNOME Shell integration for Chrome
 ============================================
 
 Introduction
 ------------
 
 This repository contains extension for Google Chrome browser and native
-connector that provides integration with gnome-shell and the corresponding
+connector that provides integration with GNOME Shell and the corresponding
 extensions repository https://extensions.gnome.org/, codenamed SweetTooth.
 
 Installation
 ------------
 
-In order to work with [Gnome-shell extensions repository](https://extensions.gnome.org/) in Google Chrome browser you must install [Gnome-shell integration extension](https://chrome.google.com/webstore/detail/gnome-shell-integration-f/gphhapmejobijbbhgpjhcjognlahblep) and native connector.
+In order to work with [GNOME Shell extensions repository](https://extensions.gnome.org/) in Google Chrome browser you must install [GNOME Shell integration extension](https://chrome.google.com/webstore/detail/gnome-shell-integration-f/gphhapmejobijbbhgpjhcjognlahblep) and native connector.
 
 The easiest way to install extension is use [Chrome web store](https://chrome.google.com/webstore/detail/gnome-shell-integration-f/gphhapmejobijbbhgpjhcjognlahblep).
 
@@ -33,7 +33,7 @@ Web extension sources located in "extension" folder. Refer [Google Chrome docume
 Before installing native connector make sure following packages installed in your system:
 * Cmake 3.2+
 * Python 2.7
-* Gnome-shell
+* GNOME Shell
 
 **To install native connector with cmake** follow this steps:
 
@@ -52,3 +52,8 @@ Before installing native connector make sure following packages installed in you
   * for Google Chromium to `/etc/chromium/native-messaging-hosts/`.
 3. Edit copied `io.github.ne0sight.gs_chrome_connector.json` file and replace `${CMAKE_INSTALL_FULL_BINDIR}/gs-chrome-connector` with full path to copied `gs-chrome-connector.py`.
 
+Legal notice
+------------
+
+GNOME Shell integration for Chrome is NOT an official GNOME Foundation project.
+The GNOME logo and GNOME name are registered trademarks or trademarks of GNOME Foundation in the United States or other countries.
