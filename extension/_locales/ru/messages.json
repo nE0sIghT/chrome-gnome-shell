@@ -1,0 +1,83 @@
+{
+	"manifest_description": {
+		"message": "Данное расширение добавляет интеграцию с GNOME Shell и репозиторием расширений https://extensions.gnome.org"
+	},
+
+	"extension_status_upgrade" : {
+		"message": "может быть обновлено"
+	},
+	"extension_status_downgrade" : {
+		"message": "должно быть понижено в версии"
+	},
+	"native_request_failed" : {
+		"message": "сбой нативного запроса «$REQUEST»",
+		"placeholders": {
+			"request": {
+				"content": "$1"
+			}
+		}
+	},
+	"no_host_response" : {
+		"message": "Нет ответа от хост-коннектора"
+	},
+	"update_check_failed" : {
+		"message": "Ошибка проверки обновлений расширений: $CAUSE$",
+		"placeholders": {
+			"cause": {
+				"content": "$1"
+			}
+		}
+	},
+	"update_available" : {
+		"message": "Доступно обновление расширений GNOME Shell"
+	},
+
+	"options_title": {
+		"message": "Настройки расширения $GS_CHROME$",
+		"placeholders": {
+			"gs_chrome": {
+				"content": "$1"
+			}
+		}
+	},
+	"options_saved": {
+		"message": "Настройки сохранены."
+	},
+	"options_update_check": {
+		"message": "Проверять обновления дополнений"
+	},
+	"options_check_period": {
+		"message": "Период проверки обновлений"
+	},
+	"options_show_release_notes": {
+		"message": "Показывать примечания к выпуску при обновлении дополнения"
+	},
+	"options_last_check": {
+		"message": "Последняя проверка"
+	},
+	"options_next_check": {
+		"message": "Следующая проверка"
+	},
+
+	"hours": {
+		"message": "часов"
+	},
+	"yes": {
+		"message": "Да"
+	},
+	"no": {
+		"message": "Нет"
+	},
+	"never": {
+		"message": "никогда"
+	},
+	"retry": {
+		"message": "Повторить"
+	},
+	"close": {
+		"message": "Закрыть"
+	},
+	"save": {
+		"message": "Сохранить"
+	}
+}
