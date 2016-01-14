@@ -9,8 +9,11 @@
  */
 
 GSC.update = (function($) {
-	function schedule(updateCheckPeriod) {
-		check();
+	function schedule(updateCheckPeriod, skipCheck) {
+		if(!skipCheck)
+		{
+			check();
+		}
 
 		chrome.alarms.create(
 			ALARM_UPDATE_CHECK,
@@ -112,7 +115,17 @@ GSC.update = (function($) {
 			if (alarm.name === ALARM_UPDATE_CHECK)
 			{
 				check();
-				chrome.runtime.sendMessage(GS_CHROME_ID, MESSAGE_NEXT_UPDATE_CHANGED);
+
+				chrome.alarms.get(ALARM_UPDATE_CHECK, function (alarm) {
+					if (alarm && alarm.periodInMinutes && ((alarm.scheduledTime - Date.now()) / 1000 / 60 < alarm.periodInMinutes * 0.9))
+					{
+						schedule(alarm.periodInMinutes / 60, true);
+					}
+					else
+					{
+						chrome.runtime.sendMessage(GS_CHROME_ID, MESSAGE_NEXT_UPDATE_CHANGED);
+					}
+				});
 			}
 		});
 
