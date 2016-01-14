@@ -11,9 +11,9 @@ extensions repository https://extensions.gnome.org/, codenamed SweetTooth.
 Installation
 ------------
 
-In order to work with [GNOME Shell extensions repository](https://extensions.gnome.org/) in Google Chrome browser you must install [GNOME Shell integration extension](https://chrome.google.com/webstore/detail/gnome-shell-integration-f/gphhapmejobijbbhgpjhcjognlahblep) and native connector.
+In order to work with [GNOME Shell extensions repository](https://extensions.gnome.org/) in Google Chrome browser you must install [GNOME Shell integration extension](https://chrome.google.com/webstore/detail/gnome-shell-integration/gphhapmejobijbbhgpjhcjognlahblep) and native connector.
 
-The easiest way to install extension is use [Chrome web store](https://chrome.google.com/webstore/detail/gnome-shell-integration-f/gphhapmejobijbbhgpjhcjognlahblep).
+The easiest way to install extension is use [Chrome web store](https://chrome.google.com/webstore/detail/gnome-shell-integration/gphhapmejobijbbhgpjhcjognlahblep).
 
 As for native connector the preferred way is use your distro's favorite package manager.
 For Gentoo Linux ebuild is available in vortex overlay. If you use Layman just type:
