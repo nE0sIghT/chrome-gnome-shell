@@ -79,5 +79,21 @@
 	},
 	"save": {
 		"message": "Сохранить"
+	},
+
+	"error_extension_response": {
+		"message": "Получено неверное сообщение расширения"
+	},
+	"no_host_connector": {
+		"message": "Хотя расширение GNOME Shell integration работает, нативный хост-коннектор не обнаружен. Обратитесь к <a href='https://github.com/nE0sIghT/chrome-gnome-shell#installation'>документации</a> за инструкциями по установке коннектора."
+	},
+	"older_connector": {
+		"message": "старше версии 4"
+	},
+	"version": {
+		"message": "версия $$1"
+	},
+	"warning_versions_mismatch": {
+		"message": "Вы используете разные версии расширения GNOME Shell integration ($$1) и нативного хост-коннектора ($$2). Некоторые возможности могут работать неправильно или не работать полностью."
 	}
 }

@@ -83,5 +83,21 @@
 	},
 	"save": {
 		"message": "Save"
+	},
+
+	"error_extension_response": {
+		"message": "Wrong extension response received"
+	},
+	"no_host_connector": {
+		"message": "Although GNOME Shell integration extension is running, native host connector is not detected. Refer <a href='https://github.com/nE0sIghT/chrome-gnome-shell#installation'>documentation</a> for instructions about installing connector."
+	},
+	"older_connector": {
+		"message": "older than version 4"
+	},
+	"version": {
+		"message": "version $$1"
+	},
+	"warning_versions_mismatch": {
+		"message": "You are using different versions of GNOME Shell integration extension ($$1) and native host connector ($$2). Some features may not work or work wrong."
 	}
 }

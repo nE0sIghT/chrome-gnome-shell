@@ -23,3 +23,11 @@ DEFAULT_OPTIONS				= {
 	updateCheck:		true,
 	updateCheckPeriod:	6
 };
+
+EXTERNAL_MESSAGES = [
+	"error_extension_response",
+	"no_host_connector",
+	"older_connector",
+	"version",
+	"warning_versions_mismatch"
+];

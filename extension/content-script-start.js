@@ -37,6 +37,15 @@ var gs_require_inject = function () {
 	});
 };
 
+var siteMessages = {};
+if(EXTERNAL_MESSAGES)
+{
+	for(var key in EXTERNAL_MESSAGES)
+	{
+		siteMessages[EXTERNAL_MESSAGES[key]] = chrome.i18n.getMessage(EXTERNAL_MESSAGES[key]);
+	}
+}
+
 var s = document.createElement('script');
 
 s.type = "text/javascript";
@@ -44,7 +53,7 @@ s.textContent = '(' +
 	gs_require_inject.toString()
 		.replace("${GS_CHROME_ID}", GS_CHROME_ID)
 		.replace("${GS_CHROME_VERSION}", chrome.runtime.getManifest().version)
-	+ ')()';
+	+ ")(); GSC = {i18n: JSON.parse('" + JSON.stringify(siteMessages).replace(/'/g, "\\'") + "')};";
 (document.head||document.documentElement).appendChild(s);
 s.parentNode.removeChild(s);
 

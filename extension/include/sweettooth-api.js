@@ -8,6 +8,22 @@
     (at your option) any later version.
  */
 
+GSC.getMessage = function(key) {
+	if(GSC && GSC.i18n && GSC.i18n[key])
+	{
+		var message = GSC.i18n[key];
+
+		for(var i = 1; i < arguments.length; i++)
+		{
+			message = message.replace('$' + i, arguments[i]);
+		}
+
+		return message;
+	}
+
+	return key;
+};
+
 define('gs-chrome', ['jquery'], function($) {
     "use strict";
 
@@ -89,7 +105,7 @@ define('gs-chrome', ['jquery'], function($) {
 				}
 				else
 				{
-					var message = response && response.message ? response.message : "Wrong extension response received";
+					var message = response && response.message ? response.message : GSC.getMessage('error_extension_response');
 					deferred.reject(message);
 				}
 			}
@@ -234,14 +250,14 @@ require(['messages', 'gs-chrome'], function(messages){
 		if(!response.connectorVersion || response.connectorVersion != GS_CHROME_VERSION)
 		{
 			if(!response.connectorVersion)
-				response.connectorVersion = "older than v4";
+				response.connectorVersion = GSC.getMessage('older_connector');
 			else
-				response.connectorVersion = "v" + response.connectorVersion;
+				response.connectorVersion = GSC.getMessage('version', response.connectorVersion);
 
-			messages.addWarning('You are using different versions of gnome-shell integration extension (v' + GS_CHROME_VERSION + ") and native connector (" + response.connectorVersion + "). Some features may not work or work wrong.");
+			messages.addWarning(GSC.getMessage('warning_versions_mismatch', GSC.getMessage('version', GS_CHROME_VERSION), response.connectorVersion));
 		}
 	}).fail(function() {
-		messages.addWarning('Although Gnome-shell extension for Chrome is running, we cannot detect a native Gnome-shell integration connector. Please refer <a href="https://github.com/nE0sIghT/chrome-gnome-shell#installation">documentation</a> for instructions about installing native connector.');
+		messages.addWarning(GSC.getMessage('no_host_connector'));
 	}).always(function() {
 		// Start extensions.gnome.org main script
 		require(['main'], function(){});
