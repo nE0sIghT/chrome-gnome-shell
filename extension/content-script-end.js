@@ -10,7 +10,7 @@
 
 var s = document.createElement('script');
 
-s.src = chrome.extension.getURL('gs-page-end.js');
+s.src = chrome.extension.getURL('include/sweettooth-api.js');
 s.onload = function() {
     this.parentNode.removeChild(this);
 };
