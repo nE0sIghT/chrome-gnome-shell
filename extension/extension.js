@@ -88,4 +88,3 @@ port.onMessage.addListener(function (message) {
 });
 
 GSC.update.init();
-GSC.notifications.restore();

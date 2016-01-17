@@ -25,6 +25,8 @@ GSC.notifications = (function($) {
 		chrome.notifications.onClicked.addListener(function (notificationId) {
 			GSC.notifications.remove(notificationId);
 		});
+
+		browser.restore();
 	}
 
 	var browser = (function() {
@@ -123,7 +125,6 @@ GSC.notifications = (function($) {
 
 	return {
 		create: browser.create,
-		remove: browser.remove,
-		restore: browser.restore
+		remove: browser.remove
 	};
 })(jQuery);
