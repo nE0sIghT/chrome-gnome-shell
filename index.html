@@ -1,0 +1,114 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>GNOME Shell integration for Chrome by nE0sIghT</title>
+
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/github-light.css">
+    <meta name="viewport" content="width=device-width">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1>GNOME Shell integration for Chrome</h1>
+        <p>GNOME Shell integration for Chrome</p>
+
+        <p class="view"><a href="https://github.com/nE0sIghT/chrome-gnome-shell">View the Project on GitHub <small>nE0sIghT/chrome-gnome-shell</small></a></p>
+
+
+        <ul>
+          <li><a href="https://github.com/nE0sIghT/chrome-gnome-shell/zipball/master">Download <strong>ZIP File</strong></a></li>
+          <li><a href="https://github.com/nE0sIghT/chrome-gnome-shell/tarball/master">Download <strong>TAR Ball</strong></a></li>
+          <li><a href="https://github.com/nE0sIghT/chrome-gnome-shell">View On <strong>GitHub</strong></a></li>
+        </ul>
+      </header>
+      <section>
+        <h1>
+<a id="gnome-shell-integration-for-chrome" class="anchor" href="#gnome-shell-integration-for-chrome" aria-hidden="true"><span class="octicon octicon-link"></span></a>GNOME Shell integration for Chrome</h1>
+
+<h2>
+<a id="introduction" class="anchor" href="#introduction" aria-hidden="true"><span class="octicon octicon-link"></span></a>Introduction</h2>
+
+<p>This repository contains extension for Google Chrome browser and native
+connector that provides integration with GNOME Shell and the corresponding
+extensions repository <a href="https://extensions.gnome.org/">https://extensions.gnome.org/</a>, codenamed SweetTooth.</p>
+
+<h2>
+<a id="installation" class="anchor" href="#installation" aria-hidden="true"><span class="octicon octicon-link"></span></a>Installation</h2>
+
+<p>In order to work with <a href="https://extensions.gnome.org/">GNOME Shell extensions repository</a> in Google Chrome browser you must install <a href="https://chrome.google.com/webstore/detail/gnome-shell-integration/gphhapmejobijbbhgpjhcjognlahblep">GNOME Shell integration extension</a> and native connector.</p>
+
+<p>The easiest way to install extension is use <a href="https://chrome.google.com/webstore/detail/gnome-shell-integration/gphhapmejobijbbhgpjhcjognlahblep">Chrome web store</a>.</p>
+
+<p>As for native connector the preferred way is use your distro's favorite package manager.
+For Gentoo Linux ebuild is available in vortex overlay. If you use Layman just type:</p>
+
+<pre><code>layman -a vortex
+emerge -av gnome-extra/gs-chrome-connector
+</code></pre>
+
+<p>If there is no native connector package in your distro you can install it using cmake or manually.</p>
+
+<h2>
+<a id="manual-installation" class="anchor" href="#manual-installation" aria-hidden="true"><span class="octicon octicon-link"></span></a>Manual installation</h2>
+
+<p>For manual installation you must clone this repository first.</p>
+
+<p>Web extension sources located in "extension" folder. Refer <a href="https://developer.chrome.com/extensions/getstarted#unpacked">Google Chrome documentation</a> for instructions about installing unpacked extension.</p>
+
+<p>Before installing native connector make sure following packages installed in your system:</p>
+
+<ul>
+<li>Cmake 3.2+</li>
+<li>Python 2.7</li>
+<li>GNOME Shell</li>
+</ul>
+
+<p><strong>To install native connector with cmake</strong> follow this steps:</p>
+
+<ol>
+<li>Create build folder and go to it:<br>
+<code>mkdir build &amp;&amp; cd build</code>
+</li>
+<li>Run cmake to create makefiles:<br>
+<code>cmake -DCMAKE_INSTALL_PREFIX=/usr -DBUILD_EXTENSION=OFF ../</code>
+</li>
+<li>Install connector:<br>
+<code>make install</code>
+</li>
+</ol>
+
+<p><strong>You also can install connector without cmake</strong> following this steps:</p>
+
+<ol>
+<li>Copy file <code>connector/gs-chrome-connector.py</code> to your preferred location.</li>
+<li>Copy file <code>connector/io.github.ne0sight.gs_chrome_connector.json</code>:
+
+<ul>
+<li>for Google Chrome to <code>/etc/opt/chrome/native-messaging-hosts/</code>;</li>
+<li>for Google Chromium to <code>/etc/chromium/native-messaging-hosts/</code>.</li>
+</ul>
+</li>
+<li>Edit copied <code>io.github.ne0sight.gs_chrome_connector.json</code> file and replace <code>${CMAKE_INSTALL_FULL_BINDIR}/gs-chrome-connector</code> with full path to copied <code>gs-chrome-connector.py</code>.</li>
+</ol>
+
+<h2>
+<a id="legal-notice" class="anchor" href="#legal-notice" aria-hidden="true"><span class="octicon octicon-link"></span></a>Legal notice</h2>
+
+<p>GNOME Shell integration for Chrome is NOT an official GNOME Foundation project.
+The GNOME logo and GNOME name are registered trademarks or trademarks of GNOME Foundation in the United States or other countries.</p>
+      </section>
+      <footer>
+        <p>This project is maintained by <a href="https://github.com/nE0sIghT">nE0sIghT</a></p>
+        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
+      </footer>
+    </div>
+    <script src="javascripts/scale.fix.js"></script>
+    
+  </body>
+</html>
