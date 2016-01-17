@@ -87,5 +87,10 @@ port.onMessage.addListener(function (message) {
 	}
 });
 
-GSC.update.init();
-GSC.notifications.restore();
+chrome.runtime.getPlatformInfo(function(info) {
+	if (["linux", "openbsd"].indexOf(info.os) !== -1)
+	{
+		GSC.update.init();
+		GSC.notifications.restore();
+	}
+});
