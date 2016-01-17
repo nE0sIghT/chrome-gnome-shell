@@ -11,6 +11,10 @@
 GSC.notifications = (function($) {
 	var browser = (function() {
 		function init() {
+			chrome.runtime.onStartup.addListener(function() {
+				// Do nothing. We just need this callback to restore notifications
+			});
+
 			chrome.notifications.onClosed.addListener(function (notificationId, byUser) {
 				if (!byUser)
 				{

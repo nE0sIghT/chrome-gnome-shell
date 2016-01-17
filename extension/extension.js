@@ -25,10 +25,6 @@ chrome.runtime.onInstalled.addListener(function(details) {
 	}
 });
 
-chrome.runtime.onStartup.addListener(function() {
-	// Do nothing. We just need this callback to restore notifications
-});
-
 chrome.runtime.onMessageExternal.addListener(function (request, sender, sendResponse) {
 	if (sender.url.startsWith('https://extensions.gnome.org/'))
 	{
