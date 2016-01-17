@@ -9,93 +9,102 @@
  */
 
 GSC.notifications = (function($) {
-	function create(name, options) {
-		chrome.storage.local.get({
-			notifications: {}
-		}, function (items) {
-			var notifications = items.notifications;
+	var browser = (function() {
+		function create(name, options) {
+			chrome.storage.local.get({
+				notifications: {}
+			}, function (items) {
+				var notifications = items.notifications;
 
-			notifications[name] = $.extend({
-				type: chrome.notifications.TemplateType.BASIC,
-				iconUrl: 'icons/GnomeLogo-128.png',
-				title: 'Gnome-shell integration',
-				buttons: [
-					{title: m('close')}
-				],
-				priority: 2,
-				isClickable: true
-			}, options);
+				notifications[name] = $.extend({
+					type: chrome.notifications.TemplateType.BASIC,
+					iconUrl: 'icons/GnomeLogo-128.png',
+					title: 'Gnome-shell integration',
+					buttons: [
+						{title: m('close')}
+					],
+					priority: 2,
+					isClickable: true
+				}, options);
 
-			_create(name, notifications[name], function (notificationId) {
-				chrome.storage.local.set({
-					notifications: notifications
+				_create(name, notifications[name], function (notificationId) {
+					chrome.storage.local.set({
+						notifications: notifications
+					});
+
+					update(notificationId);
 				});
-
-				update(notificationId);
 			});
-		});
-	}
-
-	function _create(name, options, callback)
-	{
-		if (callback)
-		{
-			chrome.notifications.create(name, options, callback);
 		}
-		else
+
+		function _create(name, options, callback)
 		{
-			chrome.notifications.create(name, options);
+			if (callback)
+			{
+				chrome.notifications.create(name, options, callback);
+			}
+			else
+			{
+				chrome.notifications.create(name, options);
+			}
 		}
-	}
 
-	function update(notificationId) {
-		chrome.storage.local.get({
-			notifications: {}
-		}, function (items) {
-			var notifications = items.notifications;
+		function update(notificationId) {
+			chrome.storage.local.get({
+				notifications: {}
+			}, function (items) {
+				var notifications = items.notifications;
 
-			if (notifications[notificationId])
-			{
-				_create(notificationId, notifications[notificationId]);
-			}
-		});
-	}
+				if (notifications[notificationId])
+				{
+					_create(notificationId, notifications[notificationId]);
+				}
+			});
+		}
 
-	function remove(notificationId) {
-		chrome.storage.local.get({
-			notifications: {}
-		}, function (items) {
-			var notifications = items.notifications;
+		function remove(notificationId) {
+			chrome.storage.local.get({
+				notifications: {}
+			}, function (items) {
+				var notifications = items.notifications;
 
-			if (notifications[notificationId])
-			{
-				delete notifications[notificationId];
-				chrome.storage.local.set({
-					notifications: notifications
-				});
-			}
+				if (notifications[notificationId])
+				{
+					delete notifications[notificationId];
+					chrome.storage.local.set({
+						notifications: notifications
+					});
+				}
 
-			chrome.notifications.clear(notificationId);
-		});
-	}
+				chrome.notifications.clear(notificationId);
+			});
+		}
 
-	function restore() {
-		chrome.storage.local.get({
-			notifications: {}
-		}, function (items) {
-			var notifications = items.notifications;
+		function restore() {
+			chrome.storage.local.get({
+				notifications: {}
+			}, function (items) {
+				var notifications = items.notifications;
 
-			for (notificationId in notifications)
-			{
-				update(notificationId);
-			}
-		});
-	}
+				for (notificationId in notifications)
+				{
+					update(notificationId);
+				}
+			});
+		}
+
+		return {
+			create: create,
+			update: update,
+			remove: remove,
+			restore: restore
+		};
+	})();
 
 	return {
-		create: create,
-		update: update,
-		remove: remove,
-		restore: restore
+		create: browser.create,
+		update: browser.update,
+		remove: browser.remove,
+		restore: browser.restore
 	};
 })(jQuery);
