@@ -9,27 +9,26 @@
  */
 
 GSC.notifications = (function($) {
-
-	function init() {
-		chrome.notifications.onClosed.addListener(function (notificationId, byUser) {
-			if (!byUser)
-			{
-				browser.update(notificationId);
-			}
-			else
-			{
-				browser.remove(notificationId);
-			}
-		});
-
-		chrome.notifications.onClicked.addListener(function (notificationId) {
-			GSC.notifications.remove(notificationId);
-		});
-
-		browser.restore();
-	}
-
 	var browser = (function() {
+		function init() {
+			chrome.notifications.onClosed.addListener(function (notificationId, byUser) {
+				if (!byUser)
+				{
+					update(notificationId);
+				}
+				else
+				{
+					remove(notificationId);
+				}
+			});
+
+			chrome.notifications.onClicked.addListener(function (notificationId) {
+				GSC.notifications.remove(notificationId);
+			});
+
+			restore();
+		}
+
 		function create(name, options) {
 			chrome.storage.local.get({
 				notifications: {}
@@ -113,15 +112,14 @@ GSC.notifications = (function($) {
 			});
 		}
 
+		init();
+
 		return {
 			create: create,
-			update: update,
-			remove: remove,
-			restore: restore
+			remove: remove
 		};
 	})();
 
-	init();
 
 	return {
 		create: browser.create,
