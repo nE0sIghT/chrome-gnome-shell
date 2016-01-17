@@ -9,6 +9,24 @@
  */
 
 GSC.notifications = (function($) {
+
+	function init() {
+		chrome.notifications.onClosed.addListener(function (notificationId, byUser) {
+			if (!byUser)
+			{
+				browser.update(notificationId);
+			}
+			else
+			{
+				browser.remove(notificationId);
+			}
+		});
+
+		chrome.notifications.onClicked.addListener(function (notificationId) {
+			GSC.notifications.remove(notificationId);
+		});
+	}
+
 	var browser = (function() {
 		function create(name, options) {
 			chrome.storage.local.get({
@@ -101,9 +119,10 @@ GSC.notifications = (function($) {
 		};
 	})();
 
+	init();
+
 	return {
 		create: browser.create,
-		update: browser.update,
 		remove: browser.remove,
 		restore: browser.restore
 	};

@@ -129,17 +129,6 @@ GSC.update = (function($) {
 			}
 		});
 
-		chrome.notifications.onClosed.addListener(function (notificationId, byUser) {
-			if (!byUser)
-			{
-				GSC.notifications.update(notificationId);
-			}
-			else
-			{
-				GSC.notifications.remove(notificationId);
-			}
-		});
-
 		chrome.notifications.onClicked.addListener(function (notificationId) {
 			if (notificationId === NOTIFICATION_UPDATE_AVAILABLE)
 			{
@@ -148,8 +137,6 @@ GSC.update = (function($) {
 					active: true
 				});
 			}
-
-			GSC.notifications.remove(notificationId);
 		});
 
 		chrome.notifications.onButtonClicked.addListener(function (notificationId, buttonIndex) {
