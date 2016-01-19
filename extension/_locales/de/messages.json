@@ -1,0 +1,103 @@
+{
+	"gs_chrome": {
+		"message": "GNOME Shell Integration"
+	},
+
+	"manifest_description": {
+		"message": "Diese Erweiterung ermöglicht die Integration mit GNOME Shell und dem dazugehöhrenden Erweiterungs Repository von https://extensions.gnome.org"
+	},
+
+	"extension_status_upgrade" : {
+		"message": "kann aktualisiert werden"
+	},
+	"extension_status_downgrade" : {
+		"message": "muss zurückgestuft werden"
+	},
+	"native_request_failed" : {
+		"message": "«$REQUEST» Native Anfrage fehlgeschlagen",
+		"placeholders": {
+			"request": {
+				"content": "$1"
+			}
+		}
+	},
+	"no_host_response" : {
+		"message": "Keine Antwort von Host"
+	},
+	"update_check_failed" : {
+		"message": "Prüfung auf Erweiterungs Aktualisierungen fehlgeschlagen: $CAUSE$",
+		"placeholders": {
+			"cause": {
+				"content": "$1"
+			}
+		}
+	},
+	"update_available" : {
+		"message": "Ein Update für GNOME Shell Erweiterung ist verfügbar"
+	},
+
+	"options_title": {
+		"message": "$GS_CHROME$ Optionen",
+		"placeholders": {
+			"gs_chrome": {
+				"content": "$1"
+			}
+		}
+	},
+	"options_saved": {
+		"message": "Optionen gespeichert."
+	},
+	"options_update_check": {
+		"message": "Prüfe auf Aktualisierungen für Erweiterungen"
+	},
+	"options_check_period": {
+		"message": "Aktualisierungs Prüfintervall"
+	},
+	"options_show_release_notes": {
+		"message": "Zeige Neuigkeiten wenn Erweiterungen aktualisiert wurden"
+	},
+	"options_last_check": {
+		"message": "Letzte Prüfung"
+	},
+	"options_next_check": {
+		"message": "Nächste Prüfung"
+	},
+
+	"hours": {
+		"message": "Stunden"
+	},
+	"yes": {
+		"message": "Ja"
+	},
+	"no": {
+		"message": "Nein"
+	},
+	"never": {
+		"message": "niemals"
+	},
+	"retry": {
+		"message": "Wiederholen"
+	},
+	"close": {
+		"message": "Schließen"
+	},
+	"save": {
+		"message": "Speichern"
+	},
+
+	"error_extension_response": {
+		"message": "Falsche Antwort von Erweiterung erhalten"
+	},
+	"no_host_connector": {
+		"message": "Obwohl die GNOME Shell Integrations Erweiterung läuft, wurde der Native Host Konnektor nicht erkannt. Siehe <a href='https://github.com/nE0sIghT/chrome-GNOME Shell#installation'>documentation</a> für Aneitungen zum installieren des Konnektors."
+	},
+	"older_connector": {
+		"message": "älter als Version 4"
+	},
+	"version": {
+		"message": "Version $$1"
+	},
+	"warning_versions_mismatch": {
+		"message": "Sie benutzten eine andere Version der GNOME Shell Integrations Erweiterung ($$1) und Native Host Konnektor ($$2). Manche Features funktionieren möglicherweise falsch oder gar nicht."
+	}
+}
