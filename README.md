@@ -35,6 +35,8 @@ Before installing native connector make sure following packages installed in you
 * Python 2.7
 * GNOME Shell
 
+All commands must be issued from the root of cloned repository.
+
 **To install native connector with cmake** follow this steps:
 
 1. Create build folder and go to it:  
