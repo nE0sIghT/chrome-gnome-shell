@@ -256,8 +256,8 @@ require(['messages', 'gs-chrome'], function(messages){
 
 			messages.addWarning(GSC.getMessage('warning_versions_mismatch', GSC.getMessage('version', GS_CHROME_VERSION), response.connectorVersion));
 		}
-	}).fail(function() {
-		messages.addWarning(GSC.getMessage('no_host_connector'));
+	}).fail(function(message) {
+		messages.addWarning(message ? message : GSC.getMessage('no_host_connector'));
 	}).always(function() {
 		// Start extensions.gnome.org main script
 		require(['main'], function(){});
