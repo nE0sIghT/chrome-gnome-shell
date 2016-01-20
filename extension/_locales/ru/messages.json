@@ -1,4 +1,8 @@
 {
+	"gs_chrome": {
+		"message": "GNOME Shell integration"
+	},
+
 	"manifest_description": {
 		"message": "Данное расширение добавляет интеграцию с GNOME Shell и репозиторием расширений https://extensions.gnome.org"
 	},
