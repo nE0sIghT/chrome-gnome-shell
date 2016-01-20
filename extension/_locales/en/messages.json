@@ -7,13 +7,13 @@
 		"message": "This extension provides integration with gnome-shell and the corresponding extensions repository https://extensions.gnome.org"
 	},
 
-	"extension_status_upgrade" : {
+	"extension_status_upgrade": {
 		"message": "can be upgraded"
 	},
-	"extension_status_downgrade" : {
+	"extension_status_downgrade": {
 		"message": "must be downgraded"
 	},
-	"native_request_failed" : {
+	"native_request_failed": {
 		"message": "«$REQUEST» native request failed",
 		"placeholders": {
 			"request": {
@@ -21,10 +21,10 @@
 			}
 		}
 	},
-	"no_host_response" : {
+	"no_host_response": {
 		"message": "No host response"
 	},
-	"update_check_failed" : {
+	"update_check_failed": {
 		"message": "Failed to check extensions updates: $CAUSE$",
 		"placeholders": {
 			"cause": {
@@ -32,7 +32,7 @@
 			}
 		}
 	},
-	"update_available" : {
+	"update_available": {
 		"message": "An update for GNOME Shell extensions available"
 	},
 

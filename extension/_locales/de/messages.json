@@ -7,13 +7,13 @@
 		"message": "Diese Erweiterung ermöglicht die Integration mit GNOME Shell und dem dazugehöhrenden Erweiterungs Repository von https://extensions.gnome.org"
 	},
 
-	"extension_status_upgrade" : {
+	"extension_status_upgrade": {
 		"message": "kann aktualisiert werden"
 	},
-	"extension_status_downgrade" : {
+	"extension_status_downgrade": {
 		"message": "muss zurückgestuft werden"
 	},
-	"native_request_failed" : {
+	"native_request_failed": {
 		"message": "«$REQUEST» Native Anfrage fehlgeschlagen",
 		"placeholders": {
 			"request": {
@@ -21,10 +21,10 @@
 			}
 		}
 	},
-	"no_host_response" : {
+	"no_host_response": {
 		"message": "Keine Antwort von Host"
 	},
-	"update_check_failed" : {
+	"update_check_failed": {
 		"message": "Prüfung auf Erweiterungs Aktualisierungen fehlgeschlagen: $CAUSE$",
 		"placeholders": {
 			"cause": {
@@ -32,7 +32,7 @@
 			}
 		}
 	},
-	"update_available" : {
+	"update_available": {
 		"message": "Ein Update für GNOME Shell Erweiterung ist verfügbar"
 	},
 
