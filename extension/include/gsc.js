@@ -9,6 +9,15 @@
  */
 
 GSC = (function() {
+	var platform_supported = true;
+
+	chrome.runtime.getPlatformInfo(function(info) {
+		if (PLATFORMS_WHITELIST.indexOf(info.os) === -1)
+		{
+			platform_supported = false;
+		}
+	});
+
 	return {
 		// https://wiki.gnome.org/Projects/GnomeShell/Extensions/UUIDGuidelines
 		isUUID: function(uuid) {
@@ -16,6 +25,19 @@ GSC = (function() {
 		},
 		
 		sendNativeRequest: function(request, sendResponse) {
+			if(!platform_supported)
+			{
+				if(sendResponse)
+				{
+					sendResponse({
+						success: false,
+						message: m('platform_not_supported')
+					});
+				}
+
+				return;
+			}
+
 			if(sendResponse)
 			{
 				chrome.runtime.sendNativeMessage(
@@ -28,9 +50,20 @@ GSC = (function() {
 						}
 						else
 						{
+							var message = m('no_host_connector');
+							if(
+								chrome.runtime.lastError &&
+								chrome.runtime.lastError.message &&
+								chrome.runtime.lastError.message.indexOf("host not found") === -1
+							)
+							{
+								// Some error occured. Show to user
+								message = chrome.runtime.lastError.message;
+							}
+
 							sendResponse({
 								success: false,
-								message: m('no_host_response')
+								message: message
 							});
 						}
 					}

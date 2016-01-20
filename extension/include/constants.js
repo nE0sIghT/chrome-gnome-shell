@@ -9,6 +9,7 @@
  */
 
 GS_CHROME_ID				= chrome.i18n.getMessage('@@extension_id');
+PLATFORMS_WHITELIST			= ["linux", "openbsd"];
 
 NOTIFICATION_UPDATE_AVAILABLE		= 'gs-chrome-update';
 NOTIFICATION_UPDATE_CHECK_FAILED	= 'gs-chrome-update-fail';

@@ -84,7 +84,7 @@ port.onMessage.addListener(function (message) {
 });
 
 chrome.runtime.getPlatformInfo(function(info) {
-	if (["linux", "openbsd"].indexOf(info.os) !== -1)
+	if (PLATFORMS_WHITELIST.indexOf(info.os) !== -1)
 	{
 		GSC.update.init();
 	}

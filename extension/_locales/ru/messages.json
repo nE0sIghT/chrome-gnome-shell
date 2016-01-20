@@ -20,6 +20,9 @@
 	"no_host_response": {
 		"message": "Нет ответа от хост-коннектора"
 	},
+	"platform_not_supported": {
+		"message": "Нативный коннектор не поддерживается в вашей операционной системе."
+	},
 	"update_check_failed": {
 		"message": "Ошибка проверки обновлений расширений: $CAUSE$",
 		"placeholders": {

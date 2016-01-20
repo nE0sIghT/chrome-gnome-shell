@@ -24,6 +24,9 @@
 	"no_host_response": {
 		"message": "No host response"
 	},
+	"platform_not_supported": {
+		"message": "Native host connector is not supported for your platform."
+	},
 	"update_check_failed": {
 		"message": "Failed to check extensions updates: $CAUSE$",
 		"placeholders": {
