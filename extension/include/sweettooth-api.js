@@ -247,7 +247,7 @@ require(['messages', 'gs-chrome'], function(messages){
 		SweetTooth.shellVersion			= response.shellVersion;
 		SweetTooth.versionValidationEnabled	= response.versionValidationEnabled;
 
-		if(!response.connectorVersion || response.connectorVersion != GS_CHROME_VERSION)
+		if(!response.connectorVersion || response.connectorVersion < 4)
 		{
 			if(!response.connectorVersion)
 				response.connectorVersion = GSC.getMessage('older_connector');
