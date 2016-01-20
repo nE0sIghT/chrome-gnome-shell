@@ -14,7 +14,7 @@
 		"message": "muss zurückgestuft werden"
 	},
 	"native_request_failed": {
-		"message": "«$REQUEST» Native Anfrage fehlgeschlagen",
+		"message": "«$REQUEST$» Native Anfrage fehlgeschlagen",
 		"placeholders": {
 			"request": {
 				"content": "$1"

@@ -10,7 +10,7 @@
 		"message": "должно быть понижено в версии"
 	},
 	"native_request_failed": {
-		"message": "сбой нативного запроса «$REQUEST»",
+		"message": "сбой нативного запроса «$REQUEST$»",
 		"placeholders": {
 			"request": {
 				"content": "$1"

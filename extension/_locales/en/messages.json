@@ -14,7 +14,7 @@
 		"message": "must be downgraded"
 	},
 	"native_request_failed": {
-		"message": "«$REQUEST» native request failed",
+		"message": "«$REQUEST$» native request failed",
 		"placeholders": {
 			"request": {
 				"content": "$1"
