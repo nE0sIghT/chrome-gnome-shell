@@ -1,5 +1,5 @@
 /*
-    Gnome-shell integration for Chrome
+    GNOME Shell integration for Chrome
     Copyright (C) 2016  Yuri Konotopov <ykonotopov@gmail.com>
 
     This program is free software: you can redistribute it and/or modify
@@ -42,7 +42,7 @@ GSC.notifications = (function($) {
 				notifications[name] = $.extend({
 					type: chrome.notifications.TemplateType.BASIC,
 					iconUrl: 'icons/GnomeLogo-128.png',
-					title: 'Gnome-shell integration',
+					title: 'GNOME Shell integration',
 					buttons: [
 						{title: m('close')}
 					],
