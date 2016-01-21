@@ -31,7 +31,7 @@ For manual installation you must clone this repository first.
 Web extension sources located in "extension" folder. Refer [Google Chrome documentation](https://developer.chrome.com/extensions/getstarted#unpacked) for instructions about installing unpacked extension.
 
 Before installing native connector make sure following packages installed in your system:
-* Cmake 3.2+
+* Cmake 2.8+
 * Python 2.7
 * GNOME Shell
 
