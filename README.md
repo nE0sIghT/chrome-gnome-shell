@@ -51,7 +51,7 @@ All commands must be issued from the root of cloned repository.
 1. Copy file `connector/gs-chrome-connector.py` to your preferred location.
 2. Copy file `connector/io.github.ne0sight.gs_chrome_connector.json`:
   * for Google Chrome to `/etc/opt/chrome/native-messaging-hosts/`;
-  * for Google Chromium to `/etc/chromium/native-messaging-hosts/`.
+  * for Google Chromium and derivatives (Vivaldi etc) to `/etc/chromium/native-messaging-hosts/`.
 3. Edit copied `io.github.ne0sight.gs_chrome_connector.json` file and replace `${CMAKE_INSTALL_FULL_BINDIR}/gs-chrome-connector` with full path to copied `gs-chrome-connector.py`.
 
 Legal notice
