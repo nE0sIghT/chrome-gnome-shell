@@ -1,4 +1,4 @@
-cmake_minimum_required (VERSION 3.2)
+cmake_minimum_required (VERSION 2.8)
 project (GS_Chrome NONE)
 
 option(BUILD_EXTENSION	"Build extension zip package"	TRUE)
@@ -41,8 +41,13 @@ if(NOT BUILD_EXTENSION AND NOT BUILD_CONNECTOR)
 endif(NOT BUILD_EXTENSION AND NOT BUILD_CONNECTOR)
 
 if(BUILD_EXTENSION)
+	find_program(7ZIP 7z)
+	if(NOT 7ZIP)
+		message(FATAL_ERROR "7-zip not found.")
+	endif(NOT 7ZIP)
+
 	add_custom_target(extension ALL
-		COMMAND ${CMAKE_COMMAND} -E tar "cfv" "${CMAKE_BINARY_DIR}/extension.zip" --format=zip "*"
+		COMMAND "${7ZIP}" a -tzip "${CMAKE_BINARY_DIR}/extension.zip" ./
 		WORKING_DIRECTORY "${CMAKE_CURRENT_SOURCE_DIR}/extension/")
 endif(BUILD_EXTENSION)
 
