@@ -26,7 +26,7 @@ If there is no native connector package in your distro you can install it using 
 Manual installation
 ------------
 
-For manual installation you must clone this repository first.
+For manual installation you must clone this repository first or download latest release tarball.
 
 Web extension sources located in "extension" folder. Refer [Google Chrome documentation](https://developer.chrome.com/extensions/getstarted#unpacked) for instructions about installing unpacked extension.
 
