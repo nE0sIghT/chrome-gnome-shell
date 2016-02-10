@@ -1,6 +1,11 @@
 GNOME Shell integration for Chrome
 ============================================
 
+Language
+------------
+[English](README.md)  
+[Русский](README.ru.md)
+
 Introduction
 ------------
 
