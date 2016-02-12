@@ -26,6 +26,8 @@
 layman -a vortex
 emerge -av gnome-extra/gs-chrome-connector
 ```
+PKGBUILD для Arch Linux доступен в AUR: [gs-chrome-connector](https://aur.archlinux.org/packages/gs-chrome-connector-git/).
+
 Если для вашего дистрибутива нет пакета с нативной программой-коннектором вы можете установить ее с помощью cmake или вручную.
 
 Ручная установка
