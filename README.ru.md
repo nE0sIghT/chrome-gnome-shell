@@ -18,17 +18,17 @@
 
 Для работы с [репозиторием расширений GNOME Shell](https://extensions.gnome.org/) в обозревателе Google Chrome вы должны установить [расширение GNOME Shell integration](https://chrome.google.com/webstore/detail/gnome-shell-integration/gphhapmejobijbbhgpjhcjognlahblep) и нативную программу-коннектор.
 
-Наиболее простой способ установки расширения - [Chrome web store](https://chrome.google.com/webstore/detail/gnome-shell-integration/gphhapmejobijbbhgpjhcjognlahblep).
+Наиболее простой способ установки расширения и коннектора - с помощью менеджера пакетов вашего дистрибутива.
 
-Что касается нативной программы-коннектора, предпочтительный способ установки - с помощью менеджера пакетов вашего дистрибутива.
-Для Gentoo Linux доступен ebuild в оверлее vortex. Если вы используете Layman просто наберите:
+Для Gentoo Linux ebuild доступен в оверлее vortex. Если вы используете Layman просто наберите:
 ```
 layman -a vortex
-emerge -av gnome-extra/gs-chrome-connector
+emerge -av gnome-extra/chrome-gnome-shell
 ```
 PKGBUILD для Arch Linux доступен в AUR: [gs-chrome-connector](https://aur.archlinux.org/packages/gs-chrome-connector-git/).
 
-Если для вашего дистрибутива нет пакета с нативной программой-коннектором вы можете установить ее с помощью cmake или вручную.
+Если для вашего дистрибутива нет готового пакета вы можете установить расширение из [Интернет-магазина Chrome](https://chrome.google.com/webstore/detail/gnome-shell-integration/gphhapmejobijbbhgpjhcjognlahblep),
+а нативную программу-коннектор с помощью cmake или вручную.
 
 Ручная установка
 ------------

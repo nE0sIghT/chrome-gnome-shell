@@ -4,6 +4,6 @@
   "path": "${CMAKE_INSTALL_FULL_BINDIR}/gs-chrome-connector",
   "type": "stdio",
   "allowed_origins": [
-    "chrome-extension://gphhapmejobijbbhgpjhcjognlahblep/"
+    "chrome-extension://${EXTENSION_ID}/"
   ]
 }

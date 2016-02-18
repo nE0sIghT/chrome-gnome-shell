@@ -4,6 +4,10 @@ project (GS_Chrome NONE)
 option(BUILD_EXTENSION	"Build extension zip package"	TRUE)
 option(BUILD_CONNECTOR	"Build native messaging host"	TRUE)
 
+if(NOT DEFINED(EXTENSION_ID))
+	set(EXTENSION_ID "gphhapmejobijbbhgpjhcjognlahblep")
+endif(NOT DEFINED(EXTENSION_ID))
+
 # Suppress warning
 if(NOT DEFINED(CMAKE_SIZEOF_VOID_P))
 	set(CMAKE_SIZEOF_VOID_P 8)
@@ -62,4 +66,6 @@ if(BUILD_CONNECTOR)
 	install(PROGRAMS "${CMAKE_CURRENT_SOURCE_DIR}/connector/gs-chrome-connector.py" DESTINATION "${CMAKE_INSTALL_BINDIR}/" RENAME gs-chrome-connector)
 	install(FILES "${CMAKE_BINARY_DIR}/io.github.ne0sight.gs_chrome_connector.json" DESTINATION "/etc/chromium/native-messaging-hosts/")
 	install(FILES "${CMAKE_BINARY_DIR}/io.github.ne0sight.gs_chrome_connector.json" DESTINATION "/etc/opt/chrome/native-messaging-hosts/")
+	install(FILES "${CMAKE_BINARY_DIR}/external_extension.json" DESTINATION "/usr/share/google-chrome/extensions/" RENAME "${EXTENSION_ID}.json")
+	install(FILES "${CMAKE_BINARY_DIR}/external_extension.json" DESTINATION "/usr/share/chromium/extensions/" RENAME "${EXTENSION_ID}.json")
 endif(BUILD_CONNECTOR)

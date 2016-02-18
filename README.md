@@ -18,17 +18,17 @@ Installation
 
 In order to work with [GNOME Shell extensions repository](https://extensions.gnome.org/) in Google Chrome browser you must install [GNOME Shell integration extension](https://chrome.google.com/webstore/detail/gnome-shell-integration/gphhapmejobijbbhgpjhcjognlahblep) and native connector.
 
-The easiest way to install extension is use [Chrome web store](https://chrome.google.com/webstore/detail/gnome-shell-integration/gphhapmejobijbbhgpjhcjognlahblep).
+The easiest way to install both is use your distro's favorite package manager.
 
-As for native connector the preferred way is use your distro's favorite package manager.
 For Gentoo Linux ebuild is available in vortex overlay. If you use Layman just type:
 ```
 layman -a vortex
-emerge -av gnome-extra/gs-chrome-connector
+emerge -av gnome-extra/chrome-gnome-shell
 ```
-For Arch Linux there is a PKGBUILD available in the AUR: [gs-chrome-connector](https://aur.archlinux.org/packages/gs-chrome-connector-git/)
+For Arch Linux there is a PKGBUILD available in the AUR: [gs-chrome-connector](https://aur.archlinux.org/packages/gs-chrome-connector-git/).
 
-If there is no native connector package in your distro you can install it using cmake or manually.
+If there is no package in your distro you can install extension via [Chrome web store](https://chrome.google.com/webstore/detail/gnome-shell-integration/gphhapmejobijbbhgpjhcjognlahblep)
+and native connector using cmake or manually.
 
 Manual installation
 ------------
