@@ -18,7 +18,7 @@ import sys
 import re
 from threading import Thread, Lock
 
-CONNECTOR_VERSION	= 5
+CONNECTOR_VERSION	= 5.1
 DEBUG_ENABLED		= False
 
 SHELL_SCHEMA		= "org.gnome.shell"
