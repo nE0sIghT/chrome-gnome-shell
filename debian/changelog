@@ -1,0 +1,5 @@
+chrome-gnome-shell (5.1.1-0ubuntu2) trusty; urgency=low
+
+  * Initial release
+
+ -- Yuri Konotopov <ykonotopov@gmail.com>  Sun, 21 Feb 2016 19:11:44 +0300

@@ -1,0 +1,12 @@
+Format: http://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
+Upstream-Name: chrome-gnome-shell
+Upstream-Contact: https://github.com/nE0sIghT/chrome-gnome-shell/issues
+Source: https://github.com/nE0sIghT/chrome-gnome-shell
+
+Files: *
+Copyright: 2016 Yuri Konotopov <ykonotopov@gmail.com>
+License: GPL-3+
+ This package is free software; you can redistribute it and/or modify
+ it under the terms of the GNU General Public License as published by
+ the Free Software Foundation; either version 3 of the License, or
+ (at your option) any later version.
