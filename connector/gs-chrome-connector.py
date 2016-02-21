@@ -116,7 +116,10 @@ def read_thread_func(proxy, mainLoop):
 
 			if request['execute'] == 'initialize':
 				shellVersion = proxy.get_cached_property("ShellVersion")
-				disableVersionCheck = settings.get_boolean(EXTENSION_DISABLE_VERSION_CHECK_KEY)
+				if EXTENSION_DISABLE_VERSION_CHECK_KEY in settings.keys():
+					disableVersionCheck = settings.get_boolean(EXTENSION_DISABLE_VERSION_CHECK_KEY)
+				else:
+					disableVersionCheck = False
 
 				send_message(
 					{
