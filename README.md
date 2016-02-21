@@ -25,7 +25,14 @@ For Gentoo Linux ebuild is available in vortex overlay. If you use Layman just t
 layman -a vortex
 emerge -av gnome-extra/chrome-gnome-shell
 ```
+
 For Arch Linux there is a PKGBUILD available in the AUR: [gs-chrome-connector](https://aur.archlinux.org/packages/gs-chrome-connector-git/).
+
+For Ubuntu Linux package is available in ne0sight/chrome-gnome-shell PPA. To install it type:
+```
+sudo add-apt-repository ppa:ne0sight/chrome-gnome-shell
+sudo apt-get install chrome-gnome-shell
+```
 
 If there is no package in your distro you can install extension via [Chrome web store](https://chrome.google.com/webstore/detail/gnome-shell-integration/gphhapmejobijbbhgpjhcjognlahblep)
 and native connector using cmake or manually.

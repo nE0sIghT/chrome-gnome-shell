@@ -25,7 +25,14 @@
 layman -a vortex
 emerge -av gnome-extra/chrome-gnome-shell
 ```
+
 PKGBUILD для Arch Linux доступен в AUR: [gs-chrome-connector](https://aur.archlinux.org/packages/gs-chrome-connector-git/).
+
+Пакет для Ubuntu Linux доступен в PPA ne0sight/chrome-gnome-shell. Для его установки наберите:
+```
+sudo add-apt-repository ppa:ne0sight/chrome-gnome-shell
+sudo apt-get install chrome-gnome-shell
+```
 
 Если для вашего дистрибутива нет готового пакета вы можете установить расширение из [Интернет-магазина Chrome](https://chrome.google.com/webstore/detail/gnome-shell-integration/gphhapmejobijbbhgpjhcjognlahblep),
 а нативную программу-коннектор с помощью cmake или вручную.
