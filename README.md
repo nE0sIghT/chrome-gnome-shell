@@ -31,6 +31,7 @@ For Arch Linux there is a PKGBUILD available in the AUR: [gs-chrome-connector](h
 For Ubuntu Linux package is available in ne0sight/chrome-gnome-shell PPA. To install it type:
 ```
 sudo add-apt-repository ppa:ne0sight/chrome-gnome-shell
+sudo apt-get update
 sudo apt-get install chrome-gnome-shell
 ```
 

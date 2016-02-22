@@ -31,6 +31,7 @@ PKGBUILD для Arch Linux доступен в AUR: [gs-chrome-connector](https:
 Пакет для Ubuntu Linux доступен в PPA ne0sight/chrome-gnome-shell. Для его установки наберите:
 ```
 sudo add-apt-repository ppa:ne0sight/chrome-gnome-shell
+sudo apt-get update
 sudo apt-get install chrome-gnome-shell
 ```
 
