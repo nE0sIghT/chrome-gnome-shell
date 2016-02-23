@@ -20,7 +20,7 @@ In order to work with [GNOME Shell extensions repository](https://extensions.gno
 
 The easiest way to install both is use your distro's favorite package manager.
 
-For Gentoo Linux ebuild is available in vortex overlay. If you use Layman just type:
+For Gentoo Linux ebuild is available in vortex overlay. If you use Layman just type under root user:
 ```
 layman -a vortex
 emerge -av gnome-extra/chrome-gnome-shell
@@ -59,7 +59,7 @@ All commands must be issued from the root of cloned repository.
 2. Run cmake to create makefiles:  
 `cmake -DCMAKE_INSTALL_PREFIX=/usr/local -DBUILD_EXTENSION=OFF ../`
 3. Install connector:  
-`make install`
+`sudo make install`
 
 **You also can install connector without cmake** following this steps:
 

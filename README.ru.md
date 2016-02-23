@@ -20,7 +20,7 @@
 
 Наиболее простой способ установки расширения и коннектора - с помощью менеджера пакетов вашего дистрибутива.
 
-Для Gentoo Linux ebuild доступен в оверлее vortex. Если вы используете Layman просто наберите:
+Для Gentoo Linux ebuild доступен в оверлее vortex. Если вы используете Layman просто наберите под пользователем root:
 ```
 layman -a vortex
 emerge -av gnome-extra/chrome-gnome-shell
@@ -59,7 +59,7 @@ sudo apt-get install chrome-gnome-shell
 2. Запустите cmake для создания make-файлов:  
 `cmake -DCMAKE_INSTALL_PREFIX=/usr/local -DBUILD_EXTENSION=OFF ../`
 3. Установите программу-коннектор:  
-`make install`
+`sudo make install`
 
 **Вы также можете установить программу-коннектор без использования cmake**:
 
