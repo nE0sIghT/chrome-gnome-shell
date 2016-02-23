@@ -28,13 +28,6 @@ EXTENSION_DISABLE_VERSION_CHECK_KEY = "disable-extension-version-validation"
 mutex = Lock()
 watcherConnected = False
 
-# On Windows, the default I/O mode is O_TEXT. Set this to O_BINARY
-# to avoid unwanted modifications of the input/output streams.
-if sys.platform == "win32":
-    import os, msvcrt
-    msvcrt.setmode(sys.stdin.fileno(), os.O_BINARY)
-    msvcrt.setmode(sys.stdout.fileno(), os.O_BINARY)
-
 # https://wiki.gnome.org/Projects/GnomeShell/Extensions/UUIDGuidelines
 def isUUID(uuid):
     return uuid is not None and re.match('[-a-zA-Z0-9@._]+$', uuid) is not None
