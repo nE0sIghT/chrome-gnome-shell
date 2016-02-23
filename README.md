@@ -57,7 +57,7 @@ All commands must be issued from the root of cloned repository.
 1. Create build folder and go to it:  
 `mkdir build && cd build`
 2. Run cmake to create makefiles:  
-`cmake -DCMAKE_INSTALL_PREFIX=/usr -DBUILD_EXTENSION=OFF ../`
+`cmake -DCMAKE_INSTALL_PREFIX=/usr/local -DBUILD_EXTENSION=OFF ../`
 3. Install connector:  
 `make install`
 

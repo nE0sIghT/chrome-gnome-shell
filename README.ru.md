@@ -57,7 +57,7 @@ sudo apt-get install chrome-gnome-shell
 1. Создайте папку для сборки и перейдите в нее:  
 `mkdir build && cd build`
 2. Запустите cmake для создания make-файлов:  
-`cmake -DCMAKE_INSTALL_PREFIX=/usr -DBUILD_EXTENSION=OFF ../`
+`cmake -DCMAKE_INSTALL_PREFIX=/usr/local -DBUILD_EXTENSION=OFF ../`
 3. Установите программу-коннектор:  
 `make install`
 
