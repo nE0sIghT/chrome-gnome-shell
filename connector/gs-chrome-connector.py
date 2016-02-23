@@ -10,6 +10,7 @@
     (at your option) any later version.
 '''
 
+from __future__ import print_function
 from gi.repository import GLib, Gio
 import json
 import os
@@ -64,7 +65,7 @@ def debug(message):
 
 
 def logError(message):
-    print >> sys.stderr, message
+    print(message, file=sys.stderr)
 
 
 def dbus_call_response(method, parameters, resultProperty):
