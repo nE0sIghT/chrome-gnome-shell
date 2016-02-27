@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Project xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+	 xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+	 xmlns:foaf="http://xmlns.com/foaf/0.1/"
+	 xmlns:gnome="http://api.gnome.org/doap-extensions#"
+	 xmlns="http://usefulinc.com/ns/doap#">
+
+	<name xml:lang="en">chrome-gnome-shell</name>
+	<shortdesc xml:lang="en">GNOME Shell integration for Chrome</shortdesc>
+	<description xml:lang="en">
+		Extension for Google Chrome browser and native connector
+		that provides integration with GNOME Shell and the corresponding
+		extensions repository https://extensions.gnome.org
+	</description>
+	<homepage rdf:resource="https://github.com/nE0sIghT/chrome-gnome-shell" />
+	<!--
+	<mailing-list rdf:resource="https://mail.gnome.org/mailman/listinfo/gnome-shell-list" />
+	<download-page rdf:resource="http://download.gnome.org/sources/chrome-gnome-shell/" />
+	<bug-database rdf:resource="https://bugzilla.gnome.org/browse.cgi?product=gnome-shell" />
+	-->
+	<category rdf:resource="http://api.gnome.org/doap-extensions#core" />
+	<programming-language>Javascript</programming-language>
+	<programming-language>Python</programming-language>
+
+	<maintainer>
+		<foaf:Person>
+			<foaf:name>Yuri Konotopov</foaf:name>
+			<foaf:mbox rdf:resource="mailto:ykonotopov@gmail.com" />
+			<gnome:userid>ykonotopov</gnome:userid>
+		</foaf:Person>
+	</maintainer>
+</Project>
