@@ -1,6 +1,3 @@
-Past GNOME Shell integration for Chrome repository
-============================================
-
 Migration to GNOME infrastructure
 ------------
 
@@ -10,7 +7,7 @@ to GNOME infrastructure.
 New resources
 ------------
 
-Source code: https://git.gnome.org/browse/chrome-gnome-shell/  
+Source code: https://git.gnome.org/browse/chrome-gnome-shell  
 Github mirror: https://github.com/GNOME/chrome-gnome-shell
 
 Issues: https://github.com/nE0sIghT/chrome-gnome-shell/issues  
