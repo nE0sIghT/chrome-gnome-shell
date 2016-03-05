@@ -1,0 +1,17 @@
+Вы ДОЛЖНЫ установить нативный хост-коннектор для работы этого расширения.
+
+В Gentoo Linux вы можете установить коннектор с помощью команд:
+layman -a vortex
+emerge gnome-extra/chrome-gnome-shell
+
+PKGBUILD для Arch Linux доступен в AUR: https://aur.archlinux.org/packages/chrome-gnome-shell-git
+
+Пакет для Ubuntu Linux доступен в PPA ne0sight/chrome-gnome-shell. Для его установки наберите:
+sudo add-apt-repository ppa:ne0sight/chrome-gnome-shell
+sudo apt-get update
+sudo apt-get install chrome-gnome-shell
+
+Вы также можете установить коннектор вручную. Инструкция по установке находится по адресу https://github.com/GNOME/chrome-gnome-shell.
+
+Расширение GNOME Shell integration для Chrome НЕ ЯВЛЯЕТСЯ официальным проектом GNOME Foundation.
+Логотип GNOME и название GNOME являются зарегистрированными торговыми марками или торговыми марками GNOME Foundation в США или других странах.

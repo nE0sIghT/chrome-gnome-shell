@@ -1,0 +1,17 @@
+You MUST install native connector for this extension to work.
+
+In Gentoo Linux you can install connector with commands:
+layman -a vortex
+emerge gnome-extra/chrome-gnome-shell
+
+For Arch Linux there is a PKGBUILD available in the AUR: https://aur.archlinux.org/packages/chrome-gnome-shell-git
+
+For Ubuntu Linux package is available in ne0sight/chrome-gnome-shell PPA. To install it type:
+sudo add-apt-repository ppa:ne0sight/chrome-gnome-shell
+sudo apt-get update
+sudo apt-get install chrome-gnome-shell
+
+You also can install connector manually. See https://github.com/GNOME/chrome-gnome-shell for install instructions.
+
+GNOME Shell integration extension for Chrome is NOT an official GNOME Foundation project.
+The GNOME logo and GNOME name are registered trademarks or trademarks of GNOME Foundation in the United States or other countries.
