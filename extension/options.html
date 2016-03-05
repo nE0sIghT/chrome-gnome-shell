@@ -8,37 +8,44 @@
 		<script type="text/javascript" src="include/constants.js"></script>
 	</head>
 	<body>
-		<div id="status" data-i18n="options_saved"></div>
+		<a id='switch_tab' href='#' data-i18n='translation_credits_title' style='float: right;'></a>
+		<div id="options">
+			<div id="status" data-i18n="options_saved"></div>
 
-		<fieldset>
-			<dl>
-				<dt><span data-i18n="options_update_check"></span>:</dt>
-				<dd>
-					<label for='update_check_yes' data-i18n="yes"></label> <input type='radio' id='update_check_yes' name='update_check' />
-					<label for='update_check_no' data-i18n="no"></label> <input type='radio' id='update_check_no' name='update_check' />
+			<fieldset>
+				<dl>
+					<dt><span data-i18n="options_update_check"></span>:</dt>
+					<dd>
+						<label for='update_check_yes' data-i18n="yes"></label> <input type='radio' id='update_check_yes' name='update_check' />
+						<label for='update_check_no' data-i18n="no"></label> <input type='radio' id='update_check_no' name='update_check' />
 
-					<div class='notice'><span data-i18n="options_last_check"></span>: <span id="last_update_check" data-i18n="never"></span></div>
-				</dd>
-			</dl>
-			<dl>
-				<dt><label for='update_check_period' data-i18n="options_check_period"></label>:</dt>
-				<dd>
-					<input id='update_check_period' type='number' min="3"  /> <span data-i18n="hours"></span>
+						<div class='notice'><span data-i18n="options_last_check"></span>: <span id="last_update_check" data-i18n="never"></span></div>
+					</dd>
+				</dl>
+				<dl>
+					<dt><label for='update_check_period' data-i18n="options_check_period"></label>:</dt>
+					<dd>
+						<input id='update_check_period' type='number' min="3"  /> <span data-i18n="hours"></span>
 
-					<div class='notice'><span data-i18n="options_next_check"></span>: <span id="next_update_check" data-i18n="never"></span></div>
-				</dd>
-			</dl>
-			<dl>
-				<dt><span data-i18n="options_show_release_notes"></span>:</dt>
-				<dd>
-					<label for='show_release_notes_yes' data-i18n="yes"></label> <input type='radio' id='show_release_notes_yes' name='show_release_notes' />
-					<label for='show_release_notes_no' data-i18n="no"></label> <input type='radio' id='show_release_notes_no' name='show_release_notes' />
-				</dd>
-			</dl>
-		</fieldset>
+						<div class='notice'><span data-i18n="options_next_check"></span>: <span id="next_update_check" data-i18n="never"></span></div>
+					</dd>
+				</dl>
+				<dl>
+					<dt><span data-i18n="options_show_release_notes"></span>:</dt>
+					<dd>
+						<label for='show_release_notes_yes' data-i18n="yes"></label> <input type='radio' id='show_release_notes_yes' name='show_release_notes' />
+						<label for='show_release_notes_no' data-i18n="no"></label> <input type='radio' id='show_release_notes_no' name='show_release_notes' />
+					</dd>
+				</dl>
+			</fieldset>
 
-		<div class='buttons'>
-			<button id="save" data-i18n="save"></button>
+			<div class='buttons'>
+				<button id="save" data-i18n="save"></button>
+			</div>
+		</div>
+		<div id="translation_credits">
+			<h2 data-i18n='translation_credits_title'></h2>
+			<div data-i18n='translation_credits' data-i18n-html='true'></div>
 		</div>
 
 		<script type="text/javascript" src="options.js"></script>

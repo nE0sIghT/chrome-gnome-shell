@@ -47,6 +47,9 @@
 			}
 		}
 	},
+	"options_link": {
+		"message": "Настройки"
+	},
 	"options_saved": {
 		"message": "Настройки сохранены."
 	},
@@ -64,6 +67,13 @@
 	},
 	"options_next_check": {
 		"message": "Следующая проверка"
+	},
+
+	"translation_credits_title": {
+		"message": "О переводе"
+	},
+	"translation_credits": {
+		"message": ""
 	},
 
 	"hours": {

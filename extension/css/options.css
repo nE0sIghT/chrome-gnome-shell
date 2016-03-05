@@ -3,6 +3,10 @@ body {
 	min-width: 500px;
 }
 
+#translation_credits {
+	display: none;
+}
+
 #update_check_period { width: 5em; }
 #status {
 	display: none;

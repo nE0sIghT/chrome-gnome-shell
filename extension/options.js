@@ -92,6 +92,28 @@ i18n();
 document.addEventListener('DOMContentLoaded', restore_options);
 document.getElementById('save').addEventListener('click', save_options);
 
+if($('#translation_credits div').is(':empty'))
+{
+	$('#switch_tab').hide();
+}
+else
+{
+	$('#switch_tab').click(function() {
+		$('#options, #translation_credits').toggle();
+
+		if($('#options').is(':visible'))
+		{
+			$(this).text(m('translation_credits_title'));
+		}
+		else
+		{
+			$(this).text(m('options_link'));
+		}
+
+		return false;
+	});
+}
+
 chrome.storage.onChanged.addListener(function (changes, areaName) {
 	if (areaName === 'local' && changes.lastUpdateCheck)
 	{

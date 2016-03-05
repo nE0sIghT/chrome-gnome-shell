@@ -47,6 +47,9 @@
 			}
 		}
 	},
+	"options_link": {
+		"message": "Options"
+	},
 	"options_saved": {
 		"message": "Options saved."
 	},
@@ -64,6 +67,13 @@
 	},
 	"options_next_check": {
 		"message": "Next check"
+	},
+
+	"translation_credits_title": {
+		"message": "About translation"
+	},
+	"translation_credits": {
+		"message": ""
 	},
 
 	"hours": {
