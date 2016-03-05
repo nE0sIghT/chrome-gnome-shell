@@ -28,7 +28,14 @@ i18n = (function($) {
 
 			if(data.length)
 			{
-				$(this).text(m(data[0], data.slice(1)));
+				if($(this).data('i18n-html'))
+				{
+					$(this).html(m(data[0], data.slice(1)));
+				}
+				else
+				{
+					$(this).text(m(data[0], data.slice(1)));
+				}
 			}
 		});
 	}
