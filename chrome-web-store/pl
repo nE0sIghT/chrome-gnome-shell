@@ -1,0 +1,17 @@
+Należy zainstalować natywnego łącznika, aby to rozszerzenie mogło działać.
+
+W systemie Gentoo Linux można go zainstalować za pomocą tych poleceń:
+layman -a vortex
+emerge gnome-extra/chrome-gnome-shell
+
+Dla systemu Arch Linux dostępny jest pakiet PKGBUILD w repozytorium AUR: https://aur.archlinux.org/packages/chrome-gnome-shell-git
+
+Dla systemu Ubuntu Linux dostępny jest pakiet w repozytorium PPA „ne0sight/chrome-gnome-shell”. Polecenia instalacji:
+sudo add-apt-repository ppa:ne0sight/chrome-gnome-shell
+sudo apt-get update
+sudo apt-get install chrome-gnome-shell
+
+Można także zainstalować łącznika ręcznie. Instrukcje instalacji: https://github.com/GNOME/chrome-gnome-shell
+
+Rozszerzenie integracji z GNOME Shell dla przeglądarki Chrome NIE jest oficjalnym projektem GNOME Foundation.
+Logo GNOME i nazwa GNOME są zarejestrowanymi znakami towarowymi lub znakami towarowymi GNOME Foundation w Stanach Zjednoczonych lub innych państwach.

@@ -47,6 +47,9 @@
 			}
 		}
 	},
+	"options_link": {
+		"message": "Opcje"
+	},
 	"options_saved": {
 		"message": "Zapisano opcje."
 	},
@@ -64,6 +67,13 @@
 	},
 	"options_next_check": {
 		"message": "Następne sprawdzanie"
+	},
+
+	"translation_credits_title": {
+		"message": "O tłumaczeniu"
+	},
+	"translation_credits": {
+		"message": "Piotr Drąg, 2016"
 	},
 
 	"hours": {
