@@ -12,7 +12,7 @@
 		that provides integration with GNOME Shell and the corresponding
 		extensions repository https://extensions.gnome.org
 	</description>
-	<homepage rdf:resource="https://github.com/nE0sIghT/chrome-gnome-shell" />
+	<homepage rdf:resource="https://wiki.gnome.org/Projects/GnomeShellIntegrationForChrome" />
 	<!--
 	<mailing-list rdf:resource="https://mail.gnome.org/mailman/listinfo/gnome-shell-list" />
 	<download-page rdf:resource="http://download.gnome.org/sources/chrome-gnome-shell/" />
