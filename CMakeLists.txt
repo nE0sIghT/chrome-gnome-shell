@@ -1,5 +1,5 @@
 cmake_minimum_required (VERSION 2.8)
-project (GS_Chrome NONE)
+project (chrome-gnome-shell NONE)
 
 option(BUILD_EXTENSION	"Build extension zip package"	TRUE)
 option(BUILD_CONNECTOR	"Build native messaging host"	TRUE)
