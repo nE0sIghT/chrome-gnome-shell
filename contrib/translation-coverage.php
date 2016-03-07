@@ -110,20 +110,18 @@ if(!$reference_strings)
 			}
 		</style>
 	</head>
-</html>
-<body>
-	<table class='stats'>
-		<thead>
-			<tr>
-				<th>Language</th>
-				<th>Translated</th>
-				<th>Missing</th>
-				<th>Redundant</th>
-				<th>Progress</th>
-			</tr>
-		</thead>
-		<tbody>
-</body>
+	<body>
+		<table class='stats'>
+			<thead>
+				<tr>
+					<th>Language</th>
+					<th>Translated</th>
+					<th>Missing</th>
+					<th>Redundant</th>
+					<th>Progress</th>
+				</tr>
+			</thead>
+			<tbody>
 <?php
 
 foreach($languages as $code => $language)
