@@ -107,6 +107,7 @@ if(!$reference_strings)
 			table
 			{
 				width: 700px !important;
+				margin: 10px auto !important;
 			}
 		</style>
 	</head>
@@ -124,6 +125,7 @@ if(!$reference_strings)
 			<tbody>
 <?php
 
+$coverage = array();
 foreach($languages as $code => $language)
 {
 	if($code == $reference_language)
@@ -154,7 +156,7 @@ foreach($languages as $code => $language)
 		}
 
 		$missing_count = sizeof($missing);
-		$translated = floor((($reference_count - $missing_count) / $reference_count)  * 100);
+		$translated = (int) floor((($reference_count - $missing_count) / $reference_count)  * 100);
 	}
 	else
 	{
@@ -163,20 +165,40 @@ foreach($languages as $code => $language)
 		$missing[] = 'all';
 	}
 
-	?>
-	<tr>
-		<td><?= "$language ($code)" ?></td>
-		<td><?=  "$translated%" ?></td>
-		<td><?= implode(', ', $missing) ?></td>
-		<td><?= implode(', ', $redundant) ?></td>
-		<td>
-			<div class="graph">
-				<div class="translated" style="width: <?= $translated ?>px;"></div>
-				<div class="untranslated" style="left: 100px; width: <?= (100 - $translated) ?>px;"></div>
-			</div>
-		</td>
-	</tr>
-	<?php
+	if(!array_key_exists($translated, $coverage))
+	{
+		$coverage[$translated] = array();
+	}
+
+	$coverage[$translated][] = array(
+		'language'	=> $language,
+		'code'		=> $code,
+		'missing'	=> $missing,
+		'redundant'	=> $redundant
+	);
+}
+
+krsort($coverage);
+
+foreach($coverage as $translated => $languages)
+{
+	foreach($languages as $data)
+	{
+		?>
+		<tr>
+			<td><?= "{$data['language']} ({$data['code']})" ?></td>
+			<td><?=  "$translated%" ?></td>
+			<td><?= implode(', ', $data['missing']) ?></td>
+			<td><?= implode(', ', $data['redundant']) ?></td>
+			<td>
+				<div class="graph">
+					<div class="translated" style="width: <?= $translated ?>px;"></div>
+					<div class="untranslated" style="left: 100px; width: <?= (100 - $translated) ?>px;"></div>
+				</div>
+			</td>
+		</tr>
+		<?php
+	}
 }
 ?>
 	</tbody>
