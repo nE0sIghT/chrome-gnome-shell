@@ -11,5 +11,4 @@ sudo add-apt-repository ppa:ne0sight/chrome-gnome-shell
 sudo apt-get update
 sudo apt-get install chrome-gnome-shell
 
-Można także zainstalować łącznika ręcznie. Instrukcje instalacji: https://github.com/GNOME/chrome-gnome-shell
-
+Można także zainstalować łącznika ręcznie. Instrukcje instalacji: https://wiki.gnome.org/Projects/GnomeShellIntegrationForChrome/Installation
