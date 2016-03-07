@@ -1,11 +1,6 @@
 GNOME Shell integration for Chrome
 ============================================
 
-Language
-------------
-[English](README.md)  
-[Русский](README.ru.md)
-
 Introduction
 ------------
 
@@ -16,55 +11,4 @@ extensions repository https://extensions.gnome.org/, codenamed SweetTooth.
 Installation
 ------------
 
-In order to work with [GNOME Shell extensions repository](https://extensions.gnome.org/) in Google Chrome browser you must install [GNOME Shell integration extension](https://chrome.google.com/webstore/detail/gnome-shell-integration/gphhapmejobijbbhgpjhcjognlahblep) and native connector.
-
-The easiest way to install both is use your distro's favorite package manager.
-
-For Gentoo Linux ebuild is available in vortex overlay. If you use Layman just type under root user:
-```
-layman -a vortex
-emerge -av gnome-extra/chrome-gnome-shell
-```
-
-For Arch Linux there is a PKGBUILD available in the AUR: [chrome-gnome-shell](https://aur.archlinux.org/packages/chrome-gnome-shell-git/).
-
-For Ubuntu Linux package is available in ne0sight/chrome-gnome-shell PPA. To install it type:
-```
-sudo add-apt-repository ppa:ne0sight/chrome-gnome-shell
-sudo apt-get update
-sudo apt-get install chrome-gnome-shell
-```
-
-If there is no package in your distro you can install extension via [Chrome web store](https://chrome.google.com/webstore/detail/gnome-shell-integration/gphhapmejobijbbhgpjhcjognlahblep)
-and native connector using cmake or manually.
-
-Manual installation
-------------
-
-For manual installation you must clone this repository first or download latest release tarball.
-
-Web extension sources located in "extension" folder. Refer [Google Chrome documentation](https://developer.chrome.com/extensions/getstarted#unpacked) for instructions about installing unpacked extension.
-
-Before installing native connector make sure following packages installed in your system:
-* Cmake 2.8+
-* Python 2.7
-* GNOME Shell
-
-All commands must be issued from the root of cloned repository.
-
-**To install native connector with cmake** follow this steps:
-
-1. Create build folder and go to it:  
-`mkdir build && cd build`
-2. Run cmake to create makefiles:  
-`cmake -DCMAKE_INSTALL_PREFIX=/usr/local -DBUILD_EXTENSION=OFF ../`
-3. Install connector:  
-`sudo make install`
-
-**You also can install connector without cmake** following this steps:
-
-1. Copy file `connector/gs-chrome-connector.py` to your preferred location.
-2. Copy file `connector/io.github.ne0sight.gs_chrome_connector.json`:
-  * for Google Chrome to `/etc/opt/chrome/native-messaging-hosts/`;
-  * for Google Chromium and derivatives (Vivaldi etc) to `/etc/chromium/native-messaging-hosts/`.
-3. Edit copied `io.github.ne0sight.gs_chrome_connector.json` file and replace `${CMAKE_INSTALL_FULL_BINDIR}/gs-chrome-connector` with full path to copied `gs-chrome-connector.py`.
+Recent installation instructions are [available in GNOME wiki](https://wiki.gnome.org/Projects/GnomeShellIntegrationForChrome/Installation).
