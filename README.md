@@ -8,6 +8,11 @@ This repository contains extension for Google Chrome browser and native
 connector that provides integration with GNOME Shell and the corresponding
 extensions repository https://extensions.gnome.org/, codenamed SweetTooth.
 
+Requirements
+------------
+ * GNOME Shell up to 3.18
+ * Python 2.7
+
 Installation
 ------------
 
