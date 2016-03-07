@@ -68,9 +68,3 @@ All commands must be issued from the root of cloned repository.
   * for Google Chrome to `/etc/opt/chrome/native-messaging-hosts/`;
   * for Google Chromium and derivatives (Vivaldi etc) to `/etc/chromium/native-messaging-hosts/`.
 3. Edit copied `io.github.ne0sight.gs_chrome_connector.json` file and replace `${CMAKE_INSTALL_FULL_BINDIR}/gs-chrome-connector` with full path to copied `gs-chrome-connector.py`.
-
-Legal notice
-------------
-
-GNOME Shell integration for Chrome is NOT an official GNOME Foundation project.
-The GNOME logo and GNOME name are registered trademarks or trademarks of GNOME Foundation in the United States or other countries.

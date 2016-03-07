@@ -13,5 +13,3 @@ sudo apt-get install chrome-gnome-shell
 
 Można także zainstalować łącznika ręcznie. Instrukcje instalacji: https://github.com/GNOME/chrome-gnome-shell
 
-Rozszerzenie integracji z GNOME Shell dla przeglądarki Chrome NIE jest oficjalnym projektem GNOME Foundation.
-Logo GNOME i nazwa GNOME są zarejestrowanymi znakami towarowymi lub znakami towarowymi GNOME Foundation w Stanach Zjednoczonych lub innych państwach.

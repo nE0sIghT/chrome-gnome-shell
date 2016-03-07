@@ -12,6 +12,3 @@ sudo apt-get update
 sudo apt-get install chrome-gnome-shell
 
 You also can install connector manually. See https://github.com/GNOME/chrome-gnome-shell for install instructions.
-
-GNOME Shell integration extension for Chrome is NOT an official GNOME Foundation project.
-The GNOME logo and GNOME name are registered trademarks or trademarks of GNOME Foundation in the United States or other countries.

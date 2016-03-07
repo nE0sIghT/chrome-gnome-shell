@@ -68,9 +68,3 @@ sudo apt-get install chrome-gnome-shell
   * для Google Chrome в `/etc/opt/chrome/native-messaging-hosts/`;
   * для Google Chromium и производных (Vivaldi и т.п.) в `/etc/chromium/native-messaging-hosts/`.
 3. Отредактируйте скопированный файл `io.github.ne0sight.gs_chrome_connector.json` и замените `${CMAKE_INSTALL_FULL_BINDIR}/gs-chrome-connector` на полный путь к скопированному файлу `gs-chrome-connector.py`.
-
-Правовое уведомление
-------------
-
-GNOME Shell integration for Chrome НЕ ЯВЛЯЕТСЯ официальным проектом GNOME Foundation.
-Логотип GNOME и название GNOME являются зарегистрированными торговыми марками или торговыми марками GNOME Foundation в США или других странах.

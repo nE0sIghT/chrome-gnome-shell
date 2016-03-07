@@ -12,6 +12,3 @@ sudo apt-get update
 sudo apt-get install chrome-gnome-shell
 
 Вы также можете установить коннектор вручную. Инструкция по установке находится по адресу https://github.com/GNOME/chrome-gnome-shell.
-
-Расширение GNOME Shell integration для Chrome НЕ ЯВЛЯЕТСЯ официальным проектом GNOME Foundation.
-Логотип GNOME и название GNOME являются зарегистрированными торговыми марками или торговыми марками GNOME Foundation в США или других странах.
