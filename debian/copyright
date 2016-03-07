@@ -1,7 +1,7 @@
 Format: http://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
 Upstream-Name: chrome-gnome-shell
 Upstream-Contact: https://github.com/nE0sIghT/chrome-gnome-shell/issues
-Source: https://github.com/nE0sIghT/chrome-gnome-shell
+Source: https://git.gnome.org/browse/chrome-gnome-shell/
 
 Files: *
 Copyright: 2016 Yuri Konotopov <ykonotopov@gmail.com>

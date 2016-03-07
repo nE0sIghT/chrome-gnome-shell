@@ -4,9 +4,9 @@ Priority: optional
 Maintainer: Yuri Konotopov <ykonotopov@gmail.com>
 Build-Depends: debhelper (>= 8.0.0), cmake
 Standards-Version: 3.9.4
-Homepage: <https://github.com/nE0sIghT/chrome-gnome-shell>
-Vcs-Git: https://github.com/nE0sIghT/chrome-gnome-shell.git
-Vcs-Browser: https://github.com/nE0sIghT/chrome-gnome-shell
+Homepage: <https://wiki.gnome.org/Projects/GnomeShellIntegrationForChrome>
+Vcs-Git: git://git.gnome.org/chrome-gnome-shell
+Vcs-Browser: https://git.gnome.org/browse/chrome-gnome-shell
 
 Package: chrome-gnome-shell
 Architecture: all

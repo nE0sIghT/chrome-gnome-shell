@@ -17,7 +17,7 @@ chrome.runtime.onInstalled.addListener(function(details) {
 			if(options.showReleaseNotes)
 			{
 				chrome.tabs.create({
-					url: 'https://github.com/nE0sIghT/chrome-gnome-shell/releases/tag/v' + version,
+					url: 'https://wiki.gnome.org/Projects/GnomeShellIntegrationForChrome/ReleaseNotes/' + version,
 					active: true
 				});
 			}
