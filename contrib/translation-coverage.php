@@ -99,19 +99,42 @@ if(!$reference_strings)
 		<title>GNOME Shell integration for Chrome translation coverage</title>
 		<link rel="stylesheet" href="https://l10n.gnome.org/static/css/template.css" />
 		<style type="text/css">
-			html
-			{
-				background: none;
-			}
-
 			table
 			{
 				width: 700px !important;
-				margin: 10px auto !important;
+				margin: 20px auto 0 auto !important;
+			}
+
+			div.tab
+			{
+				position: inherit !important;
+				float: none !important;
+				margin: 0 auto !important;
+				width: 20em !important;
+				text-align: center;
+			}
+
+			a.chrome-gnome-shell
+			{
+				color: #555753 !important;
+				text-decoration: none;
+				font-weight: bold;
+			}
+
+			a.chrome-gnome-shell:hover
+			{
+				background-color: #ececec;
 			}
 		</style>
 	</head>
 	<body>
+		<div id="global_domain_bar">
+			<div class="maxwidth">
+				<div class="tab">
+					<a class='chrome-gnome-shell' href="https://wiki.gnome.org/Projects/GnomeShellIntegrationForChrome">GNOME Shell integration for Chrome</a>
+				</div>
+			</div>
+		</div>
 		<table class='stats'>
 			<thead>
 				<tr>
