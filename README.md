@@ -14,4 +14,4 @@ Source code: https://git.gnome.org/browse/chrome-gnome-shell
 Github mirror: https://github.com/GNOME/chrome-gnome-shell
 
 Issues: https://github.com/nE0sIghT/chrome-gnome-shell/issues  
-Pull requests: https://github.com/GNOME/chrome-gnome-shell/pulls
+Pull requests: https://github.com/nE0sIghT/chrome-gnome-shell/pulls
