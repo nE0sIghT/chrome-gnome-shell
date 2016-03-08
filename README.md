@@ -7,6 +7,7 @@ to GNOME infrastructure.
 New resources
 ------------
 
+Wiki: https://wiki.gnome.org/Projects/GnomeShellIntegrationForChrome
 Installation instructions: https://wiki.gnome.org/Projects/GnomeShellIntegrationForChrome/Installation
 
 Source code: https://git.gnome.org/browse/chrome-gnome-shell  
