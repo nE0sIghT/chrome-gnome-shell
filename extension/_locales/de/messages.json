@@ -33,7 +33,7 @@
 		}
 	},
 	"update_available": {
-		"message": "Ein Update für GNOME Shell Erweiterung ist verfügbar"
+		"message": "Eine Aktualisierung für GNOME Shell Erweiterung ist verfügbar"
 	},
 
 	"options_title": {
@@ -44,6 +44,9 @@
 			}
 		}
 	},
+	"options_link": {
+ 		"message": "Optionen"
+ 	},
 	"options_saved": {
 		"message": "Optionen gespeichert."
 	},
@@ -61,6 +64,12 @@
 	},
 	"options_next_check": {
 		"message": "Nächste Prüfung"
+	},
+	"translation_credits_title": {
+		"message": "Übersetzung"
+	},
+	"translation_credits": {
+		"message": "Stefan Kirrmann, 2016"
 	},
 
 	"hours": {
@@ -98,6 +107,6 @@
 		"message": "Version $$1"
 	},
 	"warning_versions_mismatch": {
-		"message": "Sie benutzten eine andere Version der GNOME Shell Integrations Erweiterung ($$1) und Native Host Konnektor ($$2). Manche Features funktionieren möglicherweise falsch oder gar nicht."
+		"message": "Sie benutzten eine andere Version der GNOME Shell Integrations Erweiterung ($$1) und des Native Host Konnektors ($$2). Manche Features funktionieren möglicherweise falsch oder gar nicht."
 	}
 }
