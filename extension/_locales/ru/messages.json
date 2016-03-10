@@ -102,7 +102,7 @@
 		"message": "Получено неверное сообщение расширения"
 	},
 	"no_host_connector": {
-		"message": "Хотя расширение GNOME Shell integration работает, нативный хост-коннектор не обнаружен. Обратитесь к <a href='https://github.com/nE0sIghT/chrome-gnome-shell#installation'>документации</a> за инструкциями по установке коннектора."
+		"message": "Хотя расширение GNOME Shell integration работает, нативный хост-коннектор не обнаружен. Обратитесь к <a href='https://wiki.gnome.org/Projects/GnomeShellIntegrationForChrome/Installation/ru'>документации</a> за инструкциями по установке коннектора."
 	},
 	"older_connector": {
 		"message": "старше версии 4"

@@ -98,7 +98,7 @@
 		"message": "Falsche Antwort von Erweiterung erhalten"
 	},
 	"no_host_connector": {
-		"message": "Obwohl die GNOME Shell Integrations Erweiterung läuft, wurde der Native Host Konnektor nicht erkannt. Siehe <a href='https://github.com/nE0sIghT/chrome-GNOME Shell#installation'>documentation</a> für Aneitungen zum installieren des Konnektors."
+		"message": "Obwohl die GNOME Shell Integrations Erweiterung läuft, wurde der Native Host Konnektor nicht erkannt. Siehe <a href='https://wiki.gnome.org/Projects/GnomeShellIntegrationForChrome/Installation'>documentation</a> für Aneitungen zum installieren des Konnektors."
 	},
 	"older_connector": {
 		"message": "älter als Version 4"

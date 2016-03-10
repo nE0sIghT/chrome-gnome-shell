@@ -102,7 +102,7 @@
 		"message": "Λήφθηκε λαθεμένη απόκριση επέκτασης"
 	},
 	"no_host_connector": {
-		"message": "Αν και η επέκταση ενσωμάτωσης με το GNOME Shell είναι σε λειτουργία, η εγγενής εφαρμογή του συστήματος δεν έχει εντοπιστεί. Παρακαλούμε, δείτε στις οδηγίες της <a href='https://github.com/nE0sIghT/chrome-gnome-shell#installation'>τεκμηρίωσης</a> πως να την εγκαταστήσετε."
+		"message": "Αν και η επέκταση ενσωμάτωσης με το GNOME Shell είναι σε λειτουργία, η εγγενής εφαρμογή του συστήματος δεν έχει εντοπιστεί. Παρακαλούμε, δείτε στις οδηγίες της <a href='https://wiki.gnome.org/Projects/GnomeShellIntegrationForChrome/Installation'>τεκμηρίωσης</a> πως να την εγκαταστήσετε."
 	},
 	"older_connector": {
 		"message": "μικρότερη έκδοση από την 4"

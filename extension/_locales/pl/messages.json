@@ -102,7 +102,7 @@
 		"message": "Otrzymano błędną odpowiedź rozszerzenia"
 	},
 	"no_host_connector": {
-		"message": "Chociaż rozszerzenie integracji z GNOME Shell jest uruchomione, to nie wykryto natywnego łącznika serwera. <a href='https://github.com/nE0sIghT/chrome-gnome-shell#installation'>Dokumentacja</a> zawiera instrukcje na temat instalacji łącznika."
+		"message": "Chociaż rozszerzenie integracji z GNOME Shell jest uruchomione, to nie wykryto natywnego łącznika serwera. <a href='https://wiki.gnome.org/Projects/GnomeShellIntegrationForChrome/Installation'>Dokumentacja</a> zawiera instrukcje na temat instalacji łącznika."
 	},
 	"older_connector": {
 		"message": "starszy niż wersja 4"
