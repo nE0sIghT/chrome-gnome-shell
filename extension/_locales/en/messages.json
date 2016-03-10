@@ -73,7 +73,8 @@
 		"message": "About translation"
 	},
 	"translation_credits": {
-		"message": ""
+		"message": "",
+		"description": "HTML markup enabled for this string."
 	},
 
 	"hours": {
