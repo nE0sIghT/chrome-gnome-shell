@@ -1,0 +1,5 @@
+ * chrome-web-store/: Chrome Web store extension detailed description
+ * ubuntu/: debian metadata for Ubuntu PPA
+ * translation-coverage.php: helper script for translations coverage statistics
+ for https://wiki.gnome.org/Projects/GnomeShellIntegrationForChrome/Translations
+ wiki page
