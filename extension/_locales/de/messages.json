@@ -24,6 +24,9 @@
 	"no_host_response": {
 		"message": "Keine Antwort von Host"
 	},
+	"platform_not_supported": {
+		"message": "Native Host Konnektor wird auf dieser Plattform nicht unterstützt."
+	},
 	"update_check_failed": {
 		"message": "Prüfung auf Erweiterungs Aktualisierungen fehlgeschlagen: $CAUSE$",
 		"placeholders": {
