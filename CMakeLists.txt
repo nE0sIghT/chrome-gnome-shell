@@ -5,13 +5,24 @@ set(PROJECT_VERSION "5.1")
 
 set(ARCHIVE_NAME ${CMAKE_PROJECT_NAME}-${PROJECT_VERSION})
 set(ARCHIVE_FULL_NAME ${ARCHIVE_NAME}.tar.xz)
+set(ARCHIVE_DEB_NAME ${CMAKE_PROJECT_NAME}_${PROJECT_VERSION}.orig.tar.xz)
+set(DEB_DIR ${CMAKE_CURRENT_BINARY_DIR}/deb)
 
 option(BUILD_EXTENSION	"Build extension zip package"	TRUE)
 option(BUILD_CONNECTOR	"Build native messaging host"	TRUE)
+option(BUILD_DEB	"Build debian package"		FALSE)
 
 if(NOT DEFINED(EXTENSION_ID))
 	set(EXTENSION_ID "gphhapmejobijbbhgpjhcjognlahblep")
 endif(NOT DEFINED(EXTENSION_ID))
+
+if(NOT DEFINED(DEBIAN_VERSION))
+	set(DEBIAN_VERSION "0ubuntu1")
+endif(NOT DEFINED(DEBIAN_VERSION))
+
+if(NOT DEFINED(DEBIAN_DISTRO))
+	set(DEBIAN_DISTRO "trusty")
+endif(NOT DEFINED(DEBIAN_DISTRO))
 
 # Suppress warning
 if(NOT DEFINED(CMAKE_SIZEOF_VOID_P))
@@ -53,5 +64,42 @@ if(XZ)
 		COMMAND git archive --prefix=${ARCHIVE_NAME}/ HEAD | ${XZ} -z > ${CMAKE_BINARY_DIR}/${ARCHIVE_FULL_NAME}
 		WORKING_DIRECTORY ${CMAKE_SOURCE_DIR})
 else(XZ)
-	message(WARNING "XZ utils not found. Dist target will not be generated.")
+	if(BUILD_DEB)
+		message(FATAL_ERROR "XZ utils not found.")
+	else(BUILD_DEB)
+		message(WARNING "XZ utils not found. Dist target will not be generated.")
+	endif(BUILD_DEB)
 endif(XZ)
+
+if(BUILD_DEB)
+	find_program(DEBUILD debuild)
+	find_program(TAR tar)
+
+	if(NOT DEBUILD)
+		message(FATAL_ERROR "Debuild not found.")
+	endif(NOT DEBUILD)
+
+	if(NOT TAR)
+		message(FATAL_ERROR "Tar not found.")
+	endif(NOT TAR)
+
+	if(GPG_KEY)
+		set(DEBUILD_KEY "-k${GPG_KEY}")
+	endif(GPG_KEY)
+
+	configure_file("${CMAKE_CURRENT_SOURCE_DIR}/contrib/ubuntu/changelog"
+			"${CMAKE_BINARY_DIR}/debian_changelog")
+
+	add_custom_target(deb_prepare
+		DEPENDS dist
+		COMMAND ${CMAKE_COMMAND} -E make_directory "${DEB_DIR}/${ARCHIVE_NAME}"
+		COMMAND ${CMAKE_COMMAND} -E copy "${CMAKE_CURRENT_BINARY_DIR}/${ARCHIVE_FULL_NAME}" "${DEB_DIR}/${ARCHIVE_DEB_NAME}"
+		COMMAND ${TAR} -xvf "${DEB_DIR}/${ARCHIVE_DEB_NAME}" -C "${DEB_DIR}/${ARCHIVE_NAME}" --strip-components=1)
+
+	add_custom_target(deb ALL
+		DEPENDS deb_prepare
+		COMMAND ${CMAKE_COMMAND} -E copy_directory "${CMAKE_CURRENT_SOURCE_DIR}/contrib/ubuntu" "${DEB_DIR}/${ARCHIVE_NAME}/debian"
+		COMMAND ${CMAKE_COMMAND} -E copy "${CMAKE_BINARY_DIR}/debian_changelog" "${DEB_DIR}/${ARCHIVE_NAME}/debian/changelog"
+		COMMAND ${DEBUILD} -S ${DEBUILD_KEY}
+		WORKING_DIRECTORY ${DEB_DIR}/${ARCHIVE_NAME})
+endif(BUILD_DEB)
