@@ -50,7 +50,7 @@ find_program(XZ xz)
 if(XZ)
 	# http://agateau.com/2009/cmake-and-make-dist-the-simple-version/
 	add_custom_target(dist
-		COMMAND git archive --prefix=${ARCHIVE_NAME}/ HEAD | xz -z > ${CMAKE_BINARY_DIR}/${ARCHIVE_FULL_NAME}
+		COMMAND git archive --prefix=${ARCHIVE_NAME}/ HEAD | ${XZ} -z > ${CMAKE_BINARY_DIR}/${ARCHIVE_FULL_NAME}
 		WORKING_DIRECTORY ${CMAKE_SOURCE_DIR})
 else(XZ)
 	message(WARNING "XZ utils not found. Dist target will not be generated.")
