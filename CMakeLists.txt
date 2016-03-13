@@ -1,6 +1,11 @@
 cmake_minimum_required (VERSION 2.8)
 project (chrome-gnome-shell NONE)
 
+# Suppress warning
+if(NOT DEFINED(CMAKE_SIZEOF_VOID_P))
+	set(CMAKE_SIZEOF_VOID_P 8)
+endif(NOT DEFINED(CMAKE_SIZEOF_VOID_P))
+
 set(PROJECT_VERSION "5.1")
 
 set(ARCHIVE_NAME ${CMAKE_PROJECT_NAME}-${PROJECT_VERSION})
@@ -24,10 +29,6 @@ if(NOT DEFINED(DEBIAN_DISTRO))
 	set(DEBIAN_DISTRO "trusty")
 endif(NOT DEFINED(DEBIAN_DISTRO))
 
-# Suppress warning
-if(NOT DEFINED(CMAKE_SIZEOF_VOID_P))
-	set(CMAKE_SIZEOF_VOID_P 8)
-endif(NOT DEFINED(CMAKE_SIZEOF_VOID_P))
 
 include(GNUInstallDirs)
 
