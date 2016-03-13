@@ -1,3 +1,5 @@
+# GNOME Shell integration for Chrome build script
+
 cmake_minimum_required (VERSION 2.8)
 project (chrome-gnome-shell NONE)
 
@@ -6,6 +8,7 @@ if(NOT DEFINED(CMAKE_SIZEOF_VOID_P))
 	set(CMAKE_SIZEOF_VOID_P 8)
 endif(NOT DEFINED(CMAKE_SIZEOF_VOID_P))
 
+# Variables
 set(PROJECT_VERSION "5.1")
 
 set(ARCHIVE_NAME ${CMAKE_PROJECT_NAME}-${PROJECT_VERSION})
@@ -13,15 +16,18 @@ set(ARCHIVE_FULL_NAME ${ARCHIVE_NAME}.tar.xz)
 set(ARCHIVE_DEB_NAME ${CMAKE_PROJECT_NAME}_${PROJECT_VERSION}.orig.tar.xz)
 set(DEB_DIR ${CMAKE_CURRENT_BINARY_DIR}/deb)
 
+# Options
 option(BUILD_EXTENSION		"Build extension zip package"	TRUE)
 option(BUILD_CONNECTOR		"Build native messaging host"	TRUE)
 option(BUILD_SOURCE_PACKAGE	"Build source package"		FALSE)
 option(BUILD_DEB		"Build debian package"		FALSE)
 
+# Default extensions id for Chrome web store
 if(NOT DEFINED(EXTENSION_ID))
 	set(EXTENSION_ID "gphhapmejobijbbhgpjhcjognlahblep")
 endif(NOT DEFINED(EXTENSION_ID))
 
+# Debian variables
 if(NOT DEFINED(DEBIAN_VERSION))
 	set(DEBIAN_VERSION "0ubuntu1")
 endif(NOT DEFINED(DEBIAN_VERSION))
@@ -45,6 +51,7 @@ endmacro(find_program_ex)
 
 include(GNUInstallDirs)
 
+# Options validating
 if(NOT BUILD_EXTENSION AND NOT BUILD_CONNECTOR)
 	message(FATAL_ERROR "No build options selected")
 endif(NOT BUILD_EXTENSION AND NOT BUILD_CONNECTOR)
@@ -58,6 +65,7 @@ if(BUILD_SOURCE_PACKAGE AND NOT EXISTS ${CMAKE_CURRENT_SOURCE_DIR}/.git/)
 	message(FATAL_ERROR "Unable to build source package outside of git repository.")
 endif(BUILD_SOURCE_PACKAGE AND NOT EXISTS ${CMAKE_CURRENT_SOURCE_DIR}/.git/)
 
+# Options handling
 if(BUILD_EXTENSION)
 	find_program_ex(7z FATAL_ERROR)
 
