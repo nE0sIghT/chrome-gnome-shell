@@ -10,7 +10,9 @@ Wiki: https://wiki.gnome.org/Projects/GnomeShellIntegrationForChrome
 Installation instructions: https://wiki.gnome.org/Projects/GnomeShellIntegrationForChrome/Installation
 
 Source code: https://git.gnome.org/browse/chrome-gnome-shell  
-Github mirror: https://github.com/GNOME/chrome-gnome-shell
+Github mirrors:
+* https://github.com/nE0sIghT/chrome-gnome-shell-mirror
+* https://github.com/GNOME/chrome-gnome-shell
 
 Issues: https://github.com/nE0sIghT/chrome-gnome-shell-mirror/issues  
 Pull requests: https://github.com/nE0sIghT/chrome-gnome-shell-mirror/pulls
