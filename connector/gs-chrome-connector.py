@@ -64,8 +64,6 @@ def send_error(message):
     send_message({'success': False, 'message': message})
 
 def debug(message):
-    global DEBUG_ENABLED
-
     if DEBUG_ENABLED:
         logError(message)
 
@@ -88,7 +86,6 @@ def dbus_call_response(method, parameters, resultProperty):
 
 # Thread that reads messages from the webapp.
 def read_thread_func(proxy, mainLoop):
-    global mutex
     settings = Gio.Settings.new(SHELL_SCHEMA)
 
     while mainLoop.is_running():
@@ -190,8 +187,6 @@ def read_thread_func(proxy, mainLoop):
 
 
 def on_shell_signal(d_bus_proxy, sender_name, signal_name, parameters):
-    global mutex
-
     if signal_name == 'ExtensionStatusChanged':
         mutex.acquire()
         debug('[%d] Signal: to %s' % (os.getpid(), signal_name))
@@ -201,7 +196,7 @@ def on_shell_signal(d_bus_proxy, sender_name, signal_name, parameters):
 
 
 def on_shell_appeared(connection, name, name_owner):
-    global mutex, watcherConnected
+    global watcherConnected
 
     # Things get broken if we send 1st signal
     if not watcherConnected:
