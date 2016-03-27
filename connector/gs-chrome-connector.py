@@ -10,6 +10,7 @@
     (at your option) any later version.
 '''
 
+from __future__ import unicode_literals
 from __future__ import print_function
 from gi.repository import GLib, Gio
 import json
