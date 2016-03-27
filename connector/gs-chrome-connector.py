@@ -38,7 +38,7 @@ def isUUID(uuid):
 # Helper function that sends a message to the webapp.
 def send_message(response):
     message = json.dumps(response)
-    message_length = len(message)
+    message_length = len(message.encode('utf-8'))
 
     if message_length > 1024*1024:
         logError('Too long message (%d): "%s"' % (message_length, message))
