@@ -27,6 +27,7 @@ SHELL_SCHEMA = "org.gnome.shell"
 ENABLED_EXTENSIONS_KEY = "enabled-extensions"
 EXTENSION_DISABLE_VERSION_CHECK_KEY = "disable-extension-version-validation"
 
+BUFFER_SUPPORTED = hasattr(sys.stdin, 'buffer')
 mutex = Lock()
 watcherConnected = False
 
@@ -46,7 +47,11 @@ def send_message(response):
 
     try:
         # Write message size.
-        sys.stdout.write(struct.pack('I', message_length))
+        if BUFFER_SUPPORTED:
+            sys.stdout.buffer.write(struct.pack('I', message_length))
+        else:
+            sys.stdout.write(struct.pack('I', message_length))
+
         # Write the message itself.
         sys.stdout.write(message)
         sys.stdout.flush()
@@ -88,7 +93,10 @@ def read_thread_func(proxy, mainLoop):
 
     while mainLoop.is_running():
         # Read the message length (first 4 bytes).
-        text_length_bytes = sys.stdin.buffer.read(4)
+        if BUFFER_SUPPORTED:
+            text_length_bytes = sys.stdin.buffer.read(4)
+        else:
+            text_length_bytes = sys.stdin.read(4).decode('utf-8')
 
         if len(text_length_bytes) == 0:
             mainLoop.quit()
@@ -98,7 +106,10 @@ def read_thread_func(proxy, mainLoop):
         text_length = struct.unpack('i', text_length_bytes)[0]
 
         # Read the text (JSON object) of the message.
-        text = sys.stdin.read(text_length).decode('utf-8')
+        if BUFFER_SUPPORTED:
+            text = sys.stdin.buffer.read(text_length).decode('utf-8')
+        else:
+            text = sys.stdin.read(text_length).decode('utf-8')
 
         request = json.loads(text)
 
