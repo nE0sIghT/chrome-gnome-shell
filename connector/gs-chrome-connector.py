@@ -93,7 +93,7 @@ def read_thread_func(proxy, mainLoop):
         if BUFFER_SUPPORTED:
             text_length_bytes = sys.stdin.buffer.read(4)
         else:
-            text_length_bytes = sys.stdin.read(4).decode('utf-8')
+            text_length_bytes = sys.stdin.read(4)
 
         if len(text_length_bytes) == 0:
             mainLoop.quit()
