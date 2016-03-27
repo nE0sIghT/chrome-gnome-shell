@@ -87,7 +87,7 @@ def read_thread_func(proxy, mainLoop):
 
     while mainLoop.is_running():
         # Read the message length (first 4 bytes).
-        text_length_bytes = sys.stdin.read(4)
+        text_length_bytes = sys.stdin.buffer.read(4)
 
         if len(text_length_bytes) == 0:
             mainLoop.quit()
