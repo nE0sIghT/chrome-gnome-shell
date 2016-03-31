@@ -48,9 +48,9 @@ def send_message(response):
     try:
         # Write message size.
         if BUFFER_SUPPORTED:
-            sys.stdout.buffer.write(struct.pack('I', message_length))
+            sys.stdout.buffer.write(struct.pack(b'I', message_length))
         else:
-            sys.stdout.write(struct.pack('I', message_length))
+            sys.stdout.write(struct.pack(b'I', message_length))
 
         # Write the message itself.
         sys.stdout.write(message)
@@ -100,7 +100,7 @@ def read_thread_func(proxy, mainLoop):
             break
 
         # Unpack message length as 4 byte integer.
-        text_length = struct.unpack('i', text_length_bytes)[0]
+        text_length = struct.unpack(b'i', text_length_bytes)[0]
 
         # Read the text (JSON object) of the message.
         if BUFFER_SUPPORTED:
