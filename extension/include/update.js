@@ -59,7 +59,7 @@ GSC.update = (function($) {
 									onNetworkError,
 									{
 										urls: [ UPDATE_URL + "*" ],
-										types: [ 'xmlhttprequest']
+										types: [ 'xmlhttprequest' ]
 									}
 								);
 							}
