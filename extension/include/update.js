@@ -50,46 +50,71 @@ GSC.update = (function($) {
 
 						request.installed = JSON.stringify(request.installed);
 
-						$.ajax({
-							url: 'https://extensions.gnome.org/update-info/',
-							data: request,
-							method: 'GET',
-							cache: false
-						}).done(function (data, textStatus, jqXHR) {
-							GSC.notifications.remove(NOTIFICATION_UPDATE_CHECK_FAILED);
-
-							var toUpgrade = [];
-							for (uuid in data)
+						chrome.permissions.contains({
+							permissions: ["webRequest"]
+						}, function(webRequestEnabled) {
+							if(webRequestEnabled)
 							{
-								if (extensionsResponse.extensions[uuid] && $.inArray(data[uuid], ['upgrade', 'downgrade']) !== -1)
+								chrome.webRequest.onErrorOccurred.addListener(
+									onNetworkError,
+									{
+										urls: [ UPDATE_URL + "*" ],
+										types: [ 'xmlhttprequest']
+									}
+								);
+							}
+
+							$.ajax({
+								url: UPDATE_URL,
+								data: request,
+								method: 'GET',
+								cache: false
+							}).done(function (data, textStatus, jqXHR) {
+								GSC.notifications.remove(NOTIFICATION_UPDATE_CHECK_FAILED);
+
+								var toUpgrade = [];
+								for (uuid in data)
 								{
-									toUpgrade.push({
-										title: extensionsResponse.extensions[uuid].name,
-										message: m('extension_status_' + data[uuid])
+									if (extensionsResponse.extensions[uuid] && $.inArray(data[uuid], ['upgrade', 'downgrade']) !== -1)
+									{
+										toUpgrade.push({
+											title: extensionsResponse.extensions[uuid].name,
+											message: m('extension_status_' + data[uuid])
+										});
+									}
+								}
+
+								if (toUpgrade.length > 0)
+								{
+									GSC.notifications.create(NOTIFICATION_UPDATE_AVAILABLE, {
+										type: chrome.notifications.TemplateType.LIST,
+										title: m('update_available'),
+										message: '',
+										items: toUpgrade
 									});
 								}
-							}
 
-							if (toUpgrade.length > 0)
-							{
-								GSC.notifications.create(NOTIFICATION_UPDATE_AVAILABLE, {
-									type: chrome.notifications.TemplateType.LIST,
-									title: m('update_available'),
-									message: '',
-									items: toUpgrade
+								chrome.storage.local.set({
+									lastUpdateCheck: new Date().toLocaleString()
 								});
-							}
+							}).fail(function (jqXHR, textStatus, errorThrown) {
+								if(textStatus === 'error' && !errorThrown)
+								{
+									if(webRequestEnabled)
+									{
+										return;
+									}
 
-							chrome.storage.local.set({
-								lastUpdateCheck: new Date().toLocaleString()
+									textStatus = m('network_error');
+								}
+
+								createUpdateFailedNotification(textStatus);
+							}).always(function() {
+								if(webRequestEnabled)
+								{
+									chrome.webRequest.onErrorOccurred.removeListener(onNetworkError);
+								}
 							});
-						}).fail(function (jqXHR, textStatus, errorThrown) {
-							if(textStatus === 'error' && !errorThrown)
-							{
-								textStatus = m('network_error');
-							}
-
-							createUpdateFailedNotification(textStatus);
 						});
 					}
 					else
@@ -113,6 +138,10 @@ GSC.update = (function($) {
 				{title: m('close')}
 			]
 		});
+	}
+
+	function onNetworkError(details) {
+		createUpdateFailedNotification(details.error);
 	}
 
 	function init() {

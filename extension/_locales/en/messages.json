@@ -62,6 +62,12 @@
 	"options_check_period": {
 		"message": "Update check period"
 	},
+	"options_show_network_errors": {
+		"message": "Show information about network errors"
+	},
+	"options_show_network_errors_notice": {
+		"message": "Chrome permission «webRequest» required."
+	},
 	"options_show_release_notes": {
 		"message": "Show release notes when extension updated"
 	},

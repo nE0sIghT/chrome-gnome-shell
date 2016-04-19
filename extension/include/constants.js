@@ -19,6 +19,8 @@ MESSAGE_NEXT_UPDATE_CHANGED		= 'gs-next-update-changed';
 
 NATIVE_HOST				= 'io.github.ne0sight.gs_chrome_connector';
 
+UPDATE_URL				= 'https://extensions.gnome.org/update-info/';
+
 DEFAULT_OPTIONS				= {
 	showReleaseNotes:	true,
 	updateCheck:		true,

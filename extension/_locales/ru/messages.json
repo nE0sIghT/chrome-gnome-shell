@@ -62,6 +62,12 @@
 	"options_check_period": {
 		"message": "Период проверки обновлений"
 	},
+	"options_show_network_errors": {
+		"message": "Показывать информацию о сетевых ошибках"
+	},
+	"options_show_network_errors_notice": {
+		"message": "Требуется разрешение Chrome «webRequest»."
+	},
 	"options_show_release_notes": {
 		"message": "Показывать примечания к выпуску при обновлении дополнения"
 	},
