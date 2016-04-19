@@ -21,6 +21,9 @@
 			}
 		}
 	},
+	"network_error": {
+		"message": "A network error has occured. Please check your Internet connection and/or proxy settings."
+	},
 	"no_host_response": {
 		"message": "No host response"
 	},

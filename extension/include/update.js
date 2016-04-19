@@ -84,6 +84,11 @@ GSC.update = (function($) {
 								lastUpdateCheck: new Date().toLocaleString()
 							});
 						}).fail(function (jqXHR, textStatus, errorThrown) {
+							if(textStatus === 'error' && !errorThrown)
+							{
+								textStatus = m('network_error');
+							}
+
 							createUpdateFailedNotification(textStatus);
 						});
 					}
