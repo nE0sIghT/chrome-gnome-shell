@@ -21,6 +21,9 @@
 			}
 		}
 	},
+	"network_error": {
+		"message": "Wystąpił błąd sieci. Proszę sprawdzić połączenie z Internetem i/lub ustawienia pośrednika."
+	},
 	"no_host_response": {
 		"message": "Brak odpowiedzi serwera"
 	},
@@ -58,6 +61,12 @@
 	},
 	"options_check_period": {
 		"message": "Czas między sprawdzaniem aktualizacji"
+	},
+	"options_show_network_errors": {
+		"message": "Wyświetlanie informacji o błędach sieci"
+	},
+	"options_show_network_errors_notice": {
+		"message": "Wymagane jest uprawnienie „webRequest” przeglądarki Chrome."
 	},
 	"options_show_release_notes": {
 		"message": "Wyświetlanie informacji o wydaniu po aktualizacji rozszerzenia"
