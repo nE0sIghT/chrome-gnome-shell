@@ -37,6 +37,12 @@ function restore_options()
 
 		retrieveUpdateTimes();
 	});
+
+	chrome.permissions.contains({
+		permissions: ["webRequest"]
+	}, function(result) {
+		setNetworkErrors(result);
+	});
 }
 
 function retrieveUpdateTimes()
@@ -87,10 +93,41 @@ function setReleaseNotes(result)
 		$('#show_release_notes_no').prop('checked', true);
 }
 
+function setNetworkErrors(result)
+{
+	if(result)
+		$('#show_network_errors_yes').prop('checked', true);
+	else
+		$('#show_network_errors_no').prop('checked', true);
+}
+
+function handleWebrequestPermission()
+{
+	if($('#show_network_errors_yes').prop('checked'))
+	{
+		chrome.permissions.request({
+			permissions: ["webRequest"]
+		}, function(granted) {
+			setNetworkErrors(granted);
+		});
+	}
+	else
+	{
+		chrome.permissions.remove({
+			permissions: ["webRequest"]
+		}, function(removed) {
+			setNetworkErrors(!removed);
+		});
+	}
+}
+
 i18n();
 
 document.addEventListener('DOMContentLoaded', restore_options);
 document.getElementById('save').addEventListener('click', save_options);
+$.each(document.getElementsByName('show_network_errors'), function(index, control) {
+	control.addEventListener('change', handleWebrequestPermission);
+});
 
 if($('#translation_credits div').is(':empty'))
 {

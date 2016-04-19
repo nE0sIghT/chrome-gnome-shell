@@ -15,7 +15,8 @@ body {
 }
 
 .buttons { text-align: center; margin-top: 1em; }
-.notice { font-size: 90%; margin-top: 0.5em; white-space: nowrap; }
+.notice { font-size: 90%; font-weight: normal; margin-top: 0.5em; white-space: nowrap; }
+.wrapped { white-space: normal; }
 
 fieldset {
 	border: 0;
@@ -26,6 +27,7 @@ fieldset {
 
 dl {
 	padding: 0.2em 0;
+	clear: both;
 }
 
 dt {

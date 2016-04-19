@@ -21,6 +21,9 @@
 			}
 		}
 	},
+	"network_error": {
+		"message": "Произошла сетевая ошибка. Пожалуйста, проверьте ваше подключение к Интернет и/или настройки прокси сервера."
+	},
 	"no_host_response": {
 		"message": "Нет ответа от хост-коннектора"
 	},
@@ -58,6 +61,12 @@
 	},
 	"options_check_period": {
 		"message": "Период проверки обновлений"
+	},
+	"options_show_network_errors": {
+		"message": "Показывать информацию о сетевых ошибках"
+	},
+	"options_show_network_errors_notice": {
+		"message": "Требуется разрешение Chrome «webRequest»."
 	},
 	"options_show_release_notes": {
 		"message": "Показывать примечания к выпуску при обновлении дополнения"
