@@ -1,7 +1,6 @@
 Вы ДОЛЖНЫ установить нативный хост-коннектор для работы этого расширения.
 
-В Gentoo Linux вы можете установить коннектор с помощью команд:
-layman -a vortex
+В Gentoo Linux вы можете установить коннектор с помощью команды:
 emerge gnome-extra/chrome-gnome-shell
 
 PKGBUILD для Arch Linux доступен в AUR: https://aur.archlinux.org/packages/chrome-gnome-shell-git

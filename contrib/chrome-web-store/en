@@ -1,7 +1,6 @@
 You MUST install native connector for this extension to work.
 
-In Gentoo Linux you can install connector with commands:
-layman -a vortex
+In Gentoo Linux you can install connector with command:
 emerge gnome-extra/chrome-gnome-shell
 
 For Arch Linux there is a PKGBUILD available in the AUR: https://aur.archlinux.org/packages/chrome-gnome-shell-git

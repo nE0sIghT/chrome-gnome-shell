@@ -1,7 +1,6 @@
 Należy zainstalować natywnego łącznika, aby to rozszerzenie mogło działać.
 
 W systemie Gentoo Linux można go zainstalować za pomocą tych poleceń:
-layman -a vortex
 emerge gnome-extra/chrome-gnome-shell
 
 Dla systemu Arch Linux dostępny jest pakiet PKGBUILD w repozytorium AUR: https://aur.archlinux.org/packages/chrome-gnome-shell-git
