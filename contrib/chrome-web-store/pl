@@ -1,9 +1,9 @@
 Należy zainstalować natywnego łącznika, aby to rozszerzenie mogło działać.
 
+Dla systemu Arch Linux dostępny jest pakiet PKGBUILD w repozytorium AUR: https://aur.archlinux.org/packages/chrome-gnome-shell-git
+
 W systemie Gentoo Linux można go zainstalować za pomocą polecenia:
 emerge gnome-extra/chrome-gnome-shell
-
-Dla systemu Arch Linux dostępny jest pakiet PKGBUILD w repozytorium AUR: https://aur.archlinux.org/packages/chrome-gnome-shell-git
 
 Dla systemu Ubuntu Linux dostępny jest pakiet w repozytorium PPA „ne0sight/chrome-gnome-shell”. Polecenia instalacji:
 sudo add-apt-repository ppa:ne0sight/chrome-gnome-shell

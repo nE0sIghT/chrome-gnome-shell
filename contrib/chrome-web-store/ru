@@ -1,9 +1,9 @@
 Вы ДОЛЖНЫ установить нативный хост-коннектор для работы этого расширения.
 
+PKGBUILD для Arch Linux доступен в AUR: https://aur.archlinux.org/packages/chrome-gnome-shell-git
+
 В Gentoo Linux вы можете установить коннектор с помощью команды:
 emerge gnome-extra/chrome-gnome-shell
-
-PKGBUILD для Arch Linux доступен в AUR: https://aur.archlinux.org/packages/chrome-gnome-shell-git
 
 Пакет для Ubuntu Linux доступен в PPA ne0sight/chrome-gnome-shell. Для его установки наберите:
 sudo add-apt-repository ppa:ne0sight/chrome-gnome-shell
