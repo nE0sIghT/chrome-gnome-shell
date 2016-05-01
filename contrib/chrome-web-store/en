@@ -2,6 +2,8 @@ You MUST install native connector for this extension to work.
 
 For Arch Linux there is a PKGBUILD available in the AUR: https://aur.archlinux.org/packages/chrome-gnome-shell-git
 
+For Fedora Linux there is package available in Copr: https://copr.fedorainfracloud.org/coprs/region51/chrome-gnome-shell
+
 In Gentoo Linux you can install connector with command:
 emerge gnome-extra/chrome-gnome-shell
 
