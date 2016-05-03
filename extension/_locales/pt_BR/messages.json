@@ -21,6 +21,9 @@
 			}
 		}
 	},
+	"network_error": {
+		"message": "Ocorreu um erro de rede. Por favor, verifique sua conexão com a Internet e/ou a configuração de seu proxy."
+	},
 	"no_host_response": {
 		"message": "Nenhuma resposta da máquina"
 	},
@@ -58,6 +61,12 @@
 	},
 	"options_check_period": {
 		"message": "Intervalo de verificação por atualização"
+	},
+	"options_show_network_errors": {
+		"message": "Mostrar informação sobre erros de rede"
+	},
+	"options_show_network_errors_notice": {
+		"message": "É necessário ter permissão de «webRequest» do Chrome."
 	},
 	"options_show_release_notes": {
 		"message": "Mostrar notas de lançamento na atualização de extensões"

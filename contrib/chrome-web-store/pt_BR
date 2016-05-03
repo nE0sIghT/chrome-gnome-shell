@@ -2,6 +2,8 @@ Você DEVE instalar o conector nativo para que essa extensão funcione.
 
 No Arch Linux, há um PKGBUILD disponível no AUR: https://aur.archlinux.org/packages/chrome-gnome-shell-git
 
+No Fedora Linux, há um pacote disponível no Copr: https://copr.fedorainfracloud.org/coprs/region51/chrome-gnome-shell
+
 No Gentoo Linux, você pode instalar o conector com os comandos:
 emerge gnome-extra/chrome-gnome-shell
 
