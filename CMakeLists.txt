@@ -132,3 +132,14 @@ if(BUILD_SOURCE_PACKAGE)
 			WORKING_DIRECTORY ${DEB_DIR}/${ARCHIVE_NAME})
 	endif(BUILD_DEB)
 endif(BUILD_SOURCE_PACKAGE)
+
+if(DEFINED GETTEXT_REPORT_EMAIL)
+	add_custom_target(generate-pot
+		COMMAND ${CMAKE_CURRENT_SOURCE_DIR}/contrib/chrome-messages2po.py
+				--email ${GETTEXT_REPORT_EMAIL}
+				--reference-lang en
+				--write-pot
+				${CMAKE_CURRENT_SOURCE_DIR}/contrib/chrome-web-store/
+				${CMAKE_CURRENT_SOURCE_DIR}/extension/_locales/
+				${CMAKE_CURRENT_SOURCE_DIR}/po/)
+endif(DEFINED GETTEXT_REPORT_EMAIL)
