@@ -1,0 +1,124 @@
+{
+	"_DO_NOT_EDIT": {
+		"description": "This file is auto generated with po2chrome-messages tool from de.po.",
+		"message": ""
+	},
+	"close": {
+		"message": "Schlie\u00dfen"
+	},
+	"error_extension_response": {
+		"message": "Falsche Antwort von Erweiterung erhalten"
+	},
+	"extension_status_downgrade": {
+		"message": "muss zur\u00fcckgestuft werden"
+	},
+	"extension_status_upgrade": {
+		"message": "kann aktualisiert werden"
+	},
+	"gs_chrome": {
+		"message": "GNOME Shell integration"
+	},
+	"hours": {
+		"message": "Stunden"
+	},
+	"manifest_description": {
+		"message": "Diese Erweiterung erm\u00f6glicht die Integration mit GNOME Shell und dem dazugeh\u00f6hrenden Erweiterungs Repository von https://extensions.gnome.org"
+	},
+	"native_request_failed": {
+		"message": "\u00ab$REQUEST$\u00bb Native Anfrage fehlgeschlagen",
+		"placeholders": {
+			"request": {
+				"content": "$1"
+			}
+		}
+	},
+	"network_error": {
+		"message": "A network error has occured. Please check your Internet connection and/or proxy settings."
+	},
+	"never": {
+		"message": "niemals"
+	},
+	"no": {
+		"message": "Nein"
+	},
+	"no_host_connector": {
+		"message": "Obwohl die GNOME Shell Integrations Erweiterung l\u00e4uft, wurde der Native Host Konnektor nicht erkannt. Siehe <a href='https://wiki.gnome.org/Projects/GnomeShellIntegrationForChrome/Installation'>documentation</a> f\u00fcr Aneitungen zum installieren des Konnektors."
+	},
+	"no_host_response": {
+		"message": "Keine Antwort von Host"
+	},
+	"older_connector": {
+		"message": "\u00e4lter als Version 4"
+	},
+	"options_check_period": {
+		"message": "Aktualisierungs Pr\u00fcfintervall"
+	},
+	"options_last_check": {
+		"message": "Letzte Pr\u00fcfung"
+	},
+	"options_link": {
+		"message": "Optionen"
+	},
+	"options_next_check": {
+		"message": "N\u00e4chste Pr\u00fcfung"
+	},
+	"options_saved": {
+		"message": "Optionen gespeichert."
+	},
+	"options_show_network_errors": {
+		"message": "Show information about network errors"
+	},
+	"options_show_network_errors_notice": {
+		"message": "Chrome permission \u00abwebRequest\u00bb required."
+	},
+	"options_show_release_notes": {
+		"message": "Zeige Neuigkeiten wenn Erweiterungen aktualisiert wurden"
+	},
+	"options_title": {
+		"message": "$GS_CHROME$ Optionen",
+		"placeholders": {
+			"gs_chrome": {
+				"content": "$1"
+			}
+		}
+	},
+	"options_update_check": {
+		"message": "Pr\u00fcfe auf Aktualisierungen f\u00fcr Erweiterungen"
+	},
+	"platform_not_supported": {
+		"message": "Native Host Konnektor wird auf dieser Plattform nicht unterst\u00fctzt."
+	},
+	"retry": {
+		"message": "Wiederholen"
+	},
+	"save": {
+		"message": "Speichern"
+	},
+	"translation_credits": {
+		"description": "HTML markup enabled for this string.",
+		"message": "Stefan Kirrmann, 2016"
+	},
+	"translation_credits_title": {
+		"message": "\u00dcbersetzung"
+	},
+	"update_available": {
+		"message": "Eine Aktualisierung f\u00fcr GNOME Shell Erweiterung ist verf\u00fcgbar"
+	},
+	"update_check_failed": {
+		"message": "Pr\u00fcfung auf Erweiterungs Aktualisierungen fehlgeschlagen: $CAUSE$",
+		"placeholders": {
+			"cause": {
+				"content": "$1"
+			}
+		}
+	},
+	"version": {
+		"message": "Version $$1"
+	},
+	"warning_versions_mismatch": {
+		"message": "Sie benutzten eine andere Version der GNOME Shell Integrations Erweiterung ($$1) und des Native Host Konnektors ($$2). Manche Features funktionieren m\u00f6glicherweise falsch oder gar nicht."
+	},
+	"yes": {
+		"message": "Ja"
+	}
+}

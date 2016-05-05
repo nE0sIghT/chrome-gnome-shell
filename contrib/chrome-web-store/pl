@@ -1,0 +1,15 @@
+Należy zainstalować natywnego łącznika, aby to rozszerzenie mogło działać.
+
+Dla systemu Arch Linux dostępny jest pakiet PKGBUILD w repozytorium AUR: https://aur.archlinux.org/packages/chrome-gnome-shell-git
+
+Dla systemu Fedora dostępny jest pakiet w repozytorium Copr: https://copr.fedorainfracloud.org/coprs/region51/chrome-gnome-shell
+
+W systemie Gentoo Linux można go zainstalować za pomocą polecenia:
+emerge gnome-extra/chrome-gnome-shell
+
+Dla systemu Ubuntu dostępny jest pakiet w repozytorium PPA „ne0sight/chrome-gnome-shell”. Polecenia instalacji:
+sudo add-apt-repository ppa:ne0sight/chrome-gnome-shell
+sudo apt-get update
+sudo apt-get install chrome-gnome-shell
+
+Można także zainstalować łącznika ręcznie. Instrukcje instalacji: https://wiki.gnome.org/Projects/GnomeShellIntegrationForChrome/Installation

@@ -1,0 +1,124 @@
+{
+	"_DO_NOT_EDIT": {
+		"description": "This file is auto generated with po2chrome-messages tool from pl.po.",
+		"message": ""
+	},
+	"close": {
+		"message": "Zamknij"
+	},
+	"error_extension_response": {
+		"message": "Otrzymano b\u0142\u0119dn\u0105 odpowied\u017a rozszerzenia"
+	},
+	"extension_status_downgrade": {
+		"message": "musi zosta\u0107 zainstalowana poprzednia wersja"
+	},
+	"extension_status_upgrade": {
+		"message": "mo\u017ce zosta\u0107 zaktualizowane"
+	},
+	"gs_chrome": {
+		"message": "Integracja z GNOME Shell"
+	},
+	"hours": {
+		"message": "godz."
+	},
+	"manifest_description": {
+		"message": "To rozszerzenie dostarcza integracj\u0119 z GNOME Shell i repozytorium rozszerze\u0144 https://extensions.gnome.org"
+	},
+	"native_request_failed": {
+		"message": "Natywne \u017c\u0105danie \u201e$REQUEST$\u201d si\u0119 nie powiod\u0142o",
+		"placeholders": {
+			"request": {
+				"content": "$1"
+			}
+		}
+	},
+	"network_error": {
+		"message": "Wyst\u0105pi\u0142 b\u0142\u0105d sieci. Prosz\u0119 sprawdzi\u0107 po\u0142\u0105czenie z Internetem i/lub ustawienia po\u015brednika."
+	},
+	"never": {
+		"message": "nigdy"
+	},
+	"no": {
+		"message": "Nie"
+	},
+	"no_host_connector": {
+		"message": "Chocia\u017c rozszerzenie integracji z GNOME Shell jest uruchomione, to nie wykryto natywnego \u0142\u0105cznika serwera. <a href='https://wiki.gnome.org/Projects/GnomeShellIntegrationForChrome/Installation'>Dokumentacja</a> zawiera instrukcje na temat instalacji \u0142\u0105cznika."
+	},
+	"no_host_response": {
+		"message": "Brak odpowiedzi serwera"
+	},
+	"older_connector": {
+		"message": "starszy ni\u017c wersja 4"
+	},
+	"options_check_period": {
+		"message": "Czas mi\u0119dzy sprawdzaniem aktualizacji"
+	},
+	"options_last_check": {
+		"message": "Ostatnio sprawdzono"
+	},
+	"options_link": {
+		"message": "Opcje"
+	},
+	"options_next_check": {
+		"message": "Nast\u0119pne sprawdzanie"
+	},
+	"options_saved": {
+		"message": "Zapisano opcje."
+	},
+	"options_show_network_errors": {
+		"message": "Wy\u015bwietlanie informacji o b\u0142\u0119dach sieci"
+	},
+	"options_show_network_errors_notice": {
+		"message": "Wymagane jest uprawnienie \u201ewebRequest\u201d przegl\u0105darki Chrome."
+	},
+	"options_show_release_notes": {
+		"message": "Wy\u015bwietlanie informacji o wydaniu po aktualizacji rozszerzenia"
+	},
+	"options_title": {
+		"message": "Opcje $GS_CHROME$",
+		"placeholders": {
+			"gs_chrome": {
+				"content": "$1"
+			}
+		}
+	},
+	"options_update_check": {
+		"message": "Wyszukaj aktualizacje rozszerze\u0144"
+	},
+	"platform_not_supported": {
+		"message": "Natywny \u0142\u0105cznik serwera nie jest obs\u0142ugiwany dla tej platformy."
+	},
+	"retry": {
+		"message": "Pon\u00f3w"
+	},
+	"save": {
+		"message": "Zapisz"
+	},
+	"translation_credits": {
+		"description": "HTML markup enabled for this string.",
+		"message": "Piotr Dr\u0105g, 2016"
+	},
+	"translation_credits_title": {
+		"message": "O t\u0142umaczeniu"
+	},
+	"update_available": {
+		"message": "Dost\u0119pna jest aktualizacja dla rozszerze\u0144 GNOME Shell"
+	},
+	"update_check_failed": {
+		"message": "Wyszukanie aktualizacji rozszerze\u0144 si\u0119 nie powiod\u0142o: $CAUSE$",
+		"placeholders": {
+			"cause": {
+				"content": "$1"
+			}
+		}
+	},
+	"version": {
+		"message": "wersja $$1"
+	},
+	"warning_versions_mismatch": {
+		"message": "U\u017cywane s\u0105 r\u00f3\u017cne wersje rozszerzenia integracji z GNOME Shell ($$1) i natywnego \u0142\u0105cznika serwera ($$2). Niekt\u00f3re funkcje mog\u0105 nie dzia\u0142a\u0107 lub dzia\u0142a\u0107 niepoprawnie."
+	},
+	"yes": {
+		"message": "Tak"
+	}
+}
