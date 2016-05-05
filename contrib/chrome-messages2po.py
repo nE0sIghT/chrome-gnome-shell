@@ -109,6 +109,16 @@ def run():
 		if 'description' in chromeMessages[messageKey]:
 			entryData['comment'] = chromeMessages[messageKey]['description']
 
+		if 'placeholders' in chromeMessages[messageKey]:
+			if 'comment' in entryData:
+				entryData['comment'] += '\n\n'
+			else:
+				entryData['comment'] = ''
+
+			entryData['comment'] += 'String placeholders:\n'
+			for placeholder in chromeMessages[messageKey]['placeholders']:
+				entryData['comment'] += placeholder + '\n'
+
 		po.append(polib.POEntry(**entryData))
 
 	po.append(polib.POEntry(
