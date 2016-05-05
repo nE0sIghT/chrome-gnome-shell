@@ -83,7 +83,7 @@ def run():
 	po.header = "\nGNOME Shell integration for Chrome\n"
 	po.header += "\n"
 	po.header += "DO NOT EDIT!\n"
-	po.header += "This file is auto generated with chrome-messages2pot tool."
+	po.header += "This file is auto generated with chrome-messages2po tool."
 	po.header += "\n"
 
 	po.metadata = {
@@ -150,7 +150,7 @@ def run():
 			po = polib.pofile(po_path)
 			po.header = "\nGNOME Shell integration for Chrome\n"
 			po.header += "\n"
-			po.header += "This file is auto generated with chrome-messages2pot tool."
+			po.header += "This file is auto generated with chrome-messages2po tool."
 			po.header += "\n"
 			po.metadata['Language'] = lang
 
