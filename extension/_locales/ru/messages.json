@@ -1,20 +1,31 @@
 {
+	"_DO_NOT_EDIT": {
+		"description": "This file is auto generated with po2chrome-messages tool from ru.po.",
+		"message": ""
+	},
+	"close": {
+		"message": "\u0417\u0430\u043a\u0440\u044b\u0442\u044c"
+	},
+	"error_extension_response": {
+		"message": "\u041f\u043e\u043b\u0443\u0447\u0435\u043d\u043e \u043d\u0435\u0432\u0435\u0440\u043d\u043e\u0435 \u0441\u043e\u043e\u0431\u0449\u0435\u043d\u0438\u0435 \u0440\u0430\u0441\u0448\u0438\u0440\u0435\u043d\u0438\u044f"
+	},
+	"extension_status_downgrade": {
+		"message": "\u0434\u043e\u043b\u0436\u043d\u043e \u0431\u044b\u0442\u044c \u043f\u043e\u043d\u0438\u0436\u0435\u043d\u043e \u0432 \u0432\u0435\u0440\u0441\u0438\u0438"
+	},
+	"extension_status_upgrade": {
+		"message": "\u043c\u043e\u0436\u0435\u0442 \u0431\u044b\u0442\u044c \u043e\u0431\u043d\u043e\u0432\u043b\u0435\u043d\u043e"
+	},
 	"gs_chrome": {
 		"message": "GNOME Shell integration"
 	},
-
+	"hours": {
+		"message": "\u0447\u0430\u0441\u043e\u0432"
+	},
 	"manifest_description": {
-		"message": "Данное расширение добавляет интеграцию с GNOME Shell и репозиторием расширений https://extensions.gnome.org"
-	},
-
-	"extension_status_upgrade": {
-		"message": "может быть обновлено"
-	},
-	"extension_status_downgrade": {
-		"message": "должно быть понижено в версии"
+		"message": "\u0414\u0430\u043d\u043d\u043e\u0435 \u0440\u0430\u0441\u0448\u0438\u0440\u0435\u043d\u0438\u0435 \u0434\u043e\u0431\u0430\u0432\u043b\u044f\u0435\u0442 \u0438\u043d\u0442\u0435\u0433\u0440\u0430\u0446\u0438\u044e \u0441 GNOME Shell \u0438 \u0440\u0435\u043f\u043e\u0437\u0438\u0442\u043e\u0440\u0438\u0435\u043c \u0440\u0430\u0441\u0448\u0438\u0440\u0435\u043d\u0438\u0439 https://extensions.gnome.org"
 	},
 	"native_request_failed": {
-		"message": "сбой нативного запроса «$REQUEST$»",
+		"message": "\u0441\u0431\u043e\u0439 \u043d\u0430\u0442\u0438\u0432\u043d\u043e\u0433\u043e \u0437\u0430\u043f\u0440\u043e\u0441\u0430 \u00ab$REQUEST$\u00bb",
 		"placeholders": {
 			"request": {
 				"content": "$1"
@@ -22,104 +33,92 @@
 		}
 	},
 	"network_error": {
-		"message": "Произошла сетевая ошибка. Пожалуйста, проверьте ваше подключение к Интернет и/или настройки прокси сервера."
+		"message": "\u041f\u0440\u043e\u0438\u0437\u043e\u0448\u043b\u0430 \u0441\u0435\u0442\u0435\u0432\u0430\u044f \u043e\u0448\u0438\u0431\u043a\u0430. \u041f\u043e\u0436\u0430\u043b\u0443\u0439\u0441\u0442\u0430, \u043f\u0440\u043e\u0432\u0435\u0440\u044c\u0442\u0435 \u0432\u0430\u0448\u0435 \u043f\u043e\u0434\u043a\u043b\u044e\u0447\u0435\u043d\u0438\u0435 \u043a \u0418\u043d\u0442\u0435\u0440\u043d\u0435\u0442 \u0438/\u0438\u043b\u0438 \u043d\u0430\u0441\u0442\u0440\u043e\u0439\u043a\u0438 \u043f\u0440\u043e\u043a\u0441\u0438 \u0441\u0435\u0440\u0432\u0435\u0440\u0430."
+	},
+	"never": {
+		"message": "\u043d\u0438\u043a\u043e\u0433\u0434\u0430"
+	},
+	"no": {
+		"message": "\u041d\u0435\u0442"
+	},
+	"no_host_connector": {
+		"message": "\u0425\u043e\u0442\u044f \u0440\u0430\u0441\u0448\u0438\u0440\u0435\u043d\u0438\u0435 GNOME Shell integration \u0440\u0430\u0431\u043e\u0442\u0430\u0435\u0442, \u043d\u0430\u0442\u0438\u0432\u043d\u044b\u0439 \u0445\u043e\u0441\u0442-\u043a\u043e\u043d\u043d\u0435\u043a\u0442\u043e\u0440 \u043d\u0435 \u043e\u0431\u043d\u0430\u0440\u0443\u0436\u0435\u043d. \u041e\u0431\u0440\u0430\u0442\u0438\u0442\u0435\u0441\u044c \u043a <a href='https://wiki.gnome.org/Projects/GnomeShellIntegrationForChrome/Installation/ru'>\u0434\u043e\u043a\u0443\u043c\u0435\u043d\u0442\u0430\u0446\u0438\u0438</a> \u0437\u0430 \u0438\u043d\u0441\u0442\u0440\u0443\u043a\u0446\u0438\u044f\u043c\u0438 \u043f\u043e \u0443\u0441\u0442\u0430\u043d\u043e\u0432\u043a\u0435 \u043a\u043e\u043d\u043d\u0435\u043a\u0442\u043e\u0440\u0430."
 	},
 	"no_host_response": {
-		"message": "Нет ответа от хост-коннектора"
+		"message": "\u041d\u0435\u0442 \u043e\u0442\u0432\u0435\u0442\u0430 \u043e\u0442 \u0445\u043e\u0441\u0442-\u043a\u043e\u043d\u043d\u0435\u043a\u0442\u043e\u0440\u0430"
 	},
-	"platform_not_supported": {
-		"message": "Нативный коннектор не поддерживается в вашей операционной системе."
+	"older_connector": {
+		"message": "\u0441\u0442\u0430\u0440\u0448\u0435 \u0432\u0435\u0440\u0441\u0438\u0438 4"
 	},
-	"update_check_failed": {
-		"message": "Ошибка проверки обновлений расширений: $CAUSE$",
-		"placeholders": {
-			"cause": {
-				"content": "$1"
-			}
-		}
+	"options_check_period": {
+		"message": "\u041f\u0435\u0440\u0438\u043e\u0434 \u043f\u0440\u043e\u0432\u0435\u0440\u043a\u0438 \u043e\u0431\u043d\u043e\u0432\u043b\u0435\u043d\u0438\u0439"
 	},
-	"update_available": {
-		"message": "Доступно обновление расширений GNOME Shell"
+	"options_last_check": {
+		"message": "\u041f\u043e\u0441\u043b\u0435\u0434\u043d\u044f\u044f \u043f\u0440\u043e\u0432\u0435\u0440\u043a\u0430"
 	},
-
+	"options_link": {
+		"message": "\u041d\u0430\u0441\u0442\u0440\u043e\u0439\u043a\u0438"
+	},
+	"options_next_check": {
+		"message": "\u0421\u043b\u0435\u0434\u0443\u044e\u0449\u0430\u044f \u043f\u0440\u043e\u0432\u0435\u0440\u043a\u0430"
+	},
+	"options_saved": {
+		"message": "\u041d\u0430\u0441\u0442\u0440\u043e\u0439\u043a\u0438 \u0441\u043e\u0445\u0440\u0430\u043d\u0435\u043d\u044b."
+	},
+	"options_show_network_errors": {
+		"message": "\u041f\u043e\u043a\u0430\u0437\u044b\u0432\u0430\u0442\u044c \u0438\u043d\u0444\u043e\u0440\u043c\u0430\u0446\u0438\u044e \u043e \u0441\u0435\u0442\u0435\u0432\u044b\u0445 \u043e\u0448\u0438\u0431\u043a\u0430\u0445"
+	},
+	"options_show_network_errors_notice": {
+		"message": "\u0422\u0440\u0435\u0431\u0443\u0435\u0442\u0441\u044f \u0440\u0430\u0437\u0440\u0435\u0448\u0435\u043d\u0438\u0435 Chrome \u00abwebRequest\u00bb."
+	},
+	"options_show_release_notes": {
+		"message": "\u041f\u043e\u043a\u0430\u0437\u044b\u0432\u0430\u0442\u044c \u043f\u0440\u0438\u043c\u0435\u0447\u0430\u043d\u0438\u044f \u043a \u0432\u044b\u043f\u0443\u0441\u043a\u0443 \u043f\u0440\u0438 \u043e\u0431\u043d\u043e\u0432\u043b\u0435\u043d\u0438\u0438 \u0434\u043e\u043f\u043e\u043b\u043d\u0435\u043d\u0438\u044f"
+	},
 	"options_title": {
-		"message": "Настройки расширения $GS_CHROME$",
+		"message": "\u041d\u0430\u0441\u0442\u0440\u043e\u0439\u043a\u0438 \u0440\u0430\u0441\u0448\u0438\u0440\u0435\u043d\u0438\u044f $GS_CHROME$",
 		"placeholders": {
 			"gs_chrome": {
 				"content": "$1"
 			}
 		}
 	},
-	"options_link": {
-		"message": "Настройки"
-	},
-	"options_saved": {
-		"message": "Настройки сохранены."
-	},
 	"options_update_check": {
-		"message": "Проверять обновления дополнений"
+		"message": "\u041f\u0440\u043e\u0432\u0435\u0440\u044f\u0442\u044c \u043e\u0431\u043d\u043e\u0432\u043b\u0435\u043d\u0438\u044f \u0434\u043e\u043f\u043e\u043b\u043d\u0435\u043d\u0438\u0439"
 	},
-	"options_check_period": {
-		"message": "Период проверки обновлений"
-	},
-	"options_show_network_errors": {
-		"message": "Показывать информацию о сетевых ошибках"
-	},
-	"options_show_network_errors_notice": {
-		"message": "Требуется разрешение Chrome «webRequest»."
-	},
-	"options_show_release_notes": {
-		"message": "Показывать примечания к выпуску при обновлении дополнения"
-	},
-	"options_last_check": {
-		"message": "Последняя проверка"
-	},
-	"options_next_check": {
-		"message": "Следующая проверка"
-	},
-
-	"translation_credits_title": {
-		"message": "О переводе"
-	},
-	"translation_credits": {
-		"message": ""
-	},
-
-	"hours": {
-		"message": "часов"
-	},
-	"yes": {
-		"message": "Да"
-	},
-	"no": {
-		"message": "Нет"
-	},
-	"never": {
-		"message": "никогда"
+	"platform_not_supported": {
+		"message": "\u041d\u0430\u0442\u0438\u0432\u043d\u044b\u0439 \u043a\u043e\u043d\u043d\u0435\u043a\u0442\u043e\u0440 \u043d\u0435 \u043f\u043e\u0434\u0434\u0435\u0440\u0436\u0438\u0432\u0430\u0435\u0442\u0441\u044f \u0432 \u0432\u0430\u0448\u0435\u0439 \u043e\u043f\u0435\u0440\u0430\u0446\u0438\u043e\u043d\u043d\u043e\u0439 \u0441\u0438\u0441\u0442\u0435\u043c\u0435."
 	},
 	"retry": {
-		"message": "Повторить"
-	},
-	"close": {
-		"message": "Закрыть"
+		"message": "\u041f\u043e\u0432\u0442\u043e\u0440\u0438\u0442\u044c"
 	},
 	"save": {
-		"message": "Сохранить"
+		"message": "\u0421\u043e\u0445\u0440\u0430\u043d\u0438\u0442\u044c"
 	},
-
-	"error_extension_response": {
-		"message": "Получено неверное сообщение расширения"
+	"translation_credits": {
+		"description": "HTML markup enabled for this string.",
+		"message": ""
 	},
-	"no_host_connector": {
-		"message": "Хотя расширение GNOME Shell integration работает, нативный хост-коннектор не обнаружен. Обратитесь к <a href='https://wiki.gnome.org/Projects/GnomeShellIntegrationForChrome/Installation/ru'>документации</a> за инструкциями по установке коннектора."
+	"translation_credits_title": {
+		"message": "\u041e \u043f\u0435\u0440\u0435\u0432\u043e\u0434\u0435"
 	},
-	"older_connector": {
-		"message": "старше версии 4"
+	"update_available": {
+		"message": "\u0414\u043e\u0441\u0442\u0443\u043f\u043d\u043e \u043e\u0431\u043d\u043e\u0432\u043b\u0435\u043d\u0438\u0435 \u0440\u0430\u0441\u0448\u0438\u0440\u0435\u043d\u0438\u0439 GNOME Shell"
+	},
+	"update_check_failed": {
+		"message": "\u041e\u0448\u0438\u0431\u043a\u0430 \u043f\u0440\u043e\u0432\u0435\u0440\u043a\u0438 \u043e\u0431\u043d\u043e\u0432\u043b\u0435\u043d\u0438\u0439 \u0440\u0430\u0441\u0448\u0438\u0440\u0435\u043d\u0438\u0439: $CAUSE$",
+		"placeholders": {
+			"cause": {
+				"content": "$1"
+			}
+		}
 	},
 	"version": {
-		"message": "версия $$1"
+		"message": "\u0432\u0435\u0440\u0441\u0438\u044f $$1"
 	},
 	"warning_versions_mismatch": {
-		"message": "Вы используете разные версии расширения GNOME Shell integration ($$1) и нативного хост-коннектора ($$2). Некоторые возможности могут работать неправильно или не работать полностью."
+		"message": "\u0412\u044b \u0438\u0441\u043f\u043e\u043b\u044c\u0437\u0443\u0435\u0442\u0435 \u0440\u0430\u0437\u043d\u044b\u0435 \u0432\u0435\u0440\u0441\u0438\u0438 \u0440\u0430\u0441\u0448\u0438\u0440\u0435\u043d\u0438\u044f GNOME Shell integration ($$1) \u0438 \u043d\u0430\u0442\u0438\u0432\u043d\u043e\u0433\u043e \u0445\u043e\u0441\u0442-\u043a\u043e\u043d\u043d\u0435\u043a\u0442\u043e\u0440\u0430 ($$2). \u041d\u0435\u043a\u043e\u0442\u043e\u0440\u044b\u0435 \u0432\u043e\u0437\u043c\u043e\u0436\u043d\u043e\u0441\u0442\u0438 \u043c\u043e\u0433\u0443\u0442 \u0440\u0430\u0431\u043e\u0442\u0430\u0442\u044c \u043d\u0435\u043f\u0440\u0430\u0432\u0438\u043b\u044c\u043d\u043e \u0438\u043b\u0438 \u043d\u0435 \u0440\u0430\u0431\u043e\u0442\u0430\u0442\u044c \u043f\u043e\u043b\u043d\u043e\u0441\u0442\u044c\u044e."
+	},
+	"yes": {
+		"message": "\u0414\u0430"
 	}
 }

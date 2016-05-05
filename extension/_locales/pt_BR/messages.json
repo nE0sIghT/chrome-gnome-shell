@@ -1,20 +1,31 @@
 {
-	"gs_chrome": {
-		"message": "Integração com GNOME Shell"
+	"_DO_NOT_EDIT": {
+		"description": "This file is auto generated with po2chrome-messages tool from pt_BR.po.",
+		"message": ""
 	},
-
-	"manifest_description": {
-		"message": "Essa extensão fornece integração com o GNOME Shell e com o repositório de extensões correspondente, o https://extensions.gnome.org"
+	"close": {
+		"message": "Fechar"
 	},
-
+	"error_extension_response": {
+		"message": "Resposta de extens\u00e3o errada recebida"
+	},
+	"extension_status_downgrade": {
+		"message": "pode ser voltar a vers\u00e3o"
+	},
 	"extension_status_upgrade": {
 		"message": "pode ser atualizada"
 	},
-	"extension_status_downgrade": {
-		"message": "pode ser voltar a versão"
+	"gs_chrome": {
+		"message": "Integra\u00e7\u00e3o com GNOME Shell"
+	},
+	"hours": {
+		"message": "horas"
+	},
+	"manifest_description": {
+		"message": "Essa extens\u00e3o fornece integra\u00e7\u00e3o com o GNOME Shell e com o reposit\u00f3rio de extens\u00f5es correspondente, o https://extensions.gnome.org"
 	},
 	"native_request_failed": {
-		"message": "requisição nativa «$REQUEST$» falhou",
+		"message": "requisi\u00e7\u00e3o nativa \u00ab$REQUEST$\u00bb falhou",
 		"placeholders": {
 			"request": {
 				"content": "$1"
@@ -22,105 +33,92 @@
 		}
 	},
 	"network_error": {
-		"message": "Ocorreu um erro de rede. Por favor, verifique sua conexão com a Internet e/ou a configuração de seu proxy."
+		"message": "Ocorreu um erro de rede. Por favor, verifique sua conex\u00e3o com a Internet e/ou a configura\u00e7\u00e3o de seu proxy."
+	},
+	"never": {
+		"message": "nunca"
+	},
+	"no": {
+		"message": "N\u00e3o"
+	},
+	"no_host_connector": {
+		"message": "Apesar da extens\u00e3o de integra\u00e7\u00e3o do GNOME Shell estar em execu\u00e7\u00e3o, o conector nativo de m\u00e1quina n\u00e3o foi detectado. Veja a <a href='https://wiki.gnome.org/Projects/GnomeShellIntegrationForChrome/Installation'>documenta\u00e7\u00e3o</a> para instru\u00e7\u00f5es sobre instala\u00e7\u00e3o do conector."
 	},
 	"no_host_response": {
-		"message": "Nenhuma resposta da máquina"
+		"message": "Nenhuma resposta da m\u00e1quina"
 	},
-	"platform_not_supported": {
-		"message": "Sem suporte ao conector nativo de máquina para sua plataforma."
+	"older_connector": {
+		"message": "vers\u00e3o anterior a 4"
 	},
-	"update_check_failed": {
-		"message": "Falha ao verificar atualizações de extensões: $CAUSE$",
-		"placeholders": {
-			"cause": {
-				"content": "$1"
-			}
-		}
+	"options_check_period": {
+		"message": "Intervalo de verifica\u00e7\u00e3o por atualiza\u00e7\u00e3o"
 	},
-	"update_available": {
-		"message": "Uma atualização para extensões do GNOME Shell está disponível"
+	"options_last_check": {
+		"message": "\u00daltima verifica\u00e7\u00e3o"
 	},
-
+	"options_link": {
+		"message": "Op\u00e7\u00f5es"
+	},
+	"options_next_check": {
+		"message": "Pr\u00f3xima verifica\u00e7\u00e3o"
+	},
+	"options_saved": {
+		"message": "Op\u00e7\u00f5es salvas."
+	},
+	"options_show_network_errors": {
+		"message": "Mostrar informa\u00e7\u00e3o sobre erros de rede"
+	},
+	"options_show_network_errors_notice": {
+		"message": "\u00c9 necess\u00e1rio ter permiss\u00e3o de \u00abwebRequest\u00bb do Chrome."
+	},
+	"options_show_release_notes": {
+		"message": "Mostrar notas de lan\u00e7amento na atualiza\u00e7\u00e3o de extens\u00f5es"
+	},
 	"options_title": {
-		"message": "Opções de $GS_CHROME$",
+		"message": "Op\u00e7\u00f5es de $GS_CHROME$",
 		"placeholders": {
 			"gs_chrome": {
 				"content": "$1"
 			}
 		}
 	},
-	"options_link": {
-		"message": "Opções"
-	},
-	"options_saved": {
-		"message": "Opções salvas."
-	},
 	"options_update_check": {
-		"message": "Verificar atualização de extensões"
+		"message": "Verificar atualiza\u00e7\u00e3o de extens\u00f5es"
 	},
-	"options_check_period": {
-		"message": "Intervalo de verificação por atualização"
-	},
-	"options_show_network_errors": {
-		"message": "Mostrar informação sobre erros de rede"
-	},
-	"options_show_network_errors_notice": {
-		"message": "É necessário ter permissão de «webRequest» do Chrome."
-	},
-	"options_show_release_notes": {
-		"message": "Mostrar notas de lançamento na atualização de extensões"
-	},
-	"options_last_check": {
-		"message": "Última verificação"
-	},
-	"options_next_check": {
-		"message": "Próxima verificação"
-	},
-
-	"translation_credits_title": {
-		"message": "Sobre a tradução"
-	},
-	"translation_credits": {
-		"message": "",
-		"description": "Marcação HTML habilitada para esta string."
-	},
-
-	"hours": {
-		"message": "horas"
-	},
-	"yes": {
-		"message": "Sim"
-	},
-	"no": {
-		"message": "Não"
-	},
-	"never": {
-		"message": "nunca"
+	"platform_not_supported": {
+		"message": "Sem suporte ao conector nativo de m\u00e1quina para sua plataforma."
 	},
 	"retry": {
 		"message": "Tentar novamente"
 	},
-	"close": {
-		"message": "Fechar"
-	},
 	"save": {
 		"message": "Salvar"
 	},
-
-	"error_extension_response": {
-		"message": "Resposta de extensão errada recebida"
+	"translation_credits": {
+		"description": "HTML markup enabled for this string.",
+		"message": ""
 	},
-	"no_host_connector": {
-		"message": "Apesar da extensão de integração do GNOME Shell estar em execução, o conector nativo de máquina não foi detectado. Veja a <a href='https://wiki.gnome.org/Projects/GnomeShellIntegrationForChrome/Installation'>documentação</a> para instruções sobre instalação do conector."
+	"translation_credits_title": {
+		"message": "Sobre a tradu\u00e7\u00e3o"
 	},
-	"older_connector": {
-		"message": "versão anterior a 4"
+	"update_available": {
+		"message": "Uma atualiza\u00e7\u00e3o para extens\u00f5es do GNOME Shell est\u00e1 dispon\u00edvel"
+	},
+	"update_check_failed": {
+		"message": "Falha ao verificar atualiza\u00e7\u00f5es de extens\u00f5es: $CAUSE$",
+		"placeholders": {
+			"cause": {
+				"content": "$1"
+			}
+		}
 	},
 	"version": {
-		"message": "versão $$1"
+		"message": "vers\u00e3o $$1"
 	},
 	"warning_versions_mismatch": {
-		"message": "você está usando versões diferentes da extensão de integração do GNOME Shell ($$1) e conector nativo de máquina ($$2). Alguns recursos podem não funcionar ou funcionar erroneamente."
+		"message": "voc\u00ea est\u00e1 usando vers\u00f5es diferentes da extens\u00e3o de integra\u00e7\u00e3o do GNOME Shell ($$1) e conector nativo de m\u00e1quina ($$2). Alguns recursos podem n\u00e3o funcionar ou funcionar erroneamente."
+	},
+	"yes": {
+		"message": "Sim"
 	}
 }
