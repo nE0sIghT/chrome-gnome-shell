@@ -68,9 +68,6 @@ def run():
 	with open(os.path.join(args.locales, args.lang, "messages.json"), 'r') as file:
 		chromeMessages = json.load(file)
 
-	with open(os.path.join(args.chrome_store_description, args.lang), 'r') as file:
-		chromeStoreDescription = file.read()
-
 	with open(os.path.join(args.po, 'LINGUAS'), 'r') as file:
 		for line in file:
 			lang = line.strip()
