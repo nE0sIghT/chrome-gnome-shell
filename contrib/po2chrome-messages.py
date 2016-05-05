@@ -95,6 +95,7 @@ def run():
 			os.makedirs(os.path.join(args.locales, lang), exist_ok=True)
 			with open(os.path.join(args.locales, lang, "messages.json"), 'w') as file:
 				json.dump(messages, file, indent='\t', sort_keys=True)
+				file.write('\n')
 
 			entry = find_chrome_entry(po, METADATA_STORE_DESCRIPTION, exact=True)
 			if entry and entry.msgstr and not 'fuzzy' in entry.flags:
