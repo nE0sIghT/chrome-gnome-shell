@@ -21,6 +21,7 @@ option(BUILD_EXTENSION		"Build extension zip package"	TRUE)
 option(BUILD_CONNECTOR		"Build native messaging host"	TRUE)
 option(BUILD_SOURCE_PACKAGE	"Build source package"		FALSE)
 option(BUILD_DEB		"Build debian package"		FALSE)
+option(BUILD_MESSAGES		"Update translation strings"	FALSE)
 
 # Default extensions id for Chrome web store
 if(NOT DEFINED(EXTENSION_ID))
@@ -52,9 +53,9 @@ endmacro(find_program_ex)
 include(GNUInstallDirs)
 
 # Options validating
-if(NOT BUILD_EXTENSION AND NOT BUILD_CONNECTOR)
+if(NOT BUILD_EXTENSION AND NOT BUILD_CONNECTOR AND NOT BUILD_MESSAGES)
 	message(FATAL_ERROR "No build options selected")
-endif(NOT BUILD_EXTENSION AND NOT BUILD_CONNECTOR)
+endif(NOT BUILD_EXTENSION AND NOT BUILD_CONNECTOR AND NOT BUILD_MESSAGES)
 
 if(BUILD_DEB AND NOT BUILD_SOURCE_PACKAGE)
 	message(STATUS "Building of debian package enabled. Turning on building source package.")
@@ -64,6 +65,10 @@ endif(BUILD_DEB AND NOT BUILD_SOURCE_PACKAGE)
 if(BUILD_SOURCE_PACKAGE AND NOT EXISTS ${CMAKE_CURRENT_SOURCE_DIR}/.git/)
 	message(FATAL_ERROR "Unable to build source package outside of git repository.")
 endif(BUILD_SOURCE_PACKAGE AND NOT EXISTS ${CMAKE_CURRENT_SOURCE_DIR}/.git/)
+
+if(BUILD_MESSAGES AND NOT DEFINED GETTEXT_REPORT_EMAIL)
+	message(FATAL_ERROR "GETTEXT_REPORT_EMAIL must be specified to generate po template.")
+endif(BUILD_MESSAGES AND NOT DEFINED GETTEXT_REPORT_EMAIL)
 
 # Options handling
 if(BUILD_EXTENSION)
@@ -133,13 +138,46 @@ if(BUILD_SOURCE_PACKAGE)
 	endif(BUILD_DEB)
 endif(BUILD_SOURCE_PACKAGE)
 
-if(DEFINED GETTEXT_REPORT_EMAIL)
+if(BUILD_MESSAGES)
+	find_package(Gettext)
+	if(NOT GETTEXT_FOUND)
+		message(FATAL_ERROR "Gettext not found")
+	endif(NOT GETTEXT_FOUND)
+
 	add_custom_target(generate-pot
 		COMMAND ${CMAKE_CURRENT_SOURCE_DIR}/contrib/chrome-messages2po.py
-				--email ${GETTEXT_REPORT_EMAIL}
-				--reference-lang en
-				--write-pot
-				${CMAKE_CURRENT_SOURCE_DIR}/contrib/chrome-web-store/
-				${CMAKE_CURRENT_SOURCE_DIR}/extension/_locales/
-				${CMAKE_CURRENT_SOURCE_DIR}/po/)
-endif(DEFINED GETTEXT_REPORT_EMAIL)
+			--email ${GETTEXT_REPORT_EMAIL}
+			--reference-lang en
+			--write-pot
+			${CMAKE_CURRENT_SOURCE_DIR}/contrib/chrome-web-store/
+			${CMAKE_CURRENT_SOURCE_DIR}/extension/_locales/
+			${CMAKE_CURRENT_SOURCE_DIR}/po/)
+
+	add_custom_target(update-po
+		DEPENDS generate-pot)
+
+	file(GLOB PO_FILES
+		LIST_DIRECTORIES false
+		RELATIVE ${CMAKE_CURRENT_SOURCE_DIR}/po/
+		${CMAKE_CURRENT_SOURCE_DIR}/po/*.po)
+
+	foreach(PO ${PO_FILES})
+		add_custom_command(TARGET update-po
+			COMMENT "Updating ${PO}"
+			WORKING_DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}/po
+			COMMAND ${GETTEXT_MSGMERGE_EXECUTABLE} -q --update
+				${PO}
+				${CMAKE_CURRENT_SOURCE_DIR}/po/template.pot)
+	endforeach()
+
+	add_custom_command(TARGET update-po
+		COMMAND ${CMAKE_COMMAND} -E remove ${CMAKE_CURRENT_SOURCE_DIR}/po/*.po~)
+
+	add_custom_target(build-messages ALL
+		DEPENDS update-po
+		COMMAND ${CMAKE_CURRENT_SOURCE_DIR}/contrib/po2chrome-messages.py
+			--reference-lang en
+			${CMAKE_CURRENT_SOURCE_DIR}/contrib/chrome-web-store/
+			${CMAKE_CURRENT_SOURCE_DIR}/extension/_locales/
+			${CMAKE_CURRENT_SOURCE_DIR}/po/)
+endif(BUILD_MESSAGES)
