@@ -1,17 +1,19 @@
-#
 # GNOME Shell integration for Chrome
-#
 # This file is auto generated with chrome-messages2pot tool.
-#
+# Rafael Fontenelle <rafaelff@gnome.org>, 2016.
 msgid ""
 msgstr ""
 "Project-Id-Version: 1.0\n"
 "Report-Msgid-Bugs-To: ykonotopov@gmail.com\n"
 "POT-Creation-Date: 2016-05-05 15:51+0000\n"
+"PO-Revision-Date: 2016-05-05 16:55-0200\n"
+"Last-Translator: Rafael Fontenelle <rafaelff@gnome.org>\n"
 "Language: pt_BR\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"X-Generator: Virtaal 0.7.1\n"
 
 #: chrome-gnome-shell-key-no_host_connector:1
 msgid ""
@@ -21,16 +23,16 @@ msgid ""
 "instructions about installing connector."
 msgstr ""
 "Apesar da extensão de integração do GNOME Shell estar em execução, o "
-"conector nativo de máquina não foi detectado. Veja a <a href='https://wiki."
-"gnome.org/Projects/GnomeShellIntegrationForChrome/"
-"Installation'>documentação</a> para instruções sobre instalação do conector."
+"conector nativo de máquina não foi detectado. Veja a <a href='https://wiki.gn"
+"ome.org/Projects/GnomeShellIntegrationForChrome/Installation'>documentação</a"
+"> para instruções sobre instalação do conector."
 
 #: chrome-gnome-shell-key-warning_versions_mismatch:1
 msgid ""
 "You are using different versions of GNOME Shell integration extension ($$1) "
 "and native host connector ($$2). Some features may not work or work wrong."
 msgstr ""
-"você está usando versões diferentes da extensão de integração do GNOME Shell "
+"Você está usando versões diferentes da extensão de integração do GNOME Shell "
 "($$1) e conector nativo de máquina ($$2). Alguns recursos podem não "
 "funcionar ou funcionar erroneamente."
 
@@ -45,7 +47,7 @@ msgstr "Intervalo de verificação por atualização"
 #. HTML markup enabled for this string.
 #: chrome-gnome-shell-key-translation_credits:1
 msgid "translation_credits"
-msgstr ""
+msgstr "<a href=\"mailto:rafaeff@gnome.org\">Rafael Fontenelle</a>"
 
 #: chrome-gnome-shell-key-older_connector:1
 msgid "older than version 4"
@@ -123,7 +125,7 @@ msgstr "Opções de $GS_CHROME$"
 #.
 #: chrome-gnome-shell-key-native_request_failed:1
 msgid "«$REQUEST$» native request failed"
-msgstr "requisição nativa «$REQUEST$» falhou"
+msgstr "Requisição nativa «$REQUEST$» falhou"
 
 #: chrome-gnome-shell-key-options_show_release_notes:1
 msgid "Show release notes when extension updated"
@@ -205,11 +207,11 @@ msgid ""
 msgstr ""
 "Você DEVE instalar o conector nativo para que essa extensão funcione.\n"
 "\n"
-"No Arch Linux, há um PKGBUILD disponível no AUR: https://aur.archlinux.org/"
-"packages/chrome-gnome-shell-git\n"
+"No Arch Linux, há um PKGBUILD disponível no AUR: "
+"https://aur.archlinux.org/packages/chrome-gnome-shell-git\n"
 "\n"
-"No Fedora Linux, há um pacote disponível no Copr: https://copr."
-"fedorainfracloud.org/coprs/region51/chrome-gnome-shell\n"
+"No Fedora Linux, há um pacote disponível no Copr: "
+"https://copr.fedorainfracloud.org/coprs/region51/chrome-gnome-shell\n"
 "\n"
 "No Gentoo Linux, você pode instalar o conector com os comandos:\n"
 "emerge gnome-extra/chrome-gnome-shell\n"
@@ -220,6 +222,6 @@ msgstr ""
 "sudo apt-get update\n"
 "sudo apt-get install chrome-gnome-shell\n"
 "\n"
-"Você também pode instalar o conector manualmente. Veja https://wiki.gnome."
-"org/Projects/GnomeShellIntegrationForChrome/Installation para instruções de "
-"instalação.\n"
+"Você também pode instalar o conector manualmente. Veja "
+"https://wiki.gnome.org/Projects/GnomeShellIntegrationForChrome/Installation "
+"para instruções de instalação.\n"
