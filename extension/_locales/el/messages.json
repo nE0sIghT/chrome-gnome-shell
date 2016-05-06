@@ -33,7 +33,7 @@
 		}
 	},
 	"network_error": {
-		"message": "A network error has occured. Please check your Internet connection and/or proxy settings."
+		"message": "A network error has occurred. Please check your Internet connection and/or proxy settings."
 	},
 	"never": {
 		"message": "\u03c0\u03bf\u03c4\u03ad"
