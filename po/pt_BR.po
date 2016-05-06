@@ -32,7 +32,6 @@ msgid "About translation"
 msgstr "Sobre a tradução"
 
 #: chrome-gnome-shell-key-network_error:1
-#, fuzzy
 msgid ""
 "A network error has occurred. Please check your Internet connection and/or "
 "proxy settings."
