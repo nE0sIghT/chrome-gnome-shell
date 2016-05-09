@@ -1,0 +1,10 @@
+There is limited number of supported locales:
+
+ar, am, bg, bn, ca, cs, da, de, el, en_GB, en_US, es, es_419, et, fa, fi, fil,
+fr, gu, he, hi, hr, hu, id, it, ja, kn, ko, lt, lv, ml, mr, ms, nl, no, pl,
+pt_BR, pt_PT, ro, ru, sk, sl, sr, sv, sw, ta, te, th, tr, uk, vi, zh_CN, zh_TW
+
+If you use an unsupported locale, Google Chrome will ignore it.
+
+Up to date list available here:
+https://developer.chrome.com/webstore/i18n?csw=1#localeTable
