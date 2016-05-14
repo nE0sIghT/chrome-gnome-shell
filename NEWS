@@ -1,1 +1,15 @@
-Release notes are available in GNOME wiki: https://wiki.gnome.org/Projects/GnomeShellIntegrationForChrome/ReleaseNotes
+= 2016-05-14 chrome-gnome-shell 6 =
+
+== Changes ==
+
+ * Python 3 support for native host connector
+ * It's possible now to show exact network error when it occurs. This feature
+   may be activated in options page and requires
+   webRequest (https://developer.chrome.com/extensions/webRequest) permission
+   (https://github.com/nE0sIghT/chrome-gnome-shell-mirror/issues/2)
+ * Switched to gettext format for translations
+
+== Translations ==
+ * Polish (Piotr Drąg)
+ * Portuguese (Brazil) (Rafael Fontenelle)
+ * Swedish (Anders Jonsson)
