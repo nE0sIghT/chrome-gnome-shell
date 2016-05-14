@@ -1,0 +1,15 @@
+Du MÅSTE installera ett inhemskt anslutningsprogram för att detta tillägg ska fungera.
+
+För Arch Linux finns en PKGBUILD tillgänglig i AUR: https://aur.archlinux.org/packages/chrome-gnome-shell-git
+
+För Fedora Linux finns ett paket tillgängligt i Copr: https://copr.fedorainfracloud.org/coprs/region51/chrome-gnome-shell
+
+I Gentoo Linux kan du installera anslutningsprogrammet med kommandot:
+emerge gnome-extra/chrome-gnome-shell
+
+För Ubuntu Linux finns ett paket i PPA:t ne0sight/chrome-gnome-shell. För att installera det skriv:
+sudo add-apt-repository ppa:ne0sight/chrome-gnome-shell
+sudo apt-get update
+sudo apt-get install chrome-gnome-shell
+
+Du kan också installera anslutningsprogrammet manuellt. Se https://wiki.gnome.org/Projects/GnomeShellIntegrationForChrome/Installation för installationsinstruktioner.
