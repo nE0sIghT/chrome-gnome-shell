@@ -1,7 +1,9 @@
-#
-# GNOME Shell integration for Chrome
+# German translation for GNOME Shell integration for Chrome
 #
 # This file is auto generated with chrome-messages2pot tool.
+#
+# Stefan Kirrmann, 2016.
+# Mario Blättermann <mario.blaettermann@gmail.com>, 2016.
 #
 msgid ""
 msgstr ""
@@ -12,18 +14,22 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: \n"
+"Last-Translator: Mario Blättermann <mario.blaettermann@gmail.com>\n"
+"Language-Team: \n"
+"X-Generator: Poedit 1.8.7.1\n"
 
 #: chrome-gnome-shell-key-manifest_description:1
 msgid ""
 "This extension provides integration with GNOME Shell and the corresponding "
 "extensions repository https://extensions.gnome.org"
 msgstr ""
-"Diese Erweiterung ermöglicht die Integration mit GNOME Shell und dem "
-"dazugehöhrenden Erweiterungs Repository von https://extensions.gnome.org"
+"Diese Erweiterung ermöglicht die Integration mit der GNOME Shell und dem "
+"dazugehörenden Erweiterungs-Repository von https://extensions.gnome.org"
 
 #: chrome-gnome-shell-key-no_host_response:1
 msgid "No host response"
-msgstr "Keine Antwort von Host"
+msgstr "Keine Antwort vom Host"
 
 #: chrome-gnome-shell-key-translation_credits_title:1
 msgid "About translation"
@@ -34,6 +40,8 @@ msgid ""
 "A network error has occurred. Please check your Internet connection and/or "
 "proxy settings."
 msgstr ""
+"Ein Netzwerkfehler ist aufgetreten. Bitte überprüfen Sie Ihre "
+"Internetverbindung und/oder Ihre Proxy-Einstellungen."
 
 #: chrome-gnome-shell-key-older_connector:1
 msgid "older than version 4"
@@ -44,7 +52,7 @@ msgstr "älter als Version 4"
 #.
 #: chrome-gnome-shell-key-update_check_failed:1
 msgid "Failed to check extensions updates: $CAUSE$"
-msgstr "Prüfung auf Erweiterungs Aktualisierungen fehlgeschlagen: $CAUSE$"
+msgstr "Prüfung auf Erweiterungs-Aktualisierungen ist fehlgeschlagen: $CAUSE$"
 
 #: chrome-gnome-shell-key-options_saved:1
 msgid "Options saved."
@@ -59,7 +67,7 @@ msgstr "muss zurückgestuft werden"
 #.
 #: chrome-gnome-shell-key-options_title:1
 msgid "$GS_CHROME$ options"
-msgstr "$GS_CHROME$ Optionen"
+msgstr "$GS_CHROME$-Optionen"
 
 #. String placeholders:
 #. request
@@ -70,7 +78,7 @@ msgstr "«$REQUEST$» Native Anfrage fehlgeschlagen"
 
 #: chrome-gnome-shell-key-options_update_check:1
 msgid "Check for extensions update"
-msgstr "Prüfe auf Aktualisierungen für Erweiterungen"
+msgstr "Auf Aktualisierungen für Erweiterungen prüfen"
 
 #: chrome-gnome-shell-key-options_last_check:1
 msgid "Last check"
@@ -82,11 +90,11 @@ msgstr "Nächste Prüfung"
 
 #: chrome-gnome-shell-key-platform_not_supported:1
 msgid "Native host connector is not supported for your platform."
-msgstr "Native Host Konnektor wird auf dieser Plattform nicht unterstützt."
+msgstr "Nativer Host-Connector wird auf dieser Plattform nicht unterstützt."
 
 #: chrome-gnome-shell-key-options_check_period:1
 msgid "Update check period"
-msgstr "Aktualisierungs Prüfintervall"
+msgstr "Prüfintervall für Aktualisierungen"
 
 #: chrome-gnome-shell-key-extension_status_upgrade:1
 msgid "can be upgraded"
@@ -94,7 +102,7 @@ msgstr "kann aktualisiert werden"
 
 #: chrome-gnome-shell-key-gs_chrome:1
 msgid "GNOME Shell integration"
-msgstr "GNOME Shell integration"
+msgstr "GNOME Shell-Integration"
 
 #: chrome-gnome-shell-key-retry:1
 msgid "Retry"
@@ -114,7 +122,7 @@ msgstr "Ja"
 
 #: chrome-gnome-shell-key-options_show_network_errors:1
 msgid "Show information about network errors"
-msgstr ""
+msgstr "Informationen zu Netzwerkfehlern anzeigen"
 
 #: chrome-gnome-shell-key-close:1
 msgid "Close"
@@ -126,7 +134,7 @@ msgstr "Speichern"
 
 #: chrome-gnome-shell-key-update_available:1
 msgid "An update for GNOME Shell extensions available"
-msgstr "Eine Aktualisierung für GNOME Shell Erweiterung ist verfügbar"
+msgstr "Eine Aktualisierung für die GNOME Shell-Erweiterung ist verfügbar"
 
 #: chrome-gnome-shell-key-no_host_connector:1
 msgid ""
@@ -135,23 +143,26 @@ msgid ""
 "GnomeShellIntegrationForChrome/Installation'>documentation</a> for "
 "instructions about installing connector."
 msgstr ""
-"Obwohl die GNOME Shell Integrations Erweiterung läuft, wurde der Native Host "
-"Konnektor nicht erkannt. Siehe <a href='https://wiki.gnome.org/Projects/"
-"GnomeShellIntegrationForChrome/Installation'>documentation</a> für "
-"Aneitungen zum installieren des Konnektors."
+"Obwohl die GNOME Shell-Integrations-Erweiterung läuft, wurde der Native Host-"
+"Connector nicht erkannt. In <a href='https://wiki.gnome.org/Projects/"
+"GnomeShellIntegrationForChrome/Installation'>documentation</a> finden Sie "
+"Anweisungen zum Installieren des Connectors."
 
 #: chrome-gnome-shell-key-options_show_network_errors_notice:1
 msgid "Chrome permission «webRequest» required."
-msgstr ""
+msgstr "Chrome-Zugriffsrecht »webRequest« ist erforderlich."
 
 #. HTML markup enabled for this string.
 #: chrome-gnome-shell-key-translation_credits:1
 msgid "translation_credits"
-msgstr "Stefan Kirrmann, 2016"
+msgstr ""
+"Stefan Kirrmann, 2016\n"
+"Mario Blättermann, 2016"
 
 #: chrome-gnome-shell-key-options_show_release_notes:1
 msgid "Show release notes when extension updated"
-msgstr "Zeige Neuigkeiten wenn Erweiterungen aktualisiert wurden"
+msgstr ""
+"Veröffentlichungshinweise anzeigen, wenn Erweiterungen aktualisiert wurden"
 
 #: chrome-gnome-shell-key-version:1
 msgid "version $$1"
@@ -170,9 +181,9 @@ msgid ""
 "You are using different versions of GNOME Shell integration extension ($$1) "
 "and native host connector ($$2). Some features may not work or work wrong."
 msgstr ""
-"Sie benutzten eine andere Version der GNOME Shell Integrations Erweiterung ($"
-"$1) und des Native Host Konnektors ($$2). Manche Features funktionieren "
-"möglicherweise falsch oder gar nicht."
+"Sie benutzten eine andere Version der GNOME Shell-Integrations-Erweiterung ($"
+"$1) und des Nativen Host-Connectors ($$2). Manche Funktionsmerkmale stehen "
+"möglicherweise nur eingeschränkt oder gar nicht zur Verfügung."
 
 #: chrome-gnome-shell-key-no:1
 msgid "No"
@@ -201,3 +212,24 @@ msgid ""
 "You also can install connector manually. See https://wiki.gnome.org/Projects/"
 "GnomeShellIntegrationForChrome/Installation for install instructions.\n"
 msgstr ""
+"Sie müssen den Nativen Host-Connector installieren, damit diese Erweiterung "
+"funktioniert.\n"
+"\n"
+"Für Archlinux ist ein PKGBUILD im AUR verfügbar: https://aur.archlinux.org/"
+"packages/chrome-gnome-shell-git\n"
+"\n"
+"Für Fedora Linux ist ein Paket in einer Copr-Quelle verfügbar: https://copr."
+"fedorainfracloud.org/coprs/region51/chrome-gnome-shell\n"
+"\n"
+"In Gentoo Linux können Sie den Connector mit folgendem Befehl installieren:\n"
+"emerge gnome-extra/chrome-gnome-shell\n"
+"\n"
+"Für Ubuntu Linux steht ein Paket im PPA ne0sight/chrome-gnome-shell bereit. "
+"Installieren Sie es mit folgenden Befehlen:\n"
+"sudo add-apt-repository ppa:ne0sight/chrome-gnome-shell\n"
+"sudo apt-get update\n"
+"sudo apt-get install chrome-gnome-shell\n"
+"\n"
+"Sie können den Connector auch manuell installieren. Installationshinweise "
+"finden Sie auf https://wiki.gnome.org/Projects/"
+"GnomeShellIntegrationForChrome/Installation.\n"
