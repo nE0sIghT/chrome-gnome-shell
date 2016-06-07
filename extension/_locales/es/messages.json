@@ -1,0 +1,124 @@
+{
+	"_DO_NOT_EDIT": {
+		"description": "This file is auto generated with po2chrome-messages tool from es.po.",
+		"message": ""
+	},
+	"close": {
+		"message": "Cerrar"
+	},
+	"error_extension_response": {
+		"message": "Respuesta de extensi\u00f3n incorrecta recibida"
+	},
+	"extension_status_downgrade": {
+		"message": "se debe bajar de versi\u00f3n"
+	},
+	"extension_status_upgrade": {
+		"message": "se puede actualizar"
+	},
+	"gs_chrome": {
+		"message": "Integraci\u00f3n con GNOME Shell"
+	},
+	"hours": {
+		"message": "horas"
+	},
+	"manifest_description": {
+		"message": "Esta extensi\u00f3n proporciona integraci\u00f3n con GNOME Shell y el correspondiente repositorio de extensiones https://extensions.gnome.org"
+	},
+	"native_request_failed": {
+		"message": "Fall\u00f3 la respuesta nativa \u00ab$REQUEST$\u00bb",
+		"placeholders": {
+			"request": {
+				"content": "$1"
+			}
+		}
+	},
+	"network_error": {
+		"message": "Ha ocurrido un error de red. Compruebe su conexi\u00f3n a Internet y/o su configuraci\u00f3n del proxy."
+	},
+	"never": {
+		"message": "nunca"
+	},
+	"no": {
+		"message": "No"
+	},
+	"no_host_connector": {
+		"message": "Aunque la extensi\u00f3n de integraci\u00f3n con GNOME Shell est\u00e1 en ejecuci\u00f3n, no se ha detectado el conector del equipo. Consulte la <a href='https://wiki.gnome.org/Projects/GnomeShellIntegrationForChrome/Installation'>documentaci\u00f3n</a> para obtener instrucciones sobre c\u00f3mo instalar el conector."
+	},
+	"no_host_response": {
+		"message": "Sin respuesta del equipo"
+	},
+	"older_connector": {
+		"message": "anterior a la versi\u00f3n 4"
+	},
+	"options_check_period": {
+		"message": "Frecuencia de comprobaci\u00f3n de actualizaciones"
+	},
+	"options_last_check": {
+		"message": "\u00daltima comprobaci\u00f3n"
+	},
+	"options_link": {
+		"message": "Opciones"
+	},
+	"options_next_check": {
+		"message": "Siguiente comprobaci\u00f3n"
+	},
+	"options_saved": {
+		"message": "Opciones guardadas."
+	},
+	"options_show_network_errors": {
+		"message": "Mostrar informaci\u00f3n sobre los errores de la red"
+	},
+	"options_show_network_errors_notice": {
+		"message": "Se requiere el permiso \u00abwebRequest\u00bb de Chrome."
+	},
+	"options_show_release_notes": {
+		"message": "Mostrar las notas de publicaci\u00f3n cuando se actualice la extensi\u00f3n"
+	},
+	"options_title": {
+		"message": "opciones de $GS_CHROME$",
+		"placeholders": {
+			"gs_chrome": {
+				"content": "$1"
+			}
+		}
+	},
+	"options_update_check": {
+		"message": "Comprobar si hay actualizaciones de las extensiones"
+	},
+	"platform_not_supported": {
+		"message": "El conector nativo del equipo no est\u00e1 soportado en su plataforma."
+	},
+	"retry": {
+		"message": "Reintentar"
+	},
+	"save": {
+		"message": "Guardar"
+	},
+	"translation_credits": {
+		"description": "HTML markup enabled for this string.",
+		"message": "Daniel Mustieles <daniel.mustieles@gmail.com>, 2016"
+	},
+	"translation_credits_title": {
+		"message": "Acerca de la traducci\u00f3n"
+	},
+	"update_available": {
+		"message": "Hay disponible una actualizaci\u00f3n para las extensiones de GNOME Shell"
+	},
+	"update_check_failed": {
+		"message": "Fall\u00f3 al comprobar si hay actualizaciones: $CAUSE$",
+		"placeholders": {
+			"cause": {
+				"content": "$1"
+			}
+		}
+	},
+	"version": {
+		"message": "versi\u00f3n $$1"
+	},
+	"warning_versions_mismatch": {
+		"message": "Est\u00e1 usando diferentes versiones de la extensi\u00f3n de integraci\u00f3n de GNOME Shell ($$1) y el conector nativo del equipo ($$2). Algunas caracter\u00edsticas pueden no funcionar o funcionar mal."
+	},
+	"yes": {
+		"message": "S\u00ed"
+	}
+}

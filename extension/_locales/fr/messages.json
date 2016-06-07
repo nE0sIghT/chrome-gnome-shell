@@ -1,0 +1,124 @@
+{
+	"_DO_NOT_EDIT": {
+		"description": "This file is auto generated with po2chrome-messages tool from fr.po.",
+		"message": ""
+	},
+	"close": {
+		"message": "Fermer"
+	},
+	"error_extension_response": {
+		"message": "Mauvaise r\u00e9ponse re\u00e7ue de l'extension"
+	},
+	"extension_status_downgrade": {
+		"message": "doit \u00eatre r\u00e9trograd\u00e9"
+	},
+	"extension_status_upgrade": {
+		"message": "peut \u00eatre mis \u00e0 niveau"
+	},
+	"gs_chrome": {
+		"message": "Int\u00e9gration \u00e0 GNOME Shell"
+	},
+	"hours": {
+		"message": "heures"
+	},
+	"manifest_description": {
+		"message": "Cette extension permet l'int\u00e9gration \u00e0 GNOME Shell et aux extensions correspondantes du d\u00e9p\u00f4t https://extensions.gnome.org"
+	},
+	"native_request_failed": {
+		"message": "La requ\u00eate native \u00ab\u00a0$REQUEST$\u00a0\u00bb a \u00e9chou\u00e9",
+		"placeholders": {
+			"request": {
+				"content": "$1"
+			}
+		}
+	},
+	"network_error": {
+		"message": "Une erreur r\u00e9seau est survenue. Veuillez v\u00e9rifier votre connexion Internet et/ou les param\u00e8tres de votre serveur mandataire."
+	},
+	"never": {
+		"message": "jamais"
+	},
+	"no": {
+		"message": "Non"
+	},
+	"no_host_connector": {
+		"message": "Bien que l'extension d'int\u00e9gration \u00e0 GNOME Shell soit active, le connecteur de l'h\u00f4te natif n'est pas reconnu. Veuillez consulter le <a href='https://wiki.gnome.org/Projects/GnomeShellIntegrationForChrome/Installation'>manuel</a> d'installation du connecteur."
+	},
+	"no_host_response": {
+		"message": "Aucune r\u00e9ponse de l'h\u00f4te"
+	},
+	"older_connector": {
+		"message": "plus ancien que la version 4"
+	},
+	"options_check_period": {
+		"message": "P\u00e9riodicit\u00e9 des v\u00e9rifications de mise \u00e0 jour"
+	},
+	"options_last_check": {
+		"message": "Derni\u00e8re v\u00e9rification"
+	},
+	"options_link": {
+		"message": "Options"
+	},
+	"options_next_check": {
+		"message": "V\u00e9rification suivante"
+	},
+	"options_saved": {
+		"message": "Options enregistr\u00e9es."
+	},
+	"options_show_network_errors": {
+		"message": "Afficher les informations sur les erreurs r\u00e9seau"
+	},
+	"options_show_network_errors_notice": {
+		"message": "Permission \u00ab\u00a0webRequest\u00a0\u00bb de Chrome requise."
+	},
+	"options_show_release_notes": {
+		"message": "Afficher les notes de version apr\u00e8s la mise \u00e0 jour de l'extension"
+	},
+	"options_title": {
+		"message": "Options $GS_CHROME$",
+		"placeholders": {
+			"gs_chrome": {
+				"content": "$1"
+			}
+		}
+	},
+	"options_update_check": {
+		"message": "V\u00e9rifier les mises \u00e0 jour des extensions"
+	},
+	"platform_not_supported": {
+		"message": "Le connecteur natif de l'h\u00f4te n'est pas pris en charge pour votre plate-forme."
+	},
+	"retry": {
+		"message": "R\u00e9essayer"
+	},
+	"save": {
+		"message": "Enregistrer"
+	},
+	"translation_credits": {
+		"description": "HTML markup enabled for this string.",
+		"message": "Alain Lojewski <allomervan@gmail.com>"
+	},
+	"translation_credits_title": {
+		"message": "Traduit par"
+	},
+	"update_available": {
+		"message": "Il y a une mise \u00e0 jour disponible pour les extensions de GNOME Shell"
+	},
+	"update_check_failed": {
+		"message": "Impossible de v\u00e9rifier les mises \u00e0 jour des extensions\u00a0: $CAUSE$",
+		"placeholders": {
+			"cause": {
+				"content": "$1"
+			}
+		}
+	},
+	"version": {
+		"message": "version $$1"
+	},
+	"warning_versions_mismatch": {
+		"message": "Vous utilisez des versions diff\u00e9rentes de l'extension d'int\u00e9gration ($$1) \u00e0 GNOME Shell et du connecteur natif ($$2) \u00e0 l'h\u00f4te. Certaines fonctions pourraient ne pas marcher ou \u00eatre fauss\u00e9es."
+	},
+	"yes": {
+		"message": "Oui"
+	}
+}

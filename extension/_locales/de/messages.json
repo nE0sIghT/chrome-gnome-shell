@@ -16,13 +16,13 @@
 		"message": "kann aktualisiert werden"
 	},
 	"gs_chrome": {
-		"message": "GNOME Shell integration"
+		"message": "GNOME Shell-Integration"
 	},
 	"hours": {
 		"message": "Stunden"
 	},
 	"manifest_description": {
-		"message": "Diese Erweiterung erm\u00f6glicht die Integration mit GNOME Shell und dem dazugeh\u00f6hrenden Erweiterungs Repository von https://extensions.gnome.org"
+		"message": "Diese Erweiterung erm\u00f6glicht die Integration mit der GNOME Shell und dem dazugeh\u00f6renden Erweiterungs-Repository von https://extensions.gnome.org"
 	},
 	"native_request_failed": {
 		"message": "\u00ab$REQUEST$\u00bb Native Anfrage fehlgeschlagen",
@@ -33,7 +33,7 @@
 		}
 	},
 	"network_error": {
-		"message": "A network error has occurred. Please check your Internet connection and/or proxy settings."
+		"message": "Ein Netzwerkfehler ist aufgetreten. Bitte \u00fcberpr\u00fcfen Sie Ihre Internetverbindung und/oder Ihre Proxy-Einstellungen."
 	},
 	"never": {
 		"message": "niemals"
@@ -42,16 +42,16 @@
 		"message": "Nein"
 	},
 	"no_host_connector": {
-		"message": "Obwohl die GNOME Shell Integrations Erweiterung l\u00e4uft, wurde der Native Host Konnektor nicht erkannt. Siehe <a href='https://wiki.gnome.org/Projects/GnomeShellIntegrationForChrome/Installation'>documentation</a> f\u00fcr Aneitungen zum installieren des Konnektors."
+		"message": "Obwohl die GNOME Shell-Integrations-Erweiterung l\u00e4uft, wurde der Native Host-Connector nicht erkannt. In <a href='https://wiki.gnome.org/Projects/GnomeShellIntegrationForChrome/Installation'>documentation</a> finden Sie Anweisungen zum Installieren des Connectors."
 	},
 	"no_host_response": {
-		"message": "Keine Antwort von Host"
+		"message": "Keine Antwort vom Host"
 	},
 	"older_connector": {
 		"message": "\u00e4lter als Version 4"
 	},
 	"options_check_period": {
-		"message": "Aktualisierungs Pr\u00fcfintervall"
+		"message": "Pr\u00fcfintervall f\u00fcr Aktualisierungen"
 	},
 	"options_last_check": {
 		"message": "Letzte Pr\u00fcfung"
@@ -66,16 +66,16 @@
 		"message": "Optionen gespeichert."
 	},
 	"options_show_network_errors": {
-		"message": "Show information about network errors"
+		"message": "Informationen zu Netzwerkfehlern anzeigen"
 	},
 	"options_show_network_errors_notice": {
-		"message": "Chrome permission \u00abwebRequest\u00bb required."
+		"message": "Chrome-Zugriffsrecht \u00bbwebRequest\u00ab ist erforderlich."
 	},
 	"options_show_release_notes": {
-		"message": "Zeige Neuigkeiten wenn Erweiterungen aktualisiert wurden"
+		"message": "Ver\u00f6ffentlichungshinweise anzeigen, wenn Erweiterungen aktualisiert wurden"
 	},
 	"options_title": {
-		"message": "$GS_CHROME$ Optionen",
+		"message": "$GS_CHROME$-Optionen",
 		"placeholders": {
 			"gs_chrome": {
 				"content": "$1"
@@ -83,10 +83,10 @@
 		}
 	},
 	"options_update_check": {
-		"message": "Pr\u00fcfe auf Aktualisierungen f\u00fcr Erweiterungen"
+		"message": "Auf Aktualisierungen f\u00fcr Erweiterungen pr\u00fcfen"
 	},
 	"platform_not_supported": {
-		"message": "Native Host Konnektor wird auf dieser Plattform nicht unterst\u00fctzt."
+		"message": "Nativer Host-Connector wird auf dieser Plattform nicht unterst\u00fctzt."
 	},
 	"retry": {
 		"message": "Wiederholen"
@@ -96,16 +96,16 @@
 	},
 	"translation_credits": {
 		"description": "HTML markup enabled for this string.",
-		"message": "Stefan Kirrmann, 2016"
+		"message": "Stefan Kirrmann, 2016<br />Mario Bl\u00e4ttermann, 2016"
 	},
 	"translation_credits_title": {
 		"message": "\u00dcbersetzung"
 	},
 	"update_available": {
-		"message": "Eine Aktualisierung f\u00fcr GNOME Shell Erweiterung ist verf\u00fcgbar"
+		"message": "Eine Aktualisierung f\u00fcr die GNOME Shell-Erweiterung ist verf\u00fcgbar"
 	},
 	"update_check_failed": {
-		"message": "Pr\u00fcfung auf Erweiterungs Aktualisierungen fehlgeschlagen: $CAUSE$",
+		"message": "Pr\u00fcfung auf Erweiterungs-Aktualisierungen ist fehlgeschlagen: $CAUSE$",
 		"placeholders": {
 			"cause": {
 				"content": "$1"
@@ -116,7 +116,7 @@
 		"message": "Version $$1"
 	},
 	"warning_versions_mismatch": {
-		"message": "Sie benutzten eine andere Version der GNOME Shell Integrations Erweiterung ($$1) und des Native Host Konnektors ($$2). Manche Features funktionieren m\u00f6glicherweise falsch oder gar nicht."
+		"message": "Sie benutzten eine andere Version der GNOME Shell-Integrations-Erweiterung ($$1) und des Nativen Host-Connectors ($$2). Manche Funktionsmerkmale stehen m\u00f6glicherweise nur eingeschr\u00e4nkt oder gar nicht zur Verf\u00fcgung."
 	},
 	"yes": {
 		"message": "Ja"
