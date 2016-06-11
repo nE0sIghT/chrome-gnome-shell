@@ -6,7 +6,7 @@ msgstr ""
 "Project-Id-Version: 1.0\n"
 "Report-Msgid-Bugs-To: ykonotopov@gmail.com\n"
 "POT-Creation-Date: 2016-05-06 15:22+0000\n"
-"PO-Revision-Date: 2016-05-05 16:55-0200\n"
+"PO-Revision-Date: 2016-06-11 04:49-0200\n"
 "Last-Translator: Rafael Fontenelle <rafaelff@gnome.org>\n"
 "Language: pt_BR\n"
 "MIME-Version: 1.0\n"
@@ -151,7 +151,7 @@ msgstr "É necessário ter permissão de «webRequest» do Chrome."
 #. HTML markup enabled for this string.
 #: chrome-gnome-shell-key-translation_credits:1
 msgid "translation_credits"
-msgstr "<a href=\"mailto:rafaeff@gnome.org\">Rafael Fontenelle</a>"
+msgstr "<a href=\"mailto:rafaelff@gnome.org\">Rafael Fontenelle</a>"
 
 #: chrome-gnome-shell-key-options_show_release_notes:1
 msgid "Show release notes when extension updated"
