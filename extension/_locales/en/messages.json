@@ -108,6 +108,9 @@
 		"message": "Save"
 	},
 
+	"connecting_host_app": {
+		"message": "Connecting to native host application…"
+	},
 	"error_extension_response": {
 		"message": "Wrong extension response received"
 	},

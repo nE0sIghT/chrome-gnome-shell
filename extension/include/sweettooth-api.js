@@ -256,6 +256,9 @@ define('versions/common/common', ['jquery', 'dbus!API'], function($, API) {
 
 gs_chrome_initialized = true;
 require(['jquery', 'messages', 'gs-chrome'], function($, messages){
+	var connectingInfo = GSC.getMessage('connecting_host_app');
+	messages.addInfo(connectingInfo);
+
 	SweetTooth.initialize(function(response) {
 		SweetTooth.shellVersion			= response.shellVersion;
 		SweetTooth.versionValidationEnabled	= response.versionValidationEnabled;
@@ -269,6 +272,10 @@ require(['jquery', 'messages', 'gs-chrome'], function($, messages){
 
 			messages.addWarning(GSC.getMessage('warning_versions_mismatch', GSC.getMessage('version', GS_CHROME_VERSION), response.connectorVersion));
 		}
+
+		$('#message_container')
+			.find('.message:contains("' + connectingInfo + '")')
+			.remove();
 	}, function(message) {
 		messages.addWarning(message ? message : GSC.getMessage('no_host_connector'));
 	}, function() {
