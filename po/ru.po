@@ -12,6 +12,10 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: \n"
+"Last-Translator: Yuri Konotopov <ykonotopov@gmail.com>\n"
+"Language-Team: ru\n"
+"X-Generator: Poedit 1.5.5\n"
 
 #. String placeholders:
 #. request
@@ -34,7 +38,7 @@ msgstr "Следующая проверка"
 
 #: chrome-gnome-shell-key-connecting_host_app:1
 msgid "Connecting to native host application…"
-msgstr ""
+msgstr "Подключение к нативному коннектору…"
 
 #: chrome-gnome-shell-key-manifest_description:1
 msgid ""
