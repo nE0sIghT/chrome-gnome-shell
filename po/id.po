@@ -8,16 +8,39 @@ msgid ""
 msgstr ""
 "Project-Id-Version: chrome-gnome-shell master\n"
 "Report-Msgid-Bugs-To: ykonotopov@gmail.com\n"
-"POT-Creation-Date: 2016-07-07 14:56+0700\n"
+"POT-Creation-Date: 2016-07-16 16:12+0000\n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: id\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"PO-Revision-Date: \n"
-"Language-Team: \n"
 "X-Generator: Poedit 1.8.8\n"
-"Last-Translator: \n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"Language: id\n"
+
+#. String placeholders:
+#. request
+#.
+#: chrome-gnome-shell-key-native_request_failed:1
+msgid "«$REQUEST$» native request failed"
+msgstr "«$REQUEST$» permintaan native gagal"
+
+#: chrome-gnome-shell-key-options_link:1
+msgid "Options"
+msgstr "Pilihan"
+
+#: chrome-gnome-shell-key-platform_not_supported:1
+msgid "Native host connector is not supported for your platform."
+msgstr "Konektor host native tidak didukung untuk platform Anda."
+
+#: chrome-gnome-shell-key-options_next_check:1
+msgid "Next check"
+msgstr "Pemeriksaan selanjutnya"
+
+#: chrome-gnome-shell-key-connecting_host_app:1
+msgid "Connecting to native host application…"
+msgstr ""
 
 #: chrome-gnome-shell-key-manifest_description:1
 msgid ""
@@ -27,40 +50,21 @@ msgstr ""
 "Ekstensi ini menyediakan integrasi dengan Shell GNOME dan repositori "
 "ekstensi yang berhubungan https://extensions.gnome.org"
 
-#: chrome-gnome-shell-key-no_host_response:1
-msgid "No host response"
-msgstr "Tidak ada respon host"
+#: chrome-gnome-shell-key-version:1
+msgid "version $$1"
+msgstr "version $$1"
 
-#: chrome-gnome-shell-key-translation_credits_title:1
-msgid "About translation"
-msgstr "Tentang terjemahan"
+#: chrome-gnome-shell-key-options_last_check:1
+msgid "Last check"
+msgstr "Pemeriksaan terakhir"
 
-#: chrome-gnome-shell-key-network_error:1
+#: chrome-gnome-shell-key-warning_versions_mismatch:1
 msgid ""
-"A network error has occurred. Please check your Internet connection and/or "
-"proxy settings."
+"You are using different versions of GNOME Shell integration extension ($$1) "
+"and native host connector ($$2). Some features may not work or work wrong."
 msgstr ""
-"Telah terjadi kesalahan jaringan. Harap periksa koneksi Internet Anda dan/"
-"atau pengaturan proksi."
-
-#: chrome-gnome-shell-key-older_connector:1
-msgid "older than version 4"
-msgstr "lebih tua dari versi 4"
-
-#. String placeholders:
-#. cause
-#.
-#: chrome-gnome-shell-key-update_check_failed:1
-msgid "Failed to check extensions updates: $CAUSE$"
-msgstr "Gagal memeriksa pemutakhiran ekstensi: $CAUSE$"
-
-#: chrome-gnome-shell-key-options_saved:1
-msgid "Options saved."
-msgstr "Opsi disimpan."
-
-#: chrome-gnome-shell-key-extension_status_downgrade:1
-msgid "must be downgraded"
-msgstr "mesti turun tingkat"
+"Anda memakai ekstensi integrasi Shell GNOME dengan versi berbeda ($$1) dan "
+"konektor host native ($$2). Beberapa fitur mungkin tak berjalan atau salah."
 
 #. String placeholders:
 #. gs_chrome
@@ -69,72 +73,21 @@ msgstr "mesti turun tingkat"
 msgid "$GS_CHROME$ options"
 msgstr "Opsi $GS_CHROME$"
 
-#. String placeholders:
-#. request
-#.
-#: chrome-gnome-shell-key-native_request_failed:1
-msgid "«$REQUEST$» native request failed"
-msgstr "«$REQUEST$» permintaan native gagal"
+#: chrome-gnome-shell-key-no:1
+msgid "No"
+msgstr "Tidak"
 
-#: chrome-gnome-shell-key-options_update_check:1
-msgid "Check for extensions update"
-msgstr "Periksa pemutakhiran ekstensi"
-
-#: chrome-gnome-shell-key-options_last_check:1
-msgid "Last check"
-msgstr "Pemeriksaan terakhir"
-
-#: chrome-gnome-shell-key-options_next_check:1
-msgid "Next check"
-msgstr "Pemeriksaan selanjutnya"
-
-#: chrome-gnome-shell-key-platform_not_supported:1
-msgid "Native host connector is not supported for your platform."
-msgstr "Konektor host native tidak didukung untuk platform Anda."
-
-#: chrome-gnome-shell-key-options_check_period:1
-msgid "Update check period"
-msgstr "Mutakhirkan perioda periksa"
-
-#: chrome-gnome-shell-key-extension_status_upgrade:1
-msgid "can be upgraded"
-msgstr "dapat ditingkatkan"
+#: chrome-gnome-shell-key-options_saved:1
+msgid "Options saved."
+msgstr "Opsi disimpan."
 
 #: chrome-gnome-shell-key-gs_chrome:1
 msgid "GNOME Shell integration"
 msgstr "Integrasi Shell GNOME"
 
-#: chrome-gnome-shell-key-retry:1
-msgid "Retry"
-msgstr "Coba Lagi"
-
-#: chrome-gnome-shell-key-error_extension_response:1
-msgid "Wrong extension response received"
-msgstr "Menerima respon ekstensi yang salah"
-
-#: chrome-gnome-shell-key-never:1
-msgid "never"
-msgstr "tidak pernah"
-
-#: chrome-gnome-shell-key-yes:1
-msgid "Yes"
-msgstr "Ya"
-
-#: chrome-gnome-shell-key-options_show_network_errors:1
-msgid "Show information about network errors"
-msgstr "Tampilkan informasi tentang kesalahan jaringan"
-
-#: chrome-gnome-shell-key-close:1
-msgid "Close"
-msgstr "Tutup"
-
-#: chrome-gnome-shell-key-save:1
-msgid "Save"
-msgstr "Simpan"
-
-#: chrome-gnome-shell-key-update_available:1
-msgid "An update for GNOME Shell extensions available"
-msgstr "Tersedia pemutakhiran untuk Shell GNOME"
+#: chrome-gnome-shell-key-options_show_network_errors_notice:1
+msgid "Chrome permission «webRequest» required."
+msgstr "Perlu ijin «webRequest» Chrome."
 
 #: chrome-gnome-shell-key-no_host_connector:1
 msgid ""
@@ -148,42 +101,93 @@ msgstr ""
 "GnomeShellIntegrationForChrome/Installation'>dokumentasi</a> untuk instruksi "
 "tentang memasang konektor."
 
-#: chrome-gnome-shell-key-options_show_network_errors_notice:1
-msgid "Chrome permission «webRequest» required."
-msgstr "Perlu ijin «webRequest» Chrome."
+#: chrome-gnome-shell-key-update_available:1
+msgid "An update for GNOME Shell extensions available"
+msgstr "Tersedia pemutakhiran untuk Shell GNOME"
+
+#: chrome-gnome-shell-key-network_error:1
+msgid ""
+"A network error has occurred. Please check your Internet connection and/or "
+"proxy settings."
+msgstr ""
+"Telah terjadi kesalahan jaringan. Harap periksa koneksi Internet Anda dan/"
+"atau pengaturan proksi."
+
+#: chrome-gnome-shell-key-retry:1
+msgid "Retry"
+msgstr "Coba Lagi"
+
+#: chrome-gnome-shell-key-extension_status_upgrade:1
+msgid "can be upgraded"
+msgstr "dapat ditingkatkan"
+
+#: chrome-gnome-shell-key-options_update_check:1
+msgid "Check for extensions update"
+msgstr "Periksa pemutakhiran ekstensi"
+
+#: chrome-gnome-shell-key-hours:1
+msgid "hours"
+msgstr "jam"
+
+#: chrome-gnome-shell-key-options_show_release_notes:1
+msgid "Show release notes when extension updated"
+msgstr "Tampilkan catatan rilis ketika ekstensi dimutakhirkan"
+
+#: chrome-gnome-shell-key-extension_status_downgrade:1
+msgid "must be downgraded"
+msgstr "mesti turun tingkat"
+
+#: chrome-gnome-shell-key-no_host_response:1
+msgid "No host response"
+msgstr "Tidak ada respon host"
 
 #. HTML markup enabled for this string.
 #: chrome-gnome-shell-key-translation_credits:1
 msgid "translation_credits"
 msgstr "Andika Triwidada <andika@gmail.com>, 2016"
 
-#: chrome-gnome-shell-key-options_show_release_notes:1
-msgid "Show release notes when extension updated"
-msgstr "Tampilkan catatan rilis ketika ekstensi dimutakhirkan"
+#: chrome-gnome-shell-key-options_check_period:1
+msgid "Update check period"
+msgstr "Mutakhirkan perioda periksa"
 
-#: chrome-gnome-shell-key-version:1
-msgid "version $$1"
-msgstr "version $$1"
+#: chrome-gnome-shell-key-close:1
+msgid "Close"
+msgstr "Tutup"
 
-#: chrome-gnome-shell-key-hours:1
-msgid "hours"
-msgstr "jam"
+#: chrome-gnome-shell-key-never:1
+msgid "never"
+msgstr "tidak pernah"
 
-#: chrome-gnome-shell-key-options_link:1
-msgid "Options"
-msgstr "Pilihan"
+#: chrome-gnome-shell-key-yes:1
+msgid "Yes"
+msgstr "Ya"
 
-#: chrome-gnome-shell-key-warning_versions_mismatch:1
-msgid ""
-"You are using different versions of GNOME Shell integration extension ($$1) "
-"and native host connector ($$2). Some features may not work or work wrong."
-msgstr ""
-"Anda memakai ekstensi integrasi Shell GNOME dengan versi berbeda ($$1) dan "
-"konektor host native ($$2). Beberapa fitur mungkin tak berjalan atau salah."
+#: chrome-gnome-shell-key-save:1
+msgid "Save"
+msgstr "Simpan"
 
-#: chrome-gnome-shell-key-no:1
-msgid "No"
-msgstr "Tidak"
+#. String placeholders:
+#. cause
+#.
+#: chrome-gnome-shell-key-update_check_failed:1
+msgid "Failed to check extensions updates: $CAUSE$"
+msgstr "Gagal memeriksa pemutakhiran ekstensi: $CAUSE$"
+
+#: chrome-gnome-shell-key-translation_credits_title:1
+msgid "About translation"
+msgstr "Tentang terjemahan"
+
+#: chrome-gnome-shell-key-older_connector:1
+msgid "older than version 4"
+msgstr "lebih tua dari versi 4"
+
+#: chrome-gnome-shell-key-options_show_network_errors:1
+msgid "Show information about network errors"
+msgstr "Tampilkan informasi tentang kesalahan jaringan"
+
+#: chrome-gnome-shell-key-error_extension_response:1
+msgid "Wrong extension response received"
+msgstr "Menerima respon ekstensi yang salah"
 
 #. Chrome store description
 #: chrome-gnome-shell-store-description:1
