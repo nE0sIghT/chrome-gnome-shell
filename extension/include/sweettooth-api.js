@@ -29,8 +29,6 @@ define('gs-chrome', ['jquery'], function($) {
 
 	window.SweetTooth = function() {
 		var apiObject			= {
-			ready:				$.Deferred(),
-
 			apiVersion:			5,
 			shellVersion:			'-1',
 			versionValidationEnabled:	true,
@@ -65,10 +63,25 @@ define('gs-chrome', ['jquery'], function($) {
 
 			uninstallExtension:	function(uuid) {
 				return sendResolveExtensionMessage("uninstallExtension", "success", {uuid: uuid});
+			},
+
+			initialize:		function(done, fail, always) {
+				var ready = $.Deferred();
+				if(done)
+				{
+					ready.done(done);
+				}
+				if(fail)
+				{
+					ready.fail(fail);
+				}
+				if(always)
+				{
+					ready.always(always);
+				}
+				sendResolveExtensionMessage("initialize", "properties", null, ready);
 			}
 		};
-
-		sendResolveExtensionMessage("initialize", "properties", null, apiObject.ready);
 
 		window.addEventListener("message", function(event) {
 			// We only accept messages from ourselves
@@ -242,8 +255,8 @@ define('versions/common/common', ['jquery', 'dbus!API'], function($, API) {
 });
 
 gs_chrome_initialized = true;
-require(['messages', 'gs-chrome'], function(messages){
-	SweetTooth.ready.done(function(response) {
+require(['jquery', 'messages', 'gs-chrome'], function($, messages){
+	SweetTooth.initialize(function(response) {
 		SweetTooth.shellVersion			= response.shellVersion;
 		SweetTooth.versionValidationEnabled	= response.versionValidationEnabled;
 
@@ -256,9 +269,9 @@ require(['messages', 'gs-chrome'], function(messages){
 
 			messages.addWarning(GSC.getMessage('warning_versions_mismatch', GSC.getMessage('version', GS_CHROME_VERSION), response.connectorVersion));
 		}
-	}).fail(function(message) {
+	}, function(message) {
 		messages.addWarning(message ? message : GSC.getMessage('no_host_connector'));
-	}).always(function() {
+	}, function() {
 		// Start extensions.gnome.org main script
 		require(['main'], function(){});
 	});
