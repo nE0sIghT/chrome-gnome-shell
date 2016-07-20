@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: 1.0\n"
 "Report-Msgid-Bugs-To: ykonotopov@gmail.com\n"
 "POT-Creation-Date: 2016-07-16 16:12+0000\n"
-"PO-Revision-Date: 2016-05-26 12:40+0200\n"
+"PO-Revision-Date: 2016-07-20 09:39+0200\n"
 "Last-Translator: Daniel Mustieles <daniel.mustieles@gmail.com>\n"
 "Language-Team: Español; Castellano <gnome-es-list@gnome.org>\n"
 "Language: es\n"
@@ -41,7 +41,7 @@ msgstr "Siguiente comprobación"
 
 #: chrome-gnome-shell-key-connecting_host_app:1
 msgid "Connecting to native host application…"
-msgstr ""
+msgstr "Conectado al equipo nativo de la aplicación…"
 
 #: chrome-gnome-shell-key-manifest_description:1
 msgid ""
