@@ -255,6 +255,10 @@ define('versions/common/common', ['jquery', 'dbus!API'], function($, API) {
 });
 
 gs_chrome_initialized = true;
+
+requirejs.config({
+	waitSeconds: 15 // It's fails sometimes with default 7 secs
+});
 require(['jquery', 'messages', 'gs-chrome'], function($, messages){
 	var connectingInfo = GSC.getMessage('connecting_host_app');
 	messages.addInfo(connectingInfo);
