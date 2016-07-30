@@ -83,9 +83,9 @@ if(BUILD_CONNECTOR)
 	configure_file("${CMAKE_CURRENT_SOURCE_DIR}/connector/io.github.ne0sight.gs_chrome_connector.json"
 			"${CMAKE_BINARY_DIR}/")
 
-	install(PROGRAMS "${CMAKE_CURRENT_SOURCE_DIR}/connector/gs-chrome-connector.py" DESTINATION "${CMAKE_INSTALL_BINDIR}/" RENAME gs-chrome-connector)
-	install(FILES "${CMAKE_BINARY_DIR}/io.github.ne0sight.gs_chrome_connector.json" DESTINATION "/etc/chromium/native-messaging-hosts/")
-	install(FILES "${CMAKE_BINARY_DIR}/io.github.ne0sight.gs_chrome_connector.json" DESTINATION "/etc/opt/chrome/native-messaging-hosts/")
+	install(PROGRAMS "${CMAKE_CURRENT_SOURCE_DIR}/connector/chrome-gnome-shell.py" DESTINATION "${CMAKE_INSTALL_BINDIR}/" RENAME chrome-gnome-shell)
+	install(FILES "${CMAKE_BINARY_DIR}/org.gnome.chrome-gnome-shell.json" DESTINATION "/etc/chromium/native-messaging-hosts/")
+	install(FILES "${CMAKE_BINARY_DIR}/org.gnome.chrome-gnome-shell.json" DESTINATION "/etc/opt/chrome/native-messaging-hosts/")
 	install(FILES "${CMAKE_CURRENT_SOURCE_DIR}/connector/external_extension.json" DESTINATION "/usr/share/google-chrome/extensions/" RENAME "${EXTENSION_ID}.json")
 	install(FILES "${CMAKE_CURRENT_SOURCE_DIR}/connector/external_extension.json" DESTINATION "/usr/share/chromium/extensions/" RENAME "${EXTENSION_ID}.json")
 endif(BUILD_CONNECTOR)
