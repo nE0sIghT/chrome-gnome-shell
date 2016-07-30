@@ -80,7 +80,7 @@ if(BUILD_EXTENSION)
 endif(BUILD_EXTENSION)
 
 if(BUILD_CONNECTOR)
-	configure_file("${CMAKE_CURRENT_SOURCE_DIR}/connector/io.github.ne0sight.gs_chrome_connector.json"
+	configure_file("${CMAKE_CURRENT_SOURCE_DIR}/connector/org.gnome.chrome-gnome-shell.json"
 			"${CMAKE_BINARY_DIR}/")
 
 	install(PROGRAMS "${CMAKE_CURRENT_SOURCE_DIR}/connector/chrome-gnome-shell.py" DESTINATION "${CMAKE_INSTALL_BINDIR}/" RENAME chrome-gnome-shell)
