@@ -15,9 +15,9 @@ from __future__ import print_function
 from gi.repository import GLib, Gio
 import json
 import os
+import re
 import struct
 import sys
-import re
 from select import select
 from threading import Thread, Lock
 
