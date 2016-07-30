@@ -18,6 +18,7 @@ import os
 import re
 import struct
 import sys
+import time
 from select import select
 from threading import Thread, Lock
 
@@ -31,6 +32,7 @@ EXTENSION_DISABLE_VERSION_CHECK_KEY = "disable-extension-version-validation"
 BUFFER_SUPPORTED = hasattr(sys.stdin, 'buffer')
 mutex = Lock()
 watcherConnected = False
+mainLoopInterrupted = False
 
 # https://wiki.gnome.org/Projects/GnomeShell/Extensions/UUIDGuidelines
 def isUUID(uuid):
@@ -88,6 +90,9 @@ def dbus_call_response(method, parameters, resultProperty):
 # Thread that reads messages from the webapp.
 def read_thread_func(proxy, mainLoop):
     settings = Gio.Settings.new(SHELL_SCHEMA)
+
+    while not mainLoop.is_running() and not mainLoopInterrupted:
+        time.sleep(0.2)
 
     while mainLoop.is_running():
         rlist, _, _ = select([sys.stdin], [], [], 1)
@@ -241,6 +246,8 @@ if __name__ == '__main__':
         mainLoop.run()
     except KeyboardInterrupt:
         mainLoop.quit()
+
+    mainLoopInterrupted = True
 
     proxy.disconnect(shellSignalId)
     Gio.bus_unwatch_name(shellAppearedId)
