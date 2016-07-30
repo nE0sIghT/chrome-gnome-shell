@@ -18,6 +18,7 @@ import os
 import struct
 import sys
 import re
+from select import select
 from threading import Thread, Lock
 
 CONNECTOR_VERSION	= 6.1
@@ -89,11 +90,15 @@ def read_thread_func(proxy, mainLoop):
     settings = Gio.Settings.new(SHELL_SCHEMA)
 
     while mainLoop.is_running():
-        # Read the message length (first 4 bytes).
-        if BUFFER_SUPPORTED:
-            text_length_bytes = sys.stdin.buffer.read(4)
+        rlist, _, _ = select([sys.stdin], [], [], 1)
+        if rlist:
+            # Read the message length (first 4 bytes).
+            if BUFFER_SUPPORTED:
+                text_length_bytes = sys.stdin.buffer.read(4)
+            else:
+                text_length_bytes = sys.stdin.read(4)
         else:
-            text_length_bytes = sys.stdin.read(4)
+            continue
 
         if len(text_length_bytes) == 0:
             mainLoop.quit()
