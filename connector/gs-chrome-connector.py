@@ -216,6 +216,7 @@ def on_shell_appeared(connection, name, name_owner):
 
 
 if __name__ == '__main__':
+    debug('[%d] Startup' % (os.getpid()))
     proxy = Gio.DBusProxy.new_for_bus_sync(Gio.BusType.SESSION,
                                            Gio.DBusProxyFlags.NONE,
                                            None,
@@ -245,4 +246,5 @@ if __name__ == '__main__':
     Gio.bus_unwatch_name(shellAppearedId)
 
     appLoop.join()
+    debug('[%d] Quit' % (os.getpid()))
     sys.exit(0)
