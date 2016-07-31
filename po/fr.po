@@ -40,7 +40,7 @@ msgstr "Vérification suivante"
 
 #: chrome-gnome-shell-key-connecting_host_app:1
 msgid "Connecting to native host application…"
-msgstr ""
+msgstr "Connexion à une application native de l'hôte…"
 
 #: chrome-gnome-shell-key-manifest_description:1
 msgid ""
