@@ -6,7 +6,7 @@ msgstr ""
 "Project-Id-Version: 1.0\n"
 "Report-Msgid-Bugs-To: ykonotopov@gmail.com\n"
 "POT-Creation-Date: 2016-07-16 16:12+0000\n"
-"PO-Revision-Date: 2016-06-11 04:49-0200\n"
+"PO-Revision-Date: 2016-07-30 21:11-0200\n"
 "Last-Translator: Rafael Fontenelle <rafaelff@gnome.org>\n"
 "Language: pt_BR\n"
 "MIME-Version: 1.0\n"
@@ -36,7 +36,7 @@ msgstr "Próxima verificação"
 
 #: chrome-gnome-shell-key-connecting_host_app:1
 msgid "Connecting to native host application…"
-msgstr ""
+msgstr "Conectando ao aplicativo nativo de máquina…"
 
 #: chrome-gnome-shell-key-manifest_description:1
 msgid ""
