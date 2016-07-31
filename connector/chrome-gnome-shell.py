@@ -89,8 +89,6 @@ def dbus_call_response(method, parameters, resultProperty):
 
 # Thread that reads messages from the webapp.
 def read_thread_func(proxy, mainLoop):
-    settings = Gio.Settings.new(SHELL_SCHEMA)
-
     while not mainLoop.is_running() and not mainLoopInterrupted:
         time.sleep(0.2)
 
@@ -128,6 +126,7 @@ def read_thread_func(proxy, mainLoop):
             debug('[%d] Execute: to %s' % (os.getpid(), request['execute']))
 
             if request['execute'] == 'initialize':
+                settings = Gio.Settings.new(SHELL_SCHEMA)
                 shellVersion = proxy.get_cached_property("ShellVersion")
                 if EXTENSION_DISABLE_VERSION_CHECK_KEY in settings.keys():
                     disableVersionCheck = settings.get_boolean(EXTENSION_DISABLE_VERSION_CHECK_KEY)
@@ -157,6 +156,7 @@ def read_thread_func(proxy, mainLoop):
                 uuid = request['uuid']
                 enable = request['enable']
 
+                settings = Gio.Settings.new(SHELL_SCHEMA)
                 uuids = settings.get_strv(ENABLED_EXTENSIONS_KEY)
 
                 if enable:
