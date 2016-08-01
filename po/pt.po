@@ -7,16 +7,52 @@ msgid ""
 msgstr ""
 "Project-Id-Version: chrome-gnome-shell master\n"
 "Report-Msgid-Bugs-To: ykonotopov@gmail.com\n"
-"POT-Creation-Date: 2016-07-16 16:12+0000\n"
+"POT-Creation-Date: 2016-08-01 20:03+0000\n"
+"PO-Revision-Date: 2016-08-01 12:35+0100\n"
+"Last-Translator: \n"
+"Language-Team: Portuguese <gnome_pt@yahoogroups.com>\n"
+"Language: pt\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"PO-Revision-Date: 2016-08-01 12:35+0100\n"
-"Language-Team: Portuguese <gnome_pt@yahoogroups.com>\n"
-"Language: pt\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"Last-Translator: \n"
 "X-Generator: Poedit 1.8.7.1\n"
+
+#: chrome-gnome-shell-key-close:1
+msgid "Close"
+msgstr "Fechar"
+
+#: chrome-gnome-shell-key-connecting_host_app:1
+msgid "Connecting to native host application…"
+msgstr ""
+
+#: chrome-gnome-shell-key-error_extension_response:1
+msgid "Wrong extension response received"
+msgstr ""
+
+#: chrome-gnome-shell-key-extension_status_downgrade:1
+msgid "must be downgraded"
+msgstr ""
+
+#: chrome-gnome-shell-key-extension_status_upgrade:1
+#, fuzzy
+msgid "can be upgraded"
+msgstr "Pode ser predefinido"
+
+#: chrome-gnome-shell-key-gs_chrome:1
+#, fuzzy
+msgid "GNOME Shell integration"
+msgstr "Preferências das extensões á interface GNOME"
+
+#: chrome-gnome-shell-key-hours:1
+msgid "hours"
+msgstr "horas"
+
+#: chrome-gnome-shell-key-manifest_description:1
+msgid ""
+"This extension provides integration with GNOME Shell and the corresponding "
+"extensions repository https://extensions.gnome.org"
+msgstr ""
 
 #. String placeholders:
 #. request
@@ -26,41 +62,69 @@ msgstr ""
 msgid "«$REQUEST$» native request failed"
 msgstr "Pedido de ligação expirou"
 
+#: chrome-gnome-shell-key-network_error:1
+msgid ""
+"A network error has occurred. Please check your Internet connection and/or "
+"proxy settings."
+msgstr ""
+
+#: chrome-gnome-shell-key-never:1
+msgid "never"
+msgstr "nunca"
+
+#: chrome-gnome-shell-key-no:1
+msgid "No"
+msgstr "Não"
+
+#: chrome-gnome-shell-key-no_host_connector:1
+msgid ""
+"Although GNOME Shell integration extension is running, native host connector "
+"is not detected. Refer <a href='https://wiki.gnome.org/Projects/"
+"GnomeShellIntegrationForChrome/Installation'>documentation</a> for "
+"instructions about installing connector."
+msgstr ""
+
+#: chrome-gnome-shell-key-no_host_response:1
+#, fuzzy
+msgid "No host response"
+msgstr "Servidor _Socks"
+
+#: chrome-gnome-shell-key-older_connector:1
+msgid "older than version 4"
+msgstr ""
+
+#: chrome-gnome-shell-key-options_check_period:1
+#, fuzzy
+msgid "Update check period"
+msgstr "A última verificação de data e hora"
+
+#: chrome-gnome-shell-key-options_last_check:1
+msgid "Last check"
+msgstr "Última verificação"
+
 #: chrome-gnome-shell-key-options_link:1
 msgid "Options"
 msgstr "Opções"
-
-#: chrome-gnome-shell-key-platform_not_supported:1
-msgid "Native host connector is not supported for your platform."
-msgstr ""
 
 #: chrome-gnome-shell-key-options_next_check:1
 #, fuzzy
 msgid "Next check"
 msgstr "Procurar atualizações"
 
-#: chrome-gnome-shell-key-connecting_host_app:1
-msgid "Connecting to native host application…"
+#: chrome-gnome-shell-key-options_saved:1
+msgid "Options saved."
 msgstr ""
 
-#: chrome-gnome-shell-key-manifest_description:1
-msgid ""
-"This extension provides integration with GNOME Shell and the corresponding "
-"extensions repository https://extensions.gnome.org"
+#: chrome-gnome-shell-key-options_show_network_errors:1
+msgid "Show information about network errors"
 msgstr ""
 
-#: chrome-gnome-shell-key-version:1
-msgid "version $$1"
-msgstr "Versão $$1"
+#: chrome-gnome-shell-key-options_show_network_errors_notice:1
+msgid "Chrome permission «webRequest» required."
+msgstr ""
 
-#: chrome-gnome-shell-key-options_last_check:1
-msgid "Last check"
-msgstr "Última verificação"
-
-#: chrome-gnome-shell-key-warning_versions_mismatch:1
-msgid ""
-"You are using different versions of GNOME Shell integration extension ($$1) "
-"and native host connector ($$2). Some features may not work or work wrong."
+#: chrome-gnome-shell-key-options_show_release_notes:1
+msgid "Show release notes when extension updated"
 msgstr ""
 
 #. String placeholders:
@@ -71,98 +135,36 @@ msgstr ""
 msgid "$GS_CHROME$ options"
 msgstr "Opções…"
 
-#: chrome-gnome-shell-key-no:1
-msgid "No"
-msgstr "Não"
-
-#: chrome-gnome-shell-key-options_saved:1
-msgid "Options saved."
-msgstr ""
-
-#: chrome-gnome-shell-key-gs_chrome:1
+#: chrome-gnome-shell-key-options_update_check:1
 #, fuzzy
-msgid "GNOME Shell integration"
-msgstr "Preferências das extensões á interface GNOME"
+msgid "Check for extensions update"
+msgstr "A última verificação de data e hora"
 
-#: chrome-gnome-shell-key-options_show_network_errors_notice:1
-msgid "Chrome permission «webRequest» required."
-msgstr ""
-
-#: chrome-gnome-shell-key-no_host_connector:1
-msgid ""
-"Although GNOME Shell integration extension is running, native host connector "
-"is not detected. Refer <a href='https://wiki.gnome.org/Projects/"
-"GnomeShellIntegrationForChrome/Installation'>documentation</a> for "
-"instructions about installing connector."
-msgstr ""
-
-#: chrome-gnome-shell-key-update_available:1
-#, fuzzy
-msgid "An update for GNOME Shell extensions available"
-msgstr "Configurar extensões à interface GNOME"
-
-#: chrome-gnome-shell-key-network_error:1
-msgid ""
-"A network error has occurred. Please check your Internet connection and/or "
-"proxy settings."
+#: chrome-gnome-shell-key-platform_not_supported:1
+msgid "Native host connector is not supported for your platform."
 msgstr ""
 
 #: chrome-gnome-shell-key-retry:1
 msgid "Retry"
 msgstr "Tentar novamente"
 
-#: chrome-gnome-shell-key-extension_status_upgrade:1
-#, fuzzy
-msgid "can be upgraded"
-msgstr "Pode ser predefinido"
-
-#: chrome-gnome-shell-key-options_update_check:1
-#, fuzzy
-msgid "Check for extensions update"
-msgstr "A última verificação de data e hora"
-
-#: chrome-gnome-shell-key-hours:1
-msgid "hours"
-msgstr "horas"
-
-#: chrome-gnome-shell-key-options_show_release_notes:1
-msgid "Show release notes when extension updated"
-msgstr ""
-
-#: chrome-gnome-shell-key-extension_status_downgrade:1
-msgid "must be downgraded"
-msgstr ""
-
-#: chrome-gnome-shell-key-no_host_response:1
-#, fuzzy
-msgid "No host response"
-msgstr "Servidor _Socks"
+#: chrome-gnome-shell-key-save:1
+msgid "Save"
+msgstr "Gravar"
 
 #. HTML markup enabled for this string.
 #: chrome-gnome-shell-key-translation_credits:1
 msgid "translation_credits"
 msgstr "Tiago Santos <tiagofsantos81@sapo.pt>"
 
-#: chrome-gnome-shell-key-options_check_period:1
+#: chrome-gnome-shell-key-translation_credits_title:1
+msgid "About translation"
+msgstr "Sobre a tradução"
+
+#: chrome-gnome-shell-key-update_available:1
 #, fuzzy
-msgid "Update check period"
-msgstr "A última verificação de data e hora"
-
-#: chrome-gnome-shell-key-close:1
-msgid "Close"
-msgstr "Fechar"
-
-#: chrome-gnome-shell-key-never:1
-msgid "never"
-msgstr "nunca"
-
-#: chrome-gnome-shell-key-yes:1
-msgid "Yes"
-msgstr "Sim"
-
-#: chrome-gnome-shell-key-save:1
-msgid "Save"
-msgstr "Gravar"
+msgid "An update for GNOME Shell extensions available"
+msgstr "Configurar extensões à interface GNOME"
 
 #. String placeholders:
 #. cause
@@ -171,21 +173,19 @@ msgstr "Gravar"
 msgid "Failed to check extensions updates: $CAUSE$"
 msgstr ""
 
-#: chrome-gnome-shell-key-translation_credits_title:1
-msgid "About translation"
-msgstr "Sobre a tradução"
+#: chrome-gnome-shell-key-version:1
+msgid "version $$1"
+msgstr "Versão $$1"
 
-#: chrome-gnome-shell-key-older_connector:1
-msgid "older than version 4"
+#: chrome-gnome-shell-key-warning_versions_mismatch:1
+msgid ""
+"You are using different versions of GNOME Shell integration extension ($$1) "
+"and native host connector ($$2). Some features may not work or work wrong."
 msgstr ""
 
-#: chrome-gnome-shell-key-options_show_network_errors:1
-msgid "Show information about network errors"
-msgstr ""
-
-#: chrome-gnome-shell-key-error_extension_response:1
-msgid "Wrong extension response received"
-msgstr ""
+#: chrome-gnome-shell-key-yes:1
+msgid "Yes"
+msgstr "Sim"
 
 #. Chrome store description
 #: chrome-gnome-shell-store-description:1
