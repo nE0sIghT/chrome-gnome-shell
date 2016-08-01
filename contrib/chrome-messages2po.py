@@ -129,6 +129,7 @@ def run():
 
 	pot_path = os.path.join(args.po, "template.pot")
 	if args.write_pot:
+		po.sort()
 		po.save(pot_path)
 
 	if not args.generate_po:
@@ -172,6 +173,7 @@ def run():
 				if messageKey in chromeMessages:
 					entry.msgstr = chromeMessages[messageKey]['message']
 
+			po.sort()
 			po.save(po_path)
 
 if __name__ == '__main__':
