@@ -4,6 +4,7 @@
 #
 # Stefan Kirrmann, 2016.
 # Mario Blättermann <mario.blaettermann@gmail.com>, 2016.
+# Wolfgang Stöggl <c72578@yahoo.de>, 2016.
 #
 msgid ""
 msgstr ""
@@ -11,13 +12,13 @@ msgstr ""
 "Report-Msgid-Bugs-To: ykonotopov@gmail.com\n"
 "POT-Creation-Date: 2016-07-16 16:12+0000\n"
 "PO-Revision-Date: \n"
-"Last-Translator: Yuri Konotopov <ykonotopov@gmail.com>\n"
+"Last-Translator: Wolfgang Stoeggl <c72578@yahoo.de>\n"
 "Language-Team: \n"
 "Language: de\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 1.5.5\n"
+"X-Generator: Poedit 1.8.8\n"
 
 #. String placeholders:
 #. request
@@ -40,7 +41,7 @@ msgstr "Nächste Prüfung"
 
 #: chrome-gnome-shell-key-connecting_host_app:1
 msgid "Connecting to native host application…"
-msgstr ""
+msgstr "Verbindung mit nativer Rechneranwendung wird hergestellt …"
 
 #: chrome-gnome-shell-key-manifest_description:1
 msgid ""
