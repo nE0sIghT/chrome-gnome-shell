@@ -71,6 +71,9 @@ def run():
 	with open(os.path.join(args.po, 'LINGUAS'), 'r') as file:
 		for line in file:
 			lang = line.strip()
+			chromeLang = lang
+			if lang == 'pt':
+				chromeLang = 'pt_PT'
 
 			po_path = os.path.join(args.po, lang + '.po')
 
@@ -92,18 +95,18 @@ def run():
 
 				messages[messageKey] = messageEntry
 
-			os.makedirs(os.path.join(args.locales, lang), exist_ok=True)
-			with open(os.path.join(args.locales, lang, "messages.json"), 'w') as file:
+			os.makedirs(os.path.join(args.locales, chromeLang), exist_ok=True)
+			with open(os.path.join(args.locales, chromeLang, "messages.json"), 'w') as file:
 				json.dump(messages, file, indent='\t', sort_keys=True)
 				file.write('\n')
 
 			entry = find_chrome_entry(po, METADATA_STORE_DESCRIPTION, exact=True)
 			if entry and entry.msgstr and not 'fuzzy' in entry.flags:
-				with open(os.path.join(args.chrome_store_description, lang), 'w') as file:
+				with open(os.path.join(args.chrome_store_description, chromeLang), 'w') as file:
 					file.write(entry.msgstr)
 			else:
 				try:
-					os.remove(os.path.join(args.chrome_store_description, lang))
+					os.remove(os.path.join(args.chrome_store_description, chromeLang))
 				except FileNotFoundError:
 					pass
 

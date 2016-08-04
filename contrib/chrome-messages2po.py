@@ -138,11 +138,14 @@ def run():
 	with open(os.path.join(args.po, 'LINGUAS'), 'r') as file:
 		for line in file:
 			lang = line.strip()
+			chromeLang = lang
+			if lang == 'pt':
+				chromeLang = 'pt_PT'
 
-			if not lang or not os.path.isfile(os.path.join(args.locales, lang, 'messages.json')):
+			if not lang or not os.path.isfile(os.path.join(args.locales, chromeLang, 'messages.json')):
 				continue
 
-			with open(os.path.join(args.locales, lang, "messages.json"), 'r') as file:
+			with open(os.path.join(args.locales, chromeLang, "messages.json"), 'r') as file:
 				chromeMessages = json.load(file)
 
 			po_path = os.path.join(args.po, lang + '.po')
@@ -162,8 +165,8 @@ def run():
 						messageKey = occurrence[len(METADATA_SUFFIX):]
 						break
 					elif occurrence == METADATA_STORE_DESCRIPTION:
-						if os.path.isfile(os.path.join(args.chrome_store_description, lang)):
-							with open(os.path.join(args.chrome_store_description, lang)) as file:
+						if os.path.isfile(os.path.join(args.chrome_store_description, chromeLang)):
+							with open(os.path.join(args.chrome_store_description, chromeLang)) as file:
 								entry.msgstr = file.read()
 								break
 
