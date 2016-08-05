@@ -1,0 +1,230 @@
+#
+# GNOME Shell integration for Chrome
+#
+# Copyright (C) 2016 Jordi Mas i Hernàndez, jmas@softcatala.org
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: 1.0\n"
+"Report-Msgid-Bugs-To: ykonotopov@gmail.com\n"
+"POT-Creation-Date: 2016-08-01 20:03+0000\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: \n"
+"Last-Translator: Jordi Mas i Hernàndez <jmas@softcatala.org>\n"
+"Language-Team: ca_ES <tradgnome@softcatala.net>\n"
+"Language: ca\n"
+"X-Generator: Poedit 1.8.7.1\n"
+
+#: chrome-gnome-shell-key-close:1
+msgid "Close"
+msgstr "Tanca"
+
+#: chrome-gnome-shell-key-connecting_host_app:1
+msgid "Connecting to native host application…"
+msgstr "S'està connectant a una aplicació amfitriona nativa..."
+
+#: chrome-gnome-shell-key-error_extension_response:1
+msgid "Wrong extension response received"
+msgstr "S'ha rebut una resposta incorrecta d'una extensió"
+
+#: chrome-gnome-shell-key-extension_status_downgrade:1
+msgid "must be downgraded"
+msgstr "ha de ser revertit"
+
+#: chrome-gnome-shell-key-extension_status_upgrade:1
+msgid "can be upgraded"
+msgstr "pot actualitzar-se"
+
+#: chrome-gnome-shell-key-gs_chrome:1
+msgid "GNOME Shell integration"
+msgstr "Integració amb el GNOME Shell"
+
+#: chrome-gnome-shell-key-hours:1
+msgid "hours"
+msgstr "hores"
+
+#: chrome-gnome-shell-key-manifest_description:1
+msgid ""
+"This extension provides integration with GNOME Shell and the corresponding "
+"extensions repository https://extensions.gnome.org"
+msgstr ""
+"Aquesta extensió proporciona integració amb GNOME Shell i el corresponent "
+"dipòsit d'extensions https://extensions.gnome.org"
+
+#. String placeholders:
+#. request
+#.
+#: chrome-gnome-shell-key-native_request_failed:1
+msgid "«$REQUEST$» native request failed"
+msgstr "La sol·licitud nativa «$REQUEST$» ha fallat"
+
+#: chrome-gnome-shell-key-network_error:1
+msgid ""
+"A network error has occurred. Please check your Internet connection and/or "
+"proxy settings."
+msgstr ""
+"S'ha produït un error de xarxa. Comproveu la connexió a Internet i la configuració del servidor intermediari."
+
+#: chrome-gnome-shell-key-never:1
+msgid "never"
+msgstr "mai"
+
+#: chrome-gnome-shell-key-no:1
+msgid "No"
+msgstr "No"
+
+#: chrome-gnome-shell-key-no_host_connector:1
+msgid ""
+"Although GNOME Shell integration extension is running, native host "
+"connector is not detected. Refer <a href='https://wiki.gnome.org/Projects/"
+"GnomeShellIntegrationForChrome/Installation'>documentation</a> for "
+"instructions about installing connector."
+msgstr ""
+"Encara que l'extensió d'integració del GNOME Shell està executant-se, no s'ha detectat el connector amfitrió nadiu. "
+"Vegeu la <a href='https://wiki.gnome.org/Projects/"
+"GnomeShellIntegrationForChrome/Installation'>documentació</a> per obtenir instruccions de com instal·lar el connector."
+
+#: chrome-gnome-shell-key-no_host_response:1
+msgid "No host response"
+msgstr "Sense resposta de l'amfitrió:"
+
+#: chrome-gnome-shell-key-older_connector:1
+msgid "older than version 4"
+msgstr "més antic de la versió 4"
+
+#: chrome-gnome-shell-key-options_check_period:1
+msgid "Update check period"
+msgstr "Període de comprovació d'actualitzacions"
+
+#: chrome-gnome-shell-key-options_last_check:1
+msgid "Last check"
+msgstr "Darrera comprovació"
+
+#: chrome-gnome-shell-key-options_link:1
+msgid "Options"
+msgstr "Opcions"
+
+#: chrome-gnome-shell-key-options_next_check:1
+msgid "Next check"
+msgstr "Propera comprovació"
+
+#: chrome-gnome-shell-key-options_saved:1
+msgid "Options saved."
+msgstr "Configuració desada."
+
+#: chrome-gnome-shell-key-options_show_network_errors:1
+msgid "Show information about network errors"
+msgstr "Notifica els errors de xarxa"
+
+#: chrome-gnome-shell-key-options_show_network_errors_notice:1
+msgid "Chrome permission «webRequest» required."
+msgstr "Es requereix el permís de Chrome «webRequest»."
+
+#: chrome-gnome-shell-key-options_show_release_notes:1
+msgid "Show release notes when extension updated"
+msgstr "Mostra les notes de la versió quan s'actualitza l'extensió"
+
+#. String placeholders:
+#. gs_chrome
+#.
+#: chrome-gnome-shell-key-options_title:1
+msgid "$GS_CHROME$ options"
+msgstr "Opcions de $GS_CHROME$"
+
+#: chrome-gnome-shell-key-options_update_check:1
+msgid "Check for extensions update"
+msgstr "Comprova si hi ha actualitzacions de l'extensió"
+
+#: chrome-gnome-shell-key-platform_not_supported:1
+msgid "Native host connector is not supported for your platform."
+msgstr "El connector amfitrió nadiu no es compatible amb aquesta plataforma."
+
+#: chrome-gnome-shell-key-retry:1
+msgid "Retry"
+msgstr "Reintenta-ho"
+
+#: chrome-gnome-shell-key-save:1
+msgid "Save"
+msgstr "Desa"
+
+#. HTML markup enabled for this string.
+#: chrome-gnome-shell-key-translation_credits:1
+msgid "translation_credits"
+msgstr "Jordi Mas i Hernàndez <jmas@softcatala.org>"
+
+#: chrome-gnome-shell-key-translation_credits_title:1
+msgid "About translation"
+msgstr "Quant a la traducció"
+
+#: chrome-gnome-shell-key-update_available:1
+msgid "An update for GNOME Shell extensions available"
+msgstr "Hi ha una actualització disponible per les extensions del GNOME Shell"
+
+#. String placeholders:
+#. cause
+#.
+#: chrome-gnome-shell-key-update_check_failed:1
+msgid "Failed to check extensions updates: $CAUSE$"
+msgstr "La comprovació d'actualitzacions ha fallat: $CAUSE$"
+
+#: chrome-gnome-shell-key-version:1
+msgid "version $$1"
+msgstr "Versió $$1"
+
+#: chrome-gnome-shell-key-warning_versions_mismatch:1
+msgid ""
+"You are using different versions of GNOME Shell integration extension ($$1) "
+"and native host connector ($$2). Some features may not work or work wrong."
+msgstr ""
+"Esteu utilitzant diferents versions de l'extensió d'integració del GNOME Shell ($$1) "
+"i del connector amfitrió nadiu ($$2). Algunes característiques poden no funcionar o funcionar malament."
+
+#: chrome-gnome-shell-key-yes:1
+msgid "Yes"
+msgstr "Sí"
+
+#. Chrome store description
+#: chrome-gnome-shell-store-description:1
+msgid ""
+"You MUST install native connector for this extension to work.\n"
+"\n"
+"For Arch Linux there is a PKGBUILD available in the AUR: https://aur."
+"archlinux.org/packages/chrome-gnome-shell-git\n"
+"\n"
+"For Fedora Linux there is package available in Copr: https://copr."
+"fedorainfracloud.org/coprs/region51/chrome-gnome-shell\n"
+"\n"
+"In Gentoo Linux you can install connector with command:\n"
+"emerge gnome-extra/chrome-gnome-shell\n"
+"\n"
+"For Ubuntu Linux package is available in ne0sight/chrome-gnome-shell PPA. "
+"To install it type:\n"
+"sudo add-apt-repository ppa:ne0sight/chrome-gnome-shell\n"
+"sudo apt-get update\n"
+"sudo apt-get install chrome-gnome-shell\n"
+"\n"
+"You also can install connector manually. See https://wiki.gnome.org/"
+"Projects/GnomeShellIntegrationForChrome/Installation for install "
+"instructions.\n"
+msgstr ""
+"Heu d'instal·lar el connector nadiu perquè aquesta extensió funcioni.\n"
+"\n"
+"Per l'Arch Linux hi ha disponible un PKGBUILD a l'AUR: https://aur."
+"archlinux.org/packages/chrome-gnome-shell-git\n"
+"\n"
+"Pel Fedora Linux hi ha paquet disponible al Copr: https://copr."
+"fedorainfracloud.org/coprs/region51/chrome-gnome-shell\n"
+"\n"
+"Al Gentoo Linux podeu instal·lar el connector amb aquesta ordre:\n"
+"emerge gnome-extra/chrome-gnome-shell\n"
+"\n"
+"Per Ubuntu Linux el paquet està disponible al PPA: ne0sight/chrome-gnome-shell. "
+"Per a instal·lar-lo introduïu:\n"
+"sudo add-apt-repository ppa:ne0sight/chrome-gnome-shell\n"
+"sudo apt-get update\n"
+"sudo apt-get install chrome-gnome-shell\n"
+"\n"
+"També podeu instal·lar el connector manualment. Vegeu les instruccions d'instal·lació a https://wiki.gnome.org/"
+"Projects/GnomeShellIntegrationForChrome/Installation.\n"
