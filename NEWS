@@ -1,3 +1,22 @@
+= 2016-08-06 chrome-gnome-shell 6.2 =
+
+== Changes ==
+ * Fixed a hang in native host connector.
+ * Fixed several errors that may break extension initialization.
+ * Added information message while extension starting up.
+
+== Translations ==
+ * Catalan (Jordi Mas i Hernàndez)
+ * French (Alexandre Franke)
+ * German (Wolfgang Stoeggl)
+ * Hungarian(Balázs Meskó, Gabor Kelemen)
+ * Indonesian (Andika Triwidada)
+ * Polish (Piotr Drąg)
+ * Portuguese (Brazil) (Rafael Fontenelle)
+ * Portuguese (Portugal) (Tiago Santos)
+ * Spanish (Daniel Mustieles)
+ * Swedish (Anders Jonsson)
+
 = 2016-06-07 chrome-gnome-shell 6.1 =
 
 == Translations ==
