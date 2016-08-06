@@ -10,6 +10,6 @@ Vcs-Browser: https://git.gnome.org/browse/chrome-gnome-shell
 
 Package: chrome-gnome-shell
 Architecture: all
-Depends: gnome-shell, python (>= 2.7)
+Depends: gnome-shell, python (>= 2.7), python-gi
 Description: GNOME Shell integration for Google Chrome browser
   Provides integration with GNOME Shell extensions repository for Chrome browser
