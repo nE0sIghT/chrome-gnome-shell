@@ -22,7 +22,7 @@ import time
 from select import select
 from threading import Thread, Lock
 
-CONNECTOR_VERSION	= 6.1
+CONNECTOR_VERSION	= 6.2
 DEBUG_ENABLED		= False
 
 SHELL_SCHEMA = "org.gnome.shell"
