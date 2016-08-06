@@ -6,6 +6,9 @@
 	"close": {
 		"message": "Cerrar"
 	},
+	"connecting_host_app": {
+		"message": "Conectado al equipo nativo de la aplicaci\u00f3n\u2026"
+	},
 	"error_extension_response": {
 		"message": "Respuesta de extensi\u00f3n incorrecta recibida"
 	},

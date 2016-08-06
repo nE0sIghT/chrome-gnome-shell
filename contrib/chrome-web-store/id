@@ -1,0 +1,15 @@
+Anda HARUS memasang konektor native agar ekstensi ini bekerja.
+
+Untuk Arch Linux ada PKGBUILD yang tersedia di AUR: https://aur.archlinux.org/packages/chrome-gnome-shell-git
+
+Untuk Fedora Linux tersedia paket di Copr: https://copr.fedorainfracloud.org/coprs/region51/chrome-gnome-shell
+
+Dalam Gentoo Linux Anda dapat memasang konektor dengan perintah:
+emerge gnome-extra/chrome-gnome-shell
+
+Untuk Ubuntu Linux paket tersedia dalam PPA ne0sight/chrome-gnome-shell. Untuk memasangnya:
+sudo add-apt-repository ppa:ne0sight/chrome-gnome-shell
+sudo apt-get update
+sudo apt-get install chrome-gnome-shell
+
+Anda juga dapat memasang konektor secara manual. Lihat https://wiki.gnome.org/Projects/GnomeShellIntegrationForChrome/Installation untuk instruksi instalasi.

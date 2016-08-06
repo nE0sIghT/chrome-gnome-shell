@@ -1,0 +1,15 @@
+Heu d'instal·lar el connector nadiu perquè aquesta extensió funcioni.
+
+Per l'Arch Linux hi ha disponible un PKGBUILD a l'AUR: https://aur.archlinux.org/packages/chrome-gnome-shell-git
+
+Pel Fedora Linux hi ha paquet disponible al Copr: https://copr.fedorainfracloud.org/coprs/region51/chrome-gnome-shell
+
+Al Gentoo Linux podeu instal·lar el connector amb aquesta ordre:
+emerge gnome-extra/chrome-gnome-shell
+
+Per Ubuntu Linux el paquet està disponible al PPA: ne0sight/chrome-gnome-shell. Per a instal·lar-lo introduïu:
+sudo add-apt-repository ppa:ne0sight/chrome-gnome-shell
+sudo apt-get update
+sudo apt-get install chrome-gnome-shell
+
+També podeu instal·lar el connector manualment. Vegeu les instruccions d'instal·lació a https://wiki.gnome.org/Projects/GnomeShellIntegrationForChrome/Installation.

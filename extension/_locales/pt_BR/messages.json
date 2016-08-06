@@ -6,6 +6,9 @@
 	"close": {
 		"message": "Fechar"
 	},
+	"connecting_host_app": {
+		"message": "Conectando ao aplicativo nativo de m\u00e1quina\u2026"
+	},
 	"error_extension_response": {
 		"message": "Resposta de extens\u00e3o errada recebida"
 	},
@@ -96,7 +99,7 @@
 	},
 	"translation_credits": {
 		"description": "HTML markup enabled for this string.",
-		"message": "<a href=\"mailto:rafaeff@gnome.org\">Rafael Fontenelle</a>"
+		"message": "<a href=\"mailto:rafaelff@gnome.org\">Rafael Fontenelle</a>"
 	},
 	"translation_credits_title": {
 		"message": "Sobre a tradu\u00e7\u00e3o"

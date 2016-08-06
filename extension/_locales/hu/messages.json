@@ -1,0 +1,127 @@
+{
+	"_DO_NOT_EDIT": {
+		"description": "This file is auto generated with po2chrome-messages tool from hu.po.",
+		"message": ""
+	},
+	"close": {
+		"message": "Bez\u00e1r\u00e1s"
+	},
+	"connecting_host_app": {
+		"message": "Kapcsol\u00f3d\u00e1s a nat\u00edv gazdaalkalmaz\u00e1shoz\u2026"
+	},
+	"error_extension_response": {
+		"message": "Hib\u00e1s b\u0151v\u00edtm\u00e9nyv\u00e1lasz \u00e9rkezett"
+	},
+	"extension_status_downgrade": {
+		"message": "vissza kell \u00e1ll\u00edtani"
+	},
+	"extension_status_upgrade": {
+		"message": "friss\u00edthet\u0151"
+	},
+	"gs_chrome": {
+		"message": "GNOME Shell integr\u00e1ci\u00f3"
+	},
+	"hours": {
+		"message": "\u00f3ra"
+	},
+	"manifest_description": {
+		"message": "A b\u0151v\u00edtm\u00e9ny integr\u00e1ci\u00f3t biztos\u00edt a GNOME Shell-lel, \u00e9s a hozz\u00e1 tartoz\u00f3 kieg\u00e9sz\u00edt\u0151t\u00e1rol\u00f3hoz, a https://extensions.gnome.org-hoz"
+	},
+	"native_request_failed": {
+		"message": "\u201e$REQUEST$\u201d nat\u00edv k\u00e9r\u00e9s sikertelen",
+		"placeholders": {
+			"request": {
+				"content": "$1"
+			}
+		}
+	},
+	"network_error": {
+		"message": "H\u00e1l\u00f3zati hiba t\u00f6rt\u00e9nt. Ellen\u0151rizze az internetkapcsolat\u00e1t \u00e9s a proxy be\u00e1ll\u00edt\u00e1sait."
+	},
+	"never": {
+		"message": "soha"
+	},
+	"no": {
+		"message": "Nem"
+	},
+	"no_host_connector": {
+		"message": "Ugyan a GNOME Shell integr\u00e1ci\u00f3s b\u0151v\u00edtm\u00e9ny fut, a nat\u00edv gazdacsatlakoz\u00f3 nem \u00e9szlelhet\u0151. N\u00e9zze meg a <a href='https://wiki.gnome.org/Projects/GnomeShellIntegrationForChrome/Installation'>dokument\u00e1ci\u00f3t</a> a csatlakoz\u00f3 telep\u00edt\u00e9si utas\u00edt\u00e1sai\u00e9rt."
+	},
+	"no_host_response": {
+		"message": "Nincs v\u00e1lasz a gazd\u00e1t\u00f3l"
+	},
+	"older_connector": {
+		"message": "r\u00e9gebbi, mint a 4-es verzi\u00f3"
+	},
+	"options_check_period": {
+		"message": "Friss\u00edt\u00e9skeres\u00e9s gyakoris\u00e1ga"
+	},
+	"options_last_check": {
+		"message": "Legut\u00f3bbi keres\u00e9s"
+	},
+	"options_link": {
+		"message": "Be\u00e1ll\u00edt\u00e1sok"
+	},
+	"options_next_check": {
+		"message": "K\u00f6vetkez\u0151 keres\u00e9s"
+	},
+	"options_saved": {
+		"message": "Be\u00e1ll\u00edt\u00e1sok mentve."
+	},
+	"options_show_network_errors": {
+		"message": "Inform\u00e1ci\u00f3k megjelen\u00edt\u00e9se a h\u00e1l\u00f3zati hib\u00e1kr\u00f3l"
+	},
+	"options_show_network_errors_notice": {
+		"message": "A \u201ewebRequest\u201d Chrome enged\u00e9ly sz\u00fcks\u00e9ges."
+	},
+	"options_show_release_notes": {
+		"message": "A kiad\u00e1si megjegyz\u00e9sek megjelen\u00edt\u00e9se a kieg\u00e9sz\u00edt\u0151 friss\u00edt\u00e9sekor"
+	},
+	"options_title": {
+		"message": "$GS_CHROME$ be\u00e1ll\u00edt\u00e1sok",
+		"placeholders": {
+			"gs_chrome": {
+				"content": "$1"
+			}
+		}
+	},
+	"options_update_check": {
+		"message": "B\u0151v\u00edtm\u00e9nyfriss\u00edt\u00e9s keres\u00e9se"
+	},
+	"platform_not_supported": {
+		"message": "A nat\u00edv gazdacsatlakoz\u00f3 nem t\u00e1mogatott a platformj\u00e1n."
+	},
+	"retry": {
+		"message": "\u00dajrapr\u00f3b\u00e1lkoz\u00e1s"
+	},
+	"save": {
+		"message": "Ment\u00e9s"
+	},
+	"translation_credits": {
+		"description": "HTML markup enabled for this string.",
+		"message": "Mesk\u00f3 Bal\u00e1zs <meskobalazs at gmail dot com>"
+	},
+	"translation_credits_title": {
+		"message": "A ford\u00edt\u00e1s n\u00e9vjegye"
+	},
+	"update_available": {
+		"message": "Egy GNOME Shell b\u0151v\u00edtm\u00e9nyfriss\u00edt\u00e9s el\u00e9rhet\u0151"
+	},
+	"update_check_failed": {
+		"message": "A b\u0151v\u00edtm\u00e9nyfriss\u00edt\u00e9sek keres\u00e9se sikertelen: $CAUSE$",
+		"placeholders": {
+			"cause": {
+				"content": "$1"
+			}
+		}
+	},
+	"version": {
+		"message": "$$1 verzi\u00f3"
+	},
+	"warning_versions_mismatch": {
+		"message": "A GNOME Shell integr\u00e1ci\u00f3s b\u0151v\u00edtm\u00e9ny ($$1) \u00e9s a nat\u00edv gazdacsatlakoz\u00f3 ($$2) verzi\u00f3i elt\u00e9rnek. N\u00e9h\u00e1ny funkci\u00f3 lehet hogy nem, vagy hib\u00e1san m\u0171k\u00f6dik."
+	},
+	"yes": {
+		"message": "Igen"
+	}
+}

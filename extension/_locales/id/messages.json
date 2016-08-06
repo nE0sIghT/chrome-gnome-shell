@@ -1,0 +1,127 @@
+{
+	"_DO_NOT_EDIT": {
+		"description": "This file is auto generated with po2chrome-messages tool from id.po.",
+		"message": ""
+	},
+	"close": {
+		"message": "Tutup"
+	},
+	"connecting_host_app": {
+		"message": "Connecting to native host application\u2026"
+	},
+	"error_extension_response": {
+		"message": "Menerima respon ekstensi yang salah"
+	},
+	"extension_status_downgrade": {
+		"message": "mesti turun tingkat"
+	},
+	"extension_status_upgrade": {
+		"message": "dapat ditingkatkan"
+	},
+	"gs_chrome": {
+		"message": "Integrasi Shell GNOME"
+	},
+	"hours": {
+		"message": "jam"
+	},
+	"manifest_description": {
+		"message": "Ekstensi ini menyediakan integrasi dengan Shell GNOME dan repositori ekstensi yang berhubungan https://extensions.gnome.org"
+	},
+	"native_request_failed": {
+		"message": "\u00ab$REQUEST$\u00bb permintaan native gagal",
+		"placeholders": {
+			"request": {
+				"content": "$1"
+			}
+		}
+	},
+	"network_error": {
+		"message": "Telah terjadi kesalahan jaringan. Harap periksa koneksi Internet Anda dan/atau pengaturan proksi."
+	},
+	"never": {
+		"message": "tidak pernah"
+	},
+	"no": {
+		"message": "Tidak"
+	},
+	"no_host_connector": {
+		"message": "Walaupun ektensi integrasi Shell GNOME berjalan, konektor host native tidak terdeteksi. Lihat <a href='https://wiki.gnome.org/Projects/GnomeShellIntegrationForChrome/Installation'>dokumentasi</a> untuk instruksi tentang memasang konektor."
+	},
+	"no_host_response": {
+		"message": "Tidak ada respon host"
+	},
+	"older_connector": {
+		"message": "lebih tua dari versi 4"
+	},
+	"options_check_period": {
+		"message": "Mutakhirkan perioda periksa"
+	},
+	"options_last_check": {
+		"message": "Pemeriksaan terakhir"
+	},
+	"options_link": {
+		"message": "Pilihan"
+	},
+	"options_next_check": {
+		"message": "Pemeriksaan selanjutnya"
+	},
+	"options_saved": {
+		"message": "Opsi disimpan."
+	},
+	"options_show_network_errors": {
+		"message": "Tampilkan informasi tentang kesalahan jaringan"
+	},
+	"options_show_network_errors_notice": {
+		"message": "Perlu ijin \u00abwebRequest\u00bb Chrome."
+	},
+	"options_show_release_notes": {
+		"message": "Tampilkan catatan rilis ketika ekstensi dimutakhirkan"
+	},
+	"options_title": {
+		"message": "Opsi $GS_CHROME$",
+		"placeholders": {
+			"gs_chrome": {
+				"content": "$1"
+			}
+		}
+	},
+	"options_update_check": {
+		"message": "Periksa pemutakhiran ekstensi"
+	},
+	"platform_not_supported": {
+		"message": "Konektor host native tidak didukung untuk platform Anda."
+	},
+	"retry": {
+		"message": "Coba Lagi"
+	},
+	"save": {
+		"message": "Simpan"
+	},
+	"translation_credits": {
+		"description": "HTML markup enabled for this string.",
+		"message": "Andika Triwidada <andika@gmail.com>, 2016"
+	},
+	"translation_credits_title": {
+		"message": "Tentang terjemahan"
+	},
+	"update_available": {
+		"message": "Tersedia pemutakhiran untuk Shell GNOME"
+	},
+	"update_check_failed": {
+		"message": "Gagal memeriksa pemutakhiran ekstensi: $CAUSE$",
+		"placeholders": {
+			"cause": {
+				"content": "$1"
+			}
+		}
+	},
+	"version": {
+		"message": "version $$1"
+	},
+	"warning_versions_mismatch": {
+		"message": "Anda memakai ekstensi integrasi Shell GNOME dengan versi berbeda ($$1) dan konektor host native ($$2). Beberapa fitur mungkin tak berjalan atau salah."
+	},
+	"yes": {
+		"message": "Ya"
+	}
+}

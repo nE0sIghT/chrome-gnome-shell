@@ -6,6 +6,9 @@
 	"close": {
 		"message": "Zamknij"
 	},
+	"connecting_host_app": {
+		"message": "\u0141\u0105czenie z natywnym programem serwera\u2026"
+	},
 	"error_extension_response": {
 		"message": "Otrzymano b\u0142\u0119dn\u0105 odpowied\u017a rozszerzenia"
 	},

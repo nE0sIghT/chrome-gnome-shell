@@ -6,6 +6,9 @@
 	"close": {
 		"message": "Fermer"
 	},
+	"connecting_host_app": {
+		"message": "Connexion \u00e0 une application native de l'h\u00f4te\u2026"
+	},
 	"error_extension_response": {
 		"message": "Mauvaise r\u00e9ponse re\u00e7ue de l'extension"
 	},

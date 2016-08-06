@@ -1,0 +1,127 @@
+{
+	"_DO_NOT_EDIT": {
+		"description": "This file is auto generated with po2chrome-messages tool from ca.po.",
+		"message": ""
+	},
+	"close": {
+		"message": "Tanca"
+	},
+	"connecting_host_app": {
+		"message": "S'est\u00e0 connectant a una aplicaci\u00f3 amfitriona nativa..."
+	},
+	"error_extension_response": {
+		"message": "S'ha rebut una resposta incorrecta d'una extensi\u00f3"
+	},
+	"extension_status_downgrade": {
+		"message": "ha de ser revertit"
+	},
+	"extension_status_upgrade": {
+		"message": "pot actualitzar-se"
+	},
+	"gs_chrome": {
+		"message": "Integraci\u00f3 amb el GNOME Shell"
+	},
+	"hours": {
+		"message": "hores"
+	},
+	"manifest_description": {
+		"message": "Aquesta extensi\u00f3 proporciona integraci\u00f3 amb GNOME Shell i el corresponent dip\u00f2sit d'extensions https://extensions.gnome.org"
+	},
+	"native_request_failed": {
+		"message": "La sol\u00b7licitud nativa \u00ab$REQUEST$\u00bb ha fallat",
+		"placeholders": {
+			"request": {
+				"content": "$1"
+			}
+		}
+	},
+	"network_error": {
+		"message": "S'ha produ\u00eft un error de xarxa. Comproveu la connexi\u00f3 a Internet i la configuraci\u00f3 del servidor intermediari."
+	},
+	"never": {
+		"message": "mai"
+	},
+	"no": {
+		"message": "No"
+	},
+	"no_host_connector": {
+		"message": "Encara que l'extensi\u00f3 d'integraci\u00f3 del GNOME Shell est\u00e0 executant-se, no s'ha detectat el connector amfitri\u00f3 nadiu. Vegeu la <a href='https://wiki.gnome.org/Projects/GnomeShellIntegrationForChrome/Installation'>documentaci\u00f3</a> per obtenir instruccions de com instal\u00b7lar el connector."
+	},
+	"no_host_response": {
+		"message": "Sense resposta de l'amfitri\u00f3:"
+	},
+	"older_connector": {
+		"message": "m\u00e9s antic de la versi\u00f3 4"
+	},
+	"options_check_period": {
+		"message": "Per\u00edode de comprovaci\u00f3 d'actualitzacions"
+	},
+	"options_last_check": {
+		"message": "Darrera comprovaci\u00f3"
+	},
+	"options_link": {
+		"message": "Opcions"
+	},
+	"options_next_check": {
+		"message": "Propera comprovaci\u00f3"
+	},
+	"options_saved": {
+		"message": "Configuraci\u00f3 desada."
+	},
+	"options_show_network_errors": {
+		"message": "Notifica els errors de xarxa"
+	},
+	"options_show_network_errors_notice": {
+		"message": "Es requereix el perm\u00eds de Chrome \u00abwebRequest\u00bb."
+	},
+	"options_show_release_notes": {
+		"message": "Mostra les notes de la versi\u00f3 quan s'actualitza l'extensi\u00f3"
+	},
+	"options_title": {
+		"message": "Opcions de $GS_CHROME$",
+		"placeholders": {
+			"gs_chrome": {
+				"content": "$1"
+			}
+		}
+	},
+	"options_update_check": {
+		"message": "Comprova si hi ha actualitzacions de l'extensi\u00f3"
+	},
+	"platform_not_supported": {
+		"message": "El connector amfitri\u00f3 nadiu no es compatible amb aquesta plataforma."
+	},
+	"retry": {
+		"message": "Reintenta-ho"
+	},
+	"save": {
+		"message": "Desa"
+	},
+	"translation_credits": {
+		"description": "HTML markup enabled for this string.",
+		"message": "Jordi Mas i Hern\u00e0ndez <jmas@softcatala.org>"
+	},
+	"translation_credits_title": {
+		"message": "Quant a la traducci\u00f3"
+	},
+	"update_available": {
+		"message": "Hi ha una actualitzaci\u00f3 disponible per les extensions del GNOME Shell"
+	},
+	"update_check_failed": {
+		"message": "La comprovaci\u00f3 d'actualitzacions ha fallat: $CAUSE$",
+		"placeholders": {
+			"cause": {
+				"content": "$1"
+			}
+		}
+	},
+	"version": {
+		"message": "Versi\u00f3 $$1"
+	},
+	"warning_versions_mismatch": {
+		"message": "Esteu utilitzant diferents versions de l'extensi\u00f3 d'integraci\u00f3 del GNOME Shell ($$1) i del connector amfitri\u00f3 nadiu ($$2). Algunes caracter\u00edstiques poden no funcionar o funcionar malament."
+	},
+	"yes": {
+		"message": "S\u00ed"
+	}
+}

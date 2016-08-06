@@ -6,6 +6,9 @@
 	"close": {
 		"message": "Schlie\u00dfen"
 	},
+	"connecting_host_app": {
+		"message": "Verbindung mit nativer Rechneranwendung wird hergestellt \u2026"
+	},
 	"error_extension_response": {
 		"message": "Falsche Antwort von Erweiterung erhalten"
 	},

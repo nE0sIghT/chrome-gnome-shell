@@ -1,0 +1,15 @@
+A bővítmény működéséhez telepíteni KELL a natív csatlakozót.
+
+Arch Linuxhoz elérhető PKGBUILD az AUR-ban: https://aur.archlinux.org/packages/chrome-gnome-shell-git
+
+Fedora Linux esetén létezik Copr csomag: https://copr.fedorainfracloud.org/coprs/region51/chrome-gnome-shell
+
+Gentoo Linux esetén telepítheti a csatlakozót a paranccsal:
+emerge gnome-extra/chrome-gnome-shell
+
+Ubuntu Linux esetén a csomag elérhető a ne0sight/chrome-gnome-shell PPA-ban. A telepítéshez írja be:
+sudo add-apt-repository ppa:ne0sight/chrome-gnome-shell
+sudo apt-get update
+sudo apt-get install chrome-gnome-shell
+
+Kézzel is telepítheti a csatlakozót. Lásd a https://wiki.gnome.org/Projects/GnomeShellIntegrationForChrome/Installation oldalt a telepítési utasításokért.

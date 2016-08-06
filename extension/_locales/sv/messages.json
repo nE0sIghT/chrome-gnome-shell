@@ -6,6 +6,9 @@
 	"close": {
 		"message": "St\u00e4ng"
 	},
+	"connecting_host_app": {
+		"message": "Ansluter till inhemskt v\u00e4rdprogram\u2026"
+	},
 	"error_extension_response": {
 		"message": "Felaktigt svar fr\u00e5n till\u00e4gg mottaget"
 	},

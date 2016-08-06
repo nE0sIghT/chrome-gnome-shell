@@ -1,0 +1,127 @@
+{
+	"_DO_NOT_EDIT": {
+		"description": "This file is auto generated with po2chrome-messages tool from pt.po.",
+		"message": ""
+	},
+	"close": {
+		"message": "Fechar"
+	},
+	"connecting_host_app": {
+		"message": "Connecting to native host application\u2026"
+	},
+	"error_extension_response": {
+		"message": "Wrong extension response received"
+	},
+	"extension_status_downgrade": {
+		"message": "must be downgraded"
+	},
+	"extension_status_upgrade": {
+		"message": "can be upgraded"
+	},
+	"gs_chrome": {
+		"message": "GNOME Shell integration"
+	},
+	"hours": {
+		"message": "horas"
+	},
+	"manifest_description": {
+		"message": "This extension provides integration with GNOME Shell and the corresponding extensions repository https://extensions.gnome.org"
+	},
+	"native_request_failed": {
+		"message": "\u00ab$REQUEST$\u00bb native request failed",
+		"placeholders": {
+			"request": {
+				"content": "$1"
+			}
+		}
+	},
+	"network_error": {
+		"message": "A network error has occurred. Please check your Internet connection and/or proxy settings."
+	},
+	"never": {
+		"message": "nunca"
+	},
+	"no": {
+		"message": "N\u00e3o"
+	},
+	"no_host_connector": {
+		"message": "Although GNOME Shell integration extension is running, native host connector is not detected. Refer <a href='https://wiki.gnome.org/Projects/GnomeShellIntegrationForChrome/Installation'>documentation</a> for instructions about installing connector."
+	},
+	"no_host_response": {
+		"message": "No host response"
+	},
+	"older_connector": {
+		"message": "older than version 4"
+	},
+	"options_check_period": {
+		"message": "Update check period"
+	},
+	"options_last_check": {
+		"message": "\u00daltima verifica\u00e7\u00e3o"
+	},
+	"options_link": {
+		"message": "Op\u00e7\u00f5es"
+	},
+	"options_next_check": {
+		"message": "Next check"
+	},
+	"options_saved": {
+		"message": "Options saved."
+	},
+	"options_show_network_errors": {
+		"message": "Show information about network errors"
+	},
+	"options_show_network_errors_notice": {
+		"message": "Chrome permission \u00abwebRequest\u00bb required."
+	},
+	"options_show_release_notes": {
+		"message": "Show release notes when extension updated"
+	},
+	"options_title": {
+		"message": "$GS_CHROME$ options",
+		"placeholders": {
+			"gs_chrome": {
+				"content": "$1"
+			}
+		}
+	},
+	"options_update_check": {
+		"message": "Check for extensions update"
+	},
+	"platform_not_supported": {
+		"message": "Native host connector is not supported for your platform."
+	},
+	"retry": {
+		"message": "Tentar novamente"
+	},
+	"save": {
+		"message": "Gravar"
+	},
+	"translation_credits": {
+		"description": "HTML markup enabled for this string.",
+		"message": "Tiago Santos <tiagofsantos81@sapo.pt>"
+	},
+	"translation_credits_title": {
+		"message": "Sobre a tradu\u00e7\u00e3o"
+	},
+	"update_available": {
+		"message": "An update for GNOME Shell extensions available"
+	},
+	"update_check_failed": {
+		"message": "Failed to check extensions updates: $CAUSE$",
+		"placeholders": {
+			"cause": {
+				"content": "$1"
+			}
+		}
+	},
+	"version": {
+		"message": "Vers\u00e3o $$1"
+	},
+	"warning_versions_mismatch": {
+		"message": "You are using different versions of GNOME Shell integration extension ($$1) and native host connector ($$2). Some features may not work or work wrong."
+	},
+	"yes": {
+		"message": "Sim"
+	}
+}
