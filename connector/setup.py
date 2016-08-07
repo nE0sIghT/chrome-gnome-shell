@@ -13,5 +13,8 @@ if not os.path.exists(BUILD_DIR):
 shutil.copyfile(SCRIPT_DIR + '/chrome-gnome-shell.py', SCRIPT_PATH)
 
 setup(name='chrome-gnome-shell',
+      description='Provides integration with GNOME Shell extensions repository for Chrome browser',
+      author='Yuri Konotopov',
+      url='https://wiki.gnome.org/Projects/GnomeShellIntegrationForChrome',
       scripts=[SCRIPT_PATH]
      )
