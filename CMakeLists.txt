@@ -91,7 +91,7 @@ if(BUILD_CONNECTOR)
 	configure_file("${CMAKE_CURRENT_SOURCE_DIR}/connector/org.gnome.chrome_gnome_shell.json"
 			"${CMAKE_BINARY_DIR}/")
 
-	install(CODE "execute_process(COMMAND ${PYTHON_EXECUTABLE} ${CONNECTOR_SETUP} install)")
+	install(CODE "execute_process(COMMAND ${PYTHON_EXECUTABLE} ${CONNECTOR_SETUP} install --root ${CMAKE_INSTALL_PREFIX})")
 	install(FILES "${CMAKE_BINARY_DIR}/io.github.ne0sight.gs_chrome_connector.json" DESTINATION "/etc/chromium/native-messaging-hosts/")
 	install(FILES "${CMAKE_BINARY_DIR}/io.github.ne0sight.gs_chrome_connector.json" DESTINATION "/etc/opt/chrome/native-messaging-hosts/")
 	install(FILES "${CMAKE_BINARY_DIR}/org.gnome.chrome_gnome_shell.json" DESTINATION "/etc/chromium/native-messaging-hosts/")
