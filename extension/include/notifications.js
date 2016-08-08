@@ -65,6 +65,21 @@ GSC.notifications = (function($) {
 			if(IS_OPERA && options.buttons)
 			{
 				delete options.buttons;
+				if(options.type === chrome.notifications.TemplateType.LIST)
+				{
+					var items = [];
+					for(k in options.items)
+					{
+						if(options.items.hasOwnProperty(k))
+						{
+							items.push(options.items[k].title + ' ' + options.items[k].message);
+						}
+					}
+					options.message += "\n" + items.join("\n");
+
+					options.type = chrome.notifications.TemplateType.BASIC;
+					delete options.items;
+				}
 			}
 
 			if (callback)
