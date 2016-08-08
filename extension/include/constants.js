@@ -11,6 +11,8 @@
 GS_CHROME_ID				= chrome.i18n.getMessage('@@extension_id');
 PLATFORMS_WHITELIST			= ["linux", "openbsd"];
 
+IS_OPERA				= navigator.userAgent.indexOf(' OPR/') >= 0;
+
 NOTIFICATION_UPDATE_AVAILABLE		= 'gs-chrome-update';
 NOTIFICATION_UPDATE_CHECK_FAILED	= 'gs-chrome-update-fail';
 ALARM_UPDATE_CHECK			= 'gs-chrome-update-check';

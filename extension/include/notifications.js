@@ -62,6 +62,11 @@ GSC.notifications = (function($) {
 
 		function _create(name, options, callback)
 		{
+			if(IS_OPERA && options.buttons)
+			{
+				delete options.buttons;
+			}
+
 			if (callback)
 			{
 				chrome.notifications.create(name, options, callback);
