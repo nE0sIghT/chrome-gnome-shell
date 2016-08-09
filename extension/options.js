@@ -35,6 +35,8 @@ function save_options()
 
 function restore_options()
 {
+	tabby.init();
+
 	chrome.storage.sync.get(DEFAULT_SYNC_OPTIONS, function (items) {
 		setCheckUpdate(items.updateCheck);
 		$('#update_check_period').val(items.updateCheckPeriod);
@@ -155,24 +157,7 @@ $.each(document.getElementsByName('show_network_errors'), function(index, contro
 
 if($('#translation_credits div').is(':empty'))
 {
-	$('#switch_tab').hide();
-}
-else
-{
-	$('#switch_tab').click(function() {
-		$('#options, #translation_credits').toggle();
-
-		if($('#options').is(':visible'))
-		{
-			$(this).text(m('translation_credits_title'));
-		}
-		else
-		{
-			$(this).text(m('options_link'));
-		}
-
-		return false;
-	});
+	$('.translation_credits_container').remove();
 }
 
 chrome.storage.onChanged.addListener(function (changes, areaName) {

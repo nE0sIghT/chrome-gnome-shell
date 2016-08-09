@@ -3,10 +3,6 @@ body {
 	min-width: 550px;
 }
 
-#translation_credits {
-	display: none;
-}
-
 #update_check_period { width: 5em; }
 #status {
 	display: none;
@@ -42,4 +38,32 @@ dd {
 	margin-left: 51%;
 	vertical-align: top;
 	margin-bottom: 3px;
+}
+
+ul.tabs {
+	float: right;
+}
+
+ul.tabs li {
+	list-style: none;
+}
+
+ul.tabs li, ul.tabs li a {
+	display: inline-block;
+}
+
+ul.tabs li a.active {
+	color: inherit;
+	cursor: default;
+	text-decoration: none;
+}
+
+ul.tabs li:not(:last-child) {
+	border-right: 1px solid #000;
+	margin-right: 5px;
+	padding-right: 5px;
+}
+
+div.tabs-pane {
+	clear: both;
 }

@@ -87,6 +87,9 @@
 		"message": "Next check"
 	},
 
+	"synchronization": {
+		"message": "Synchronization"
+	},
 	"translation_credits_title": {
 		"message": "About translation"
 	},
