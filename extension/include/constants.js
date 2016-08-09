@@ -30,6 +30,10 @@ DEFAULT_SYNC_OPTIONS			= {
 	updateCheckPeriod:	6
 };
 
+DEFAULT_LOCAL_OPTIONS			= {
+	syncExtensions:		false
+};
+
 EXTERNAL_MESSAGES = [
 	"connecting_host_app",
 	"error_extension_response",

@@ -71,6 +71,15 @@
 	"options_show_release_notes": {
 		"message": "Show release notes when extension updated"
 	},
+	"options_synchronize_extensions": {
+		"message": "Synchronize extensions list"
+	},
+	"options_synchronize_extensions_notice": {
+		"message": "If enabled, your GNOME Shell extensions list will be synchronized with your Google account."
+	},
+	"options_synchronize_extensions_notice2": {
+		"message": "For this feature to work properly you must manage GNOME Shell extensions from your Chrome/Chromium browser only."
+	},
 	"options_last_check": {
 		"message": "Last check"
 	},

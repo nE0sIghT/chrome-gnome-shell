@@ -11,6 +11,7 @@
 function save_options()
 {
 	var showReleaseNotes = $('#show_release_notes_yes').prop('checked');
+	var syncExtensions = $('#synchronize_extensions_yes').prop('checked');
 	var updateCheck = $('#update_check_yes').prop('checked');
 	var updateCheckPeriod = $('#update_check_period').val();
 	updateCheckPeriod = Math.max(3, updateCheckPeriod);
@@ -20,11 +21,15 @@ function save_options()
 		updateCheck:		updateCheck,
 		updateCheckPeriod:	updateCheckPeriod
 	}, function () {
-		// Update status to let user know options were saved.
-		$('#status')
-			.show()
-			.delay(750)
-			.hide(250);
+		chrome.storage.local.set({
+			syncExtensions:	syncExtensions
+		}, function() {
+			// Update status to let user know options were saved.
+			$('#status')
+				.show()
+				.delay(750)
+				.hide(250);
+		});
 	});
 }
 
@@ -43,6 +48,17 @@ function restore_options()
 	}, function(result) {
 		setNetworkErrors(result);
 	});
+
+	if(!IS_OPERA)
+	{
+		chrome.storage.local.get(DEFAULT_LOCAL_OPTIONS, function (items) {
+			setSyncExtensions(items.syncExtensions);
+		});
+	}
+	else
+	{
+		$('#synchronize_extensions_yes').closest('dl').hide();
+	}
 }
 
 function retrieveUpdateTimes()
@@ -99,6 +115,14 @@ function setNetworkErrors(result)
 		$('#show_network_errors_yes').prop('checked', true);
 	else
 		$('#show_network_errors_no').prop('checked', true);
+}
+
+function setSyncExtensions(result)
+{
+	if(result)
+		$('#synchronize_extensions_yes').prop('checked', true);
+	else
+		$('#synchronize_extensions_no').prop('checked', true);
 }
 
 function handleWebrequestPermission()
