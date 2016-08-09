@@ -26,7 +26,7 @@ chrome.runtime.onInstalled.addListener(function(details) {
 });
 
 chrome.runtime.onMessageExternal.addListener(function (request, sender, sendResponse) {
-	if (sender.url.startsWith('https://extensions.gnome.org/'))
+	if (sender.url.startsWith(EXTENSIONS_WEBSITE))
 	{
 		if (request && request.execute)
 		{
@@ -72,7 +72,7 @@ port.onMessage.addListener(function (message) {
 	if (message && message.signal && ["ExtensionStatusChanged", "org.gnome.Shell"].indexOf(message.signal) !== -1)
 	{
 		chrome.tabs.query({
-			url: 'https://extensions.gnome.org/*'
+			url: EXTENSIONS_WEBSITE + '*'
 		},
 		function (tabs) {
 			for (k in tabs)

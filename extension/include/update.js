@@ -167,7 +167,7 @@ GSC.update = (function($) {
 			if (notificationId === NOTIFICATION_UPDATE_AVAILABLE)
 			{
 				chrome.tabs.create({
-					url: 'https://extensions.gnome.org/local/',
+					url: EXTENSIONS_WEBSITE + 'local/',
 					active: true
 				});
 			}
