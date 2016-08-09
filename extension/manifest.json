@@ -19,7 +19,7 @@
 
   "background": {
     "scripts": [
-	    "include/jquery-2.1.4.min.js",
+	    "include/external/jquery-2.1.4.min.js",
 	    "include/i18n.js",
 	    "include/constants.js",
 	    "include/gsc.js",
