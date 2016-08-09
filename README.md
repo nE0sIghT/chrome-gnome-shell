@@ -11,7 +11,7 @@ extensions repository https://extensions.gnome.org/, codenamed SweetTooth.
 Requirements
 ------------
  * GNOME Shell up to 3.20
- * Python 2.7+
+ * Python 2.7+ or 3.x
  * PyGObject
 
 Installation
