@@ -194,14 +194,14 @@ GSC.update = (function($) {
 				}
 				else
 				{
-					chrome.storage.sync.get(DEFAULT_OPTIONS, function (options) {
+					chrome.storage.sync.get(DEFAULT_SYNC_OPTIONS, function (options) {
 						schedule(options.updateCheckPeriod);
 					});
 				}
 			}
 			else if (changes.updateCheckPeriod)
 			{
-				chrome.storage.sync.get(DEFAULT_OPTIONS, function (options) {
+				chrome.storage.sync.get(DEFAULT_SYNC_OPTIONS, function (options) {
 					if (options.updateCheck)
 					{
 						schedule(options.updateCheckPeriod);
@@ -210,7 +210,7 @@ GSC.update = (function($) {
 			}
 		});
 
-		chrome.storage.sync.get(DEFAULT_OPTIONS, function (options) {
+		chrome.storage.sync.get(DEFAULT_SYNC_OPTIONS, function (options) {
 			if (options.updateCheck)
 			{
 				chrome.alarms.get(ALARM_UPDATE_CHECK, function (alarm) {

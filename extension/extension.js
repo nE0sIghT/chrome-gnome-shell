@@ -13,7 +13,7 @@ chrome.runtime.onInstalled.addListener(function(details) {
 
 	if(details.reason == chrome.runtime.OnInstalledReason.UPDATE && details.previousVersion != version)
 	{
-		chrome.storage.sync.get(DEFAULT_OPTIONS, function (options) {
+		chrome.storage.sync.get(DEFAULT_SYNC_OPTIONS, function (options) {
 			if(options.showReleaseNotes)
 			{
 				chrome.tabs.create({

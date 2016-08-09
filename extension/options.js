@@ -30,7 +30,7 @@ function save_options()
 
 function restore_options()
 {
-	chrome.storage.sync.get(DEFAULT_OPTIONS, function (items) {
+	chrome.storage.sync.get(DEFAULT_SYNC_OPTIONS, function (items) {
 		setCheckUpdate(items.updateCheck);
 		$('#update_check_period').val(items.updateCheckPeriod);
 		setReleaseNotes(items.showReleaseNotes);

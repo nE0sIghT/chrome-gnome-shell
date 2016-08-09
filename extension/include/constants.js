@@ -24,7 +24,7 @@ NATIVE_HOST				= 'io.github.ne0sight.gs_chrome_connector';
 EXTENSIONS_WEBSITE			= 'https://extensions.gnome.org/';
 UPDATE_URL				= EXTENSIONS_WEBSITE + 'update-info/';
 
-DEFAULT_OPTIONS				= {
+DEFAULT_SYNC_OPTIONS			= {
 	showReleaseNotes:	true,
 	updateCheck:		true,
 	updateCheckPeriod:	6
