@@ -55,12 +55,12 @@ chrome.runtime.onMessageExternal.addListener(function (request, sender, sendResp
 
 				case 'enableExtension':
 					GSC.sendNativeRequest({
-						execute: request.execute,
-						uuid: request.uuid,
-						enable: request.enable
-					},
-					sendResponse
-						);
+							execute: request.execute,
+							uuid: request.uuid,
+							enable: request.enable
+						},
+						sendResponse
+					);
 					return true;
 			}
 		}

@@ -25,7 +25,7 @@ GSC.getMessage = function(key) {
 };
 
 define('gs-chrome', ['jquery'], function($) {
-    "use strict";
+	"use strict";
 
 	window.SweetTooth = function() {
 		var apiObject			= {
@@ -157,7 +157,7 @@ define('gs-chrome', ['jquery'], function($) {
 define('versions/common/common', ['jquery', 'dbus!API'], function($, API) {
     "use strict";
 
-     function _makeRawPromise(result) {
+    function _makeRawPromise(result) {
         // Check if result is promise already
         if(isPromise(result))
             return result;
