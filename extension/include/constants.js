@@ -19,6 +19,9 @@ ALARM_UPDATE_CHECK			= 'gs-chrome-update-check';
 
 MESSAGE_NEXT_UPDATE_CHANGED		= 'gs-next-update-changed';
 
+SIGNAL_EXTENSIONS_CHANGED		= 'ExtensionStatusChanged';
+SIGNAL_SHELL_APPEARED			= 'org.gnome.Shell';
+
 NATIVE_HOST				= 'io.github.ne0sight.gs_chrome_connector';
 
 EXTENSIONS_WEBSITE			= 'https://extensions.gnome.org/';

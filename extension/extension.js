@@ -69,7 +69,7 @@ chrome.runtime.onMessageExternal.addListener(function (request, sender, sendResp
 
 var port = chrome.runtime.connectNative(NATIVE_HOST);
 port.onMessage.addListener(function (message) {
-	if (message && message.signal && ["ExtensionStatusChanged", "org.gnome.Shell"].indexOf(message.signal) !== -1)
+	if (message && message.signal && [SIGNAL_EXTENSIONS_CHANGED, SIGNAL_SHELL_APPEARED].indexOf(message.signal) !== -1)
 	{
 		chrome.tabs.query({
 			url: EXTENSIONS_WEBSITE + '*'
