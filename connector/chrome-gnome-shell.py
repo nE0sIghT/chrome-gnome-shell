@@ -160,7 +160,7 @@ def read_thread_func(proxy, mainLoop):
             elif request['execute'] == 'listExtensions':
                 dbus_call_response("ListExtensions", None, "extensions")
 
-            elif request['execute'] == 'EnableExtension' or request['execute'] == 'enableExtension':
+            elif request['execute'] == 'enableExtension':
                 settings = Gio.Settings.new(SHELL_SCHEMA)
                 uuids = settings.get_strv(ENABLED_EXTENSIONS_KEY)
 
