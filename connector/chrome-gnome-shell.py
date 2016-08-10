@@ -34,6 +34,14 @@ mutex = Lock()
 watcherConnected = False
 mainLoopInterrupted = False
 
+proxy = Gio.DBusProxy.new_for_bus_sync(Gio.BusType.SESSION,
+                                       Gio.DBusProxyFlags.NONE,
+                                       None,
+                                       'org.gnome.Shell',
+                                       '/org/gnome/Shell',
+                                       'org.gnome.Shell.Extensions',
+                                       None)
+
 # https://wiki.gnome.org/Projects/GnomeShell/Extensions/UUIDGuidelines
 def isUUID(uuid):
     return uuid is not None and re.match('[-a-zA-Z0-9@._]+$', uuid) is not None
@@ -220,15 +228,8 @@ def on_shell_appeared(connection, name, name_owner):
     mutex.release()
 
 
-if __name__ == '__main__':
+def main():
     debug('[%d] Startup' % (os.getpid()))
-    proxy = Gio.DBusProxy.new_for_bus_sync(Gio.BusType.SESSION,
-                                           Gio.DBusProxyFlags.NONE,
-                                           None,
-                                           'org.gnome.Shell',
-                                           '/org/gnome/Shell',
-                                           'org.gnome.Shell.Extensions',
-                                           None)
 
     shellSignalId = proxy.connect('g-signal', on_shell_signal)
     shellAppearedId = Gio.bus_watch_name(Gio.BusType.SESSION,
@@ -255,3 +256,7 @@ if __name__ == '__main__':
     appLoop.join()
     debug('[%d] Quit' % (os.getpid()))
     sys.exit(0)
+
+
+if __name__ == '__main__':
+	main()
