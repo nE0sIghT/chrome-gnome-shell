@@ -67,10 +67,17 @@ chrome.runtime.onMessageExternal.addListener(function (request, sender, sendResp
 	}
 });
 
+var lastPortMessage = {message: null, date: 0};
 var port = chrome.runtime.connectNative(NATIVE_HOST);
 port.onMessage.addListener(function (message) {
 	if (message && message.signal && [SIGNAL_EXTENSIONS_CHANGED, SIGNAL_SHELL_APPEARED].indexOf(message.signal) !== -1)
 	{
+		if((new Date().getTime()) - lastPortMessage.date < 500 && GSC.isSignalsEqual(message, lastPortMessage.message))
+		{
+			lastPortMessage.date = new Date().getTime();
+			return;
+		}
+
 		chrome.tabs.query({
 			url: EXTENSIONS_WEBSITE + '*'
 		},
@@ -80,6 +87,11 @@ port.onMessage.addListener(function (message) {
 				chrome.tabs.sendMessage(tabs[k].id, message);
 			}
 		});
+
+		lastPortMessage = {
+			message: message,
+			date: new Date().getTime()
+		};
 	}
 });
 

@@ -73,6 +73,37 @@ GSC = (function() {
 			{
 				chrome.runtime.sendNativeMessage(NATIVE_HOST, request);
 			}
+		},
+
+		isSignalsEqual: function(newSignal, oldSignal) {
+			if(!oldSignal || !newSignal)
+				return false;
+
+			if(!newSignal.signal || !oldSignal.signal || newSignal.signal !== oldSignal.signal)
+				return false;
+
+			if(newSignal.parameters)
+			{
+				if(!oldSignal.parameters)
+					return false;
+
+				if(newSignal.parameters.length !== oldSignal.parameters.length)
+					return false;
+
+				for(var i = 0; i < newSignal.parameters.length; i++)
+				{
+					if(newSignal.parameters[i] !== oldSignal.parameters[i])
+					{
+						return false;
+					}
+				}
+			}
+			else if (oldSignal.parameters)
+			{
+				return false;
+			}
+
+			return true;
 		}
 	};
 })();
