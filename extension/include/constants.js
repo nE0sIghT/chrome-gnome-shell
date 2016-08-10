@@ -37,7 +37,7 @@ DEFAULT_LOCAL_OPTIONS			= {
 	syncExtensions:		false
 };
 
-EXTERNAL_MESSAGES = [
+EXTERNAL_MESSAGES			= [
 	"connecting_host_app",
 	"error_extension_response",
 	"no_host_connector",
