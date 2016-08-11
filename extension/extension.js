@@ -69,15 +69,24 @@ chrome.runtime.onMessageExternal.addListener(function (request, sender, sendResp
 
 var lastPortMessage = {message: null, date: 0};
 var port = chrome.runtime.connectNative(NATIVE_HOST);
+/*
+ * Native host messaging events handler.
+ */
 port.onMessage.addListener(function (message) {
 	if (message && message.signal && [SIGNAL_EXTENSION_CHANGED, SIGNAL_SHELL_APPEARED].indexOf(message.signal) !== -1)
 	{
+		/*
+		 * Skip duplicate events. This is happens eg when extension is installed.
+		 */
 		if((new Date().getTime()) - lastPortMessage.date < 500 && GSC.isSignalsEqual(message, lastPortMessage.message))
 		{
 			lastPortMessage.date = new Date().getTime();
 			return;
 		}
 
+		/*
+		 * Send events to opened extensions.gnome.org tabs
+		 */
 		chrome.tabs.query({
 			url: EXTENSIONS_WEBSITE + '*'
 		},
