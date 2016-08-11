@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 1.0\n"
 "Report-Msgid-Bugs-To: ykonotopov@gmail.com\n"
-"POT-Creation-Date: 2016-08-01 20:03+0000\n"
+"POT-Creation-Date: 2016-08-11 10:44+0000\n"
 "PO-Revision-Date: 2016-07-20 09:39+0200\n"
 "Last-Translator: Daniel Mustieles <daniel.mustieles@gmail.com>\n"
 "Language-Team: Español; Castellano <gnome-es-list@gnome.org>\n"
@@ -32,6 +32,21 @@ msgstr "Conectado al equipo nativo de la aplicación…"
 msgid "Wrong extension response received"
 msgstr "Respuesta de extensión incorrecta recibida"
 
+#. Used as title, eg in table header.
+#: chrome-gnome-shell-key-extension_enabled:1
+msgid "Enabled"
+msgstr ""
+
+#. Used as title, eg in table header.
+#: chrome-gnome-shell-key-extension_installed:1
+msgid "Installed"
+msgstr ""
+
+#. Used as title, eg in table header. Means 'Extension name'.
+#: chrome-gnome-shell-key-extension_name:1
+msgid "Extension"
+msgstr ""
+
 #: chrome-gnome-shell-key-extension_status_downgrade:1
 msgid "must be downgraded"
 msgstr "se debe bajar de versión"
@@ -39,6 +54,11 @@ msgstr "se debe bajar de versión"
 #: chrome-gnome-shell-key-extension_status_upgrade:1
 msgid "can be upgraded"
 msgstr "se puede actualizar"
+
+#. Used as title, eg in table header.
+#: chrome-gnome-shell-key-extension_synchronized:1
+msgid "Synchronized"
+msgstr ""
 
 #: chrome-gnome-shell-key-gs_chrome:1
 msgid "GNOME Shell integration"
@@ -131,6 +151,16 @@ msgstr "Se requiere el permiso «webRequest» de Chrome."
 msgid "Show release notes when extension updated"
 msgstr "Mostrar las notas de publicación cuando se actualice la extensión"
 
+#: chrome-gnome-shell-key-options_synchronize_extensions:1
+msgid "Synchronize extensions list"
+msgstr ""
+
+#: chrome-gnome-shell-key-options_synchronize_extensions_notice:1
+msgid ""
+"If enabled, your GNOME Shell extensions list will be synchronized with your "
+"Google account."
+msgstr ""
+
 #. String placeholders:
 #. gs_chrome
 #.
@@ -154,6 +184,34 @@ msgstr "Reintentar"
 msgid "Save"
 msgstr "Guardar"
 
+#: chrome-gnome-shell-key-synchronization:1
+msgid "Synchronization"
+msgstr ""
+
+#: chrome-gnome-shell-key-synchronization_cancel:1
+msgid "Do not enable synchronization."
+msgstr ""
+
+#. String placeholders:
+#. cause
+#.
+#: chrome-gnome-shell-key-synchronization_failed:1
+#, fuzzy
+msgid "Failed to synchronize extensions: $CAUSE$"
+msgstr "Falló al comprobar si hay actualizaciones: $CAUSE$"
+
+#: chrome-gnome-shell-key-synchronization_storage_exists:1
+msgid "Your remote synchronization storage already contains extensions list."
+msgstr ""
+
+#: chrome-gnome-shell-key-synchronization_use_local:1
+msgid "Use local extensions list, overwrite remote."
+msgstr ""
+
+#: chrome-gnome-shell-key-synchronization_use_remote:1
+msgid "Use remote extensions list, overwrite local."
+msgstr ""
+
 #. HTML markup enabled for this string.
 #: chrome-gnome-shell-key-translation_credits:1
 msgid "translation_credits"
@@ -162,6 +220,10 @@ msgstr "Daniel Mustieles <daniel.mustieles@gmail.com>, 2016"
 #: chrome-gnome-shell-key-translation_credits_title:1
 msgid "About translation"
 msgstr "Acerca de la traducción"
+
+#: chrome-gnome-shell-key-unknown_error:1
+msgid "unknown error"
+msgstr ""
 
 #: chrome-gnome-shell-key-update_available:1
 msgid "An update for GNOME Shell extensions available"
