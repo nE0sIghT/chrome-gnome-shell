@@ -61,7 +61,7 @@ chrome.runtime.onMessage.addListener(
 	function (request, sender, sendResponse) {
 		if(
 			sender.id && sender.id === GS_CHROME_ID &&
-			request && request.signal && [SIGNAL_EXTENSIONS_CHANGED, SIGNAL_SHELL_APPEARED].indexOf(request.signal) !== -1)
+			request && request.signal && [SIGNAL_EXTENSION_CHANGED, SIGNAL_SHELL_APPEARED].indexOf(request.signal) !== -1)
 		{
 			window.postMessage(
 				{
