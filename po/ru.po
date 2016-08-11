@@ -32,17 +32,17 @@ msgstr "Получено неверное сообщение расширени�
 #. Used as title, eg in table header.
 #: chrome-gnome-shell-key-extension_enabled:1
 msgid "Enabled"
-msgstr ""
+msgstr "Включено"
 
 #. Used as title, eg in table header.
 #: chrome-gnome-shell-key-extension_installed:1
 msgid "Installed"
-msgstr ""
+msgstr "Установлено"
 
 #. Used as title, eg in table header. Means 'Extension name'.
 #: chrome-gnome-shell-key-extension_name:1
 msgid "Extension"
-msgstr ""
+msgstr "Расширение"
 
 #: chrome-gnome-shell-key-extension_status_downgrade:1
 msgid "must be downgraded"
@@ -55,7 +55,7 @@ msgstr "может быть обновлено"
 #. Used as title, eg in table header.
 #: chrome-gnome-shell-key-extension_synchronized:1
 msgid "Synchronized"
-msgstr ""
+msgstr "Синхронизировано"
 
 #: chrome-gnome-shell-key-gs_chrome:1
 msgid "GNOME Shell integration"
@@ -150,13 +150,15 @@ msgstr "Показывать примечания к выпуску при об�
 
 #: chrome-gnome-shell-key-options_synchronize_extensions:1
 msgid "Synchronize extensions list"
-msgstr ""
+msgstr "Синхронизировать список расширений"
 
 #: chrome-gnome-shell-key-options_synchronize_extensions_notice:1
 msgid ""
 "If enabled, your GNOME Shell extensions list will be synchronized with your "
 "Google account."
 msgstr ""
+"Если включено, ваш список расширений GNOME Shell будет синхронизирован с "
+"вашим аккаунтом Google."
 
 #. String placeholders:
 #. gs_chrome
@@ -183,31 +185,30 @@ msgstr "Сохранить"
 
 #: chrome-gnome-shell-key-synchronization:1
 msgid "Synchronization"
-msgstr ""
+msgstr "Синхронизация"
 
 #: chrome-gnome-shell-key-synchronization_cancel:1
 msgid "Do not enable synchronization."
-msgstr ""
+msgstr "Не включать синхронизацию"
 
 #. String placeholders:
 #. cause
 #.
 #: chrome-gnome-shell-key-synchronization_failed:1
-#, fuzzy
 msgid "Failed to synchronize extensions: $CAUSE$"
-msgstr "Ошибка проверки обновлений расширений: $CAUSE$"
+msgstr "Ошибка синхронизации расширений: $CAUSE$"
 
 #: chrome-gnome-shell-key-synchronization_storage_exists:1
 msgid "Your remote synchronization storage already contains extensions list."
-msgstr ""
+msgstr "В удалённом хранилище уже имеется список расширений."
 
 #: chrome-gnome-shell-key-synchronization_use_local:1
 msgid "Use local extensions list, overwrite remote."
-msgstr ""
+msgstr "Использовать локальный список расширений, перезаписать удалённый."
 
 #: chrome-gnome-shell-key-synchronization_use_remote:1
 msgid "Use remote extensions list, overwrite local."
-msgstr ""
+msgstr "Использовать удалённый список расширений, перезаписать локальный."
 
 #. HTML markup enabled for this string.
 #: chrome-gnome-shell-key-translation_credits:1
@@ -220,7 +221,7 @@ msgstr "О переводе"
 
 #: chrome-gnome-shell-key-unknown_error:1
 msgid "unknown error"
-msgstr ""
+msgstr "неизвестная ошибка"
 
 #: chrome-gnome-shell-key-update_available:1
 msgid "An update for GNOME Shell extensions available"
