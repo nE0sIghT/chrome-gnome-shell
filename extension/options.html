@@ -8,6 +8,8 @@
 		<script type="text/javascript" src="include/external/tabby-10.1.0.min.js"></script>
 		<script type="text/javascript" src="include/i18n.js"></script>
 		<script type="text/javascript" src="include/constants.js"></script>
+		<script type="text/javascript" src="include/gsc.js"></script>
+		<script type="text/javascript" src="include/sync.js"></script>
 	</head>
 	<body>
 		<ul data-tabs='tabs' class="tabs">
@@ -18,6 +20,7 @@
 		<div data-tabs-content='tabs-content'>
 			<div id="options" class="tabs-pane active" data-tabs-pane='tabs-pane'>
 				<div id="status" data-i18n="options_saved"></div>
+				<div id="error"></div>
 
 				<fieldset>
 					<dl>
@@ -40,8 +43,7 @@
 					<dl>
 						<dt>
 							<label for='synchronize_extensions_yes' data-i18n="options_synchronize_extensions"></label>:<br />
-							<span class="notice wrapped" data-i18n="options_synchronize_extensions_notice"></span><br />
-							<span class="notice wrapped" data-i18n="options_synchronize_extensions_notice2"></span>
+							<span class="notice wrapped" data-i18n="options_synchronize_extensions_notice"></span>
 						</dt>
 						<dd>
 							<label for='synchronize_extensions_yes' data-i18n="yes"></label> <input type='radio' id='synchronize_extensions_yes' name='synchronize_extensions' />
@@ -72,12 +74,31 @@
 				</div>
 			</div>
 			<div id="synchronization" class="tabs-pane" data-tabs-pane='tabs-pane'>
+				<table>
+					<thead>
+						<tr>
+							<th data-i18n="extension_name"></th>
+							<th data-i18n="extension_installed"></th>
+							<th data-i18n="extension_enabled"></th>
+							<th data-i18n="extension_synchronized"></th>
+						</tr>
+					</thead>
+					<tbody></tbody>
+				</table>
 			</div>
 			<div id="translation_credits" class="tabs-pane translation_credits_container" data-tabs-pane='tabs-pane'>
 				<div data-i18n='translation_credits' data-i18n-html='true'></div>
 			</div>
 		</div>
 
+		<dialog id='syncChoice'>
+			<h2 data-i18n='synchronization_storage_exists'></h2>
+			<form method="dialog">
+				<button type='submit' value='local' data-i18n='synchronization_use_local'></button>
+				<button type='submit' value='remote' data-i18n='synchronization_use_remote'></button>
+				<button type='submit' value='cancel' data-i18n='synchronization_cancel'></button>
+			</form>
+		</dialog>
 		<script type="text/javascript" src="options.js"></script>
 	</body>
 </html>

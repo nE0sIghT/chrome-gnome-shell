@@ -13,14 +13,20 @@ PLATFORMS_WHITELIST			= ["linux", "openbsd"];
 
 IS_OPERA				= navigator.userAgent.indexOf(' OPR/') >= 0;
 
+NOTIFICATION_SYNC_FAILED		= 'gs-chrome-sync-fail';
 NOTIFICATION_UPDATE_AVAILABLE		= 'gs-chrome-update';
 NOTIFICATION_UPDATE_CHECK_FAILED	= 'gs-chrome-update-fail';
 ALARM_UPDATE_CHECK			= 'gs-chrome-update-check';
 
 MESSAGE_NEXT_UPDATE_CHANGED		= 'gs-next-update-changed';
+MESSAGE_SYNC_FROM_REMOTE		= 'gs-sync-from-remote';
 
 SIGNAL_EXTENSION_CHANGED		= 'ExtensionStatusChanged';
 SIGNAL_SHELL_APPEARED			= 'org.gnome.Shell';
+
+EXTENSION_CHANGED_UUID			= 0;
+EXTENSION_CHANGED_STATE			= 1;
+EXTENSION_CHANGED_ERROR			= 2;
 
 NATIVE_HOST				= 'io.github.ne0sight.gs_chrome_connector';
 
@@ -45,3 +51,17 @@ EXTERNAL_MESSAGES			= [
 	"version",
 	"warning_versions_mismatch"
 ];
+
+// gnome-shell/js/ui/extensionSystem.js
+EXTENSION_STATE			= {
+	ENABLED:	1,
+	DISABLED:	2,
+	ERROR:		3,
+	OUT_OF_DATE:	4,
+	DOWNLOADING:	5,
+	INITIALIZED:	6,
+
+	// Used as an error state for operations on unknown extensions,
+	// should never be in a real extensionMeta object.
+	UNINSTALLED:	99
+};

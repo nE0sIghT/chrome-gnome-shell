@@ -24,13 +24,62 @@ function save_options()
 		chrome.storage.local.set({
 			syncExtensions:	syncExtensions
 		}, function() {
-			// Update status to let user know options were saved.
-			$('#status')
-				.show()
-				.delay(750)
-				.hide(250);
+			if(syncExtensions)
+			{
+				syncType = document.getElementById('syncChoice').returnValue;
+				if(!syncType || syncType === 'local')
+				{
+					GSC.sync.getExtensions($.Deferred().done(function (extensions) {
+						var localExtensions = {};
+						$.each(extensions, function (uuid, extension) {
+							if(
+								extension.local &&
+								$.inArray(extension.localState,
+									[EXTENSION_STATE.ENABLED, EXTENSION_STATE.DISABLED]) !== -1
+							)
+							{
+								localExtensions[extension.uuid] = {
+									uuid:	extension.uuid,
+									name:	extension.name,
+									state:	extension.localState
+								};
+							}
+						});
+
+						chrome.storage.sync.set({
+							extensions: localExtensions
+						}, function() {
+							showSuccessStatus();
+						});
+					}).fail(function (message) {
+						$('#error')
+							.text(message)
+							.show()
+							.delay(15000)
+							.hide(250);
+					}));
+				}
+				else if(syncType === 'remote')
+				{
+					chrome.runtime.sendMessage(GS_CHROME_ID, MESSAGE_SYNC_FROM_REMOTE);
+					showSuccessStatus();
+				}
+			}
+			else
+			{
+				showSuccessStatus();
+			}
 		});
 	});
+}
+
+function showSuccessStatus()
+{
+	// Update status to let user know options were saved.
+	$('#status')
+		.show()
+		.delay(750)
+		.hide(250);
 }
 
 function restore_options()
@@ -53,6 +102,7 @@ function restore_options()
 
 	if(!IS_OPERA)
 	{
+		updateSynchronizationStatus();
 		chrome.storage.local.get(DEFAULT_LOCAL_OPTIONS, function (items) {
 			setSyncExtensions(items.syncExtensions);
 		});
@@ -147,6 +197,61 @@ function handleWebrequestPermission()
 	}
 }
 
+function updateSynchronizationStatus()
+{
+	GSC.sync.getExtensions($.Deferred().done(function (extensions) {
+		var keys = Object.keys(extensions).sort(function (a, b) {
+			var nameA = extensions[a].name.toLowerCase();
+			var nameB = extensions[b].name.toLowerCase();
+
+			if (nameA < nameB)
+			{
+				return -1;
+			}
+
+			if (nameA > nameB)
+			{
+				return 1;
+			}
+
+			return 0;
+		});
+
+		$('#synchronization table tbody').empty();
+		$.each(keys, function (key, uuid) {
+			var extension = extensions[uuid];
+
+			$('#synchronization table tbody').append(
+				$('<tr />')
+					.append(
+						$('<td />').text(extension.name)
+					)
+					.append(
+						$('<td />').addClass(
+							extension.local ? 'ok' : 'fail'
+						)
+					)
+					.append(
+						$('<td />').addClass(
+							extension.localState == EXTENSION_STATE.ENABLED ? 'ok' : 'fail'
+						)
+					)
+					.append(
+						$('<td />').addClass(
+							extension.remote ? 'ok' : 'fail'
+						)
+					)
+			);
+		});
+	}).fail(function (message) {
+		$('#error')
+			.text(message)
+			.show()
+			.delay(15000)
+			.hide(250);
+	}));
+}
+
 i18n();
 
 document.addEventListener('DOMContentLoaded', restore_options);
@@ -155,29 +260,58 @@ $.each(document.getElementsByName('show_network_errors'), function(index, contro
 	control.addEventListener('change', handleWebrequestPermission);
 });
 
+document.getElementById('syncChoice').addEventListener('close', function() {
+	if(document.getElementById('syncChoice').returnValue === 'cancel')
+	{
+		$('#synchronize_extensions_no').prop('checked', 'checked');
+	}
+});
+$('input[type="radio"][name="synchronize_extensions"]').change(function() {
+	if($('#synchronize_extensions_yes').is(':checked'))
+	{
+		chrome.storage.sync.get({
+			extensions: {}
+		}, function (options) {
+			if(!$.isEmptyObject(options.extensions))
+			{
+				document.getElementById('syncChoice').showModal();
+			}
+		});
+	}
+});
+
 if($('#translation_credits div').is(':empty'))
 {
 	$('.translation_credits_container').remove();
 }
 
 chrome.storage.onChanged.addListener(function (changes, areaName) {
-	if (areaName === 'local' && changes.lastUpdateCheck)
+	if (areaName === 'local')
 	{
-		if (changes.lastUpdateCheck.newValue)
+		if(changes.lastUpdateCheck && changes.lastUpdateCheck.newValue)
 		{
 			$('#last_update_check').text(changes.lastUpdateCheck.newValue);
 		}
+	}
+
+	if (areaName === 'sync' && changes.extensions)
+	{
+		updateSynchronizationStatus();
 	}
 });
 
 chrome.runtime.onMessage.addListener(
 	function (request, sender, sendResponse) {
-		if(
-			sender.id && sender.id === GS_CHROME_ID &&
-			request && request === MESSAGE_NEXT_UPDATE_CHANGED
-		)
+		if(sender.id && sender.id === GS_CHROME_ID && request)
 		{
-			retrieveNextUpdateTime();
+			if(request === MESSAGE_NEXT_UPDATE_CHANGED)
+			{
+				retrieveNextUpdateTime();
+			}
+			else if(request.signal && request.signal === SIGNAL_EXTENSION_CHANGED)
+			{
+				updateSynchronizationStatus();
+			}
 		}
 	}
 );

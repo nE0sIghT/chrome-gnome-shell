@@ -7,6 +7,22 @@
 		"message": "This extension provides integration with GNOME Shell and the corresponding extensions repository https://extensions.gnome.org"
 	},
 
+	"extension_name": {
+		"message": "Extension",
+		"description": "Used as title, eg in table header. Means 'Extension name'."
+	},
+	"extension_installed": {
+		"message": "Installed",
+		"description": "Used as title, eg in table header."
+	},
+	"extension_enabled": {
+		"message": "Enabled",
+		"description": "Used as title, eg in table header."
+	},
+	"extension_synchronized": {
+		"message": "Synchronized",
+		"description": "Used as title, eg in table header."
+	},
 	"extension_status_upgrade": {
 		"message": "can be upgraded"
 	},
@@ -77,9 +93,6 @@
 	"options_synchronize_extensions_notice": {
 		"message": "If enabled, your GNOME Shell extensions list will be synchronized with your Google account."
 	},
-	"options_synchronize_extensions_notice2": {
-		"message": "For this feature to work properly you must manage GNOME Shell extensions from your Chrome/Chromium browser only."
-	},
 	"options_last_check": {
 		"message": "Last check"
 	},
@@ -90,12 +103,35 @@
 	"synchronization": {
 		"message": "Synchronization"
 	},
+	"synchronization_storage_exists": {
+		"message": "Your remote synchronization storage already contains extensions list."
+	},
+	"synchronization_use_local": {
+		"message": "Use local extensions list, overwrite remote."
+	},
+	"synchronization_use_remote": {
+		"message": "Use remote extensions list, overwrite local."
+	},
+	"synchronization_cancel": {
+		"message": "Do not enable synchronization."
+	},
+	"synchronization_failed": {
+		"message": "Failed to synchronize extensions: $CAUSE$",
+		"placeholders": {
+			"cause": {
+				"content": "$1"
+			}
+		}
+	},
 	"translation_credits_title": {
 		"message": "About translation"
 	},
 	"translation_credits": {
 		"message": "",
 		"description": "HTML markup enabled for this string."
+	},
+	"unknown_error": {
+		"message": "unknown error"
 	},
 
 	"hours": {
