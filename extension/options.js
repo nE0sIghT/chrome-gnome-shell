@@ -109,6 +109,7 @@ function restore_options()
 	}
 	else
 	{
+		$('a[data-i18n="synchronization"]').parent().remove();
 		$('#synchronize_extensions_yes').closest('dl').hide();
 	}
 }
