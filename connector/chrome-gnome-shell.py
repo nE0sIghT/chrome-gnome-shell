@@ -20,6 +20,7 @@ import socket
 import struct
 import sys
 import time
+import traceback
 from select import select
 from threading import Thread, Lock
 
@@ -31,6 +32,7 @@ ENABLED_EXTENSIONS_KEY = "enabled-extensions"
 EXTENSION_DISABLE_VERSION_CHECK_KEY = "disable-extension-version-validation"
 
 BUFFER_SUPPORTED = hasattr(sys.stdin, 'buffer')
+mainLoop = GLib.MainLoop()
 mutex = Lock()
 watcherConnected = False
 mainLoopInterrupted = False
@@ -97,7 +99,7 @@ def dbus_call_response(method, parameters, resultProperty):
         send_error(e.message)
 
 # Thread that reads messages from the webapp.
-def read_thread_func(proxy, mainLoop):
+def read_thread_func():
     while not mainLoop.is_running() and not mainLoopInterrupted:
         time.sleep(0.2)
 
@@ -233,9 +235,45 @@ def on_shell_appeared(connection, name, name_owner):
     mutex.release()
 
 
+def default_exception_hook(type, value, tb):
+    logError("Uncaught exception of type %s occured" % type)
+    traceback.print_tb(tb)
+    logError("Exception: %s" % value)
+
+    mainLoop.quit()
+
+
+def setup_thread_excepthook():
+    """
+    Workaround for `sys.excepthook` thread bug from:
+    http://bugs.python.org/issue1230540
+
+    Call once from the main thread before creating any threads.
+    """
+
+    init_original = Thread.__init__
+
+    def init(self, *args, **kwargs):
+
+        init_original(self, *args, **kwargs)
+        run_original = self.run
+
+        def run_with_except_hook(*args2, **kwargs2):
+            try:
+                run_original(*args2, **kwargs2)
+            except Exception:
+                sys.excepthook(*sys.exc_info())
+
+        self.run = run_with_except_hook
+
+    Thread.__init__ = init
+
+
 def main():
     debug('[%d] Startup' % (os.getpid()))
 
+    setup_thread_excepthook()
+    sys.excepthook = default_exception_hook
     lock_socket = socket.socket(socket.AF_UNIX, socket.SOCK_DGRAM)
     try:
         lock_socket.bind('\0chrome-gnome-shell-%d' % os.getppid())
@@ -251,9 +289,7 @@ def main():
         debug('[%d] Local socket already bound' % (os.getpid()))
         lock_socket = False
 
-    mainLoop = GLib.MainLoop()
-
-    appLoop = Thread(target=read_thread_func, args=(proxy, mainLoop))
+    appLoop = Thread(target=read_thread_func)
     appLoop.start()
 
     try:
