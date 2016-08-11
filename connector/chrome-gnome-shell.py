@@ -238,7 +238,7 @@ def main():
 
     lock_socket = socket.socket(socket.AF_UNIX, socket.SOCK_DGRAM)
     try:
-        lock_socket.bind('\0chrome-gnome-shell')
+        lock_socket.bind('\0chrome-gnome-shell-%d' % os.getppid())
         debug('[%d] Local socket obtained' % (os.getpid()))
 
         shellAppearedId = Gio.bus_watch_name(Gio.BusType.SESSION,
