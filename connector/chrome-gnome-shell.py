@@ -16,6 +16,7 @@ from gi.repository import GLib, Gio
 import json
 import os
 import re
+import socket
 import struct
 import sys
 import time
@@ -235,12 +236,20 @@ def on_shell_appeared(connection, name, name_owner):
 def main():
     debug('[%d] Startup' % (os.getpid()))
 
-    shellSignalId = proxy.connect('g-signal', on_shell_signal)
-    shellAppearedId = Gio.bus_watch_name(Gio.BusType.SESSION,
-                                         'org.gnome.Shell',
-                                         Gio.BusNameWatcherFlags.NONE,
-                                         on_shell_appeared,
-                                         None)
+    lock_socket = socket.socket(socket.AF_UNIX, socket.SOCK_DGRAM)
+    try:
+        lock_socket.bind('\0chrome-gnome-shell')
+        debug('[%d] Local socket obtained' % (os.getpid()))
+
+        shellAppearedId = Gio.bus_watch_name(Gio.BusType.SESSION,
+                                             'org.gnome.Shell',
+                                             Gio.BusNameWatcherFlags.NONE,
+                                             on_shell_appeared,
+                                             None)
+        shellSignalId = proxy.connect('g-signal', on_shell_signal)
+    except socket.error:
+        debug('[%d] Local socket already bound' % (os.getpid()))
+        lock_socket = False
 
     mainLoop = GLib.MainLoop()
 
@@ -254,8 +263,11 @@ def main():
 
     mainLoopInterrupted = True
 
-    proxy.disconnect(shellSignalId)
-    Gio.bus_unwatch_name(shellAppearedId)
+    if lock_socket:
+        proxy.disconnect(shellSignalId)
+        Gio.bus_unwatch_name(shellAppearedId)
+
+        lock_socket.close()
 
     appLoop.join()
     debug('[%d] Quit' % (os.getpid()))
