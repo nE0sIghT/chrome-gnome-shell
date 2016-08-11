@@ -23,7 +23,7 @@ GSC = (function() {
 		isUUID: function(uuid) {
 			return uuid && uuid.match('^[-a-zA-Z0-9@._]+$');
 		},
-		
+
 		sendNativeRequest: function(request, sendResponse) {
 			if(!platform_supported)
 			{
