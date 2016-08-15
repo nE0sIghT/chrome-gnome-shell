@@ -174,7 +174,10 @@ def read_thread_func():
                     extensions.append({'uuid': request['uuid'], 'enable': request['enable'] })
 
                 for extension in extensions:
-                    if extension['enable'] and isUUID(extension['uuid']):
+                    if not isUUID(extension['uuid']):
+                        continue
+
+                    if extension['enable']:
                         uuids.append(extension['uuid'])
                     else:
                         uuids.remove(extension['uuid'])
