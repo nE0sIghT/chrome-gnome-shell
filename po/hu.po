@@ -9,15 +9,15 @@ msgstr ""
 "Project-Id-Version: chrome-gnome-shell master\n"
 "Report-Msgid-Bugs-To: ykonotopov@gmail.com\n"
 "POT-Creation-Date: 2016-08-11 10:44+0000\n"
-"PO-Revision-Date: 2016-08-04 07:53+0200\n"
-"Last-Translator: Gabor Kelemen <kelemeng at ubuntu dot com>\n"
+"PO-Revision-Date: 2016-08-15 12:38+0200\n"
+"Last-Translator: Meskó Balázs <meskobalazs@gmail.com>\n"
 "Language-Team: Hungarian <openscope at googlegroups dot com>\n"
 "Language: hu\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 1.5\n"
+"X-Generator: Poedit 1.8.8\n"
 
 #: chrome-gnome-shell-key-close:1
 msgid "Close"
@@ -34,17 +34,17 @@ msgstr "Hibás bővítményválasz érkezett"
 #. Used as title, eg in table header.
 #: chrome-gnome-shell-key-extension_enabled:1
 msgid "Enabled"
-msgstr ""
+msgstr "Engedélyezve"
 
 #. Used as title, eg in table header.
 #: chrome-gnome-shell-key-extension_installed:1
 msgid "Installed"
-msgstr ""
+msgstr "Telepítve"
 
 #. Used as title, eg in table header. Means 'Extension name'.
 #: chrome-gnome-shell-key-extension_name:1
 msgid "Extension"
-msgstr ""
+msgstr "Bővítmény"
 
 #: chrome-gnome-shell-key-extension_status_downgrade:1
 msgid "must be downgraded"
@@ -57,7 +57,7 @@ msgstr "frissíthető"
 #. Used as title, eg in table header.
 #: chrome-gnome-shell-key-extension_synchronized:1
 msgid "Synchronized"
-msgstr ""
+msgstr "Szinkronizált"
 
 #: chrome-gnome-shell-key-gs_chrome:1
 msgid "GNOME Shell integration"
@@ -152,13 +152,15 @@ msgstr "A kiadási megjegyzések megjelenítése a kiegészítő frissítésekor
 
 #: chrome-gnome-shell-key-options_synchronize_extensions:1
 msgid "Synchronize extensions list"
-msgstr ""
+msgstr "Bővítménylista szinkronizálása"
 
 #: chrome-gnome-shell-key-options_synchronize_extensions_notice:1
 msgid ""
 "If enabled, your GNOME Shell extensions list will be synchronized with your "
 "Google account."
 msgstr ""
+"Ha engedélyezett, akkor a GNOME Shell bővítménylista a Google fiókjával "
+"kerül szinkronizálásra."
 
 #. String placeholders:
 #. gs_chrome
@@ -185,31 +187,30 @@ msgstr "Mentés"
 
 #: chrome-gnome-shell-key-synchronization:1
 msgid "Synchronization"
-msgstr ""
+msgstr "Szinkronizálás"
 
 #: chrome-gnome-shell-key-synchronization_cancel:1
 msgid "Do not enable synchronization."
-msgstr ""
+msgstr "Ne engedélyezze a szinkronizálást."
 
 #. String placeholders:
 #. cause
 #.
 #: chrome-gnome-shell-key-synchronization_failed:1
-#, fuzzy
 msgid "Failed to synchronize extensions: $CAUSE$"
-msgstr "A bővítményfrissítések keresése sikertelen: $CAUSE$"
+msgstr "A bővítmények szinkronizálása sikertelen: $CAUSE$"
 
 #: chrome-gnome-shell-key-synchronization_storage_exists:1
 msgid "Your remote synchronization storage already contains extensions list."
-msgstr ""
+msgstr "A távoli szinkronizációs tároló már tartalmazza a bővítménylistát."
 
 #: chrome-gnome-shell-key-synchronization_use_local:1
 msgid "Use local extensions list, overwrite remote."
-msgstr ""
+msgstr "Használja a helyi bővítménylistát, írja felül a távolit."
 
 #: chrome-gnome-shell-key-synchronization_use_remote:1
 msgid "Use remote extensions list, overwrite local."
-msgstr ""
+msgstr "Használja a távoli bővítménylistát, írja felül a helyit."
 
 #. HTML markup enabled for this string.
 #: chrome-gnome-shell-key-translation_credits:1
@@ -222,7 +223,7 @@ msgstr "A fordítás névjegye"
 
 #: chrome-gnome-shell-key-unknown_error:1
 msgid "unknown error"
-msgstr ""
+msgstr "ismeretlen hiba"
 
 #: chrome-gnome-shell-key-update_available:1
 msgid "An update for GNOME Shell extensions available"
