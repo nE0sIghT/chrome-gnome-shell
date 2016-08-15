@@ -179,7 +179,7 @@ def read_thread_func():
 
                     if extension['enable']:
                         uuids.append(extension['uuid'])
-                    else:
+                    elif extension['uuid'] in uuids:
                         uuids.remove(extension['uuid'])
 
                 settings.set_strv(ENABLED_EXTENSIONS_KEY, uuids)
