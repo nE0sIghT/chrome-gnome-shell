@@ -16,6 +16,11 @@ set(ARCHIVE_FULL_NAME ${ARCHIVE_NAME}.tar.xz)
 set(ARCHIVE_DEB_NAME ${CMAKE_PROJECT_NAME}_${PROJECT_VERSION}.orig.tar.xz)
 set(DEB_DIR ${CMAKE_CURRENT_BINARY_DIR}/deb)
 
+set(EXTENSION_SOURCES ${CMAKE_CURRENT_SOURCE_DIR}/extension)
+set(EXTENSION_BUILD_DIR ${CMAKE_BINARY_DIR}/extension)
+set(CHROME_BUILD_DIR ${EXTENSION_BUILD_DIR}/chrome)
+set(OPERA_BUILD_DIR ${EXTENSION_BUILD_DIR}/opera)
+
 # Options
 option(BUILD_EXTENSION		"Build extension zip package"	TRUE)
 option(BUILD_CONNECTOR		"Build native messaging host"	TRUE)
@@ -23,10 +28,15 @@ option(BUILD_SOURCE_PACKAGE	"Build source package"		FALSE)
 option(BUILD_DEB		"Build debian package"		FALSE)
 option(BUILD_MESSAGES		"Update translation strings"	FALSE)
 
-# Default extensions id for Chrome web store
-if(NOT DEFINED(EXTENSION_ID))
-	set(EXTENSION_ID "gphhapmejobijbbhgpjhcjognlahblep")
-endif(NOT DEFINED(EXTENSION_ID))
+# Default extension key for Chrome web store
+if(NOT DEFINED(CHROME_EXTENSION_KEY))
+	set(CHROME_EXTENSION_KEY "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAlig8TAPPQZinMkJnptC0ldizx6fG9jSjZDJ9c8GuLcXeGRH+NMlQuPC9bR5IQlT7+4VY/1tm1+IZ4xvITx1wXCNTR+KXzZv3VNc2D+logehK7oIRTRj0fLhixrx4NLSNK7L7HgV2xcIoW6QV0jOdFcTPL0mWXodXSzZePrvXuflF7qpwNxLzYVi04Vh3xu2oR2Pc9SwfZ4SNbyCaunH/p8n5AYmDuogI2Ah++RZw0ctnqn7mmHrGXteBu/vkpcHZu3B3eW9PFSrv69rRs8duybYR9C91hJm6yzRqZqIpindIU3k2HnNWeCFWkRVpZPhaNVoxcBUO7wWUUwdIflW2JwIDAQAB")
+endif(NOT DEFINED(CHROME_EXTENSION_KEY))
+
+# Default extension key for Opera addons
+if(NOT DEFINED(OPERA_EXTENSION_KEY))
+	set(OPERA_EXTENSION_KEY "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA1QBzvBFxSTBP1Z3u+B3GnxOhZiT/LLGJ9R3Mu3R5ap1YgvbHNqSj0CmrWE+MvJUYA+AxHSRP6ctKfPBZl/kdGYGLPgvagGBEEbutCerj9www7T2LAsFNc5gIgDXaU0P74Yik8MjLZIXOC3Q91Kien5Jbtit382HNVHl2nRbhgGZ9LZ+6UJnzSseW9NHw0/XRRnT0kv0Ih7lgC55xWfP7guam1uaT5DPxC7W5cy9V1z7mljBf50OxgnbEmf7Xvfz4QpQfDyQWE5hqKlBuPc8W/8bvYmWN+FDBqhls/FCml3icAElNMBg0YryFEDzu6xCTzgHqDKYu5SN49u+m6tyamQIDAQAB")
+endif(NOT DEFINED(OPERA_EXTENSION_KEY))
 
 # Debian variables
 if(NOT DEFINED(DEBIAN_VERSION))
@@ -70,13 +80,55 @@ if(BUILD_MESSAGES AND NOT DEFINED GETTEXT_REPORT_EMAIL)
 	message(FATAL_ERROR "GETTEXT_REPORT_EMAIL must be specified to generate po template.")
 endif(BUILD_MESSAGES AND NOT DEFINED GETTEXT_REPORT_EMAIL)
 
+if(BUILD_EXTENSION OR BUILD_CONNECTOR)
+	find_program_ex(base64 FATAL_ERROR)
+	find_program_ex(sha256sum FATAL_ERROR)
+	find_program_ex(head FATAL_ERROR)
+	find_program_ex(tr FATAL_ERROR)
+
+	# https://github.com/adobe/chromium/blob/master/chrome/common/extensions/extension.cc#L696
+	# http://stackoverflow.com/questions/23873623/obtaining-chrome-extension-id-for-development
+	execute_process(COMMAND echo "${CHROME_EXTENSION_KEY}"
+			COMMAND ${BASE64_EXECUTABLE} -d
+			COMMAND ${SHA256SUM_EXECUTABLE}
+			COMMAND ${HEAD_EXECUTABLE} -c32
+			COMMAND ${TR_EXECUTABLE} 0-9a-f a-p
+			OUTPUT_VARIABLE CHROME_EXTENSION_ID)
+	message(STATUS "Calculated Chrome extension id: ${CHROME_EXTENSION_ID}")
+
+	execute_process(COMMAND echo "${OPERA_EXTENSION_KEY}"
+			COMMAND ${BASE64_EXECUTABLE} -d
+			COMMAND ${SHA256SUM_EXECUTABLE}
+			COMMAND ${HEAD_EXECUTABLE} -c32
+			COMMAND ${TR_EXECUTABLE} 0-9a-f a-p
+			OUTPUT_VARIABLE OPERA_EXTENSION_ID)
+	message(STATUS "Calculated Opera extension id: ${OPERA_EXTENSION_ID}")
+endif(BUILD_EXTENSION OR BUILD_CONNECTOR)
+
 # Options handling
 if(BUILD_EXTENSION)
 	find_program_ex(7z FATAL_ERROR)
 
-	add_custom_target(extension ALL
-		COMMAND "${7Z_EXECUTABLE}" a -tzip "${CMAKE_BINARY_DIR}/extension.zip" ./
-		WORKING_DIRECTORY "${CMAKE_CURRENT_SOURCE_DIR}/extension/")
+	file(COPY "${EXTENSION_SOURCES}/" DESTINATION "${CHROME_BUILD_DIR}"
+		PATTERN "manifest.json" EXCLUDE)
+
+	file(COPY "${EXTENSION_SOURCES}/" DESTINATION "${OPERA_BUILD_DIR}"
+		PATTERN "manifest.json" EXCLUDE)
+
+	set(PUBLIC_KEY ${CHROME_EXTENSION_KEY})
+	configure_file("${EXTENSION_SOURCES}/manifest.json" "${CHROME_BUILD_DIR}/")
+
+	set(PUBLIC_KEY ${OPERA_EXTENSION_KEY})
+	configure_file("${EXTENSION_SOURCES}/manifest.json" "${OPERA_BUILD_DIR}/")
+
+	unset(PUBLIC_KEY)
+
+	add_custom_target(chrome-extension ALL
+		COMMAND "${7Z_EXECUTABLE}" a -tzip "${CMAKE_BINARY_DIR}/extension-chrome.zip" ./
+		WORKING_DIRECTORY "${CHROME_BUILD_DIR}")
+	add_custom_target(opera-extension ALL
+		COMMAND "${7Z_EXECUTABLE}" a -tzip "${CMAKE_BINARY_DIR}/extension-opera.zip" ./
+		WORKING_DIRECTORY "${OPERA_BUILD_DIR}")
 endif(BUILD_EXTENSION)
 
 if(BUILD_CONNECTOR)

@@ -4,6 +4,7 @@
   "path": "${CMAKE_INSTALL_FULL_BINDIR}/chrome-gnome-shell",
   "type": "stdio",
   "allowed_origins": [
-    "chrome-extension://${EXTENSION_ID}/"
+    "chrome-extension://${CHROME_EXTENSION_ID}/",
+    "chrome-extension://${OPERA_EXTENSION_ID}/"
   ]
 }
