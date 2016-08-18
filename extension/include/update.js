@@ -67,6 +67,7 @@ GSC.update = (function($) {
 							$.ajax({
 								url: UPDATE_URL,
 								data: request,
+								dataType: 'json',
 								method: 'GET',
 								cache: false
 							}).done(function (data, textStatus, jqXHR) {
