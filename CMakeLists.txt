@@ -160,6 +160,14 @@ if(BUILD_CONNECTOR)
 	install(FILES "${CMAKE_BINARY_DIR}/org.gnome.chrome_gnome_shell.json" DESTINATION "/etc/opt/chrome/native-messaging-hosts/")
 	install(FILES "${CMAKE_CURRENT_SOURCE_DIR}/connector/external_extension.json" DESTINATION "/usr/share/google-chrome/extensions/" RENAME "${EXTENSION_ID}.json")
 	install(FILES "${CMAKE_CURRENT_SOURCE_DIR}/connector/external_extension.json" DESTINATION "/usr/share/chromium/extensions/" RENAME "${EXTENSION_ID}.json")
+
+	# There is wrong patch in FreeBSD that forces Chromium to look into
+	# /usr/local/etc/chrome/native-messaging-hosts for native messaging host manifest.
+	# https://svn0.us-east.freebsd.org/ports/head/www/chromium/files/patch-chrome_common_chrome__paths.cc
+	if(CMAKE_SYSTEM_NAME MATCHES "DragonFly.*|FreeBSD")
+		install(FILES "${CMAKE_BINARY_DIR}/io.github.ne0sight.gs_chrome_connector.json" DESTINATION "/usr/local/etc/chrome/native-messaging-hosts/")
+		install(FILES "${CMAKE_BINARY_DIR}/org.gnome.chrome_gnome_shell.json" DESTINATION "/usr/local/etc/chrome/native-messaging-hosts/")
+	endif(CMAKE_SYSTEM_NAME MATCHES "DragonFly.*|FreeBSD")
 endif(BUILD_CONNECTOR)
 
 if(BUILD_SOURCE_PACKAGE)
