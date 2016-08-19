@@ -158,8 +158,8 @@ if(BUILD_CONNECTOR)
 	install(FILES "${CMAKE_BINARY_DIR}/io.github.ne0sight.gs_chrome_connector.json" DESTINATION "/etc/opt/chrome/native-messaging-hosts/")
 	install(FILES "${CMAKE_BINARY_DIR}/org.gnome.chrome_gnome_shell.json" DESTINATION "/etc/chromium/native-messaging-hosts/")
 	install(FILES "${CMAKE_BINARY_DIR}/org.gnome.chrome_gnome_shell.json" DESTINATION "/etc/opt/chrome/native-messaging-hosts/")
-	install(FILES "${CMAKE_CURRENT_SOURCE_DIR}/connector/external_extension.json" DESTINATION "/usr/share/google-chrome/extensions/" RENAME "${EXTENSION_ID}.json")
-	install(FILES "${CMAKE_CURRENT_SOURCE_DIR}/connector/external_extension.json" DESTINATION "/usr/share/chromium/extensions/" RENAME "${EXTENSION_ID}.json")
+	install(FILES "${CMAKE_CURRENT_SOURCE_DIR}/connector/external_extension.json" DESTINATION "/usr/share/google-chrome/extensions/" RENAME "${CHROME_EXTENSION_ID}.json")
+	install(FILES "${CMAKE_CURRENT_SOURCE_DIR}/connector/external_extension.json" DESTINATION "/usr/share/chromium/extensions/" RENAME "${CHROME_EXTENSION_ID}.json")
 
 	# There is wrong patch in FreeBSD that forces Chromium to look into
 	# /usr/local/etc/chrome/native-messaging-hosts for native messaging host manifest.
