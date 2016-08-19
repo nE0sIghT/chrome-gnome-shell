@@ -19,7 +19,7 @@ msgstr "Zamknij"
 
 #: chrome-gnome-shell-key-connecting_host_app:1
 msgid "Connecting to native host application…"
-msgstr "Łączenie z natywnym programem serwera…"
+msgstr "Łączenie z natywnym programem serwera…"
 
 #: chrome-gnome-shell-key-error_extension_response:1
 msgid "Wrong extension response received"
@@ -55,7 +55,7 @@ msgstr "Synchronizowane"
 
 #: chrome-gnome-shell-key-gs_chrome:1
 msgid "GNOME Shell integration"
-msgstr "Integracja z GNOME Shell"
+msgstr "Integracja z GNOME Shell"
 
 #: chrome-gnome-shell-key-hours:1
 msgid "hours"
@@ -66,7 +66,7 @@ msgid ""
 "This extension provides integration with GNOME Shell and the corresponding "
 "extensions repository https://extensions.gnome.org"
 msgstr ""
-"To rozszerzenie dostarcza integrację z GNOME Shell i repozytorium rozszerzeń "
+"To rozszerzenie dostarcza integrację z GNOME Shell i repozytorium rozszerzeń "
 "https://extensions.gnome.org"
 
 #. String placeholders:
@@ -81,7 +81,7 @@ msgid ""
 "A network error has occurred. Please check your Internet connection and/or "
 "proxy settings."
 msgstr ""
-"Wystąpił błąd sieci. Proszę sprawdzić połączenie z Internetem i/lub "
+"Wystąpił błąd sieci. Proszę sprawdzić połączenie z Internetem i/lub "
 "ustawienia pośrednika."
 
 #: chrome-gnome-shell-key-never:1
@@ -99,7 +99,7 @@ msgid ""
 "GnomeShellIntegrationForChrome/Installation'>documentation</a> for "
 "instructions about installing connector."
 msgstr ""
-"Chociaż rozszerzenie integracji z GNOME Shell jest uruchomione, to nie "
+"Chociaż rozszerzenie integracji z GNOME Shell jest uruchomione, to nie "
 "wykryto natywnego łącznika serwera. <a href='https://wiki.gnome.org/Projects/"
 "GnomeShellIntegrationForChrome/Installation'>Dokumentacja</a> zawiera "
 "instrukcje na temat instalacji łącznika."
@@ -134,7 +134,7 @@ msgstr "Zapisano opcje."
 
 #: chrome-gnome-shell-key-options_show_network_errors:1
 msgid "Show information about network errors"
-msgstr "Wyświetlanie informacji o błędach sieci"
+msgstr "Wyświetlanie informacji o błędach sieci"
 
 #: chrome-gnome-shell-key-options_show_network_errors_notice:1
 msgid "Chrome permission «webRequest» required."
@@ -142,7 +142,7 @@ msgstr "Wymagane jest uprawnienie „webRequest” przeglądarki Chrome."
 
 #: chrome-gnome-shell-key-options_show_release_notes:1
 msgid "Show release notes when extension updated"
-msgstr "Wyświetlanie informacji o wydaniu po aktualizacji rozszerzenia"
+msgstr "Wyświetlanie informacji o wydaniu po aktualizacji rozszerzenia"
 
 #: chrome-gnome-shell-key-options_synchronize_extensions:1
 msgid "Synchronize extensions list"
@@ -153,7 +153,7 @@ msgid ""
 "If enabled, your GNOME Shell extensions list will be synchronized with your "
 "Google account."
 msgstr ""
-"Po włączeniu lista rozszerzeń GNOME Shell będzie synchronizowana z kontem "
+"Po włączeniu lista rozszerzeń GNOME Shell będzie synchronizowana z kontem "
 "Google."
 
 #. String placeholders:
@@ -213,7 +213,7 @@ msgstr "Piotr Drąg, 2016"
 
 #: chrome-gnome-shell-key-translation_credits_title:1
 msgid "About translation"
-msgstr "O tłumaczeniu"
+msgstr "O tłumaczeniu"
 
 #: chrome-gnome-shell-key-unknown_error:1
 msgid "unknown error"
@@ -239,8 +239,8 @@ msgid ""
 "You are using different versions of GNOME Shell integration extension ($$1) "
 "and native host connector ($$2). Some features may not work or work wrong."
 msgstr ""
-"Używane są różne wersje rozszerzenia integracji z GNOME Shell ($$1) i "
-"natywnego łącznika serwera ($$2). Niektóre funkcje mogą nie działać lub "
+"Używane są różne wersje rozszerzenia integracji z GNOME Shell ($$1) "
+"i natywnego łącznika serwera ($$2). Niektóre funkcje mogą nie działać lub "
 "działać niepoprawnie."
 
 #: chrome-gnome-shell-key-yes:1
@@ -272,16 +272,16 @@ msgid ""
 msgstr ""
 "Należy zainstalować natywnego łącznika, aby to rozszerzenie mogło działać.\n"
 "\n"
-"Dla systemu Arch Linux dostępny jest pakiet PKGBUILD w repozytorium AUR: "
+"Dla systemu Arch Linux dostępny jest pakiet PKGBUILD w repozytorium AUR: "
 "https://aur.archlinux.org/packages/chrome-gnome-shell-git\n"
 "\n"
-"Dla systemu Fedora dostępny jest pakiet w repozytorium Copr: https://copr."
+"Dla systemu Fedora dostępny jest pakiet w repozytorium Copr: https://copr."
 "fedorainfracloud.org/coprs/region51/chrome-gnome-shell\n"
 "\n"
-"W systemie Gentoo Linux można go zainstalować za pomocą polecenia:\n"
+"W systemie Gentoo Linux można go zainstalować za pomocą polecenia:\n"
 "emerge gnome-extra/chrome-gnome-shell\n"
 "\n"
-"Dla systemu Ubuntu dostępny jest pakiet w repozytorium PPA „ne0sight/chrome-"
+"Dla systemu Ubuntu dostępny jest pakiet w repozytorium PPA „ne0sight/chrome-"
 "gnome-shell”. Polecenia instalacji:\n"
 "sudo add-apt-repository ppa:ne0sight/chrome-gnome-shell\n"
 "sudo apt-get update\n"
