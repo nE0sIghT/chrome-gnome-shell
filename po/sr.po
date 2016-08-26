@@ -1,0 +1,292 @@
+# GNOME Shell integration for Chrome
+# DO NOT EDIT!
+# This file is auto generated with chrome-messages2po tool.
+# Мирослав Николић <miroslavnikolic@rocketmail.com>, 2016.
+msgid ""
+msgstr ""
+"Project-Id-Version: 1.0\n"
+"Report-Msgid-Bugs-To: ykonotopov@gmail.com\n"
+"POT-Creation-Date: 2016-08-11 10:44+0000\n"
+"PO-Revision-Date: 2016-08-26 20:34+0200\n"
+"Last-Translator: Мирослав Николић <miroslavnikolic@rocketmail.com>\n"
+"Language-Team: српски <gnome-sr@googlegroups.org>\n"
+"Language: sr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=n==1? 3 : n%10==1 && n%100!=11 ? 0 : "
+"n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+
+#: chrome-gnome-shell-key-close:1
+msgid "Close"
+msgstr "Затвори"
+
+#: chrome-gnome-shell-key-connecting_host_app:1
+msgid "Connecting to native host application…"
+msgstr "Повезујем се са изворним програмом домаћином…"
+
+#: chrome-gnome-shell-key-error_extension_response:1
+msgid "Wrong extension response received"
+msgstr "Примљен је погрешан одговор проширења"
+
+#. Used as title, eg in table header.
+#: chrome-gnome-shell-key-extension_enabled:1
+msgid "Enabled"
+msgstr "Укључено"
+
+#. Used as title, eg in table header.
+#: chrome-gnome-shell-key-extension_installed:1
+msgid "Installed"
+msgstr "Инсталирано"
+
+#. Used as title, eg in table header. Means 'Extension name'.
+#: chrome-gnome-shell-key-extension_name:1
+msgid "Extension"
+msgstr "Проширење"
+
+#: chrome-gnome-shell-key-extension_status_downgrade:1
+msgid "must be downgraded"
+msgstr "мора бити разграђено"
+
+#: chrome-gnome-shell-key-extension_status_upgrade:1
+msgid "can be upgraded"
+msgstr "може бити надограђено"
+
+#. Used as title, eg in table header.
+#: chrome-gnome-shell-key-extension_synchronized:1
+msgid "Synchronized"
+msgstr "Усклађено"
+
+#: chrome-gnome-shell-key-gs_chrome:1
+msgid "GNOME Shell integration"
+msgstr "Интеграција Гномове шкољке"
+
+#: chrome-gnome-shell-key-hours:1
+msgid "hours"
+msgstr "сати"
+
+#: chrome-gnome-shell-key-manifest_description:1
+msgid ""
+"This extension provides integration with GNOME Shell and the corresponding "
+"extensions repository https://extensions.gnome.org"
+msgstr ""
+"Ово проширење обезбеђује интеграцију са Гномовом шкољком и одговарајућом "
+"ризницом проширења „https://extensions.gnome.org“"
+
+#. String placeholders:
+#. request
+#. 
+#: chrome-gnome-shell-key-native_request_failed:1
+msgid "«$REQUEST$» native request failed"
+msgstr "«$REQUEST$» изворни захтев није успео"
+
+#: chrome-gnome-shell-key-network_error:1
+msgid ""
+"A network error has occurred. Please check your Internet connection and/or "
+"proxy settings."
+msgstr ""
+"Дошло је до грешке са мрежом. Проверите вашу Интернет везу и/или подешавања "
+"посредника."
+
+#: chrome-gnome-shell-key-never:1
+msgid "never"
+msgstr "никада"
+
+#: chrome-gnome-shell-key-no:1
+msgid "No"
+msgstr "Не"
+
+#: chrome-gnome-shell-key-no_host_connector:1
+msgid ""
+"Although GNOME Shell integration extension is running, native host connector"
+" is not detected. Refer <a "
+"href='https://wiki.gnome.org/Projects/GnomeShellIntegrationForChrome/Installation'>documentation</a>"
+" for instructions about installing connector."
+msgstr ""
+"Иако проширење интеграције Гномове шкољке ради, изворни конектор домаћина "
+"није откривен. Погледајте у <a href='https://wiki.gnome.org/Projects/GnomeShe"
+"llIntegrationForChrome/Installation'>документацији</a> упутства о "
+"инсталирању конектора."
+
+#: chrome-gnome-shell-key-no_host_response:1
+msgid "No host response"
+msgstr "Нема одговора домаћина"
+
+#: chrome-gnome-shell-key-older_connector:1
+msgid "older than version 4"
+msgstr "старије од издања 4"
+
+#: chrome-gnome-shell-key-options_check_period:1
+msgid "Update check period"
+msgstr "Период провере освежавања"
+
+#: chrome-gnome-shell-key-options_last_check:1
+msgid "Last check"
+msgstr "Последња провера"
+
+#: chrome-gnome-shell-key-options_link:1
+msgid "Options"
+msgstr "Опције"
+
+#: chrome-gnome-shell-key-options_next_check:1
+msgid "Next check"
+msgstr "Следећа провера"
+
+#: chrome-gnome-shell-key-options_saved:1
+msgid "Options saved."
+msgstr "Опције су сачуване."
+
+#: chrome-gnome-shell-key-options_show_network_errors:1
+msgid "Show information about network errors"
+msgstr "Прикажи обавештење о грешкама мреже"
+
+#: chrome-gnome-shell-key-options_show_network_errors_notice:1
+msgid "Chrome permission «webRequest» required."
+msgstr "Потребан је „веб_захтев“ Хромовог овлашћења."
+
+#: chrome-gnome-shell-key-options_show_release_notes:1
+msgid "Show release notes when extension updated"
+msgstr "Прикажи напомене о издању када се освежи проширење"
+
+#: chrome-gnome-shell-key-options_synchronize_extensions:1
+msgid "Synchronize extensions list"
+msgstr "Усагласи списак проширења"
+
+#: chrome-gnome-shell-key-options_synchronize_extensions_notice:1
+msgid ""
+"If enabled, your GNOME Shell extensions list will be synchronized with your "
+"Google account."
+msgstr ""
+"Ако је укључено, ваш списак проширења Гномове шкољке биће усаглашен са вашим "
+"Гугл налогом."
+
+#. String placeholders:
+#. gs_chrome
+#. 
+#: chrome-gnome-shell-key-options_title:1
+msgid "$GS_CHROME$ options"
+msgstr "$GS_CHROME$ опције"
+
+#: chrome-gnome-shell-key-options_update_check:1
+msgid "Check for extensions update"
+msgstr "Провери за освежењима проширења"
+
+#: chrome-gnome-shell-key-platform_not_supported:1
+msgid "Native host connector is not supported for your platform."
+msgstr "Изворни конектор домаћина није подржан за вашу платформу."
+
+#: chrome-gnome-shell-key-retry:1
+msgid "Retry"
+msgstr "Покушај поново"
+
+#: chrome-gnome-shell-key-save:1
+msgid "Save"
+msgstr "Сачувај"
+
+#: chrome-gnome-shell-key-synchronization:1
+msgid "Synchronization"
+msgstr "Усаглашавање"
+
+#: chrome-gnome-shell-key-synchronization_cancel:1
+msgid "Do not enable synchronization."
+msgstr "Не укључуј усаглашавање."
+
+#. String placeholders:
+#. cause
+#. 
+#: chrome-gnome-shell-key-synchronization_failed:1
+msgid "Failed to synchronize extensions: $CAUSE$"
+msgstr "Нисам успео да усагласим проширења: $CAUSE$"
+
+#: chrome-gnome-shell-key-synchronization_storage_exists:1
+msgid "Your remote synchronization storage already contains extensions list."
+msgstr "Ваш удаљени смештај усаглашавања већ садржи списак проширења."
+
+#: chrome-gnome-shell-key-synchronization_use_local:1
+msgid "Use local extensions list, overwrite remote."
+msgstr "Користи месни списак проширења, препиши удаљени."
+
+#: chrome-gnome-shell-key-synchronization_use_remote:1
+msgid "Use remote extensions list, overwrite local."
+msgstr "Користи удаљени списак проширења, препиши месни."
+
+#. HTML markup enabled for this string.
+#: chrome-gnome-shell-key-translation_credits:1
+msgid "translation_credits"
+msgstr "Мирослав Николић <miroslavnikolic@rocketmail.com>"
+
+#: chrome-gnome-shell-key-translation_credits_title:1
+msgid "About translation"
+msgstr "О преводу"
+
+#: chrome-gnome-shell-key-unknown_error:1
+msgid "unknown error"
+msgstr "непозната грешка"
+
+#: chrome-gnome-shell-key-update_available:1
+msgid "An update for GNOME Shell extensions available"
+msgstr "Доступно је освежење за проширења Гномове шкољке"
+
+#. String placeholders:
+#. cause
+#. 
+#: chrome-gnome-shell-key-update_check_failed:1
+msgid "Failed to check extensions updates: $CAUSE$"
+msgstr "Нисам успео да проверим освежења проширења: $CAUSE$"
+
+#: chrome-gnome-shell-key-version:1
+msgid "version $$1"
+msgstr "издање $$1"
+
+#: chrome-gnome-shell-key-warning_versions_mismatch:1
+msgid ""
+"You are using different versions of GNOME Shell integration extension ($$1) "
+"and native host connector ($$2). Some features may not work or work wrong."
+msgstr ""
+"Користите другачија издања проширења интеграције Гномове шкољке ($$1) и "
+"изворног конектора домаћина ($$2). Неке функције неће радити или ће радити "
+"лоше."
+
+#: chrome-gnome-shell-key-yes:1
+msgid "Yes"
+msgstr "Да"
+
+#. Chrome store description
+#: chrome-gnome-shell-store-description:1
+msgid ""
+"You MUST install native connector for this extension to work.\n"
+"\n"
+"For Arch Linux there is a PKGBUILD available in the AUR: https://aur.archlinux.org/packages/chrome-gnome-shell-git\n"
+"\n"
+"For Fedora Linux there is package available in Copr: https://copr.fedorainfracloud.org/coprs/region51/chrome-gnome-shell\n"
+"\n"
+"In Gentoo Linux you can install connector with command:\n"
+"emerge gnome-extra/chrome-gnome-shell\n"
+"\n"
+"For Ubuntu Linux package is available in ne0sight/chrome-gnome-shell PPA. To install it type:\n"
+"sudo add-apt-repository ppa:ne0sight/chrome-gnome-shell\n"
+"sudo apt-get update\n"
+"sudo apt-get install chrome-gnome-shell\n"
+"\n"
+"You also can install connector manually. See https://wiki.gnome.org/Projects/GnomeShellIntegrationForChrome/Installation for install instructions.\n"
+msgstr ""
+"МОРАТЕ инсталирати изворни конектор да би ово проширење радило.\n"
+"\n"
+"За Арч Линукс постоји „PKGBUILD“ доступан у АУР-у: "
+"https://aur.archlinux.org/packages/chrome-gnome-shell-git\n"
+"\n"
+"За Федору Линукс пакет је доступан у Копр-у: "
+"https://copr.fedorainfracloud.org/coprs/region51/chrome-gnome-shell\n"
+"\n"
+"У Џенту Линуксу конектор можете инсталирати наредбом:\n"
+"emerge gnome-extra/chrome-gnome-shell\n"
+"\n"
+"За Убунту Линукс пакет је доступан у ППА „ne0sight/chrome-gnome-shell“. Да "
+"га инсталирате упишите:\n"
+"sudo add-apt-repository ppa:ne0sight/chrome-gnome-shell\n"
+"sudo apt-get update\n"
+"sudo apt-get install chrome-gnome-shell\n"
+"\n"
+"Можете такође и ручно да инсталирате повезивач. Погледајте "
+"„https://wiki.gnome.org/Projects/GnomeShellIntegrationForChrome/Installation“"
+" за упутствима о инсталацији.\n"
