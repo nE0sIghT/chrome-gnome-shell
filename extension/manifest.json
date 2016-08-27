@@ -18,16 +18,7 @@
   },
 
   "background": {
-    "scripts": [
-	    "include/external/jquery-2.1.4.min.js",
-	    "include/i18n.js",
-	    "include/constants.js",
-	    "include/gsc.js",
-	    "include/notifications.js",
-	    "include/update.js",
-	    "include/sync.js",
-	    "extension.js"
-    ],
+    "page": "extension.html",
     "persistent": false
   },
 
