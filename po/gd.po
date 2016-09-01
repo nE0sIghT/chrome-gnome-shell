@@ -1,0 +1,303 @@
+# Scottish Gaelic translation for chrome-gnome-shell.
+# Copyright (C) 2016 chrome-gnome-shell's COPYRIGHT HOLDER
+# This file is distributed under the same license as the chrome-gnome-shell package.
+# GunChleoc <fios@foramnagaidhlig.net>, 2016.
+msgid ""
+msgstr ""
+"Project-Id-Version: chrome-gnome-shell master\n"
+"Report-Msgid-Bugs-To: ykonotopov@gmail.com\n"
+"POT-Creation-Date: 2016-08-11 10:44+0000\n"
+"PO-Revision-Date: 2016-09-01 17:42+0100\n"
+"Last-Translator: GunChleoc <fios@foramnagaidhlig.net>\n"
+"Language-Team: Fòram na Gàidhlig\n"
+"Language: gd\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=(n==1 || n==11) ? 0 : (n==2 || n==12) ? 1 : "
+"(n > 2 && n < 20) ? 2 : 3;\n"
+"X-Generator: Virtaal 0.7.1\n"
+"X-Project-Style: gnome\n"
+
+#: chrome-gnome-shell-key-close:1
+msgid "Close"
+msgstr "Dùin"
+
+#: chrome-gnome-shell-key-connecting_host_app:1
+msgid "Connecting to native host application…"
+msgstr "A' ceangal ri aplacaid òstair tùsail…"
+
+#: chrome-gnome-shell-key-error_extension_response:1
+msgid "Wrong extension response received"
+msgstr "Fhuaras freagairt chearr an leudachain"
+
+#. Used as title, eg in table header.
+#: chrome-gnome-shell-key-extension_enabled:1
+msgid "Enabled"
+msgstr "An comas"
+
+#. Used as title, eg in table header.
+#: chrome-gnome-shell-key-extension_installed:1
+msgid "Installed"
+msgstr "Air a stàladh"
+
+#. Used as title, eg in table header. Means 'Extension name'.
+#: chrome-gnome-shell-key-extension_name:1
+msgid "Extension"
+msgstr "Leudachan"
+
+#: chrome-gnome-shell-key-extension_status_downgrade:1
+msgid "must be downgraded"
+msgstr "feumach air ìsleachadh"
+
+#: chrome-gnome-shell-key-extension_status_upgrade:1
+msgid "can be upgraded"
+msgstr "gabhaidh àrdachadh"
+
+#. Used as title, eg in table header.
+#: chrome-gnome-shell-key-extension_synchronized:1
+msgid "Synchronized"
+msgstr "Sioncronaichte"
+
+#: chrome-gnome-shell-key-gs_chrome:1
+msgid "GNOME Shell integration"
+msgstr "Amalachadh slige GNOMW"
+
+#: chrome-gnome-shell-key-hours:1
+msgid "hours"
+msgstr "uair(ean) a thìde"
+
+#: chrome-gnome-shell-key-manifest_description:1
+msgid ""
+"This extension provides integration with GNOME Shell and the corresponding "
+"extensions repository https://extensions.gnome.org"
+msgstr ""
+"Bheir an leudachan seo dhut amalachadh le Slige GNOME agus Shell ionad-"
+"tasgaidh nan leudachan co-cheangailte rithe https://extensions.gnome.org"
+
+#. String placeholders:
+#. request
+#.
+#: chrome-gnome-shell-key-native_request_failed:1
+msgid "«$REQUEST$» native request failed"
+msgstr "Dh'fhàillig leis an iarrtas tùsail \"$REQUEST$\""
+
+#: chrome-gnome-shell-key-network_error:1
+msgid ""
+"A network error has occurred. Please check your Internet connection and/or "
+"proxy settings."
+msgstr ""
+"Thachair mearachd lìonraidh. Thoir sùil air a' cheangal dhan eadar-lìon agad "
+"agus/no rèiteachadh a' phrogsaidh."
+
+#: chrome-gnome-shell-key-never:1
+msgid "never"
+msgstr "chan ann idir"
+
+#: chrome-gnome-shell-key-no:1
+msgid "No"
+msgstr "Chan eil"
+
+#: chrome-gnome-shell-key-no_host_connector:1
+msgid ""
+"Although GNOME Shell integration extension is running, native host connector "
+"is not detected. Refer <a href='https://wiki.gnome.org/Projects/"
+"GnomeShellIntegrationForChrome/Installation'>documentation</a> for "
+"instructions about installing connector."
+msgstr ""
+"Ger a tha leudachan amalachadh Slige GNOME Shell 'na ruith, cha do mhothaich "
+"sinn dha cheangladair òstair tùsail. Faic an <a href='https://wiki.gnome.or"
+"g/Projects/GnomeShellIntegrationForChrome/Installation'>docamaideadh</a> "
+"airson stiùireadh air mar a stàlaicheas tu an ceangladair."
+
+#: chrome-gnome-shell-key-no_host_response:1
+msgid "No host response"
+msgstr "Cha do fhreagair an t-òstair"
+
+#: chrome-gnome-shell-key-older_connector:1
+msgid "older than version 4"
+msgstr "nas sine na tionndadh 4"
+
+#: chrome-gnome-shell-key-options_check_period:1
+msgid "Update check period"
+msgstr "Àm a' toirt sùil airson ùrachadh"
+
+#: chrome-gnome-shell-key-options_last_check:1
+msgid "Last check"
+msgstr "An sgrùdadh mu dheireadh"
+
+#: chrome-gnome-shell-key-options_link:1
+msgid "Options"
+msgstr "Roghainnean"
+
+#: chrome-gnome-shell-key-options_next_check:1
+msgid "Next check"
+msgstr "An t-ath-sgrùdadh"
+
+#: chrome-gnome-shell-key-options_saved:1
+msgid "Options saved."
+msgstr "Chaidh na roghainnean a shàbhaladh."
+
+#: chrome-gnome-shell-key-options_show_network_errors:1
+msgid "Show information about network errors"
+msgstr "Seall fiosrachadh mu mhearachdan lìonraidh"
+
+#: chrome-gnome-shell-key-options_show_network_errors_notice:1
+msgid "Chrome permission «webRequest» required."
+msgstr "Tha feum air cead Chrome \"webRequest\"."
+
+#: chrome-gnome-shell-key-options_show_release_notes:1
+msgid "Show release notes when extension updated"
+msgstr "Seall na nòtaichean-sgaoilidh nuair a thèid an leudachan ùrachadh"
+
+#: chrome-gnome-shell-key-options_synchronize_extensions:1
+msgid "Synchronize extensions list"
+msgstr "Sioncronaich liosta nan leudachan"
+
+#: chrome-gnome-shell-key-options_synchronize_extensions_notice:1
+msgid ""
+"If enabled, your GNOME Shell extensions list will be synchronized with your "
+"Google account."
+msgstr ""
+"Ma tha seo an comas, thèid liosta nan leudachan Slige GNOME a "
+"shioncronachadh leis a' chunntas Google agad."
+
+#. String placeholders:
+#. gs_chrome
+#.
+#: chrome-gnome-shell-key-options_title:1
+msgid "$GS_CHROME$ options"
+msgstr "Roghainnean $GS_CHROME$"
+
+#: chrome-gnome-shell-key-options_update_check:1
+msgid "Check for extensions update"
+msgstr "Thoir sùil airson ùrachadh nan leudachan"
+
+#: chrome-gnome-shell-key-platform_not_supported:1
+msgid "Native host connector is not supported for your platform."
+msgstr "Cha chuirear taic ri ceangladair òstair tùsail air an ùrlar agad."
+
+#: chrome-gnome-shell-key-retry:1
+msgid "Retry"
+msgstr "Feuch ris a-rithist"
+
+#: chrome-gnome-shell-key-save:1
+msgid "Save"
+msgstr "Sàbhail"
+
+#: chrome-gnome-shell-key-synchronization:1
+msgid "Synchronization"
+msgstr "Sioncronachadh"
+
+#: chrome-gnome-shell-key-synchronization_cancel:1
+msgid "Do not enable synchronization."
+msgstr "Na cuir an sioncronachadh an comas."
+
+#. String placeholders:
+#. cause
+#.
+#: chrome-gnome-shell-key-synchronization_failed:1
+msgid "Failed to synchronize extensions: $CAUSE$"
+msgstr "Cha deach leinn na leudachain a shioncronachadh: $CAUSE$"
+
+#: chrome-gnome-shell-key-synchronization_storage_exists:1
+msgid "Your remote synchronization storage already contains extensions list."
+msgstr ""
+"Tha liosta nan leudachan ann an stòras cèin an t-sioncronachaidh agad mu "
+"thràth."
+
+#: chrome-gnome-shell-key-synchronization_use_local:1
+msgid "Use local extensions list, overwrite remote."
+msgstr ""
+"Cleachd liosta nan leudachan ionadail agus sgrìobh thairis air an tè chèin."
+
+#: chrome-gnome-shell-key-synchronization_use_remote:1
+msgid "Use remote extensions list, overwrite local."
+msgstr ""
+"Cleachd liosta nan leudachan chèin agus sgrìobh thairis air an tè ionadail."
+
+#. HTML markup enabled for this string.
+#: chrome-gnome-shell-key-translation_credits:1
+msgid "translation_credits"
+msgstr "GunChleoc <fios@foramnagaidhlig.net>"
+
+#: chrome-gnome-shell-key-translation_credits_title:1
+msgid "About translation"
+msgstr "Mun eadar-theangachadh"
+
+#: chrome-gnome-shell-key-unknown_error:1
+msgid "unknown error"
+msgstr "mearachd nach aithne dhuinn"
+
+#: chrome-gnome-shell-key-update_available:1
+msgid "An update for GNOME Shell extensions available"
+msgstr "Tha ùrachadh air leudachain Slige GNOME ri fhaighinn"
+
+#. String placeholders:
+#. cause
+#.
+#: chrome-gnome-shell-key-update_check_failed:1
+msgid "Failed to check extensions updates: $CAUSE$"
+msgstr ""
+"Cha deach leinn sùil a thoirt airson ùrachaidhean nan leudachan: $CAUSE$"
+
+#: chrome-gnome-shell-key-version:1
+msgid "version $$1"
+msgstr "tionndadh $$1"
+
+#: chrome-gnome-shell-key-warning_versions_mismatch:1
+msgid ""
+"You are using different versions of GNOME Shell integration extension ($$1) "
+"and native host connector ($$2). Some features may not work or work wrong."
+msgstr ""
+"Chan eil na tionndaidhean dhe leudachan amalachadh Slige GNOME ($$1) agus "
+"dhen cheangladair òstair tùsail ($$2) a-rèir a chèile. Dh'fhaoidte nach "
+"obraich a h-uile gleus mar bu chòir no nach obraich iad idir."
+
+#: chrome-gnome-shell-key-yes:1
+msgid "Yes"
+msgstr "Tha"
+
+#. Chrome store description
+#: chrome-gnome-shell-store-description:1
+msgid ""
+"You MUST install native connector for this extension to work.\n"
+"\n"
+"For Arch Linux there is a PKGBUILD available in the AUR: https://aur."
+"archlinux.org/packages/chrome-gnome-shell-git\n"
+"\n"
+"For Fedora Linux there is package available in Copr: https://copr."
+"fedorainfracloud.org/coprs/region51/chrome-gnome-shell\n"
+"\n"
+"In Gentoo Linux you can install connector with command:\n"
+"emerge gnome-extra/chrome-gnome-shell\n"
+"\n"
+"For Ubuntu Linux package is available in ne0sight/chrome-gnome-shell PPA. To "
+"install it type:\n"
+"sudo add-apt-repository ppa:ne0sight/chrome-gnome-shell\n"
+"sudo apt-get update\n"
+"sudo apt-get install chrome-gnome-shell\n"
+"\n"
+"You also can install connector manually. See https://wiki.gnome.org/Projects/"
+"GnomeShellIntegrationForChrome/Installation for install instructions.\n"
+msgstr ""
+"Feumaidh tu ceangladair tùsail a stàladh mus obraich an leudachan seo.\n"
+"\n"
+"Airson Arch Linux, tha PKGBUILD ri fhaighinn san AUR: "
+"https://aur.archlinux.org/packages/chrome-gnome-shell-git\n"
+"\n"
+"Airson Fedora Linux, tha pacaid ri faighinn ann an Copr: "
+"https://copr.fedorainfracloud.org/coprs/region51/chrome-gnome-shell\n"
+"\n"
+"Airson Gentoo Linux, 's urrainn dhut ceangladair a stàladh leis an àithne:\n"
+"emerge gnome-extra/chrome-gnome-shell\n"
+"\n"
+"Airson Ubuntu Linux, tha pacaid ri faighinn sa PPA ne0sight/chrome-gnome-"
+"shell. Gus a stàladh, sgrìobh:\n"
+"sudo add-apt-repository ppa:ne0sight/chrome-gnome-shell\n"
+"sudo apt-get update\n"
+"sudo apt-get install chrome-gnome-shell\n"
+"\n"
+"'S urrainn dhut ceangladair a stàladh a làimh cuideachd. Faic "
+"https://wiki.gnome.org/Projects/GnomeShellIntegrationForChrome/Installation "
+"airson stiùireadh air an stàladh.\n"
