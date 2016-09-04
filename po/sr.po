@@ -6,65 +6,78 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 1.0\n"
 "Report-Msgid-Bugs-To: ykonotopov@gmail.com\n"
-"POT-Creation-Date: 2016-08-11 10:44+0000\n"
+"POT-Creation-Date: 2016-09-04 19:46+0000\n"
 "PO-Revision-Date: 2016-08-26 20:34+0200\n"
 "Last-Translator: Мирослав Николић <miroslavnikolic@rocketmail.com>\n"
 "Language-Team: српски <gnome-sr@googlegroups.org>\n"
 "Language: sr\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=utf-8\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=4; plural=n==1? 3 : n%10==1 && n%100!=11 ? 0 : "
-"n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+"Plural-Forms: nplurals=4; plural=n==1? 3 : n%10==1 && n%100!=11 ? 0 : n"
+"%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
 
 #: chrome-gnome-shell-key-close:1
 msgid "Close"
 msgstr "Затвори"
 
+#. Shown to user when Web extension sent request to native host messaging
+#. application and waiting for result.
 #: chrome-gnome-shell-key-connecting_host_app:1
 msgid "Connecting to native host application…"
 msgstr "Повезујем се са изворним програмом домаћином…"
 
+#. Shown to user when response of extension API call does not follow known
+#. format.
 #: chrome-gnome-shell-key-error_extension_response:1
 msgid "Wrong extension response received"
 msgstr "Примљен је погрешан одговор проширења"
 
-#. Used as title, eg in table header.
+#. Used as title, eg in table header. Means 'Does GNOME Shell extension
+#. enabled?'
 #: chrome-gnome-shell-key-extension_enabled:1
 msgid "Enabled"
 msgstr "Укључено"
 
-#. Used as title, eg in table header.
+#. Used as title, eg in table header. Means 'Does GNOME Shell extension
+#. installed?'
 #: chrome-gnome-shell-key-extension_installed:1
 msgid "Installed"
 msgstr "Инсталирано"
 
-#. Used as title, eg in table header. Means 'Extension name'.
+#. Used as title, eg in table header. Means 'GNOME Shell extension name'.
 #: chrome-gnome-shell-key-extension_name:1
 msgid "Extension"
 msgstr "Проширење"
 
+#. This is a part of phrase like 'Extension Top Icons must be downgraded'.
 #: chrome-gnome-shell-key-extension_status_downgrade:1
 msgid "must be downgraded"
 msgstr "мора бити разграђено"
 
+#. This is a part of phrase like 'Extension Top Icons can be upgraded'.
 #: chrome-gnome-shell-key-extension_status_upgrade:1
 msgid "can be upgraded"
 msgstr "може бити надограђено"
 
-#. Used as title, eg in table header.
+#. Used as title, eg in table header. Means 'Does GNOME Shell extension status
+#. synchronized with remote browser storage?'
 #: chrome-gnome-shell-key-extension_synchronized:1
 msgid "Synchronized"
 msgstr "Усклађено"
 
+#. This is a project title. Used as extension name in Chrome Store and in some
+#. titlebars.
 #: chrome-gnome-shell-key-gs_chrome:1
 msgid "GNOME Shell integration"
 msgstr "Интеграција Гномове шкољке"
 
+#. This is a part of phrase 'Update check period: xx hours'
 #: chrome-gnome-shell-key-hours:1
 msgid "hours"
 msgstr "сати"
 
+#. Used as extension description in Chrome Store
 #: chrome-gnome-shell-key-manifest_description:1
 msgid ""
 "This extension provides integration with GNOME Shell and the corresponding "
@@ -73,9 +86,12 @@ msgstr ""
 "Ово проширење обезбеђује интеграцију са Гномовом шкољком и одговарајућом "
 "ризницом проширења „https://extensions.gnome.org“"
 
+#. $REQUEST$ is a placeholder for technical name of request that web extension
+#. make via native messaging host application.
+#.
 #. String placeholders:
 #. request
-#. 
+#.
 #: chrome-gnome-shell-key-native_request_failed:1
 msgid "«$REQUEST$» native request failed"
 msgstr "«$REQUEST$» изворни захтев није успео"
@@ -88,6 +104,7 @@ msgstr ""
 "Дошло је до грешке са мрежом. Проверите вашу Интернет везу и/или подешавања "
 "посредника."
 
+#. This is a part of phrase 'Last check: never'
 #: chrome-gnome-shell-key-never:1
 msgid "never"
 msgstr "никада"
@@ -98,60 +115,82 @@ msgstr "Не"
 
 #: chrome-gnome-shell-key-no_host_connector:1
 msgid ""
-"Although GNOME Shell integration extension is running, native host connector"
-" is not detected. Refer <a "
-"href='https://wiki.gnome.org/Projects/GnomeShellIntegrationForChrome/Installation'>documentation</a>"
-" for instructions about installing connector."
+"Although GNOME Shell integration extension is running, native host connector "
+"is not detected. Refer <a href='https://wiki.gnome.org/Projects/"
+"GnomeShellIntegrationForChrome/Installation'>documentation</a> for "
+"instructions about installing connector."
 msgstr ""
 "Иако проширење интеграције Гномове шкољке ради, изворни конектор домаћина "
-"није откривен. Погледајте у <a href='https://wiki.gnome.org/Projects/GnomeShe"
-"llIntegrationForChrome/Installation'>документацији</a> упутства о "
+"није откривен. Погледајте у <a href='https://wiki.gnome.org/Projects/"
+"GnomeShellIntegrationForChrome/Installation'>документацији</a> упутства о "
 "инсталирању конектора."
 
+#. Means 'Web extension does not received answer from native messaging host
+#. application.'
 #: chrome-gnome-shell-key-no_host_response:1
 msgid "No host response"
 msgstr "Нема одговора домаћина"
 
+#. Part of phrase eg 'You are using different versions of GNOME Shell
+#. integration extension (version 5) and native host connector (older than
+#. version 4)'.
 #: chrome-gnome-shell-key-older_connector:1
 msgid "older than version 4"
 msgstr "старије од издања 4"
 
+#. Option name. Allow to set interval between GNOME Shell extensions update
+#. checks.
 #: chrome-gnome-shell-key-options_check_period:1
 msgid "Update check period"
 msgstr "Период провере освежавања"
 
+#. This is a start of phrase (followed by date/time) of last GNOME Shell
+#. extensions update check.
 #: chrome-gnome-shell-key-options_last_check:1
 msgid "Last check"
 msgstr "Последња провера"
 
+#. Link name for options tab.
 #: chrome-gnome-shell-key-options_link:1
 msgid "Options"
 msgstr "Опције"
 
+#. This is a start of phrase (followed by date/time) of next GNOME Shell
+#. extensions update check.
 #: chrome-gnome-shell-key-options_next_check:1
 msgid "Next check"
 msgstr "Следећа провера"
 
+#. Means 'Options were saved successfully after user clicked Save button'
 #: chrome-gnome-shell-key-options_saved:1
 msgid "Options saved."
 msgstr "Опције су сачуване."
 
+#. Option name. By default Chrome do not reveal exact network error in case of
+#. request failure. Allow enable/disable extended error information.
 #: chrome-gnome-shell-key-options_show_network_errors:1
 msgid "Show information about network errors"
 msgstr "Прикажи обавештење о грешкама мреже"
 
+#. This is a notice under option name. Warns user that additional browser
+#. permission is required if option will be enabled.
 #: chrome-gnome-shell-key-options_show_network_errors_notice:1
 msgid "Chrome permission «webRequest» required."
 msgstr "Потребан је „веб_захтев“ Хромовог овлашћења."
 
+#. Option name. Allow to enable/disable popup with release notes when Web
+#. extension is updated.
 #: chrome-gnome-shell-key-options_show_release_notes:1
 msgid "Show release notes when extension updated"
 msgstr "Прикажи напомене о издању када се освежи проширење"
 
+#. Option name. Allow to enable/disable synchronization of GNOME Shell
+#. extensions with remote browser storage.
 #: chrome-gnome-shell-key-options_synchronize_extensions:1
 msgid "Synchronize extensions list"
 msgstr "Усагласи списак проширења"
 
+#. This is a notice under option name.
 #: chrome-gnome-shell-key-options_synchronize_extensions_notice:1
 msgid ""
 "If enabled, your GNOME Shell extensions list will be synchronized with your "
@@ -160,13 +199,18 @@ msgstr ""
 "Ако је укључено, ваш списак проширења Гномове шкољке биће усаглашен са вашим "
 "Гугл налогом."
 
+#. $GS_CHROME$ is placeholder for 'GNOME Shell integration' string. This
+#. string used as title for Options page. This title is not shown in Chrome,
+#. but may be shown in other browsers.
+#.
 #. String placeholders:
 #. gs_chrome
-#. 
+#.
 #: chrome-gnome-shell-key-options_title:1
 msgid "$GS_CHROME$ options"
 msgstr "$GS_CHROME$ опције"
 
+#. Option name. Allow enable/disable update check for GNOME Shell extensions.
 #: chrome-gnome-shell-key-options_update_check:1
 msgid "Check for extensions update"
 msgstr "Провери за освежењима проширења"
@@ -183,6 +227,7 @@ msgstr "Покушај поново"
 msgid "Save"
 msgstr "Сачувај"
 
+#. Link name for synchronization tab in options dialog.
 #: chrome-gnome-shell-key-synchronization:1
 msgid "Synchronization"
 msgstr "Усаглашавање"
@@ -191,9 +236,11 @@ msgstr "Усаглашавање"
 msgid "Do not enable synchronization."
 msgstr "Не укључуј усаглашавање."
 
+#. $CAUSE$ is placeholder for error that caused synchronization failure.
+#.
 #. String placeholders:
 #. cause
-#. 
+#.
 #: chrome-gnome-shell-key-synchronization_failed:1
 msgid "Failed to synchronize extensions: $CAUSE$"
 msgstr "Нисам успео да усагласим проширења: $CAUSE$"
@@ -210,15 +257,19 @@ msgstr "Користи месни списак проширења, препиш�
 msgid "Use remote extensions list, overwrite local."
 msgstr "Користи удаљени списак проширења, препиши месни."
 
-#. HTML markup enabled for this string.
+#. This is content of 'About translation' tab in Options dialog. Thank you for
+#. translation and feel free to add yourself here. HTML markup enabled for
+#. this string.
 #: chrome-gnome-shell-key-translation_credits:1
 msgid "translation_credits"
 msgstr "Мирослав Николић <miroslavnikolic@rocketmail.com>"
 
+#. Link name for translation credits tab in options dialog.
 #: chrome-gnome-shell-key-translation_credits_title:1
 msgid "About translation"
 msgstr "О преводу"
 
+#. This should newer be shown to user. However better safe than sorry.
 #: chrome-gnome-shell-key-unknown_error:1
 msgid "unknown error"
 msgstr "непозната грешка"
@@ -227,13 +278,16 @@ msgstr "непозната грешка"
 msgid "An update for GNOME Shell extensions available"
 msgstr "Доступно је освежење за проширења Гномове шкољке"
 
+#. $CAUSE$ is placeholder for error that caused update failure.
+#.
 #. String placeholders:
 #. cause
-#. 
+#.
 #: chrome-gnome-shell-key-update_check_failed:1
 msgid "Failed to check extensions updates: $CAUSE$"
 msgstr "Нисам успео да проверим освежења проширења: $CAUSE$"
 
+#. Part of phrase eg 'GNOME Shell integration extension (version 5)'
 #: chrome-gnome-shell-key-version:1
 msgid "version $$1"
 msgstr "издање $$1"
@@ -256,27 +310,31 @@ msgstr "Да"
 msgid ""
 "You MUST install native connector for this extension to work.\n"
 "\n"
-"For Arch Linux there is a PKGBUILD available in the AUR: https://aur.archlinux.org/packages/chrome-gnome-shell-git\n"
+"For Arch Linux there is a PKGBUILD available in the AUR: https://aur."
+"archlinux.org/packages/chrome-gnome-shell-git\n"
 "\n"
-"For Fedora Linux there is package available in Copr: https://copr.fedorainfracloud.org/coprs/region51/chrome-gnome-shell\n"
+"For Fedora Linux there is package available in Copr: https://copr."
+"fedorainfracloud.org/coprs/region51/chrome-gnome-shell\n"
 "\n"
 "In Gentoo Linux you can install connector with command:\n"
 "emerge gnome-extra/chrome-gnome-shell\n"
 "\n"
-"For Ubuntu Linux package is available in ne0sight/chrome-gnome-shell PPA. To install it type:\n"
+"For Ubuntu Linux package is available in ne0sight/chrome-gnome-shell PPA. To "
+"install it type:\n"
 "sudo add-apt-repository ppa:ne0sight/chrome-gnome-shell\n"
 "sudo apt-get update\n"
 "sudo apt-get install chrome-gnome-shell\n"
 "\n"
-"You also can install connector manually. See https://wiki.gnome.org/Projects/GnomeShellIntegrationForChrome/Installation for install instructions.\n"
+"You also can install connector manually. See https://wiki.gnome.org/Projects/"
+"GnomeShellIntegrationForChrome/Installation for install instructions.\n"
 msgstr ""
 "МОРАТЕ инсталирати изворни конектор да би ово проширење радило.\n"
 "\n"
-"За Арч Линукс постоји „PKGBUILD“ доступан у АУР-у: "
-"https://aur.archlinux.org/packages/chrome-gnome-shell-git\n"
+"За Арч Линукс постоји „PKGBUILD“ доступан у АУР-у: https://aur.archlinux.org/"
+"packages/chrome-gnome-shell-git\n"
 "\n"
-"За Федору Линукс пакет је доступан у Копр-у: "
-"https://copr.fedorainfracloud.org/coprs/region51/chrome-gnome-shell\n"
+"За Федору Линукс пакет је доступан у Копр-у: https://copr.fedorainfracloud."
+"org/coprs/region51/chrome-gnome-shell\n"
 "\n"
 "У Џенту Линуксу конектор можете инсталирати наредбом:\n"
 "emerge gnome-extra/chrome-gnome-shell\n"
@@ -287,6 +345,6 @@ msgstr ""
 "sudo apt-get update\n"
 "sudo apt-get install chrome-gnome-shell\n"
 "\n"
-"Можете такође и ручно да инсталирате повезивач. Погледајте "
-"„https://wiki.gnome.org/Projects/GnomeShellIntegrationForChrome/Installation“"
-" за упутствима о инсталацији.\n"
+"Можете такође и ручно да инсталирате повезивач. Погледајте „https://wiki."
+"gnome.org/Projects/GnomeShellIntegrationForChrome/Installation“ за "
+"упутствима о инсталацији.\n"

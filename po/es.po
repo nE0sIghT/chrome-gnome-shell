@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 1.0\n"
 "Report-Msgid-Bugs-To: ykonotopov@gmail.com\n"
-"POT-Creation-Date: 2016-08-11 10:44+0000\n"
+"POT-Creation-Date: 2016-09-04 19:46+0000\n"
 "PO-Revision-Date: 2016-08-31 13:54+0200\n"
 "Last-Translator: Daniel Mustieles <daniel.mustieles@gmail.com>\n"
 "Language-Team: Español; Castellano <gnome-es-list@gnome.org>\n"
@@ -24,50 +24,63 @@ msgstr ""
 msgid "Close"
 msgstr "Cerrar"
 
+#. Shown to user when Web extension sent request to native host messaging
+#. application and waiting for result.
 #: chrome-gnome-shell-key-connecting_host_app:1
 msgid "Connecting to native host application…"
 msgstr "Conectado al equipo nativo de la aplicación…"
 
+#. Shown to user when response of extension API call does not follow known
+#. format.
 #: chrome-gnome-shell-key-error_extension_response:1
 msgid "Wrong extension response received"
 msgstr "Respuesta de extensión incorrecta recibida"
 
-#. Used as title, eg in table header.
+#. Used as title, eg in table header. Means 'Does GNOME Shell extension
+#. enabled?'
 #: chrome-gnome-shell-key-extension_enabled:1
 msgid "Enabled"
 msgstr "Activada"
 
-#. Used as title, eg in table header.
+#. Used as title, eg in table header. Means 'Does GNOME Shell extension
+#. installed?'
 #: chrome-gnome-shell-key-extension_installed:1
 msgid "Installed"
 msgstr "Instalada"
 
-#. Used as title, eg in table header. Means 'Extension name'.
+#. Used as title, eg in table header. Means 'GNOME Shell extension name'.
 #: chrome-gnome-shell-key-extension_name:1
 msgid "Extension"
 msgstr "Extensión"
 
+#. This is a part of phrase like 'Extension Top Icons must be downgraded'.
 #: chrome-gnome-shell-key-extension_status_downgrade:1
 msgid "must be downgraded"
 msgstr "se debe bajar de versión"
 
+#. This is a part of phrase like 'Extension Top Icons can be upgraded'.
 #: chrome-gnome-shell-key-extension_status_upgrade:1
 msgid "can be upgraded"
 msgstr "se puede actualizar"
 
-#. Used as title, eg in table header.
+#. Used as title, eg in table header. Means 'Does GNOME Shell extension status
+#. synchronized with remote browser storage?'
 #: chrome-gnome-shell-key-extension_synchronized:1
 msgid "Synchronized"
 msgstr "Sincronizada"
 
+#. This is a project title. Used as extension name in Chrome Store and in some
+#. titlebars.
 #: chrome-gnome-shell-key-gs_chrome:1
 msgid "GNOME Shell integration"
 msgstr "Integración con GNOME Shell"
 
+#. This is a part of phrase 'Update check period: xx hours'
 #: chrome-gnome-shell-key-hours:1
 msgid "hours"
 msgstr "horas"
 
+#. Used as extension description in Chrome Store
 #: chrome-gnome-shell-key-manifest_description:1
 msgid ""
 "This extension provides integration with GNOME Shell and the corresponding "
@@ -76,6 +89,9 @@ msgstr ""
 "Esta extensión proporciona integración con GNOME Shell y el correspondiente "
 "repositorio de extensiones https://extensions.gnome.org"
 
+#. $REQUEST$ is a placeholder for technical name of request that web extension
+#. make via native messaging host application.
+#.
 #. String placeholders:
 #. request
 #.
@@ -91,6 +107,7 @@ msgstr ""
 "Ha ocurrido un error de red. Compruebe su conexión a Internet y/o su "
 "configuración del proxy."
 
+#. This is a part of phrase 'Last check: never'
 #: chrome-gnome-shell-key-never:1
 msgid "never"
 msgstr "nunca"
@@ -111,50 +128,72 @@ msgstr ""
 "org/Projects/GnomeShellIntegrationForChrome/Installation'>documentación</a> "
 "para obtener instrucciones sobre cómo instalar el conector."
 
+#. Means 'Web extension does not received answer from native messaging host
+#. application.'
 #: chrome-gnome-shell-key-no_host_response:1
 msgid "No host response"
 msgstr "Sin respuesta del equipo"
 
+#. Part of phrase eg 'You are using different versions of GNOME Shell
+#. integration extension (version 5) and native host connector (older than
+#. version 4)'.
 #: chrome-gnome-shell-key-older_connector:1
 msgid "older than version 4"
 msgstr "anterior a la versión 4"
 
+#. Option name. Allow to set interval between GNOME Shell extensions update
+#. checks.
 #: chrome-gnome-shell-key-options_check_period:1
 msgid "Update check period"
 msgstr "Frecuencia de comprobación de actualizaciones"
 
+#. This is a start of phrase (followed by date/time) of last GNOME Shell
+#. extensions update check.
 #: chrome-gnome-shell-key-options_last_check:1
 msgid "Last check"
 msgstr "Última comprobación"
 
+#. Link name for options tab.
 #: chrome-gnome-shell-key-options_link:1
 msgid "Options"
 msgstr "Opciones"
 
+#. This is a start of phrase (followed by date/time) of next GNOME Shell
+#. extensions update check.
 #: chrome-gnome-shell-key-options_next_check:1
 msgid "Next check"
 msgstr "Siguiente comprobación"
 
+#. Means 'Options were saved successfully after user clicked Save button'
 #: chrome-gnome-shell-key-options_saved:1
 msgid "Options saved."
 msgstr "Opciones guardadas."
 
+#. Option name. By default Chrome do not reveal exact network error in case of
+#. request failure. Allow enable/disable extended error information.
 #: chrome-gnome-shell-key-options_show_network_errors:1
 msgid "Show information about network errors"
 msgstr "Mostrar información sobre los errores de la red"
 
+#. This is a notice under option name. Warns user that additional browser
+#. permission is required if option will be enabled.
 #: chrome-gnome-shell-key-options_show_network_errors_notice:1
 msgid "Chrome permission «webRequest» required."
 msgstr "Se requiere el permiso «webRequest» de Chrome."
 
+#. Option name. Allow to enable/disable popup with release notes when Web
+#. extension is updated.
 #: chrome-gnome-shell-key-options_show_release_notes:1
 msgid "Show release notes when extension updated"
 msgstr "Mostrar las notas de publicación cuando se actualice la extensión"
 
+#. Option name. Allow to enable/disable synchronization of GNOME Shell
+#. extensions with remote browser storage.
 #: chrome-gnome-shell-key-options_synchronize_extensions:1
 msgid "Synchronize extensions list"
 msgstr "Lista de extensiones sincronizada"
 
+#. This is a notice under option name.
 #: chrome-gnome-shell-key-options_synchronize_extensions_notice:1
 msgid ""
 "If enabled, your GNOME Shell extensions list will be synchronized with your "
@@ -163,6 +202,10 @@ msgstr ""
 "Si está activada, sus lista de extensiones de GNOME Shell se sincronizará "
 "con su cuenta de Google."
 
+#. $GS_CHROME$ is placeholder for 'GNOME Shell integration' string. This
+#. string used as title for Options page. This title is not shown in Chrome,
+#. but may be shown in other browsers.
+#.
 #. String placeholders:
 #. gs_chrome
 #.
@@ -170,6 +213,7 @@ msgstr ""
 msgid "$GS_CHROME$ options"
 msgstr "opciones de $GS_CHROME$"
 
+#. Option name. Allow enable/disable update check for GNOME Shell extensions.
 #: chrome-gnome-shell-key-options_update_check:1
 msgid "Check for extensions update"
 msgstr "Comprobar si hay actualizaciones de las extensiones"
@@ -186,6 +230,7 @@ msgstr "Reintentar"
 msgid "Save"
 msgstr "Guardar"
 
+#. Link name for synchronization tab in options dialog.
 #: chrome-gnome-shell-key-synchronization:1
 msgid "Synchronization"
 msgstr "Sincronización"
@@ -194,6 +239,8 @@ msgstr "Sincronización"
 msgid "Do not enable synchronization."
 msgstr "No activar la sincronización."
 
+#. $CAUSE$ is placeholder for error that caused synchronization failure.
+#.
 #. String placeholders:
 #. cause
 #.
@@ -215,15 +262,19 @@ msgstr "Usar lista de extensiones local, sobrescribir la remota."
 msgid "Use remote extensions list, overwrite local."
 msgstr "Usar lista de extensiones remota, sobrescribir la local."
 
-#. HTML markup enabled for this string.
+#. This is content of 'About translation' tab in Options dialog. Thank you for
+#. translation and feel free to add yourself here. HTML markup enabled for
+#. this string.
 #: chrome-gnome-shell-key-translation_credits:1
 msgid "translation_credits"
 msgstr "Daniel Mustieles <daniel.mustieles@gmail.com>, 2016"
 
+#. Link name for translation credits tab in options dialog.
 #: chrome-gnome-shell-key-translation_credits_title:1
 msgid "About translation"
 msgstr "Acerca de la traducción"
 
+#. This should newer be shown to user. However better safe than sorry.
 #: chrome-gnome-shell-key-unknown_error:1
 msgid "unknown error"
 msgstr "error desconocido"
@@ -232,6 +283,8 @@ msgstr "error desconocido"
 msgid "An update for GNOME Shell extensions available"
 msgstr "Hay disponible una actualización para las extensiones de GNOME Shell"
 
+#. $CAUSE$ is placeholder for error that caused update failure.
+#.
 #. String placeholders:
 #. cause
 #.
@@ -239,6 +292,7 @@ msgstr "Hay disponible una actualización para las extensiones de GNOME Shell"
 msgid "Failed to check extensions updates: $CAUSE$"
 msgstr "Falló al comprobar si hay actualizaciones: $CAUSE$"
 
+#. Part of phrase eg 'GNOME Shell integration extension (version 5)'
 #: chrome-gnome-shell-key-version:1
 msgid "version $$1"
 msgstr "versión $$1"

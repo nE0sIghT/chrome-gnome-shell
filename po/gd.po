@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: chrome-gnome-shell master\n"
 "Report-Msgid-Bugs-To: ykonotopov@gmail.com\n"
-"POT-Creation-Date: 2016-08-11 10:44+0000\n"
+"POT-Creation-Date: 2016-09-04 19:46+0000\n"
 "PO-Revision-Date: 2016-09-01 17:42+0100\n"
 "Last-Translator: GunChleoc <fios@foramnagaidhlig.net>\n"
 "Language-Team: Fòram na Gàidhlig\n"
@@ -23,50 +23,63 @@ msgstr ""
 msgid "Close"
 msgstr "Dùin"
 
+#. Shown to user when Web extension sent request to native host messaging
+#. application and waiting for result.
 #: chrome-gnome-shell-key-connecting_host_app:1
 msgid "Connecting to native host application…"
 msgstr "A' ceangal ri aplacaid òstair tùsail…"
 
+#. Shown to user when response of extension API call does not follow known
+#. format.
 #: chrome-gnome-shell-key-error_extension_response:1
 msgid "Wrong extension response received"
 msgstr "Fhuaras freagairt chearr an leudachain"
 
-#. Used as title, eg in table header.
+#. Used as title, eg in table header. Means 'Does GNOME Shell extension
+#. enabled?'
 #: chrome-gnome-shell-key-extension_enabled:1
 msgid "Enabled"
 msgstr "An comas"
 
-#. Used as title, eg in table header.
+#. Used as title, eg in table header. Means 'Does GNOME Shell extension
+#. installed?'
 #: chrome-gnome-shell-key-extension_installed:1
 msgid "Installed"
 msgstr "Air a stàladh"
 
-#. Used as title, eg in table header. Means 'Extension name'.
+#. Used as title, eg in table header. Means 'GNOME Shell extension name'.
 #: chrome-gnome-shell-key-extension_name:1
 msgid "Extension"
 msgstr "Leudachan"
 
+#. This is a part of phrase like 'Extension Top Icons must be downgraded'.
 #: chrome-gnome-shell-key-extension_status_downgrade:1
 msgid "must be downgraded"
 msgstr "feumach air ìsleachadh"
 
+#. This is a part of phrase like 'Extension Top Icons can be upgraded'.
 #: chrome-gnome-shell-key-extension_status_upgrade:1
 msgid "can be upgraded"
 msgstr "gabhaidh àrdachadh"
 
-#. Used as title, eg in table header.
+#. Used as title, eg in table header. Means 'Does GNOME Shell extension status
+#. synchronized with remote browser storage?'
 #: chrome-gnome-shell-key-extension_synchronized:1
 msgid "Synchronized"
 msgstr "Sioncronaichte"
 
+#. This is a project title. Used as extension name in Chrome Store and in some
+#. titlebars.
 #: chrome-gnome-shell-key-gs_chrome:1
 msgid "GNOME Shell integration"
 msgstr "Amalachadh slige GNOMW"
 
+#. This is a part of phrase 'Update check period: xx hours'
 #: chrome-gnome-shell-key-hours:1
 msgid "hours"
 msgstr "uair(ean) a thìde"
 
+#. Used as extension description in Chrome Store
 #: chrome-gnome-shell-key-manifest_description:1
 msgid ""
 "This extension provides integration with GNOME Shell and the corresponding "
@@ -75,6 +88,9 @@ msgstr ""
 "Bheir an leudachan seo dhut amalachadh le Slige GNOME agus Shell ionad-"
 "tasgaidh nan leudachan co-cheangailte rithe https://extensions.gnome.org"
 
+#. $REQUEST$ is a placeholder for technical name of request that web extension
+#. make via native messaging host application.
+#.
 #. String placeholders:
 #. request
 #.
@@ -90,6 +106,7 @@ msgstr ""
 "Thachair mearachd lìonraidh. Thoir sùil air a' cheangal dhan eadar-lìon agad "
 "agus/no rèiteachadh a' phrogsaidh."
 
+#. This is a part of phrase 'Last check: never'
 #: chrome-gnome-shell-key-never:1
 msgid "never"
 msgstr "chan ann idir"
@@ -106,54 +123,76 @@ msgid ""
 "instructions about installing connector."
 msgstr ""
 "Ger a tha leudachan amalachadh Slige GNOME Shell 'na ruith, cha do mhothaich "
-"sinn dha cheangladair òstair tùsail. Faic an <a href='https://wiki.gnome.or"
-"g/Projects/GnomeShellIntegrationForChrome/Installation'>docamaideadh</a> "
+"sinn dha cheangladair òstair tùsail. Faic an <a href='https://wiki.gnome.org/"
+"Projects/GnomeShellIntegrationForChrome/Installation'>docamaideadh</a> "
 "airson stiùireadh air mar a stàlaicheas tu an ceangladair."
 
+#. Means 'Web extension does not received answer from native messaging host
+#. application.'
 #: chrome-gnome-shell-key-no_host_response:1
 msgid "No host response"
 msgstr "Cha do fhreagair an t-òstair"
 
+#. Part of phrase eg 'You are using different versions of GNOME Shell
+#. integration extension (version 5) and native host connector (older than
+#. version 4)'.
 #: chrome-gnome-shell-key-older_connector:1
 msgid "older than version 4"
 msgstr "nas sine na tionndadh 4"
 
+#. Option name. Allow to set interval between GNOME Shell extensions update
+#. checks.
 #: chrome-gnome-shell-key-options_check_period:1
 msgid "Update check period"
 msgstr "Àm a' toirt sùil airson ùrachadh"
 
+#. This is a start of phrase (followed by date/time) of last GNOME Shell
+#. extensions update check.
 #: chrome-gnome-shell-key-options_last_check:1
 msgid "Last check"
 msgstr "An sgrùdadh mu dheireadh"
 
+#. Link name for options tab.
 #: chrome-gnome-shell-key-options_link:1
 msgid "Options"
 msgstr "Roghainnean"
 
+#. This is a start of phrase (followed by date/time) of next GNOME Shell
+#. extensions update check.
 #: chrome-gnome-shell-key-options_next_check:1
 msgid "Next check"
 msgstr "An t-ath-sgrùdadh"
 
+#. Means 'Options were saved successfully after user clicked Save button'
 #: chrome-gnome-shell-key-options_saved:1
 msgid "Options saved."
 msgstr "Chaidh na roghainnean a shàbhaladh."
 
+#. Option name. By default Chrome do not reveal exact network error in case of
+#. request failure. Allow enable/disable extended error information.
 #: chrome-gnome-shell-key-options_show_network_errors:1
 msgid "Show information about network errors"
 msgstr "Seall fiosrachadh mu mhearachdan lìonraidh"
 
+#. This is a notice under option name. Warns user that additional browser
+#. permission is required if option will be enabled.
 #: chrome-gnome-shell-key-options_show_network_errors_notice:1
 msgid "Chrome permission «webRequest» required."
 msgstr "Tha feum air cead Chrome \"webRequest\"."
 
+#. Option name. Allow to enable/disable popup with release notes when Web
+#. extension is updated.
 #: chrome-gnome-shell-key-options_show_release_notes:1
 msgid "Show release notes when extension updated"
 msgstr "Seall na nòtaichean-sgaoilidh nuair a thèid an leudachan ùrachadh"
 
+#. Option name. Allow to enable/disable synchronization of GNOME Shell
+#. extensions with remote browser storage.
 #: chrome-gnome-shell-key-options_synchronize_extensions:1
 msgid "Synchronize extensions list"
 msgstr "Sioncronaich liosta nan leudachan"
 
+#. This is a notice under option name.
 #: chrome-gnome-shell-key-options_synchronize_extensions_notice:1
 msgid ""
 "If enabled, your GNOME Shell extensions list will be synchronized with your "
@@ -162,6 +201,10 @@ msgstr ""
 "Ma tha seo an comas, thèid liosta nan leudachan Slige GNOME a "
 "shioncronachadh leis a' chunntas Google agad."
 
+#. $GS_CHROME$ is placeholder for 'GNOME Shell integration' string. This
+#. string used as title for Options page. This title is not shown in Chrome,
+#. but may be shown in other browsers.
+#.
 #. String placeholders:
 #. gs_chrome
 #.
@@ -169,6 +212,7 @@ msgstr ""
 msgid "$GS_CHROME$ options"
 msgstr "Roghainnean $GS_CHROME$"
 
+#. Option name. Allow enable/disable update check for GNOME Shell extensions.
 #: chrome-gnome-shell-key-options_update_check:1
 msgid "Check for extensions update"
 msgstr "Thoir sùil airson ùrachadh nan leudachan"
@@ -185,6 +229,7 @@ msgstr "Feuch ris a-rithist"
 msgid "Save"
 msgstr "Sàbhail"
 
+#. Link name for synchronization tab in options dialog.
 #: chrome-gnome-shell-key-synchronization:1
 msgid "Synchronization"
 msgstr "Sioncronachadh"
@@ -193,6 +238,8 @@ msgstr "Sioncronachadh"
 msgid "Do not enable synchronization."
 msgstr "Na cuir an sioncronachadh an comas."
 
+#. $CAUSE$ is placeholder for error that caused synchronization failure.
+#.
 #. String placeholders:
 #. cause
 #.
@@ -216,15 +263,19 @@ msgid "Use remote extensions list, overwrite local."
 msgstr ""
 "Cleachd liosta nan leudachan chèin agus sgrìobh thairis air an tè ionadail."
 
-#. HTML markup enabled for this string.
+#. This is content of 'About translation' tab in Options dialog. Thank you for
+#. translation and feel free to add yourself here. HTML markup enabled for
+#. this string.
 #: chrome-gnome-shell-key-translation_credits:1
 msgid "translation_credits"
 msgstr "GunChleoc <fios@foramnagaidhlig.net>"
 
+#. Link name for translation credits tab in options dialog.
 #: chrome-gnome-shell-key-translation_credits_title:1
 msgid "About translation"
 msgstr "Mun eadar-theangachadh"
 
+#. This should newer be shown to user. However better safe than sorry.
 #: chrome-gnome-shell-key-unknown_error:1
 msgid "unknown error"
 msgstr "mearachd nach aithne dhuinn"
@@ -233,6 +284,8 @@ msgstr "mearachd nach aithne dhuinn"
 msgid "An update for GNOME Shell extensions available"
 msgstr "Tha ùrachadh air leudachain Slige GNOME ri fhaighinn"
 
+#. $CAUSE$ is placeholder for error that caused update failure.
+#.
 #. String placeholders:
 #. cause
 #.
@@ -241,6 +294,7 @@ msgid "Failed to check extensions updates: $CAUSE$"
 msgstr ""
 "Cha deach leinn sùil a thoirt airson ùrachaidhean nan leudachan: $CAUSE$"
 
+#. Part of phrase eg 'GNOME Shell integration extension (version 5)'
 #: chrome-gnome-shell-key-version:1
 msgid "version $$1"
 msgstr "tionndadh $$1"
@@ -283,11 +337,11 @@ msgid ""
 msgstr ""
 "Feumaidh tu ceangladair tùsail a stàladh mus obraich an leudachan seo.\n"
 "\n"
-"Airson Arch Linux, tha PKGBUILD ri fhaighinn san AUR: "
-"https://aur.archlinux.org/packages/chrome-gnome-shell-git\n"
+"Airson Arch Linux, tha PKGBUILD ri fhaighinn san AUR: https://aur.archlinux."
+"org/packages/chrome-gnome-shell-git\n"
 "\n"
-"Airson Fedora Linux, tha pacaid ri faighinn ann an Copr: "
-"https://copr.fedorainfracloud.org/coprs/region51/chrome-gnome-shell\n"
+"Airson Fedora Linux, tha pacaid ri faighinn ann an Copr: https://copr."
+"fedorainfracloud.org/coprs/region51/chrome-gnome-shell\n"
 "\n"
 "Airson Gentoo Linux, 's urrainn dhut ceangladair a stàladh leis an àithne:\n"
 "emerge gnome-extra/chrome-gnome-shell\n"
@@ -298,6 +352,6 @@ msgstr ""
 "sudo apt-get update\n"
 "sudo apt-get install chrome-gnome-shell\n"
 "\n"
-"'S urrainn dhut ceangladair a stàladh a làimh cuideachd. Faic "
-"https://wiki.gnome.org/Projects/GnomeShellIntegrationForChrome/Installation "
-"airson stiùireadh air an stàladh.\n"
+"'S urrainn dhut ceangladair a stàladh a làimh cuideachd. Faic https://wiki."
+"gnome.org/Projects/GnomeShellIntegrationForChrome/Installation airson "
+"stiùireadh air an stàladh.\n"
