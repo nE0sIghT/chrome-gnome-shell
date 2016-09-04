@@ -11,7 +11,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"PO-Revision-Date: 2016-09-04 23:52+0300\n"
+"PO-Revision-Date: 2016-09-05 00:18+0300\n"
 "Last-Translator: Muhammet Kara <muhammetk@gmail.com>\n"
 "Language-Team: Türkçe <gnome-turk@gnome.org>\n"
 "Language: tr\n"
@@ -26,13 +26,13 @@ msgstr "Kapat"
 #. application and waiting for result.
 #: chrome-gnome-shell-key-connecting_host_app:1
 msgid "Connecting to native host application…"
-msgstr ""
+msgstr "Yerleşik ana makine uygulamasına bağlanılıyor…"
 
 #. Shown to user when response of extension API call does not follow known
 #. format.
 #: chrome-gnome-shell-key-error_extension_response:1
 msgid "Wrong extension response received"
-msgstr ""
+msgstr "Hatalı uzantı yanıtı alındı"
 
 #. Used as title, eg in table header. Means 'Does GNOME Shell extension
 #. enabled?'
@@ -54,24 +54,24 @@ msgstr "Uzantı"
 #. This is a part of phrase like 'Extension Top Icons must be downgraded'.
 #: chrome-gnome-shell-key-extension_status_downgrade:1
 msgid "must be downgraded"
-msgstr ""
+msgstr "sürümü düşürülmeli"
 
 #. This is a part of phrase like 'Extension Top Icons can be upgraded'.
 #: chrome-gnome-shell-key-extension_status_upgrade:1
 msgid "can be upgraded"
-msgstr ""
+msgstr "yükseltilebilir"
 
 #. Used as title, eg in table header. Means 'Does GNOME Shell extension status
 #. synchronized with remote browser storage?'
 #: chrome-gnome-shell-key-extension_synchronized:1
 msgid "Synchronized"
-msgstr ""
+msgstr "Eşzamanlandı"
 
 #. This is a project title. Used as extension name in Chrome Store and in some
 #. titlebars.
 #: chrome-gnome-shell-key-gs_chrome:1
 msgid "GNOME Shell integration"
-msgstr ""
+msgstr "GNOME Shell bütünleşmesi"
 
 #. This is a part of phrase 'Update check period: xx hours'
 #: chrome-gnome-shell-key-hours:1
@@ -84,6 +84,8 @@ msgid ""
 "This extension provides integration with GNOME Shell and the corresponding "
 "extensions repository https://extensions.gnome.org"
 msgstr ""
+"Bu uygulama, GNOME Shell ve buna uygun uzantı deposu https://extensions."
+"gnome.org ile bütünleşme sağlar"
 
 #. $REQUEST$ is a placeholder for technical name of request that web extension
 #. make via native messaging host application.
@@ -93,13 +95,15 @@ msgstr ""
 #.
 #: chrome-gnome-shell-key-native_request_failed:1
 msgid "«$REQUEST$» native request failed"
-msgstr ""
+msgstr "«$REQUEST$» yerleşik talebi başarısız oldu"
 
 #: chrome-gnome-shell-key-network_error:1
 msgid ""
 "A network error has occurred. Please check your Internet connection and/or "
 "proxy settings."
 msgstr ""
+"Bir ağ hatası meydana geldi. Lütfen Internet bağlantınızı ve/veya vakil "
+"sunucu ayarlarınızı kontrol edin."
 
 #. This is a part of phrase 'Last check: never'
 #: chrome-gnome-shell-key-never:1
@@ -122,26 +126,26 @@ msgstr ""
 #. application.'
 #: chrome-gnome-shell-key-no_host_response:1
 msgid "No host response"
-msgstr ""
+msgstr "Ana makine yanıt vermiyor"
 
 #. Part of phrase eg 'You are using different versions of GNOME Shell
 #. integration extension (version 5) and native host connector (older than
 #. version 4)'.
 #: chrome-gnome-shell-key-older_connector:1
 msgid "older than version 4"
-msgstr ""
+msgstr "sürüm 4'ten daha eski"
 
 #. Option name. Allow to set interval between GNOME Shell extensions update
 #. checks.
 #: chrome-gnome-shell-key-options_check_period:1
 msgid "Update check period"
-msgstr ""
+msgstr "Güncelleme denetleme periyodu"
 
 #. This is a start of phrase (followed by date/time) of last GNOME Shell
 #. extensions update check.
 #: chrome-gnome-shell-key-options_last_check:1
 msgid "Last check"
-msgstr ""
+msgstr "Son denetleme"
 
 #. Link name for options tab.
 #: chrome-gnome-shell-key-options_link:1
@@ -152,18 +156,18 @@ msgstr "Seçenekler"
 #. extensions update check.
 #: chrome-gnome-shell-key-options_next_check:1
 msgid "Next check"
-msgstr ""
+msgstr "Sonraki denetleme"
 
 #. Means 'Options were saved successfully after user clicked Save button'
 #: chrome-gnome-shell-key-options_saved:1
 msgid "Options saved."
-msgstr ""
+msgstr "Seçenekler kaydedildi."
 
 #. Option name. By default Chrome do not reveal exact network error in case of
 #. request failure. Allow enable/disable extended error information.
 #: chrome-gnome-shell-key-options_show_network_errors:1
 msgid "Show information about network errors"
-msgstr ""
+msgstr "Ağ hataları hakkındaki bilgileri göster"
 
 #. This is a notice under option name. Warns user that additional browser
 #. permission is required if option will be enabled.
@@ -225,7 +229,7 @@ msgstr "Eşzamanlandırma"
 
 #: chrome-gnome-shell-key-synchronization_cancel:1
 msgid "Do not enable synchronization."
-msgstr ""
+msgstr "Eşzamanlandırmayı etkinleştirme."
 
 #. $CAUSE$ is placeholder for error that caused synchronization failure.
 #.
@@ -234,7 +238,7 @@ msgstr ""
 #.
 #: chrome-gnome-shell-key-synchronization_failed:1
 msgid "Failed to synchronize extensions: $CAUSE$"
-msgstr ""
+msgstr "Uzantıların eşzamanlandırılması başarısız oldu: $CAUSE$"
 
 #: chrome-gnome-shell-key-synchronization_storage_exists:1
 msgid "Your remote synchronization storage already contains extensions list."
@@ -254,11 +258,12 @@ msgstr ""
 #: chrome-gnome-shell-key-translation_credits:1
 msgid "translation_credits"
 msgstr ""
+"Türkçe çeviri: <a href=\"mailto:muhammetk@gmail.com\">Muhammet Kara</a>"
 
 #. Link name for translation credits tab in options dialog.
 #: chrome-gnome-shell-key-translation_credits_title:1
 msgid "About translation"
-msgstr ""
+msgstr "Çeviri hakkında"
 
 #. This should newer be shown to user. However better safe than sorry.
 #: chrome-gnome-shell-key-unknown_error:1
@@ -267,7 +272,7 @@ msgstr "bilinmeyen hata"
 
 #: chrome-gnome-shell-key-update_available:1
 msgid "An update for GNOME Shell extensions available"
-msgstr ""
+msgstr "GNOME Shell uzantıları için bir güncelleme var"
 
 #. $CAUSE$ is placeholder for error that caused update failure.
 #.
