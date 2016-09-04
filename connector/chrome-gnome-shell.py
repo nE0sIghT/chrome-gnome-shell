@@ -183,7 +183,6 @@ def read_thread_func():
                         uuids.remove(extension['uuid'])
 
                 settings.set_strv(ENABLED_EXTENSIONS_KEY, uuids)
-                Gio.Settings.sync()
 
                 send_message({'success': True})
 
