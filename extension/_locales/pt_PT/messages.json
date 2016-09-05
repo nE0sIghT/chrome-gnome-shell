@@ -7,27 +7,51 @@
 		"message": "Fechar"
 	},
 	"connecting_host_app": {
+		"description": "Shown to user when Web extension sent request to native host messaging application and waiting for result.",
 		"message": "Connecting to native host application\u2026"
 	},
 	"error_extension_response": {
+		"description": "Shown to user when response of extension API call does not follow known format.",
 		"message": "Wrong extension response received"
 	},
+	"extension_enabled": {
+		"description": "Used as title, eg in table header. Means 'Does GNOME Shell extension enabled?'",
+		"message": "Enabled"
+	},
+	"extension_installed": {
+		"description": "Used as title, eg in table header. Means 'Does GNOME Shell extension installed?'",
+		"message": "Installed"
+	},
+	"extension_name": {
+		"description": "Used as title, eg in table header. Means 'GNOME Shell extension name'.",
+		"message": "Extension"
+	},
 	"extension_status_downgrade": {
+		"description": "This is a part of phrase like 'Extension Top Icons must be downgraded'.",
 		"message": "must be downgraded"
 	},
 	"extension_status_upgrade": {
+		"description": "This is a part of phrase like 'Extension Top Icons can be upgraded'.",
 		"message": "can be upgraded"
 	},
+	"extension_synchronized": {
+		"description": "Used as title, eg in table header. Means 'Does GNOME Shell extension status synchronized with remote browser storage?'",
+		"message": "Synchronized"
+	},
 	"gs_chrome": {
+		"description": "This is a project title. Used as extension name in Chrome Store and in some titlebars.",
 		"message": "GNOME Shell integration"
 	},
 	"hours": {
+		"description": "This is a part of phrase 'Update check period: xx hours'",
 		"message": "horas"
 	},
 	"manifest_description": {
+		"description": "Used as extension description in Chrome Store",
 		"message": "This extension provides integration with GNOME Shell and the corresponding extensions repository https://extensions.gnome.org"
 	},
 	"native_request_failed": {
+		"description": "$REQUEST$ is a placeholder for technical name of request that web extension make via native messaging host application.",
 		"message": "\u00ab$REQUEST$\u00bb native request failed",
 		"placeholders": {
 			"request": {
@@ -39,6 +63,7 @@
 		"message": "A network error has occurred. Please check your Internet connection and/or proxy settings."
 	},
 	"never": {
+		"description": "This is a part of phrase 'Last check: never'",
 		"message": "nunca"
 	},
 	"no": {
@@ -48,36 +73,55 @@
 		"message": "Although GNOME Shell integration extension is running, native host connector is not detected. Refer <a href='https://wiki.gnome.org/Projects/GnomeShellIntegrationForChrome/Installation'>documentation</a> for instructions about installing connector."
 	},
 	"no_host_response": {
+		"description": "Means 'Web extension does not received answer from native messaging host application.'",
 		"message": "No host response"
 	},
 	"older_connector": {
+		"description": "Part of phrase eg 'You are using different versions of GNOME Shell integration extension (version 5) and native host connector (older than version 4)'.",
 		"message": "older than version 4"
 	},
 	"options_check_period": {
+		"description": "Option name. Allow to set interval between GNOME Shell extensions update checks.",
 		"message": "Update check period"
 	},
 	"options_last_check": {
+		"description": "This is a start of phrase (followed by date/time) of last GNOME Shell extensions update check.",
 		"message": "\u00daltima verifica\u00e7\u00e3o"
 	},
 	"options_link": {
+		"description": "Link name for options tab.",
 		"message": "Op\u00e7\u00f5es"
 	},
 	"options_next_check": {
+		"description": "This is a start of phrase (followed by date/time) of next GNOME Shell extensions update check.",
 		"message": "Next check"
 	},
 	"options_saved": {
+		"description": "Means 'Options were saved successfully after user clicked Save button'",
 		"message": "Options saved."
 	},
 	"options_show_network_errors": {
+		"description": "Option name. By default Chrome do not reveal exact network error in case of request failure. Allow enable/disable extended error information.",
 		"message": "Show information about network errors"
 	},
 	"options_show_network_errors_notice": {
+		"description": "This is a notice under option name. Warns user that additional browser permission is required if option will be enabled.",
 		"message": "Chrome permission \u00abwebRequest\u00bb required."
 	},
 	"options_show_release_notes": {
+		"description": "Option name. Allow to enable/disable popup with release notes when Web extension is updated.",
 		"message": "Show release notes when extension updated"
 	},
+	"options_synchronize_extensions": {
+		"description": "Option name. Allow to enable/disable synchronization of GNOME Shell extensions with remote browser storage.",
+		"message": "Synchronize extensions list"
+	},
+	"options_synchronize_extensions_notice": {
+		"description": "This is a notice under option name.",
+		"message": "If enabled, your GNOME Shell extensions list will be synchronized with your Google account."
+	},
 	"options_title": {
+		"description": "$GS_CHROME$ is placeholder for 'GNOME Shell integration' string. This string used as title for Options page. This title is not shown in Chrome, but may be shown in other browsers.",
 		"message": "$GS_CHROME$ options",
 		"placeholders": {
 			"gs_chrome": {
@@ -86,6 +130,7 @@
 		}
 	},
 	"options_update_check": {
+		"description": "Option name. Allow enable/disable update check for GNOME Shell extensions.",
 		"message": "Check for extensions update"
 	},
 	"platform_not_supported": {
@@ -97,17 +142,48 @@
 	"save": {
 		"message": "Gravar"
 	},
+	"synchronization": {
+		"description": "Link name for synchronization tab in options dialog.",
+		"message": "Synchronization"
+	},
+	"synchronization_cancel": {
+		"message": "Do not enable synchronization."
+	},
+	"synchronization_failed": {
+		"description": "$CAUSE$ is placeholder for error that caused synchronization failure.",
+		"message": "Failed to synchronize extensions: $CAUSE$",
+		"placeholders": {
+			"cause": {
+				"content": "$1"
+			}
+		}
+	},
+	"synchronization_storage_exists": {
+		"message": "Your remote synchronization storage already contains extensions list."
+	},
+	"synchronization_use_local": {
+		"message": "Use local extensions list, overwrite remote."
+	},
+	"synchronization_use_remote": {
+		"message": "Use remote extensions list, overwrite local."
+	},
 	"translation_credits": {
-		"description": "HTML markup enabled for this string.",
+		"description": "This is content of 'About translation' tab in Options dialog. Thank you for translation and feel free to add yourself here. HTML markup enabled for this string.",
 		"message": "Tiago Santos <tiagofsantos81@sapo.pt>"
 	},
 	"translation_credits_title": {
+		"description": "Link name for translation credits tab in options dialog.",
 		"message": "Sobre a tradu\u00e7\u00e3o"
+	},
+	"unknown_error": {
+		"description": "This should newer be shown to user. However better safe than sorry.",
+		"message": "unknown error"
 	},
 	"update_available": {
 		"message": "An update for GNOME Shell extensions available"
 	},
 	"update_check_failed": {
+		"description": "$CAUSE$ is placeholder for error that caused update failure.",
 		"message": "Failed to check extensions updates: $CAUSE$",
 		"placeholders": {
 			"cause": {
@@ -116,6 +192,7 @@
 		}
 	},
 	"version": {
+		"description": "Part of phrase eg 'GNOME Shell integration extension (version 5)'",
 		"message": "Vers\u00e3o $$1"
 	},
 	"warning_versions_mismatch": {

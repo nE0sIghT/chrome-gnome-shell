@@ -7,27 +7,51 @@
 		"message": "Tanca"
 	},
 	"connecting_host_app": {
+		"description": "Shown to user when Web extension sent request to native host messaging application and waiting for result.",
 		"message": "S'est\u00e0 connectant a una aplicaci\u00f3 amfitriona nativa..."
 	},
 	"error_extension_response": {
+		"description": "Shown to user when response of extension API call does not follow known format.",
 		"message": "S'ha rebut una resposta incorrecta d'una extensi\u00f3"
 	},
+	"extension_enabled": {
+		"description": "Used as title, eg in table header. Means 'Does GNOME Shell extension enabled?'",
+		"message": "Habilitat"
+	},
+	"extension_installed": {
+		"description": "Used as title, eg in table header. Means 'Does GNOME Shell extension installed?'",
+		"message": "Instal\u00b7lat"
+	},
+	"extension_name": {
+		"description": "Used as title, eg in table header. Means 'GNOME Shell extension name'.",
+		"message": "Extensi\u00f3"
+	},
 	"extension_status_downgrade": {
+		"description": "This is a part of phrase like 'Extension Top Icons must be downgraded'.",
 		"message": "ha de ser revertit"
 	},
 	"extension_status_upgrade": {
+		"description": "This is a part of phrase like 'Extension Top Icons can be upgraded'.",
 		"message": "pot actualitzar-se"
 	},
+	"extension_synchronized": {
+		"description": "Used as title, eg in table header. Means 'Does GNOME Shell extension status synchronized with remote browser storage?'",
+		"message": "Sincronitzaci\u00f3"
+	},
 	"gs_chrome": {
+		"description": "This is a project title. Used as extension name in Chrome Store and in some titlebars.",
 		"message": "Integraci\u00f3 amb el GNOME Shell"
 	},
 	"hours": {
+		"description": "This is a part of phrase 'Update check period: xx hours'",
 		"message": "hores"
 	},
 	"manifest_description": {
+		"description": "Used as extension description in Chrome Store",
 		"message": "Aquesta extensi\u00f3 proporciona integraci\u00f3 amb GNOME Shell i el corresponent dip\u00f2sit d'extensions https://extensions.gnome.org"
 	},
 	"native_request_failed": {
+		"description": "$REQUEST$ is a placeholder for technical name of request that web extension make via native messaging host application.",
 		"message": "La sol\u00b7licitud nativa \u00ab$REQUEST$\u00bb ha fallat",
 		"placeholders": {
 			"request": {
@@ -39,6 +63,7 @@
 		"message": "S'ha produ\u00eft un error de xarxa. Comproveu la connexi\u00f3 a Internet i la configuraci\u00f3 del servidor intermediari."
 	},
 	"never": {
+		"description": "This is a part of phrase 'Last check: never'",
 		"message": "mai"
 	},
 	"no": {
@@ -48,36 +73,55 @@
 		"message": "Encara que l'extensi\u00f3 d'integraci\u00f3 del GNOME Shell est\u00e0 executant-se, no s'ha detectat el connector amfitri\u00f3 nadiu. Vegeu la <a href='https://wiki.gnome.org/Projects/GnomeShellIntegrationForChrome/Installation'>documentaci\u00f3</a> per obtenir instruccions de com instal\u00b7lar el connector."
 	},
 	"no_host_response": {
+		"description": "Means 'Web extension does not received answer from native messaging host application.'",
 		"message": "Sense resposta de l'amfitri\u00f3:"
 	},
 	"older_connector": {
+		"description": "Part of phrase eg 'You are using different versions of GNOME Shell integration extension (version 5) and native host connector (older than version 4)'.",
 		"message": "m\u00e9s antic de la versi\u00f3 4"
 	},
 	"options_check_period": {
+		"description": "Option name. Allow to set interval between GNOME Shell extensions update checks.",
 		"message": "Per\u00edode de comprovaci\u00f3 d'actualitzacions"
 	},
 	"options_last_check": {
+		"description": "This is a start of phrase (followed by date/time) of last GNOME Shell extensions update check.",
 		"message": "Darrera comprovaci\u00f3"
 	},
 	"options_link": {
+		"description": "Link name for options tab.",
 		"message": "Opcions"
 	},
 	"options_next_check": {
+		"description": "This is a start of phrase (followed by date/time) of next GNOME Shell extensions update check.",
 		"message": "Propera comprovaci\u00f3"
 	},
 	"options_saved": {
+		"description": "Means 'Options were saved successfully after user clicked Save button'",
 		"message": "Configuraci\u00f3 desada."
 	},
 	"options_show_network_errors": {
+		"description": "Option name. By default Chrome do not reveal exact network error in case of request failure. Allow enable/disable extended error information.",
 		"message": "Notifica els errors de xarxa"
 	},
 	"options_show_network_errors_notice": {
+		"description": "This is a notice under option name. Warns user that additional browser permission is required if option will be enabled.",
 		"message": "Es requereix el perm\u00eds de Chrome \u00abwebRequest\u00bb."
 	},
 	"options_show_release_notes": {
+		"description": "Option name. Allow to enable/disable popup with release notes when Web extension is updated.",
 		"message": "Mostra les notes de la versi\u00f3 quan s'actualitza l'extensi\u00f3"
 	},
+	"options_synchronize_extensions": {
+		"description": "Option name. Allow to enable/disable synchronization of GNOME Shell extensions with remote browser storage.",
+		"message": "Sincronitza la llista d'extensions"
+	},
+	"options_synchronize_extensions_notice": {
+		"description": "This is a notice under option name.",
+		"message": "Si s'habilita, la llista d'extensions del GNOME Shell se sincronitzar\u00e0 amb el compte de Google."
+	},
 	"options_title": {
+		"description": "$GS_CHROME$ is placeholder for 'GNOME Shell integration' string. This string used as title for Options page. This title is not shown in Chrome, but may be shown in other browsers.",
 		"message": "Opcions de $GS_CHROME$",
 		"placeholders": {
 			"gs_chrome": {
@@ -86,6 +130,7 @@
 		}
 	},
 	"options_update_check": {
+		"description": "Option name. Allow enable/disable update check for GNOME Shell extensions.",
 		"message": "Comprova si hi ha actualitzacions de l'extensi\u00f3"
 	},
 	"platform_not_supported": {
@@ -97,17 +142,48 @@
 	"save": {
 		"message": "Desa"
 	},
+	"synchronization": {
+		"description": "Link name for synchronization tab in options dialog.",
+		"message": "Sincronitzaci\u00f3"
+	},
+	"synchronization_cancel": {
+		"message": "No habilitis la sincronitzaci\u00f3."
+	},
+	"synchronization_failed": {
+		"description": "$CAUSE$ is placeholder for error that caused synchronization failure.",
+		"message": "S'ha produ\u00eft un error en sincronitzar les extensions: $CAUSE$",
+		"placeholders": {
+			"cause": {
+				"content": "$1"
+			}
+		}
+	},
+	"synchronization_storage_exists": {
+		"message": "L'emmagatzematge remot per la sincronitzaci\u00f3 ja cont\u00e9 una llista d'extensions."
+	},
+	"synchronization_use_local": {
+		"message": "Utilitza la llista local d'extensions, sobreescrivint la remota."
+	},
+	"synchronization_use_remote": {
+		"message": "Utilitza la llista remota d'extensions, sobreescrivint la local."
+	},
 	"translation_credits": {
-		"description": "HTML markup enabled for this string.",
+		"description": "This is content of 'About translation' tab in Options dialog. Thank you for translation and feel free to add yourself here. HTML markup enabled for this string.",
 		"message": "Jordi Mas i Hern\u00e0ndez <jmas@softcatala.org>"
 	},
 	"translation_credits_title": {
+		"description": "Link name for translation credits tab in options dialog.",
 		"message": "Quant a la traducci\u00f3"
+	},
+	"unknown_error": {
+		"description": "This should newer be shown to user. However better safe than sorry.",
+		"message": "Error desconegut"
 	},
 	"update_available": {
 		"message": "Hi ha una actualitzaci\u00f3 disponible per les extensions del GNOME Shell"
 	},
 	"update_check_failed": {
+		"description": "$CAUSE$ is placeholder for error that caused update failure.",
 		"message": "La comprovaci\u00f3 d'actualitzacions ha fallat: $CAUSE$",
 		"placeholders": {
 			"cause": {
@@ -116,6 +192,7 @@
 		}
 	},
 	"version": {
+		"description": "Part of phrase eg 'GNOME Shell integration extension (version 5)'",
 		"message": "Versi\u00f3 $$1"
 	},
 	"warning_versions_mismatch": {

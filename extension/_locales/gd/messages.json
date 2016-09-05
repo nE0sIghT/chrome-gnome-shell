@@ -1,58 +1,58 @@
 {
 	"_DO_NOT_EDIT": {
-		"description": "This file is auto generated with po2chrome-messages tool from pt_BR.po.",
+		"description": "This file is auto generated with po2chrome-messages tool from gd.po.",
 		"message": ""
 	},
 	"close": {
-		"message": "Fechar"
+		"message": "D\u00f9in"
 	},
 	"connecting_host_app": {
 		"description": "Shown to user when Web extension sent request to native host messaging application and waiting for result.",
-		"message": "Conectando ao aplicativo nativo de m\u00e1quina\u2026"
+		"message": "A' ceangal ri aplacaid \u00f2stair t\u00f9sail\u2026"
 	},
 	"error_extension_response": {
 		"description": "Shown to user when response of extension API call does not follow known format.",
-		"message": "Resposta de extens\u00e3o errada recebida"
+		"message": "Fhuaras freagairt chearr an leudachain"
 	},
 	"extension_enabled": {
 		"description": "Used as title, eg in table header. Means 'Does GNOME Shell extension enabled?'",
-		"message": "Habilitado"
+		"message": "An comas"
 	},
 	"extension_installed": {
 		"description": "Used as title, eg in table header. Means 'Does GNOME Shell extension installed?'",
-		"message": "Instalado"
+		"message": "Air a st\u00e0ladh"
 	},
 	"extension_name": {
 		"description": "Used as title, eg in table header. Means 'GNOME Shell extension name'.",
-		"message": "Extens\u00e3o"
+		"message": "Leudachan"
 	},
 	"extension_status_downgrade": {
 		"description": "This is a part of phrase like 'Extension Top Icons must be downgraded'.",
-		"message": "pode ser voltar a vers\u00e3o"
+		"message": "feumach air \u00ecsleachadh"
 	},
 	"extension_status_upgrade": {
 		"description": "This is a part of phrase like 'Extension Top Icons can be upgraded'.",
-		"message": "pode ser atualizada"
+		"message": "gabhaidh \u00e0rdachadh"
 	},
 	"extension_synchronized": {
 		"description": "Used as title, eg in table header. Means 'Does GNOME Shell extension status synchronized with remote browser storage?'",
-		"message": "Sincronizado"
+		"message": "Sioncronaichte"
 	},
 	"gs_chrome": {
 		"description": "This is a project title. Used as extension name in Chrome Store and in some titlebars.",
-		"message": "Integra\u00e7\u00e3o com GNOME Shell"
+		"message": "Amalachadh slige GNOMW"
 	},
 	"hours": {
 		"description": "This is a part of phrase 'Update check period: xx hours'",
-		"message": "horas"
+		"message": "uair(ean) a th\u00ecde"
 	},
 	"manifest_description": {
 		"description": "Used as extension description in Chrome Store",
-		"message": "Essa extens\u00e3o fornece integra\u00e7\u00e3o com o GNOME Shell e com o reposit\u00f3rio de extens\u00f5es correspondente, o https://extensions.gnome.org"
+		"message": "Bheir an leudachan seo dhut amalachadh le Slige GNOME agus Shell ionad-tasgaidh nan leudachan co-cheangailte rithe https://extensions.gnome.org"
 	},
 	"native_request_failed": {
 		"description": "$REQUEST$ is a placeholder for technical name of request that web extension make via native messaging host application.",
-		"message": "Requisi\u00e7\u00e3o nativa \u00ab$REQUEST$\u00bb falhou",
+		"message": "Dh'fh\u00e0illig leis an iarrtas t\u00f9sail \"$REQUEST$\"",
 		"placeholders": {
 			"request": {
 				"content": "$1"
@@ -60,69 +60,69 @@
 		}
 	},
 	"network_error": {
-		"message": "Ocorreu um erro de rede. Por favor, verifique sua conex\u00e3o com a Internet e/ou a configura\u00e7\u00e3o de seu proxy."
+		"message": "Thachair mearachd l\u00econraidh. Thoir s\u00f9il air a' cheangal dhan eadar-l\u00econ agad agus/no r\u00e8iteachadh a' phrogsaidh."
 	},
 	"never": {
 		"description": "This is a part of phrase 'Last check: never'",
-		"message": "nunca"
+		"message": "chan ann idir"
 	},
 	"no": {
-		"message": "N\u00e3o"
+		"message": "Chan eil"
 	},
 	"no_host_connector": {
-		"message": "Apesar da extens\u00e3o de integra\u00e7\u00e3o do GNOME Shell estar em execu\u00e7\u00e3o, o conector nativo de m\u00e1quina n\u00e3o foi detectado. Veja a <a href='https://wiki.gnome.org/Projects/GnomeShellIntegrationForChrome/Installation'>documenta\u00e7\u00e3o</a> para instru\u00e7\u00f5es sobre instala\u00e7\u00e3o do conector."
+		"message": "Ger a tha leudachan amalachadh Slige GNOME Shell 'na ruith, cha do mhothaich sinn dha cheangladair \u00f2stair t\u00f9sail. Faic an <a href='https://wiki.gnome.org/Projects/GnomeShellIntegrationForChrome/Installation'>docamaideadh</a> airson sti\u00f9ireadh air mar a st\u00e0laicheas tu an ceangladair."
 	},
 	"no_host_response": {
 		"description": "Means 'Web extension does not received answer from native messaging host application.'",
-		"message": "Nenhuma resposta da m\u00e1quina"
+		"message": "Cha do fhreagair an t-\u00f2stair"
 	},
 	"older_connector": {
 		"description": "Part of phrase eg 'You are using different versions of GNOME Shell integration extension (version 5) and native host connector (older than version 4)'.",
-		"message": "vers\u00e3o anterior a 4"
+		"message": "nas sine na tionndadh 4"
 	},
 	"options_check_period": {
 		"description": "Option name. Allow to set interval between GNOME Shell extensions update checks.",
-		"message": "Intervalo de verifica\u00e7\u00e3o por atualiza\u00e7\u00e3o"
+		"message": "\u00c0m a' toirt s\u00f9il airson \u00f9rachadh"
 	},
 	"options_last_check": {
 		"description": "This is a start of phrase (followed by date/time) of last GNOME Shell extensions update check.",
-		"message": "\u00daltima verifica\u00e7\u00e3o"
+		"message": "An sgr\u00f9dadh mu dheireadh"
 	},
 	"options_link": {
 		"description": "Link name for options tab.",
-		"message": "Op\u00e7\u00f5es"
+		"message": "Roghainnean"
 	},
 	"options_next_check": {
 		"description": "This is a start of phrase (followed by date/time) of next GNOME Shell extensions update check.",
-		"message": "Pr\u00f3xima verifica\u00e7\u00e3o"
+		"message": "An t-ath-sgr\u00f9dadh"
 	},
 	"options_saved": {
 		"description": "Means 'Options were saved successfully after user clicked Save button'",
-		"message": "Op\u00e7\u00f5es salvas."
+		"message": "Chaidh na roghainnean a sh\u00e0bhaladh."
 	},
 	"options_show_network_errors": {
 		"description": "Option name. By default Chrome do not reveal exact network error in case of request failure. Allow enable/disable extended error information.",
-		"message": "Mostrar informa\u00e7\u00e3o sobre erros de rede"
+		"message": "Seall fiosrachadh mu mhearachdan l\u00econraidh"
 	},
 	"options_show_network_errors_notice": {
 		"description": "This is a notice under option name. Warns user that additional browser permission is required if option will be enabled.",
-		"message": "\u00c9 necess\u00e1rio ter permiss\u00e3o de \u00abwebRequest\u00bb do Chrome."
+		"message": "Tha feum air cead Chrome \"webRequest\"."
 	},
 	"options_show_release_notes": {
 		"description": "Option name. Allow to enable/disable popup with release notes when Web extension is updated.",
-		"message": "Mostrar notas de lan\u00e7amento na atualiza\u00e7\u00e3o de extens\u00f5es"
+		"message": "Seall na n\u00f2taichean-sgaoilidh nuair a th\u00e8id an leudachan \u00f9rachadh"
 	},
 	"options_synchronize_extensions": {
 		"description": "Option name. Allow to enable/disable synchronization of GNOME Shell extensions with remote browser storage.",
-		"message": "Sincronizar lista de extens\u00f5es"
+		"message": "Sioncronaich liosta nan leudachan"
 	},
 	"options_synchronize_extensions_notice": {
 		"description": "This is a notice under option name.",
-		"message": "Caso habilitado, a sua lista de extens\u00f5es de Shell do GNOME ser\u00e1 sincronizada com a sua conta do Google."
+		"message": "Ma tha seo an comas, th\u00e8id liosta nan leudachan Slige GNOME a shioncronachadh leis a' chunntas Google agad."
 	},
 	"options_title": {
 		"description": "$GS_CHROME$ is placeholder for 'GNOME Shell integration' string. This string used as title for Options page. This title is not shown in Chrome, but may be shown in other browsers.",
-		"message": "Op\u00e7\u00f5es de $GS_CHROME$",
+		"message": "Roghainnean $GS_CHROME$",
 		"placeholders": {
 			"gs_chrome": {
 				"content": "$1"
@@ -131,27 +131,27 @@
 	},
 	"options_update_check": {
 		"description": "Option name. Allow enable/disable update check for GNOME Shell extensions.",
-		"message": "Verificar atualiza\u00e7\u00e3o de extens\u00f5es"
+		"message": "Thoir s\u00f9il airson \u00f9rachadh nan leudachan"
 	},
 	"platform_not_supported": {
-		"message": "Sem suporte ao conector nativo de m\u00e1quina para sua plataforma."
+		"message": "Cha chuirear taic ri ceangladair \u00f2stair t\u00f9sail air an \u00f9rlar agad."
 	},
 	"retry": {
-		"message": "Tentar novamente"
+		"message": "Feuch ris a-rithist"
 	},
 	"save": {
-		"message": "Salvar"
+		"message": "S\u00e0bhail"
 	},
 	"synchronization": {
 		"description": "Link name for synchronization tab in options dialog.",
-		"message": "Sincroniza\u00e7\u00e3o"
+		"message": "Sioncronachadh"
 	},
 	"synchronization_cancel": {
-		"message": "N\u00e3o habilitar a sincroniza\u00e7\u00e3o."
+		"message": "Na cuir an sioncronachadh an comas."
 	},
 	"synchronization_failed": {
 		"description": "$CAUSE$ is placeholder for error that caused synchronization failure.",
-		"message": "Ocorreu falha ao sincronizar extens\u00f5es: $CAUSE$",
+		"message": "Cha deach leinn na leudachain a shioncronachadh: $CAUSE$",
 		"placeholders": {
 			"cause": {
 				"content": "$1"
@@ -159,32 +159,32 @@
 		}
 	},
 	"synchronization_storage_exists": {
-		"message": "Seu reposit\u00f3rio de sincroniza\u00e7\u00e3o remota j\u00e1 cont\u00e9m lista de extens\u00f5es."
+		"message": "Tha liosta nan leudachan ann an st\u00f2ras c\u00e8in an t-sioncronachaidh agad mu thr\u00e0th."
 	},
 	"synchronization_use_local": {
-		"message": "Usar a lista local de extens\u00f5es, sobrescrever a remota."
+		"message": "Cleachd liosta nan leudachan ionadail agus sgr\u00ecobh thairis air an t\u00e8 ch\u00e8in."
 	},
 	"synchronization_use_remote": {
-		"message": "Usar a lista remota de extens\u00f5es, sobrescrever a local."
+		"message": "Cleachd liosta nan leudachan ch\u00e8in agus sgr\u00ecobh thairis air an t\u00e8 ionadail."
 	},
 	"translation_credits": {
 		"description": "This is content of 'About translation' tab in Options dialog. Thank you for translation and feel free to add yourself here. HTML markup enabled for this string.",
-		"message": "<a href=\"mailto:rafaelff@gnome.org\">Rafael Fontenelle</a><br>\n<a href=\"mailto:liverig@gnome.org\">Enrico Nicoletto</a>"
+		"message": "GunChleoc <fios@foramnagaidhlig.net>"
 	},
 	"translation_credits_title": {
 		"description": "Link name for translation credits tab in options dialog.",
-		"message": "Sobre a tradu\u00e7\u00e3o"
+		"message": "Mun eadar-theangachadh"
 	},
 	"unknown_error": {
 		"description": "This should newer be shown to user. However better safe than sorry.",
-		"message": "erro desconhecido"
+		"message": "mearachd nach aithne dhuinn"
 	},
 	"update_available": {
-		"message": "Uma atualiza\u00e7\u00e3o para extens\u00f5es do GNOME Shell est\u00e1 dispon\u00edvel"
+		"message": "Tha \u00f9rachadh air leudachain Slige GNOME ri fhaighinn"
 	},
 	"update_check_failed": {
 		"description": "$CAUSE$ is placeholder for error that caused update failure.",
-		"message": "Falha ao verificar atualiza\u00e7\u00f5es de extens\u00f5es: $CAUSE$",
+		"message": "Cha deach leinn s\u00f9il a thoirt airson \u00f9rachaidhean nan leudachan: $CAUSE$",
 		"placeholders": {
 			"cause": {
 				"content": "$1"
@@ -193,12 +193,12 @@
 	},
 	"version": {
 		"description": "Part of phrase eg 'GNOME Shell integration extension (version 5)'",
-		"message": "vers\u00e3o $$1"
+		"message": "tionndadh $$1"
 	},
 	"warning_versions_mismatch": {
-		"message": "Voc\u00ea est\u00e1 usando vers\u00f5es diferentes da extens\u00e3o de integra\u00e7\u00e3o do GNOME Shell ($$1) e conector nativo de m\u00e1quina ($$2). Alguns recursos podem n\u00e3o funcionar ou funcionar erroneamente."
+		"message": "Chan eil na tionndaidhean dhe leudachan amalachadh Slige GNOME ($$1) agus dhen cheangladair \u00f2stair t\u00f9sail ($$2) a-r\u00e8ir a ch\u00e8ile. Dh'fhaoidte nach obraich a h-uile gleus mar bu ch\u00f2ir no nach obraich iad idir."
 	},
 	"yes": {
-		"message": "Sim"
+		"message": "Tha"
 	}
 }

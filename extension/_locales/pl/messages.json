@@ -7,27 +7,51 @@
 		"message": "Zamknij"
 	},
 	"connecting_host_app": {
-		"message": "\u0141\u0105czenie z natywnym programem serwera\u2026"
+		"description": "Shown to user when Web extension sent request to native host messaging application and waiting for result.",
+		"message": "\u0141\u0105czenie z\u00a0natywnym programem serwera\u2026"
 	},
 	"error_extension_response": {
+		"description": "Shown to user when response of extension API call does not follow known format.",
 		"message": "Otrzymano b\u0142\u0119dn\u0105 odpowied\u017a rozszerzenia"
 	},
+	"extension_enabled": {
+		"description": "Used as title, eg in table header. Means 'Does GNOME Shell extension enabled?'",
+		"message": "W\u0142\u0105czone"
+	},
+	"extension_installed": {
+		"description": "Used as title, eg in table header. Means 'Does GNOME Shell extension installed?'",
+		"message": "Zainstalowane"
+	},
+	"extension_name": {
+		"description": "Used as title, eg in table header. Means 'GNOME Shell extension name'.",
+		"message": "Rozszerzenie"
+	},
 	"extension_status_downgrade": {
+		"description": "This is a part of phrase like 'Extension Top Icons must be downgraded'.",
 		"message": "musi zosta\u0107 zainstalowana poprzednia wersja"
 	},
 	"extension_status_upgrade": {
+		"description": "This is a part of phrase like 'Extension Top Icons can be upgraded'.",
 		"message": "mo\u017ce zosta\u0107 zaktualizowane"
 	},
+	"extension_synchronized": {
+		"description": "Used as title, eg in table header. Means 'Does GNOME Shell extension status synchronized with remote browser storage?'",
+		"message": "Synchronizowane"
+	},
 	"gs_chrome": {
-		"message": "Integracja z GNOME Shell"
+		"description": "This is a project title. Used as extension name in Chrome Store and in some titlebars.",
+		"message": "Integracja z\u00a0GNOME Shell"
 	},
 	"hours": {
+		"description": "This is a part of phrase 'Update check period: xx hours'",
 		"message": "godz."
 	},
 	"manifest_description": {
-		"message": "To rozszerzenie dostarcza integracj\u0119 z GNOME Shell i repozytorium rozszerze\u0144 https://extensions.gnome.org"
+		"description": "Used as extension description in Chrome Store",
+		"message": "To rozszerzenie dostarcza integracj\u0119 z\u00a0GNOME Shell i\u00a0repozytorium rozszerze\u0144 https://extensions.gnome.org"
 	},
 	"native_request_failed": {
+		"description": "$REQUEST$ is a placeholder for technical name of request that web extension make via native messaging host application.",
 		"message": "Natywne \u017c\u0105danie \u201e$REQUEST$\u201d si\u0119 nie powiod\u0142o",
 		"placeholders": {
 			"request": {
@@ -36,48 +60,68 @@
 		}
 	},
 	"network_error": {
-		"message": "Wyst\u0105pi\u0142 b\u0142\u0105d sieci. Prosz\u0119 sprawdzi\u0107 po\u0142\u0105czenie z Internetem i/lub ustawienia po\u015brednika."
+		"message": "Wyst\u0105pi\u0142 b\u0142\u0105d sieci. Prosz\u0119 sprawdzi\u0107 po\u0142\u0105czenie z\u00a0Internetem i/lub ustawienia po\u015brednika."
 	},
 	"never": {
+		"description": "This is a part of phrase 'Last check: never'",
 		"message": "nigdy"
 	},
 	"no": {
 		"message": "Nie"
 	},
 	"no_host_connector": {
-		"message": "Chocia\u017c rozszerzenie integracji z GNOME Shell jest uruchomione, to nie wykryto natywnego \u0142\u0105cznika serwera. <a href='https://wiki.gnome.org/Projects/GnomeShellIntegrationForChrome/Installation'>Dokumentacja</a> zawiera instrukcje na temat instalacji \u0142\u0105cznika."
+		"message": "Chocia\u017c rozszerzenie integracji z\u00a0GNOME Shell jest uruchomione, to nie wykryto natywnego \u0142\u0105cznika serwera. <a href='https://wiki.gnome.org/Projects/GnomeShellIntegrationForChrome/Installation'>Dokumentacja</a> zawiera instrukcje na temat instalacji \u0142\u0105cznika."
 	},
 	"no_host_response": {
+		"description": "Means 'Web extension does not received answer from native messaging host application.'",
 		"message": "Brak odpowiedzi serwera"
 	},
 	"older_connector": {
+		"description": "Part of phrase eg 'You are using different versions of GNOME Shell integration extension (version 5) and native host connector (older than version 4)'.",
 		"message": "starszy ni\u017c wersja 4"
 	},
 	"options_check_period": {
+		"description": "Option name. Allow to set interval between GNOME Shell extensions update checks.",
 		"message": "Czas mi\u0119dzy sprawdzaniem aktualizacji"
 	},
 	"options_last_check": {
+		"description": "This is a start of phrase (followed by date/time) of last GNOME Shell extensions update check.",
 		"message": "Ostatnio sprawdzono"
 	},
 	"options_link": {
+		"description": "Link name for options tab.",
 		"message": "Opcje"
 	},
 	"options_next_check": {
+		"description": "This is a start of phrase (followed by date/time) of next GNOME Shell extensions update check.",
 		"message": "Nast\u0119pne sprawdzanie"
 	},
 	"options_saved": {
+		"description": "Means 'Options were saved successfully after user clicked Save button'",
 		"message": "Zapisano opcje."
 	},
 	"options_show_network_errors": {
-		"message": "Wy\u015bwietlanie informacji o b\u0142\u0119dach sieci"
+		"description": "Option name. By default Chrome do not reveal exact network error in case of request failure. Allow enable/disable extended error information.",
+		"message": "Wy\u015bwietlanie informacji o\u00a0b\u0142\u0119dach sieci"
 	},
 	"options_show_network_errors_notice": {
+		"description": "This is a notice under option name. Warns user that additional browser permission is required if option will be enabled.",
 		"message": "Wymagane jest uprawnienie \u201ewebRequest\u201d przegl\u0105darki Chrome."
 	},
 	"options_show_release_notes": {
-		"message": "Wy\u015bwietlanie informacji o wydaniu po aktualizacji rozszerzenia"
+		"description": "Option name. Allow to enable/disable popup with release notes when Web extension is updated.",
+		"message": "Wy\u015bwietlanie informacji o\u00a0wydaniu po aktualizacji rozszerzenia"
+	},
+	"options_synchronize_extensions": {
+		"description": "Option name. Allow to enable/disable synchronization of GNOME Shell extensions with remote browser storage.",
+		"message": "Synchronizowanie listy rozszerze\u0144"
+	},
+	"options_synchronize_extensions_notice": {
+		"description": "This is a notice under option name.",
+		"message": "Po w\u0142\u0105czeniu lista rozszerze\u0144 GNOME Shell b\u0119dzie synchronizowana z\u00a0kontem Google."
 	},
 	"options_title": {
+		"description": "$GS_CHROME$ is placeholder for 'GNOME Shell integration' string. This string used as title for Options page. This title is not shown in Chrome, but may be shown in other browsers.",
 		"message": "Opcje $GS_CHROME$",
 		"placeholders": {
 			"gs_chrome": {
@@ -86,6 +130,7 @@
 		}
 	},
 	"options_update_check": {
+		"description": "Option name. Allow enable/disable update check for GNOME Shell extensions.",
 		"message": "Wyszukaj aktualizacje rozszerze\u0144"
 	},
 	"platform_not_supported": {
@@ -97,17 +142,48 @@
 	"save": {
 		"message": "Zapisz"
 	},
+	"synchronization": {
+		"description": "Link name for synchronization tab in options dialog.",
+		"message": "Synchronizacja"
+	},
+	"synchronization_cancel": {
+		"message": "Nie w\u0142\u0105czaj synchronizacji."
+	},
+	"synchronization_failed": {
+		"description": "$CAUSE$ is placeholder for error that caused synchronization failure.",
+		"message": "Zsynchronizowanie rozszerze\u0144 si\u0119 nie powiod\u0142o: $CAUSE$",
+		"placeholders": {
+			"cause": {
+				"content": "$1"
+			}
+		}
+	},
+	"synchronization_storage_exists": {
+		"message": "Zdalna pami\u0119\u0107 synchronizacji ju\u017c zawiera list\u0119 rozszerze\u0144."
+	},
+	"synchronization_use_local": {
+		"message": "U\u017cyj lokalnej listy rozszerze\u0144, zast\u0105p zdaln\u0105."
+	},
+	"synchronization_use_remote": {
+		"message": "U\u017cyj zdalnej listy rozszerze\u0144, zast\u0105p lokaln\u0105."
+	},
 	"translation_credits": {
-		"description": "HTML markup enabled for this string.",
+		"description": "This is content of 'About translation' tab in Options dialog. Thank you for translation and feel free to add yourself here. HTML markup enabled for this string.",
 		"message": "Piotr Dr\u0105g, 2016"
 	},
 	"translation_credits_title": {
-		"message": "O t\u0142umaczeniu"
+		"description": "Link name for translation credits tab in options dialog.",
+		"message": "O\u00a0t\u0142umaczeniu"
+	},
+	"unknown_error": {
+		"description": "This should newer be shown to user. However better safe than sorry.",
+		"message": "nieznany b\u0142\u0105d"
 	},
 	"update_available": {
 		"message": "Dost\u0119pna jest aktualizacja dla rozszerze\u0144 GNOME Shell"
 	},
 	"update_check_failed": {
+		"description": "$CAUSE$ is placeholder for error that caused update failure.",
 		"message": "Wyszukanie aktualizacji rozszerze\u0144 si\u0119 nie powiod\u0142o: $CAUSE$",
 		"placeholders": {
 			"cause": {
@@ -116,10 +192,11 @@
 		}
 	},
 	"version": {
+		"description": "Part of phrase eg 'GNOME Shell integration extension (version 5)'",
 		"message": "wersja $$1"
 	},
 	"warning_versions_mismatch": {
-		"message": "U\u017cywane s\u0105 r\u00f3\u017cne wersje rozszerzenia integracji z GNOME Shell ($$1) i natywnego \u0142\u0105cznika serwera ($$2). Niekt\u00f3re funkcje mog\u0105 nie dzia\u0142a\u0107 lub dzia\u0142a\u0107 niepoprawnie."
+		"message": "U\u017cywane s\u0105 r\u00f3\u017cne wersje rozszerzenia integracji z\u00a0GNOME Shell ($$1) i\u00a0natywnego \u0142\u0105cznika serwera ($$2). Niekt\u00f3re funkcje mog\u0105 nie dzia\u0142a\u0107 lub dzia\u0142a\u0107 niepoprawnie."
 	},
 	"yes": {
 		"message": "Tak"

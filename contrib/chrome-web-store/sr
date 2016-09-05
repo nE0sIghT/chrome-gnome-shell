@@ -1,0 +1,15 @@
+МОРАТЕ инсталирати изворни конектор да би ово проширење радило.
+
+За Арч Линукс постоји „PKGBUILD“ доступан у АУР-у: https://aur.archlinux.org/packages/chrome-gnome-shell-git
+
+За Федору Линукс пакет је доступан у Копр-у: https://copr.fedorainfracloud.org/coprs/region51/chrome-gnome-shell
+
+У Џенту Линуксу конектор можете инсталирати наредбом:
+emerge gnome-extra/chrome-gnome-shell
+
+За Убунту Линукс пакет је доступан у ППА „ne0sight/chrome-gnome-shell“. Да га инсталирате упишите:
+sudo add-apt-repository ppa:ne0sight/chrome-gnome-shell
+sudo apt-get update
+sudo apt-get install chrome-gnome-shell
+
+Можете такође и ручно да инсталирате повезивач. Погледајте „https://wiki.gnome.org/Projects/GnomeShellIntegrationForChrome/Installation“ за упутствима о инсталацији.

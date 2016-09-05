@@ -1,0 +1,15 @@
+Deze extensie werkt alleen als u de platform-eigen connector installeert.
+
+Voor Arch Linux is PKGBUILD beschikbaar in de AUR: https://aur.archlinux.org/packages/chrome-gnome-shell-git
+
+Voor Fedora Linux is er een pakket beschikbaar in Copr: https://copr.fedorainfracloud.org/coprs/region51/chrome-gnome-shell
+
+In Gentoo Linux kunt u connector installeren met de opdracht:
+emerge gnome-extra/chrome-gnome-shell
+
+Voor Ubuntu Linux is er een pakket beschikbaar in ne0sight/chrome-gnome-shell PPA. Typ om te installeren het volgende in:
+sudo add-apt-repository ppa:ne0sight/chrome-gnome-shell
+sudo apt-get update
+sudo apt-get install chrome-gnome-shell
+
+U kunt connector ook handmatig installeren. Zie https://wiki.gnome.org/Projects/GnomeShellIntegrationForChrome/Installation voor installatie-instructies.
