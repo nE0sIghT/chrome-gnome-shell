@@ -1,3 +1,30 @@
+= 2016-09-05 chrome-gnome-shell 7 =
+
+== Changes ==
+ * Opera browser support (https://addons.opera.com/ru/extensions/details/gnome-shell-integration/).
+   Native host connector version 7 or newer required.
+ * Implemented extensions synchronization via browser remote storage (not supported in Opera).
+ * Extension installation now forced via Chrome policies.
+ * Native host connector stability enchancements.
+ * Native host connector now installed with distutils.
+ * Added workaround for wrong FreeBSD Chromium patch.
+
+== Translations ==
+ * Catalan (Jordi Mas i Hernàndez)
+ * Dutch (Hannie Dumoleyn)
+ * Finnish (Jiri Grönroos)
+ * French (Alexandre Franke)
+ * German (Mario Blättermann)
+ * Hungarian (Meskó Balázs)
+ * Polish (Piotr Drąg)
+ * Portuguese (Brazil) (Enrico Nicoletto)
+ * Scottish Gaelic (GunChleoc)
+ * Serbian (Мирослав Николић)
+ * Slovenian (Matej Urbančič)
+ * Spanish (Daniel Mustieles)
+ * Swedish (Anders Jonsson)
+ * Turkish (Muhammet Kara)
+
 = 2016-08-06 chrome-gnome-shell 6.2 =
 
 == Changes ==
