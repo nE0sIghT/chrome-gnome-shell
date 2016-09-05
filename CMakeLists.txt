@@ -27,6 +27,7 @@ option(BUILD_CONNECTOR		"Build native messaging host"	TRUE)
 option(BUILD_SOURCE_PACKAGE	"Build source package"		FALSE)
 option(BUILD_DEB		"Build debian package"		FALSE)
 option(BUILD_MESSAGES		"Update translation strings"	FALSE)
+option(USE_DEBIAN_LAYOUT	"Use --install-layout=deb distutils parameter"	FALSE)
 
 # Default extension key for Chrome web store
 if(NOT DEFINED(CHROME_EXTENSION_KEY))
@@ -145,6 +146,12 @@ if(BUILD_CONNECTOR)
 	configure_file("${CMAKE_CURRENT_SOURCE_DIR}/policies/chrome-gnome-shell.json"
 			"${CMAKE_BINARY_DIR}/")
 
+	if(DEFINED(USE_DEBIAN_LAYOUT))
+		set(DISTUTILS_EXTRA_ARGS "--install-layout=deb")
+	else()
+		set(DISTUTILS_EXTRA_ARGS "")
+	endif(DEFINED(USE_DEBIAN_LAYOUT))
+
 	install(CODE "
 		if(DEFINED ENV{DESTDIR})
 			set(DESTDIR \"\$ENV{DESTDIR}\")
@@ -153,7 +160,7 @@ if(BUILD_CONNECTOR)
 		endif(DEFINED ENV{DESTDIR})
 
 		execute_process(COMMAND ${PYTHON_EXECUTABLE} ${CONNECTOR_SETUP}
-					install
+					install ${DISTUTILS_EXTRA_ARGS}
 						--root \"\${DESTDIR}\"
 						--prefix \"${CMAKE_INSTALL_PREFIX}\")")
 	install(FILES "${CMAKE_BINARY_DIR}/io.github.ne0sight.gs_chrome_connector.json" DESTINATION "/etc/chromium/native-messaging-hosts/")
