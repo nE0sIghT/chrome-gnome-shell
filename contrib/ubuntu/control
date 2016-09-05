@@ -2,7 +2,7 @@ Source: chrome-gnome-shell
 Section: gnome
 Priority: optional
 Maintainer: Yuri Konotopov <ykonotopov@gmail.com>
-Build-Depends: debhelper (>= 8.0.0), cmake, coreutils
+Build-Depends: debhelper (>= 8.0.0), cmake, coreutils, python (>= 2.7)
 Standards-Version: 3.9.4
 Homepage: <https://wiki.gnome.org/Projects/GnomeShellIntegrationForChrome>
 Vcs-Git: git://git.gnome.org/chrome-gnome-shell

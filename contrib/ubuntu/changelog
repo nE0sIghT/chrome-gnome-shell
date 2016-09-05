@@ -1,6 +1,7 @@
 chrome-gnome-shell (${PROJECT_VERSION}-${DEBIAN_VERSION}) ${DEBIAN_DISTRO}; urgency=low
 
-  * Initial release
+  * Updated build build-time dependencies
   * Added python-gi dependency
+  * Initial release
 
- -- Yuri Konotopov <ykonotopov@gmail.com>  Sun, 21 Feb 2016 19:11:44 +0300
+ -- Yuri Konotopov <ykonotopov@gmail.com>  Mon, 5 Sep 2016 19:26:18 +0300
