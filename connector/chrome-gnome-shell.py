@@ -24,7 +24,7 @@ import traceback
 from select import select
 from threading import Thread, Lock
 
-CONNECTOR_VERSION	= 6.2
+CONNECTOR_VERSION	= 7
 DEBUG_ENABLED		= False
 
 SHELL_SCHEMA = "org.gnome.shell"
