@@ -48,16 +48,21 @@ if(NOT DEFINED(DEBIAN_DISTRO))
 	set(DEBIAN_DISTRO "trusty")
 endif(NOT DEFINED(DEBIAN_DISTRO))
 
-macro(find_program_ex program message_type)
-	string(TOUPPER ${program} _PROGRAM_UPPER)
+macro(find_program_ex)
+	string(TOUPPER ${ARGV0} _PROGRAM_UPPER)
 
-	find_program(${_PROGRAM_UPPER}_EXECUTABLE ${program})
+	set(_NAMES ${ARGV})
+	math(EXPR _NAMES_LAST_INDEX "${ARGC}-1")
+	list(GET _NAMES ${_NAMES_LAST_INDEX} _MESSAGE_STATUS)
+	list(REMOVE_AT _NAMES ${_NAMES_LAST_INDEX})
+
+	find_program(${_PROGRAM_UPPER}_EXECUTABLE NAMES ${_NAMES})
 
 	if(${_PROGRAM_UPPER}_EXECUTABLE)
-		message(STATUS "Found ${program}: ${${_PROGRAM_UPPER}_EXECUTABLE}")
+		message(STATUS "Found ${ARGV0}: ${${_PROGRAM_UPPER}_EXECUTABLE}")
 		set(${_PROGRAM_UPPER}_FOUND TRUE)
 	else(${_PROGRAM_UPPER}_EXECUTABLE)
-		message(${message_type} "Could NOT find ${program}.")
+		message(${_MESSAGE_STATUS} "Could NOT find ${ARGV0}.")
 	endif(${_PROGRAM_UPPER}_EXECUTABLE)
 endmacro(find_program_ex)
 
@@ -82,10 +87,10 @@ if(BUILD_MESSAGES AND NOT DEFINED GETTEXT_REPORT_EMAIL)
 endif(BUILD_MESSAGES AND NOT DEFINED GETTEXT_REPORT_EMAIL)
 
 if(BUILD_EXTENSION OR BUILD_CONNECTOR)
-	find_program_ex(base64 FATAL_ERROR)
-	find_program_ex(sha256sum FATAL_ERROR)
-	find_program_ex(head FATAL_ERROR)
-	find_program_ex(tr FATAL_ERROR)
+	find_program_ex(base64 gbase64 FATAL_ERROR)
+	find_program_ex(sha256sum gsha256sum FATAL_ERROR)
+	find_program_ex(head ghead FATAL_ERROR)
+	find_program_ex(tr gtr FATAL_ERROR)
 
 	# https://github.com/adobe/chromium/blob/master/chrome/common/extensions/extension.cc#L696
 	# http://stackoverflow.com/questions/23873623/obtaining-chrome-extension-id-for-development
